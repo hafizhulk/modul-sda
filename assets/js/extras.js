@@ -233,6 +233,19 @@
         'B1 --> B2["Zona kritis: regenerasi gagal"]:::leak',
         'E --> E1["Penyediaan · pengaturan · habitat · budaya"]',
         "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;"
+      ].join("\n"),
+      "mm-cld": [
+        "flowchart TD",
+        'A["Permintaan perumahan & komersial"] -->|+| B["Harga lahan peri-urban"]',
+        'B -->|+| C["Konversi sawah → terbangun"]',
+        'C -->|+| D["Pasokan lahan terbangun"]',
+        'D -->|-| A',
+        'C -->|+| E["Kehilangan fungsi tata air sawah"]',
+        'E -->|+| F["Risiko & kerugian banjir"]',
+        'F -->|+| G["Biaya proteksi & tekanan regulasi"]',
+        'G -->|-| A',
+        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
+        'class C,E leak'
       ].join("\n")
     };
   }

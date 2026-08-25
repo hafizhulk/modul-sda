@@ -3,51 +3,500 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Modul SDL — I-02 Potensi Lokal dan Sistem Sosial-Ekologis. Segera tersedia." />
-  <title>SDL · I-02 — Segera</title>
+  <meta name="description" content="Modul SDL Bab 2 — Potensi Lokal dan Sistem Sosial-Ekologis: potensi lokal dan struktur wilayah, pendorong dinamika, komponen SES, umpan balik, ambang perubahan, dan studi kasus alih fungsi lahan peri-urban." />
+  <title>SDL · I-02 Potensi Lokal dan Sistem Sosial-Ekologis</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body class="landing-page">
+<body class="with-rail">
   <div id="progress-track" role="presentation" aria-hidden="true"><div id="progress-bar"></div></div>
 
   <header class="site-header" id="site-header">
     <div class="wrap header-inner">
+      <button type="button" class="rail-toggle" id="rail-toggle" aria-expanded="false" aria-controls="rail" aria-label="Buka daftar isi">
+        <span class="icon" data-lucide="list"></span>
+      </button>
       <a class="brand" href="index.html" aria-label="Beranda modul SDL">
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-text">Sumber Daya &amp; <strong>Lingkungan</strong></span>
       </a>
+      <div class="chapter-nav" id="chapter-nav">
+        <button type="button" class="chapter-btn" id="chapter-btn" aria-haspopup="menu" aria-expanded="false" aria-label="Pilih bab">
+          <span class="sheet-code">I-02</span>
+          <span class="chapter-btn-label" id="chapter-btn-label">Bab 2</span>
+          <span class="icon chev" data-lucide="chevron-down"></span>
+        </button>
+        <div class="chapter-menu" id="chapter-menu" role="menu" hidden></div>
+      </div>
       <button type="button" id="theme-toggle" class="icon-btn" aria-label="Alihkan tema terang/gelap" aria-pressed="false">
         <span class="icon" data-lucide="sun"></span>
       </button>
     </div>
   </header>
 
-  <main id="top" class="landing-main">
-    <section class="grid-paper hero">
+  <aside class="rail" id="rail" aria-label="Daftar isi bab">
+    <p class="rail-title">I-02 · Legenda</p>
+    <p class="rail-label">Materi</p>
+    <a class="rail-item" href="#pendahuluan"><span class="rail-code">PD</span> Pendahuluan</a>
+    <a class="rail-item" href="#objectives"><span class="rail-code">00</span> Tujuan pembelajaran</a>
+    <a class="rail-item" href="#sub-21"><span class="rail-code">01</span> Potensi lokal &amp; struktur wilayah</a>
+    <a class="rail-item" href="#sub-22"><span class="rail-code">02</span> Pendorong dinamika</a>
+    <a class="rail-item" href="#pendorong"><span class="rail-code">PR</span> Empat pendorong utama</a>
+    <a class="rail-item" href="#sub-23"><span class="rail-code">03</span> Komponen sistem sosial-ekologis</a>
+    <a class="rail-item" href="#sub-24"><span class="rail-code">04</span> Aliran &amp; umpan balik</a>
+    <a class="rail-item" href="#sub-25"><span class="rail-code">05</span> Ambang &amp; respons sistem</a>
+    <a class="rail-item" href="#studi-kasus"><span class="rail-code">SC</span> Studi kasus · peri-urban</a>
+    <p class="rail-label">Penutup</p>
+    <a class="rail-item" href="#rangkuman"><span class="rail-code">RK</span> Rangkuman</a>
+    <a class="rail-item" href="#quiz"><span class="rail-code">QZ</span> Kuis</a>
+    <a class="rail-item" href="#diskusi"><span class="rail-code">DS</span> Diskusi</a>
+    <a class="rail-item" href="#latihan"><span class="rail-code">LT</span> Latihan</a>
+    <a class="rail-item" href="#pustaka"><span class="rail-code">PB</span> Pustaka</a>
+  </aside>
+  <div class="rail-backdrop" aria-hidden="true"></div>
+
+  <main id="top" class="content">
+
+    <section class="grid-paper hero" id="hero" aria-labelledby="hero-title">
       <div class="wrap hero-copy">
-        <p class="eyebrow">Bagian I · Modul Ajar S2 PWK</p>
-        <h1><span class="sheet-code">I-02</span> Potensi Lokal dan Sistem Sosial-Ekologis</h1>
-        <p class="lead">Bab ini sedang disiapkan dan akan segera tersedia.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="index.html"><span class="icon" data-lucide="arrow-left"></span> Kembali ke daftar bab</a>
-          <a class="btn btn-ghost" href="bab-1.html"><span class="icon" data-lucide="book-open"></span> Buka Bab 1</a>
+        <p class="eyebrow">Bagian I · Fondasi Konseptual · Modul Ajar S2 PWK</p>
+        <h1 id="hero-title">Potensi Lokal dan Sistem Sosial-Ekologis<span class="tone">: pendorong, umpan balik, dan ambang sistem</span></h1>
+      </div>
+      <div class="wrap stat-strip" aria-label="Angka kunci bab">
+        <div class="stat"><span class="stat-num">7×</span><span class="stat-lbl">nilai lahan perumahan vs sawah di peri-urban Jatim (Rondhi dkk., 2018)</span></div>
+        <div class="stat"><span class="stat-num">56,7→66,6%</span><span class="stat-lbl">penduduk perkotaan Indonesia 2020 → 2035 (BPS)</span></div>
+        <div class="stat"><span class="stat-num">+3.791 → −7.141 t</span><span class="stat-lbl">keseimbangan beras Purwokerto melintasi ambang (Rizq dkk., 2025)</span></div>
+      </div>
+    </section>
+
+    <!-- PENDAHULUAN -->
+    <section class="sec" id="pendahuluan" aria-labelledby="pd-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Pendahuluan</p>
+        <h2 class="h2" id="pd-title">Wilayah sebagai sistem yang hidup</h2>
+        <div class="prose">
+          <p>Bab 1 menegaskan bahwa sumber daya alam bukan entitas yang berdiri sendiri: nilai, kelangkaan, dan distribusinya dibentuk oleh keputusan manusia. Bab 2 melangkah lebih jauh dengan memperkenalkan dua kerangka analitis yang menjadi tulang punggung seluruh buku ini.</p>
+          <p>Pertama, kerangka <strong>potensi lokal–struktur wilayah</strong>: bagaimana karakter sumber daya suatu wilayah membentuk basis ekonomi, pola permukiman, dan struktur ruangnya — dan sebaliknya, bagaimana struktur wilayah menentukan tekanan terhadap sumber daya. Kedua, kerangka <strong><span class="term" data-gloss="ses">sistem sosial-ekologis</span></strong> (SES): wilayah dipahami sebagai satu sistem terpadu di mana komponen sosial dan ekologis saling memengaruhi melalui aliran sumber daya, hubungan sebab-akibat, dan umpan balik — dengan konsekuensi adanya <strong>ambang perubahan</strong> yang, bila terlewati, dapat menggeser sistem ke kondisi baru yang sulit dipulihkan.</p>
+          <p>Bagi perencana wilayah dan kota, kedua kerangka ini bukan sekadar teori. <span class="term" data-gloss="d3tlh">KLHS</span> yang dimandatkan PP No. 22/2021 pada hakikatnya adalah analisis sistem sosial-ekologis: mengidentifikasi daya dukung dan daya tampung, memetakan pendorong tekanan, dan mengantisipasi titik kritis sebelum rencana tata ruang (RTRW/RDTR) ditetapkan.</p>
+          <p class="note">Konvensi pembacaan bab ini: setiap klaim dibedakan atas [Fakta empiris] — temuan terukur dari literatur atau statistik resmi; [Regulasi] — ketentuan normatif; [Asumsi/model] — konstruksi analitis atau hasil pemodelan; dan [Interpretasi] — analisis penulis untuk konteks perencanaan.</p>
         </div>
       </div>
     </section>
+
+    <!-- TUJUAN -->
+    <section class="sec" id="objectives" aria-labelledby="obj-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Tujuan pembelajaran</p>
+        <h2 class="h2" id="obj-title">Setelah mempelajari bab ini, mahasiswa mampu…</h2>
+        <ul class="objective-list" id="objectives-list"></ul>
+      </div>
+    </section>
+
+    <!-- KATA KUNCI -->
+    <section class="sec sec-kw" id="kata-kunci" aria-labelledby="kw-title">
+      <div class="wrap">
+        <p class="eyebrow center-eyebrow">Kata kunci</p>
+        <h2 class="h2 sr-only" id="kw-title">Kata kunci bab ini</h2>
+        <div class="kw-cloud" id="kw-cloud" aria-label="Daftar kata kunci"></div>
+      </div>
+    </section>
+
+    <!-- 2.1 POTENSI LOKAL & STRUKTUR WILAYAH -->
+    <section class="sec" id="sub-21" aria-labelledby="s21-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">2.1 · Potensi lokal &amp; struktur wilayah</p>
+          <h2 class="h2" id="s21-title">Potensi sumber daya lokal dan struktur wilayah</h2>
+          <p class="sec-desc">Potensi menentukan daya tarik wilayah; struktur menentukan akses terhadap potensi. Keduanya saling membentuk.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>2.1.1 · Aset bawaan dan aset ciptaan</h3>
+          <p>Potensi sumber daya lokal adalah keseluruhan aset yang dimiliki suatu wilayah dan dapat dimobilisasi untuk pembangunan, dibedakan menjadi dua golongan:</p>
+          <ul>
+            <li><strong><span class="term" data-gloss="aset-bawaan">Aset bawaan</span></strong> — sumber daya alam (lahan subur, air, mineral, keanekaragaman hayati), kondisi iklim, dan posisi geografis yang "diberikan" dan tidak dapat dipindahkan.</li>
+            <li><strong>Aset ciptaan</strong> — infrastruktur, modal manusia, kelembagaan, dan teknologi yang dibangun melalui investasi dan akumulasi pengetahuan.</li>
+          </ul>
+          <p><span class="term" data-gloss="resource-dependence">Keduanya memiliki logika pengelolaan berbeda</span>: aset bawaan memberi keunggulan komparatif awal, tetapi wilayah yang hanya bertumpu padanya rentan <em>resource dependence</em> — struktur ekonomi rapuh ketika sumber daya menyusut atau harga komoditas jatuh. Aset ciptaan justru menentukan kemampuan wilayah mengubah potensi menjadi kinerja pembangunan berkelanjutan.</p>
+
+          <h3>2.1.2 · Dari potensi lokal ke struktur wilayah: teori klasik</h3>
+          <p>Empat karya seminal membentuk kerangka berpikir ekonomi regional, ditambah teori tempat sentral sebagai pelengkap:</p>
+          <ol>
+            <li><strong>Teori basis ekonomi</strong> (North, 1955) — pertumbuhan digerakkan sektor basis (ekspor keluar wilayah); potensi lokal menentukan sektor basis apa yang mungkin berkembang.</li>
+            <li><strong>Kutub pertumbuhan</strong> (Perroux, 1950) — pertumbuhan terkonsentrasi pada titik-titik berindustri pendorong, lalu menyebar (atau gagal menyebar) ke wilayah belakang.</li>
+            <li><strong>Kausalasi kumulatif</strong> (Myrdal, 1957) — konsentrasi sumber daya di pusat memicu efek <span class="term" data-gloss="backwash">backwash</span> (hisapan dari pinggiran) yang bisa lebih kuat dari efek <em>spread</em>; ketimpangan cenderung menguat tanpa intervensi.</li>
+            <li><strong>Sewa lahan dan struktur penggunaan lahan</strong> (von Thünen, 1826; Alonso, 1964) — penggunaan lahan tersusun menurut kemampuan membayar sewa (<span class="term" data-gloss="bid-rent">bid-rent</span>) yang menurun seiring jarak dari pusat. Ketika sewa urban melampaui sewa pertanian di pinggiran, konversi lahan menjadi secara ekonomi "rasional" bagi pemilik.</li>
+            <li><strong>Teori tempat sentral</strong> (Christaller) — hierarki pusat permukiman ditentukan ambang populasi (<em>threshold</em>) dan jangkauan pasar (<em>range</em>); relevan tetapi statis, mengasumsikan permukaan isotropik yang jarang berlaku di Indonesia.</li>
+          </ol>
+          <div class="callout callout-warn">
+            <span class="icon" data-lucide="triangle-alert"></span>
+            <p><strong>Implikasi praktis.</strong> Kerangka bid-rent menjelaskan <em>mengapa</em> pengendalian alih fungsi lahan lewat rencana tata ruang saja sering gagal: rencana berhadapan dengan insentif ekonomi yang kuat. Instrumen yang efektif harus mengubah struktur insentif (insentif fiskal bagi lahan pertanian berkelanjutan, atau biaya konversi yang mencerminkan nilai jasa ekosistem yang hilang) — bukan sekadar menggambar batas di peta.</p>
+          </div>
+
+          <h3>2.1.3 · Struktur ruang dalam sistem perencanaan Indonesia</h3>
+          <p>UU No. 26/2007 mendefinisikan <strong>struktur ruang</strong> sebagai susunan pusat-pusat permukiman dan sistem jaringan prasarana yang saling berhubungan hierarkis; <strong>pola ruang</strong> sebagai distribusi peruntukan tanah (kawasan lindung dan budidaya). Potensi lokal masuk melalui dua pintu: sebagai dasar penetapan kawasan strategis dan arahan fungsi kawasan dalam RTRW, serta sebagai masukan KLHS yang menguji apakah struktur dan pola ruang melampaui daya dukung–daya tampung. <em>Analisis potensi lokal yang lemah akan menjalar menjadi struktur ruang yang rapuh.</em></p>
+
+          <h3>2.1.4 · Implikasi bagi perencanaan</h3>
+          <ul>
+            <li>Inventarisasi potensi lokal harus membedakan aset bawaan dan aset ciptaan, serta menilai keterbaruan dan status kelangkaannya (kaitan Bab 1).</li>
+            <li>Penetapan struktur ruang (hierarki pusat pelayanan, koridor pengembangan) perlu diuji terhadap distribusi spasial sumber daya penyangga — terutama air dan lahan.</li>
+            <li>Analisis keunggulan komparatif berbasis sumber daya harus disertai analisis risiko ketergantungan sumber daya dan strategi diversifikasi.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2.2 PENDORONG DINAMIKA -->
+    <section class="sec" id="sub-22" aria-labelledby="s22-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">2.2 · Pendorong dinamika</p>
+          <h2 class="h2" id="s22-title">Pendorong dinamika pemanfaatan sumber daya</h2>
+          <p class="sec-desc">Penyebab proksimal vs kekuatan pendorong mendasar — dan empat pendorong utama dalam konteks Indonesia.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>2.2.1 · Kerangka analisis: dua lapis penyebab</h3>
+          <p><span class="term" data-gloss="proksimal">Meta-analisis Geist &amp; Lambin (2002)</span> atas 152 studi kasus deforestasi tropis membedakan <strong>penyebab proksimal</strong> (aktivitas langsung yang mengubah tutupan lahan) dan <strong>kekuatan pendorong mendasar</strong> (demografi, ekonomi, teknologi, kebijakan, sosial-budaya). Temuan kuncinya: perubahan lahan hampir tidak pernah digerakkan satu faktor tunggal. Perencana harus menolak penjelasan satu variabel ("konversi terjadi karena penduduk bertambah") dan menelusuri rantai pendorong hingga faktor kelembagaan — kebijakan perizinan, harga lahan, akses pembiayaan.</p>
+
+          <h3>2.2.2 · Empat pendorong utama</h3>
+          <p><strong>(a) Pertumbuhan penduduk</strong> — meningkatkan kebutuhan lahan, pangan, air, energi; pengaruhnya selalu dimediasi kepadatan, konsumsi per kapita, dan kelembagaan. <strong>(b) Urbanisasi</strong> — 56,7% penduduk urban (2020) → proyeksi 66,6% (2035); di Asia Tenggara berwujud <span class="term" data-gloss="desakota">desakota</span> (McGee, 1991), bentang campuran pertanian–nonpertanian di koridor antarkota. <strong>(c) Kegiatan ekonomi</strong> — transformasi struktural mengubah permintaan lahan; koridor industri Bekasi–Karawang–Purwakarta menarik konversi sawah besar-besaran (Firman, 1997). <strong>(d) Investasi</strong> — properti skala besar dan infrastruktur mempercepat sekaligus mengarahkan konversi; di peri-urban Jakarta inisiatif pengembang swasta mendahului perencanaan, dan pemda justru menyesuaikan rencana tata ruang terhadap inisiatif tersebut (Hudalah dkk., 2016) — arah kausalitas yang kerap terbalik dalam diskusi publik.</p>
+
+          <p class="tbl-title">Tabel 2.1 — Estimasi laju konversi lahan sawah nasional dari berbagai sumber</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Perbandingan estimasi laju konversi lahan sawah nasional">
+            <thead><tr><th scope="col">Sumber &amp; tahun data</th><th scope="col">Estimasi laju</th><th scope="col">Cakupan/metode</th></tr></thead>
+            <tbody>
+              <tr><td>BPS (2021)</td><td>60.000–80.000 ha/tahun</td><td>Statistik lahan baku sawah nasional</td></tr>
+              <tr><td>ATR/BPN (2022)</td><td>100.000–150.000 ha/tahun</td><td>Data pertanahan nasional</td></tr>
+              <tr><td>Kementan (2015–2019)</td><td>±150.000 ha/tahun (8,1→7,5 jt ha)</td><td>Data luas baku sawah nasional</td></tr>
+              <tr><td>Mentan via BPS (2025)</td><td>±15.000 ha/tahun (±79.000 ha/5 tahun)</td><td>Sanggahan resmi atas angka 100.000 ha/tahun</td></tr>
+              <tr><td>Studi lokal Bogor</td><td>51,45 ha/tahun; potensi kehilangan 3.098 t/tahun</td><td>Studi akademik area spesifik — tidak digeneralisasi</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p class="note">Perbedaan angka mencerminkan perbedaan definisi (lahan baku sawah vs lahan tanam), metode (survei lapangan vs estimasi model), dan periode — bukan "mana yang benar". Praktik yang benar: laporkan semuanya beserta metodenya (lihat Bab 3 tentang triangulasi data).</p>
+
+          <h3>2.2.3 · Kerangka DPSIR</h3>
+          <p class="tbl-title">Tabel 2.2 — DPSIR pada alih fungsi lahan peri-urban</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Kerangka DPSIR untuk alih fungsi lahan peri-urban">
+            <thead><tr><th scope="col">Komponen</th><th scope="col">Contoh pada alih fungsi lahan peri-urban</th></tr></thead>
+            <tbody>
+              <tr><td>Driving force</td><td>Pertumbuhan penduduk, urbanisasi, ekspansi industri, investasi properti</td></tr>
+              <tr><td>Pressure</td><td>Konversi sawah menjadi lahan terbangun; peningkatan permukaan kedap air</td></tr>
+              <tr><td>State</td><td>Penurunan luas lahan pertanian; peningkatan limpasan; penurunan infiltrasi</td></tr>
+              <tr><td>Impact</td><td>Kehilangan produksi pangan lokal; peningkatan frekuensi banjir; hilangnya jasa ekosistem</td></tr>
+              <tr><td>Response</td><td>Penetapan LP2B; zonasi RDTR; insentif pertanian; pengendalian perizinan</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p><span class="term" data-gloss="dpsir">DPSIR</span> bersifat linear, padahal SES bekerja dengan umpan balik. Ia adalah alat <em>strukturasi awal</em> — harus dilengkapi analisis umpan balik pada subbab 2.4.</p>
+
+          <h3>2.2.4 · Implikasi bagi perencanaan</h3>
+          <ul>
+            <li>Identifikasi pendorong dalam KLHS/RTRW harus membedakan proksimal vs mendasar dan menyebutkan bukti untuk masing-masing.</li>
+            <li>Empat pendorong berinteraksi; kebijakan yang hanya menyasar satu pendorong cenderung tidak efektif.</li>
+            <li>Data yang lazim tersedia: BPS (penduduk, urbanisasi, PDRB), ATR/BPN (alih fungsi lahan, RTRW/RDTR), data perizinan berusaha.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEPPER: EMPAT PENDORONG -->
+    <section class="sec sec-deep" id="pendorong" aria-labelledby="pendorong-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Panduan bertahap</p>
+          <h2 class="h2" id="pendorong-title">Empat pendorong utama pemanfaatan sumber daya</h2>
+          <p class="sec-desc">Pendorong tidak bekerja sendiri-sendiri — mereka saling menguatkan. Telaah satu per satu beserta mekanisme dan buktinya.</p>
+        </div>
+        <div class="stepper card" role="region" aria-label="Langkah empat pendorong utama" aria-live="polite" id="stepper-box">
+          <div class="stepper-pos" id="stepper-pos">Langkah 1 dari 4</div>
+          <div class="stepper-stage" id="stepper-stage"></div>
+          <div class="stepper-nav">
+            <button type="button" class="btn btn-ghost" id="step-prev"><span class="icon" data-lucide="chevron-left"></span> Sebelumnya</button>
+            <div class="stepper-dots" id="stepper-dots" aria-hidden="true"></div>
+            <button type="button" class="btn btn-primary" id="step-next">Berikutnya <span class="icon" data-lucide="chevron-right"></span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2.3 KOMPONEN SES -->
+    <section class="sec" id="sub-23" aria-labelledby="s23-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">2.3 · Komponen SES</p>
+          <h2 class="h2" id="s23-title">Komponen sistem sosial-ekologis</h2>
+          <p class="sec-desc">Empat kelompok komponen yang operasional untuk diagnosis wilayah — dari biotik hingga kelembagaan manusia.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>2.3.1 · Definisi dan perkembangan konsep</h3>
+          <p><span class="term" data-gloss="ses">Sistem sosial-ekologis</span> adalah sistem terpadu di mana sub-sistem sosial dan ekologis saling terkait dan berevolusi bersama (Berkes &amp; Folke, 1998). Folke dkk. (2004) menegaskan karakter SES sebagai sistem adaptif kompleks: ketergantungan historis, dinamika nonlinier, efek ambang, lebih dari satu keadaan stabil, dan keterbatasan prediktabilitas. Liu dkk. (2007) menambah enam ciri sistem manusia–alam terpadu yang relevan langsung bagi perencana: hubungan timbal balik, nonlinieritas, ambang, kejutan, <em>legacy effects</em>, dan <em>time lags</em> — dua yang terakhir menjelaskan mengapa dampak keputusan tata ruang hari ini (mis. konversi DAS hulu) baru terasa puluhan tahun kemudian.</p>
+
+          <h3>2.3.2 · Empat komponen SES untuk perencanaan</h3>
+          <ol>
+            <li><strong>Komponen biotik</strong> — vegetasi, keanekaragaman hayati, organisme tanah, dan proses ekologis (penyerbukan, dekomposisi, jaring-jaring makanan).</li>
+            <li><strong>Komponen abiotik</strong> — air (permukaan dan tanah), tanah dan geologi, mineral, iklim dan topografi — termasuk stok tak terbarukan.</li>
+            <li><strong>Lingkungan binaan</strong> — bangunan, jaringan jalan, infrastruktur air/drainase/energi; sering luput dari SES klasik padahal menentukan aliran sumber daya di wilayah urban.</li>
+            <li><strong>Aktivitas dan kelembagaan manusia</strong> — produksi, konsumsi, mobilitas, serta aturan formal (perizinan, tata ruang) dan informal (norma pengelolaan bersama).</li>
+          </ol>
+
+          <p class="tbl-title">Tabel 2.3 — Komponen SES dan padanan Ostrom (SESF)</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Pemetaan komponen SES ke SESF Ostrom">
+            <thead><tr><th scope="col">Komponen bab</th><th scope="col">Padanan Ostrom</th><th scope="col">Contoh operasional (peri-urban)</th></tr></thead>
+            <tbody>
+              <tr><td>Biotik</td><td>RU + bagian RS</td><td>Sawah dan biodiversitas pertanian; produktivitas padi per ha</td></tr>
+              <tr><td>Abiotik</td><td>RS (fisik)</td><td>Air tanah (akuifer), kesuburan tanah, tutupan lahan</td></tr>
+              <tr><td>Lingkungan binaan</td><td>RS buatan + GS fisik</td><td>Permukiman, jalan tol, kawasan industri, saluran drainase</td></tr>
+              <tr><td>Aktivitas manusia</td><td>A + I</td><td>Produksi pertanian, spekulasi lahan, konstruksi, tata kelola LP2B</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p><span class="term" data-gloss="sesf">SESF Ostrom (2009)</span> menyediakan taksonomi berjenjang (RS, RU, GS, A, I, O) agar temuan lintas disiplin dan lokasi dapat diakumulasikan. Nilai utamanya bagi PWK adalah sebagai <em>checklist diagnosis</em>: siapa pengguna (A), aturan apa yang mengatur akses (GS), bagaimana karakter fisik sumber daya (RS/RU), dan interaksi apa yang menghasilkan luaran saat ini (I→O). Kelemahannya: statis-diagnostik — untuk dinamika diperlukan alat pada subbab 2.4.</p>
+
+          <h3>2.3.3 · Implikasi bagi perencanaan</h3>
+          <ul>
+            <li>Peta komponen SES wilayah studi adalah langkah awal diagnosis lingkungan terintegrasi (Tugas 1, Bab 6).</li>
+            <li>Lingkungan binaan harus diperlakukan setara komponen alami — infrastruktur mengubah aliran air, energi, dan material secara permanen.</li>
+            <li>Analisis kelembagaan (aturan, aktor, kewenangan) bukan pelengkap, melainkan inti diagnosis SES — jembatan ke Bab 7.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2.4 ALIRAN & UMPAN BALIK -->
+    <section class="sec" id="sub-24" aria-labelledby="s24-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">2.4 · Aliran &amp; umpan balik</p>
+          <h2 class="h2" id="s24-title">Aliran sumber daya, sebab-akibat, dan umpan balik sistem</h2>
+          <p class="sec-desc">Membaca wilayah sebagai simpul jaringan aliran, memetakan loop kausal, dan menemukan titik ungkit intervensi.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>2.4.1 · Metabolisme kota</h3>
+          <p><span class="term" data-gloss="metabolisme">Metabolisme kota</span> (Kennedy dkk., 2007) memandang kota sebagai sistem yang memproses aliran masuk (air, energi, pangan, material), menyimpannya sebagai stok (bangunan, infrastruktur), dan mengeluarkannya sebagai limbah-emisi. Bagi perencana, ini mengubah cara membaca peta: wilayah adalah simpul dalam jaringan aliran. Kota metropolitan Indonesia menarik air dari DAS lintas kabupaten, pangan dari hinterland, energi dari luar pulau — sambil mengekspor limbah cair ke hilir.</p>
+
+          <h3>2.4.2 · Diagram loop kausal</h3>
+          <p><span class="term" data-gloss="cld">CLD</span> (Sterman, 2000) memetakan variabel dengan polaritas: (+) searah, (−) berlawanan. Rangkaian tertutup membentuk <strong>loop penguat (R)</strong> — mesin pertumbuhan atau spiral degradasi — dan <strong>loop penyeimbang (B)</strong> — mekanisme stabilisasi. Diagram berikut diadaptasi dari studi kasus alih fungsi lahan peri-urban:</p>
+          <figure class="viz">
+            <div class="mermaid-box" id="mm-cld" role="img" aria-label="Diagram loop kausal tekanan urbanisasi pada lahan sawah"></div>
+            <figcaption><strong>Gbr. 2.1</strong> — CLD tekanan urbanisasi pada lahan sawah. Loop R1 (ekspansi) memperkuat konversi; loop B1 (pasokan) meredam permintaan; loop E–G (banjir) adalah <em>feedback negatif tertunda</em> yang sering terlambat menyadarkan.</figcaption>
+          </figure>
+          <p>Dua loop yang khas dalam literatur peri-urban:</p>
+          <ul>
+            <li><strong>R1 (spiral ekspansi)</strong>: pertumbuhan kota → permintaan lahan ↑ → harga lahan pinggiran ↑ → petani menjual sawah → konversi ↑ → kawasan terbangun meluas → aksesibilitas ↑ → daya tarik pertumbuhan ↑.</li>
+            <li><strong>R2 (spiral banjir / <span class="term" data-gloss="maladaptasi">maladaptasi</span>)</strong>: konversi sawah → permukaan kedap air ↑ → limpasan ↑ → banjir ↑ → pembangunan drainase/tanggul ↑ → rasa aman semu → permukiman baru tertarik → konversi ↑.</li>
+            <li><strong>B1 (peredam melalui biaya)</strong>: banjir ↑ → biaya infrastruktur dan kerugian ↑ → daya tarik investasi ↓ → laju konversi menurun.</li>
+          </ul>
+
+          <h3>2.4.3 · Titik ungkit intervensi</h3>
+          <p><span class="term" data-gloss="leverage-points">Meadows (2008)</span> menyusun hierarki titik ungkit dari yang dangkal hingga dalam: parameter (tarif, subsidi) &lt; struktur stok-aliran &lt; struktur umpan balik &lt; aturan sistem &lt; tujuan dan paradigma. Menarik tarif air = intervensi parameter; menetapkan LP2B = intervensi aturan; mengubah paradigma "sawah = lahan kosong menunggu dibangun" menjadi "sawah = infrastruktur ekologis" = intervensi paradigma. Perencana perlu mampu menyebutkan pada level mana rekomendasinya bekerja.</p>
+
+          <h3>2.4.4 · Aliran lintas jarak: telekopling</h3>
+          <p>Ekspansi kota tidak hanya mengonversi lahan di sekitarnya — ia memindahkan tekanan ke wilayah lain melalui efek <em>displacement</em>. Studi pemodelan di Tiongkok memperkirakan kehilangan lahan alami akibat <em>indirect land use change</em> dapat jauh lebih besar daripada kehilangan langsung ekspansi kota. <strong>Ekstrapolasi untuk Indonesia:</strong> konversi sawah di Jawa secara politik dijawab program cetak sawah di luar Jawa, yang berpotensi memindahkan beban ekologis ke lahan gambut dan hutan — perlakukan sebagai ekstrapolasi, bukan fakta empiris Indonesia.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2.5 AMBANG & RESPONS -->
+    <section class="sec" id="sub-25" aria-labelledby="s25-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">2.5 · Ambang &amp; respons</p>
+          <h2 class="h2" id="s25-title">Ambang perubahan dan respons sistem sosial-ekologis</h2>
+          <p class="sec-desc">Resiliensi, pergeseran rezim, histeresis, dan sinyal peringatan dini — kunci membaca titik kritis.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>2.5.1 · Resiliensi</h3>
+          <p><span class="term" data-gloss="resiliensi">Resiliensi ekologis</span> (Holling, 1973) adalah kapasitas menyerap gangguan sambil mempertahankan fungsi, struktur, dan umpan balik — berbeda dari "kestabilan" rekayasa yang mengukur kecepatan kembali ke satu titik setimbang. Walker &amp; Salt (2006) mengoperasionalkannya bagi praktik pengelolaan sumber daya.</p>
+
+          <h3>2.5.2 · Ambang, titik kritis, dan pergeseran rezim</h3>
+          <p>Sistem dapat memiliki lebih dari satu keadaan stabil yang dipisahkan <span class="term" data-gloss="regime-shift">ambang</span>. Ketika tekanan yang meningkat perlahan membawa sistem melewati ambang, perubahan kecil tambahan memicu respons besar — pergeseran rezim yang persisten dan sulit dipulihkan (Scheffer dkk., 2001). Fenomena <span class="term" data-gloss="histeresis">histeresis</span> berarti pemulihan memerlukan penurunan tekanan jauh melampaui titik pergeseran — secara ekonomi, biaya pemulihan jauh lebih mahal daripada pencegahan.</p>
+
+          <h3>2.5.3 · Sinyal peringatan dini</h3>
+          <p>Sistem yang mendekati titik kritis cenderung menunjukkan <span class="term" data-gloss="critical-slowing">critical slowing down</span> (Scheffer dkk., 2009): pemulihan dari gangguan kecil makin lambat, terdeteksi sebagai kenaikan autokorelasi dan varians. Bagi perencana: pentingnya indikator pemantauan yang sensitif terhadap <em>kehilangan resiliensi</em>, bukan hanya indikator keadaan statis.</p>
+
+          <h3>2.5.4 · Respons sistem: dari resistensi ke transformasi</h3>
+          <ol>
+            <li><strong>Resistensi</strong> — menahan tekanan dan mempertahankan keadaan (mangrove utuh meredam gelombang).</li>
+            <li><strong>Adaptasi</strong> — menyesuaikan diri dalam rezim yang sama (petani mengubah kalender tanam).</li>
+            <li><strong>Transformasi</strong> — berpindah ke rezim baru, baik tak diinginkan (degradasi permanen) maupun sengaja dirancang (transformasi menuju keberlanjutan).</li>
+          </ol>
+
+          <p class="tbl-title">Tabel 2.4 — Ambang yang terancam dan respons sistem</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Ambang perubahan dan respons sistem pada kasus terverifikasi">
+            <thead><tr><th scope="col">Kasus</th><th scope="col">Indikator &amp; ambang</th><th scope="col">Respons sistem bila terlewati</th><th scope="col">Sumber</th></tr></thead>
+            <tbody>
+              <tr><td>Pasokan pangan peri-urban</td><td>Keseimbangan beras menyeberang 0: Purwokerto +3.791 t (2015) → −7.141 t (2024)</td><td>Ketergantungan impor beras; kerentanan harga-logistik; konversi lanjutan (self-reinforcing)</td><td>Rizq dkk. (2025)</td></tr>
+              <tr><td>Air tanah &amp; muka tanah</td><td>Ekstraksi &gt; recharge → subsiden kota pantai</td><td>Banjir rob, kerusakan aset, biaya proteksi naik; reversibilitas praktis nol (histeresis)</td><td>Chaussard dkk. (2013)</td></tr>
+              <tr><td>Fungsi regulasi sawah</td><td>Tutupan sawah di bawah ambang buffer tata air</td><td>Banjir urban lebih sering; donut effect pembangunan mengejar nilai tanah tanpa bayar jasa ekosistem</td><td>Mulya dkk. (2024)</td></tr>
+              <tr><td>Sistem delta (internasional)</td><td>Debit &amp; salinitas melampaui toleransi</td><td>Kehilangan resiliensi; peralihan mata pencaharian (pertanian → tambak)</td><td>Hossain dkk. (2020)</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <h3>2.5.5 · Dari ambang ilmiah ke ambang normatif</h3>
+          <p>PP No. 22/2021 mewajibkan penyusunan <span class="term" data-gloss="d3tlh">D3TLH</span> sebagai dasar KLHS dan perencanaan tata ruang — upaya menerjemahkan ambang ekologis menjadi ambang normatif yang dapat ditegakkan. Ketegangan yang harus dipahami mahasiswa magister: ambang ekologis nonlinier dan tidak pasti, sedangkan ambang normatif harus sederhana dan dapat ditegakkan — sehingga selalu ada risiko ambang normatif ditetapkan terlalu longgar. Prinsip kehati-hatian dalam UU No. 32/2009 menjadi jangkar etis untuk ketidakpastian ini.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDI KASUS: ALIH FUNGSI LAHAN PERI-URBAN -->
+    <section class="sec sec-deep" id="studi-kasus" aria-labelledby="sk-title">
+      <div class="wrap">
+        <div class="case-plate">
+          <p class="eyebrow"><span class="case-pin" aria-hidden="true"></span>Studi Kasus · Alih Fungsi Lahan Peri-Urban Metropolitan Indonesia</p>
+          <h2 class="h2" id="sk-title">Laboratorium alami seluruh konsep Bab 2</h2>
+          <p class="case-meta">Jabodetabek · Bandung Raya · Jawa · Skala 1990-an–kini</p>
+          <p class="lead">Wilayah <span class="term" data-gloss="peri-urban">peri-urban</span> metropolitan Indonesia adalah arena konflik pemanfaatan sumber daya yang paling nyata: pendorong ganda, umpan balik permukiman–degradasi, dan hilangnya fungsi ekologis lahan terjadi bersamaan. Penataan ruangnya diatur antara lain melalui Perpres No. 60/2020 (Jabodetabekpunjur), menggantikan Perpres No. 54/2008.</p>
+
+          <h3>Dua angka yang berbeda — pelajaran metodologis</h3>
+          <p class="tbl-title">Tabel 2.5 — Estimasi laju alih fungsi lahan pertanian Indonesia antar-sumber</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Perbandingan dua angka alih fungsi lahan">
+            <thead><tr><th scope="col">Sumber</th><th scope="col">Tahun data</th><th scope="col">Angka</th><th scope="col">Cakupan/metode</th></tr></thead>
+            <tbody>
+              <tr><td>ATR/BPN (via Kompas)</td><td>2022</td><td>100.000–150.000 ha/tahun</td><td>Nasional; basis pemetaan lahan baku</td></tr>
+              <tr><td>Kementan</td><td>2015–2019</td><td>8,1 → 7,5 juta ha sawah</td><td>Nasional; statistik lahan pertanian</td></tr>
+              <tr><td>BPS (via Mentan)</td><td>±2020–2024</td><td>±79.000 ha/5 tahun (±15.000 ha/tahun)</td><td>Nasional; statistik BPS</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p>Perbedaan angka mencerminkan perbedaan definisi, metode, dan cakupan — bukan semata "mana yang benar". Praktik yang benar: laporkan keduanya beserta metodenya (Bab 3).</p>
+
+          <h3>Bukti dari literatur</h3>
+          <ul>
+            <li><strong>Firman (1997)</strong> — konversi lahan di utara Jawa Barat digerakkan industrialisasi sejak 1990-an.</li>
+            <li><strong>Pribadi &amp; Pauleit (2015)</strong> — pertanian peri-urban Jabodetabek bertahan dalam bentuk berubah (intensifikasi, komoditas bernilai tinggi) di tengah urbanisasi, tetapi fragmentasi lahan meningkat.</li>
+            <li><strong>Winarso dkk. (2015)</strong> — transformasi peri-urban Jakarta didominasi pengembangan skala besar swasta (kota-kota baru) sejak awal 1990-an.</li>
+            <li><strong>Hudalah dkk. (2016)</strong> — pemda menyesuaikan rencana tata ruang terhadap inisiatif swasta; bukti arah kausalitas investasi → pertumbuhan.</li>
+            <li><strong>Rustiadi dkk. (2021)</strong> — ekspansi megakota Jakarta membentuk konurbasi Jakarta–Bandung.</li>
+          </ul>
+
+          <h3>Analisis dengan kerangka bab</h3>
+          <p><strong>Pendorong (2.2).</strong> Penyebab proksimal: pembangunan permukiman, kawasan industri, infrastruktur jalan. Pendorong mendasar: urbanisasi (56,7% → 66,6%), transformasi ekonomi koridor industri, dan investasi properti yang mendahului rencana.</p>
+          <p><strong>Umpan balik (2.4).</strong> Loop R1 dan R2 pada subbab 2.4.2 dikonstruksi persis dari kasus ini. Sawah yang terkonversi menghilangkan ruang retensi air; tanggul dan drainase meredam gejala tetapi menarik permukiman baru.</p>
+          <p><strong>Hilangnya fungsi ekologis (2.5).</strong> Meta-analisis Fang dkk. (2024) menemukan penurunan jasa ekosistem yang konsisten dari konversi lahan pertanian — terutama penyediaan pangan, pengaturan air, dan pendukung. Sawah peri-urban bukan sekadar produsen padi: ia infrastruktur hijau-biru (retensi banjir, infiltrasi, pendinginan, bentang budaya).</p>
+          <p><strong>Keadilan lingkungan.</strong> Manfaat konversi mengalir ke pengembang dan penghuni baru; beban banjir, kehilangan mata pencaharian, dan fragmentasi ditanggung petani dan penghuni lama — pola gentrifikasi peri-urban (Hudalah dkk., 2016). Analisis "siapa memperoleh apa" wajib menyertai "berapa hektare berubah".</p>
+
+          <h3>Respons kebijakan dan kesenjangannya</h3>
+          <div class="callout callout-warn">
+            <span class="icon" data-lucide="search"></span>
+            <p><strong>LP2B (UU No. 41/2009)</strong> memandatkan penetapan lahan pertanian pangan berkelanjutan dengan insentif dan larangan alih fungsi. Fakta bahwa konversi terus berlangsung menunjukkan kesenjangan implementasi: mandat normatif belum mengubah struktur insentif bid-rent dan belum mengimbangi kekuatan pendorong investasi — dianalisis mendalam pada Bab 7.</p>
+          </div>
+          <p class="note">Peta komponen SES kasus ini (kerangka 2.3): RS = DAS Ciliwung–Bekasi–Citarum, sawah dan rawa pesisir; RU = air, padi, ruang, jasa regulasi banjir; GS = UU 41/2009, UU 26/2007, RTRW, rezim perizinan; A = petani, pengembang-spekulan, investor, pekerja urban, pemerintah; I/O = konversi sawah → sprawl, displacement, defisit pangan lokal, banjir, fragmentasi.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RANGKUMAN -->
+    <section class="sec" id="rangkuman" aria-labelledby="rangkuman-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Rangkuman</p>
+        <h2 class="h2" id="rangkuman-title">Pokok pembelajaran</h2>
+        <ul class="objective-list" id="rangkuman-list">
+          <li>Potensi sumber daya lokal — aset bawaan dan ciptaan — membentuk basis ekonomi dan struktur ruang; teori <strong>bid-rent</strong> menjelaskan mengapa konversi lahan peri-urban secara ekonomi terus terjadi tanpa intervensi insentif.</li>
+          <li>Dinamika pemanfaatan digerakkan kombinasi <strong>pendorong mendasar</strong> (penduduk, urbanisasi, ekonomi, investasi) dan <strong>penyebab proksimal</strong>; kerangka DPSIR membantu menstrukturkan tetapi harus dilengkapi analisis umpan balik.</li>
+          <li>Wilayah adalah <strong>sistem sosial-ekologis</strong>: komponen biotik, abiotik, lingkungan binaan, dan aktivitas manusia terhubung melalui aliran sumber daya; SESF Ostrom dan metabolisme kota menyediakan alat diagnosis.</li>
+          <li>Umpan balik penguat dapat menciptakan <strong>spiral ekspansi maupun spiral degradasi</strong> (maladaptasi); titik ungkit terdalam terletak pada aturan dan paradigma sistem.</li>
+          <li>SES memiliki <strong>ambang</strong> dan dapat mengalami <strong>pergeseran rezim dengan histeresis</strong>; D3TLH dan KLHS adalah upaya normatif Indonesia menjaga sistem tetap jauh dari ambang ekologis — menuntut prinsip kehati-hatian.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="sec sec-deep" id="quiz" aria-labelledby="quiz-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Checkpoint</p>
+          <h2 class="h2" id="quiz-title">Uji pemahaman</h2>
+          <p class="sec-desc">Lima soal pilihan ganda dari materi di atas. Jawab, periksa hasil secara langsung, dan peroleh skor beserta umpan balik.</p>
+        </div>
+        <div class="quiz card" id="quiz-box">
+          <div id="quiz-root"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DISKUSI -->
+    <section class="sec" id="diskusi" aria-labelledby="diskusi-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Diskusi</p>
+          <h2 class="h2" id="diskusi-title">Pertanyaan diskusi</h2>
+          <p class="sec-desc">Soal terbuka untuk dibedah bersama. Klik kartu untuk membuka petunjuk arah pembahasannya.</p>
+        </div>
+        <div class="acc" id="diskusi-list"></div>
+      </div>
+    </section>
+
+    <!-- LATIHAN -->
+    <section class="sec sec-deep" id="latihan" aria-labelledby="latihan-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Latihan</p>
+          <h2 class="h2" id="latihan-title">Latihan mandiri</h2>
+          <p class="sec-desc">Tugas penerapan. Tandai saat selesai — progres tersimpan otomatis di perangkat ini.</p>
+        </div>
+        <div class="lat-progress" role="status" aria-live="polite">
+          <div class="lat-bar"><div class="lat-bar-fill" id="lat-fill"></div></div>
+          <span class="lat-count" id="lat-count">0 / 3 selesai</span>
+        </div>
+        <ol class="lat-list" id="latihan-list"></ol>
+      </div>
+    </section>
+
+    <!-- PUSTAKA -->
+    <section class="sec" id="pustaka" aria-labelledby="pustaka-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Referensi</p>
+        <h2 class="h2" id="pustaka-title">Daftar pustaka</h2>
+        <div id="pustaka-list"></div>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-dialog" role="document">
+        <button type="button" class="modal-close" data-close-modal aria-label="Tutup dialog"><span class="icon" data-lucide="x"></span></button>
+        <p class="eyebrow" id="modal-eyebrow"></p>
+        <h3 class="h3" id="modal-title"></h3>
+        <div class="modal-body" id="modal-body"></div>
+      </div>
+    </div>
+
+    <span id="tooltip" class="tooltip" role="tooltip" hidden></span>
   </main>
 
   <footer class="site-footer">
     <div class="wrap foot-inner">
       <p class="foot-copy">© <span data-current-year></span> <a href="https://khair.am" target="_blank" rel="noopener noreferrer">Hafizhul Khair</a></p>
-      <p class="foot-modified">Terakhir diperbarui: <time data-last-modified datetime="2026-08-25"></time></p>
+      <p class="foot-modified">Terakhir diperbarui: <time data-last-modified datetime="2026-08-26"></time></p>
     </div>
   </footer>
 
+  <button type="button" id="to-top" class="to-top" aria-label="Kembali ke atas" hidden><span class="icon" data-lucide="arrow-up"></span></button>
+
+  <!-- Library via CDN, versi ter-pin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lucide@0.462.0/dist/umd/lucide.min.js"></script>
-  <script src="assets/js/landing.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+
+  <!-- Konten (paling awal) lalu logika -->
+  <script src="assets/js/data-bab2.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/stepper.js"></script>
+  <script src="assets/js/quiz.js"></script>
+  <script src="assets/js/extras.js"></script>
   <script src="assets/js/footer.js"></script>
 </body>
 </html>

@@ -112,7 +112,7 @@ APP_DATA.GLOSSARY = {
 /* Bab-bab modul (nav dropdown di header) */
 APP_DATA.CHAPTERS = [
   { n: 1, title: "Landasan Konseptual SDA dan Lingkungan", href: "#top", current: true },
-  { n: 2, title: "Potensi Lokal dan Sistem Sosial-Ekologis", href: null },
+  { n: 2, title: "Potensi Lokal dan Sistem Sosial-Ekologis", href: "bab-2.html" },
   { n: 3, title: "Arsitektur Data Spasial dan Nonspasial", href: null },
   { n: 4, title: "Kapasitas Lingkungan dan Jasa Ekosistem", href: null },
   { n: 5, title: "Perubahan Lahan, Pencemaran, dan Degradasi", href: null },
