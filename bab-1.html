@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Modul SDL Bab 1 — Landasan Konseptual Sumber Daya Alam dan Lingkungan: ruang lingkup, klasifikasi, kelangkaan, distribusi spasial, dan studi kasus Laut Aral." />
+  <title>SDL · I-01 Landasan Konseptual SDA dan Lingkungan</title>
+
+  <!-- Google Fonts: judul + isi + mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Design system & tokens (sumber kebenaran gaya) -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="with-rail">
+  <!-- Reading progress bar -->
+  <div id="progress-track" role="presentation" aria-hidden="true"><div id="progress-bar"></div></div>
+
+  <!-- Header bersih: brand + dropdown bab + drawer rail + tema -->
+  <header class="site-header" id="site-header">
+    <div class="wrap header-inner">
+      <button type="button" class="rail-toggle" id="rail-toggle" aria-expanded="false" aria-controls="rail" aria-label="Buka daftar isi">
+        <span class="icon" data-lucide="list"></span>
+      </button>
+      <a class="brand" href="index.html" aria-label="Beranda modul SDL">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">Sumber Daya &amp; <strong>Lingkungan</strong></span>
+      </a>
+      <div class="chapter-nav" id="chapter-nav">
+        <button type="button" class="chapter-btn" id="chapter-btn" aria-haspopup="menu" aria-expanded="false" aria-label="Pilih bab">
+          <span class="sheet-code">I-01</span>
+          <span class="chapter-btn-label" id="chapter-btn-label">Bab 1</span>
+          <span class="icon chev" data-lucide="chevron-down"></span>
+        </button>
+        <div class="chapter-menu" id="chapter-menu" role="menu" hidden></div>
+      </div>
+      <button type="button" id="theme-toggle" class="icon-btn" aria-label="Alihkan tema terang/gelap" aria-pressed="false">
+        <span class="icon" data-lucide="sun"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Rail navigasi vertikal (Legenda) -->
+  <aside class="rail" id="rail" aria-label="Daftar isi bab">
+    <p class="rail-title">I-01 · Legenda</p>
+    <p class="rail-label">Materi</p>
+    <a class="rail-item" href="#pendahuluan"><span class="rail-code">PD</span> Pendahuluan</a>
+    <a class="rail-item" href="#objectives"><span class="rail-code">00</span> Tujuan pembelajaran</a>
+    <a class="rail-item" href="#sub-11"><span class="rail-code">01</span> Pengertian &amp; ruang lingkup</a>
+    <a class="rail-item" href="#sub-12"><span class="rail-code">02</span> Klasifikasi sumber daya</a>
+    <a class="rail-item" href="#mekanisme"><span class="rail-code">MK</span> Mekanisme kelangkaan</a>
+    <a class="rail-item" href="#sub-13"><span class="rail-code">03</span> Kelangkaan &amp; keterbatasan</a>
+    <a class="rail-item" href="#sub-14"><span class="rail-code">04</span> Distribusi spasial</a>
+    <a class="rail-item" href="#studi-kasus"><span class="rail-code">SC</span> Studi kasus · Laut Aral</a>
+    <a class="rail-item" href="#padanan"><span class="rail-code">ID</span> Padanan Indonesia</a>
+    <p class="rail-label">Penutup</p>
+    <a class="rail-item" href="#rangkuman"><span class="rail-code">RK</span> Rangkuman</a>
+    <a class="rail-item" href="#quiz"><span class="rail-code">QZ</span> Kuis</a>
+    <a class="rail-item" href="#diskusi"><span class="rail-code">DS</span> Diskusi</a>
+    <a class="rail-item" href="#latihan"><span class="rail-code">LT</span> Latihan</a>
+    <a class="rail-item" href="#pustaka"><span class="rail-code">PB</span> Pustaka</a>
+  </aside>
+  <div class="rail-backdrop" aria-hidden="true"></div>
+
+  <main id="top" class="content">
+
+    <!-- HERO -->
+    <section class="grid-paper hero" id="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-copy">
+        <p class="eyebrow">Bagian I · Fondasi Konseptual · Modul Ajar S2 PWK</p>
+        <h1 id="hero-title">Landasan Konseptual SDA dan Lingkungan<span class="tone">: kelangkaan, klasifikasi, dan ruang</span></h1>
+      </div>
+      <div class="wrap stat-strip" aria-label="Angka kunci bab">
+        <div class="stat"><span class="stat-num">74%</span><span class="stat-lbl">penyusutan luas Laut Aral sejak 1960 (Micklin, 2007)</span></div>
+        <div class="stat"><span class="stat-num">14/18</span><span class="stat-lbl">kategori kontribusi alam (NCP) menurun global (IPBES, 2019)</span></div>
+        <div class="stat"><span class="stat-num">4,5%</span><span class="stat-lbl">potensi air nasional ada di Jawa — pulau bagi 56% penduduk</span></div>
+      </div>
+    </section>
+
+    <!-- PENDAHULUAN -->
+    <section class="sec" id="pendahuluan" aria-labelledby="pd-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Pendahuluan</p>
+        <h2 class="h2" id="pd-title">Mengapa perencana perlu konsep sumber daya?</h2>
+        <div class="prose">
+          <p>Perencanaan wilayah dan kota, pada hakikatnya, adalah praktik mengalokasikan ruang dan sumber daya yang terbatas di antara tuntutan yang bersaing: permukiman versus lahan pertanian, kawasan budidaya versus kawasan lindung, pertumbuhan ekonomi versus kapasitas asimilasi lingkungan. Setiap keputusan tata ruang adalah keputusan tentang sumber daya — tentang siapa memperoleh manfaat, di mana, dan siapa menanggung bebannya.</p>
+          <p>Namun <strong>"sumber daya" bukan kategori yang netral atau tetap</strong>. Suatu bentang alam baru menjadi "sumber daya" ketika masyarakat — melalui teknologi, kelembagaan, dan sistem nilainya — menetapkannya sebagai sesuatu yang berguna. Gambut tropis selama berabad-abad dipandang lahan terbuang; kini ia penyimpan karbon strategis yang diperebutkan. Sebaliknya, air yang tampak melimpah dapat berubah langka dalam satu generasi akibat keputusan manusia — sebagaimana ditunjukkan secara ekstrem oleh <a href="#studi-kasus">Laut Aral</a>.</p>
+          <p>Konsep bab ini akan dipakai ulang pada Bab 2 (sistem sosial-ekologis), Bab 4 (daya dukung dan jasa ekosistem), serta Bab 7–9 (instrumen kebijakan dan strategi).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TUJUAN PEMBELAJARAN -->
+    <section class="sec" id="objectives" aria-labelledby="obj-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Tujuan pembelajaran</p>
+        <h2 class="h2" id="obj-title">Setelah mempelajari bab ini, mahasiswa mampu…</h2>
+        <ul class="objective-list" id="objectives-list"></ul>
+      </div>
+    </section>
+
+    <!-- KATA KUNCI -->
+    <section class="sec sec-kw" id="kata-kunci" aria-labelledby="kw-title">
+      <div class="wrap">
+        <p class="eyebrow center-eyebrow">Kata kunci</p>
+        <h2 class="h2 sr-only" id="kw-title">Kata kunci bab ini</h2>
+        <div class="kw-cloud" id="kw-cloud" aria-label="Daftar kata kunci"></div>
+      </div>
+    </section>
+
+    <!-- 1.1 PENGERTIAN & RUANG LINGKUP -->
+    <section class="sec" id="sub-11" aria-labelledby="s11-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">1.1 · Pengertian &amp; ruang lingkup</p>
+          <h2 class="h2" id="s11-title">Pengertian dan ruang lingkup SDA dan lingkungan</h2>
+          <p class="sec-desc">Menetapkan bahasa bersama: dari tesis fungsional Zimmermann, definisi legal Indonesia, hingga empat lapisan ruang lingkup.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>1.1.1 · Sumber daya sebagai konstruk fungsional</h3>
+          <p>Titik tolak klasik ilmu sumber daya adalah tesis Erich W. Zimmermann (1933): <em>"resources are not, they become"</em> — sumber daya tidak <em>ada</em> dengan sendirinya, melainkan <em>menjadi</em>. Alam menyediakan <span class="term" data-gloss="zimmermann">bahan netral</span> (<em>neutral stuff</em>); penilaian manusia — melalui kebutuhan, pengetahuan, teknologi, dan kelembagaan — yang mengubahnya menjadi sumber daya.</p>
+          <p>Tesis ini punya tiga konsekuensi penting bagi perencana:</p>
+          <ul>
+            <li><strong>Klasifikasi bersifat dinamis.</strong> Uranium bukan sumber daya sebelum era nuklir; lithium menjadi strategis bersama revolusi baterai; mangrove bergeser dari "lahan kosong" menjadi aset <em>blue carbon</em>. Yang hari ini "tidak bernilai" dapat menjadi kritis dalam satu dasawarsa.</li>
+            <li><strong>Kelangkaan relatif terhadap kelembagaan dan teknologi</strong>, bukan semata jumlah fisik. Air hujan melimpah tidak menjadi "sumber daya air" tanpa infrastruktur dan kelembagaan yang menampungnya.</li>
+            <li><strong>Perencana ikut "menciptakan" sumber daya.</strong> Penetapan kawasan strategis, lindung, atau budidaya dalam RTRW adalah tindakan kelembagaan yang mengubah bahan netral menjadi sumber daya yang diperebutkan — atau sebaliknya.</li>
+          </ul>
+
+          <h3>1.1.2 · Definisi normatif dalam hukum Indonesia</h3>
+          <p>UU No. 32 Tahun 2009 (PPLH), Pasal 1, mendefinisikan:</p>
+          <ul>
+            <li><strong>Sumber daya alam</strong> (ayat 9): unsur lingkungan hidup yang terdiri atas sumber daya hayati dan nonhayati yang secara keseluruhan membentuk kesatuan ekosistem.</li>
+            <li><strong>Lingkungan hidup</strong> (ayat 1): kesatuan ruang dengan semua benda, daya, keadaan, dan makhluk hidup — termasuk manusia dan perilakunya — yang memengaruhi kelangsungan perikehidupan dan kesejahteraan.</li>
+            <li><strong><span class="term" data-gloss="daya-dukung">Daya dukung</span></strong> (ayat 7) dan <strong><span class="term" data-gloss="daya-tampung">daya tampung</span></strong> (ayat 8): kemampuan mendukung kehidupan, dan kemampuan menyerap zat/energi yang masuk.</li>
+          </ul>
+          <div class="callout callout-warn">
+            <span class="icon" data-lucide="triangle-alert"></span>
+            <p><strong>Dua catatan kritis.</strong> Pertama, definisi legal Indonesia bersifat <strong>ekosentris-kesatuan</strong> — SDA sebagai unsur ekosistem, bukan komoditas lepas — tetapi implementasi perizinan sektoral sering kembali ke logika komoditas. Kedua, definisi daya dukung–daya tampung bersifat kualitatif; operasionalisasinya diserahkan pada peraturan pelaksana, antara lain PP No. 22/2021 yang menjadikannya muatan wajib <span class="term" data-gloss="klhs">KLHS</span>. Dalam rezim penataan ruang, UU No. 26/2007 menegaskan: <strong>ruang itu sendiri</strong> — beserta sumber daya dan jasanya — adalah objek perencanaan.</p>
+          </div>
+
+          <h3>1.1.3 · Ruang lingkup: stok, aliran, dan sistem pendukung kehidupan</h3>
+          <p>Literatur ekonomi sumber daya (Perman et al., 2011; Tietenberg &amp; Lewis, 2018) membagi ruang lingkup menjadi empat lapisan:</p>
+          <ol>
+            <li><strong>Sumber daya stok</strong> — mineral dan bahan bakar fosil yang terbentuk dalam skala geologis.</li>
+            <li><strong>Sumber daya aliran</strong> — surya, angin, aliran air: tiba berkelanjutan terlepas dari pemanfaatan.</li>
+            <li><strong>Sumber daya terbarukan biologis</strong> — hutan, perikanan, tanah, air; terbarukan <em>hanya jika</em> laju pemanfaatan ≤ laju regenerasi.</li>
+            <li><strong>Lingkungan sebagai sistem pendukung kehidupan</strong> — regulasi iklim, siklus nutrien, kapasitas asimilasi limbah, nilai estetika: <span class="term" data-gloss="jasa-lingkungan">jasa ekosistem</span> (MEA, 2005) atau kontribusi alam kepada manusia (IPBES, 2019).</li>
+          </ol>
+          <p>Satu lapisan tambahan bersifat konstitutif bagi PWK: <strong>ruang (lahan) itu sendiri sebagai sumber daya</strong> — lokasi, aksesibilitas, dan kualitas tapak yang tak dapat dipindahkan dan selalu langka di pusat kota. Konflik tata ruang pada dasarnya adalah kompetisi memperebutkan sumber daya lokasi.</p>
+
+          <h3>1.1.4 · Relevansi bagi perencanaan wilayah dan kota</h3>
+          <ul>
+            <li><strong>KLHS RTRW/RPJM</strong> menuntut inventarisasi sumber daya sebagai <em>sistem</em> — apa yang menopang apa, dan apa yang terancam alternatif kebijakan yang dievaluasi.</li>
+            <li><strong>Struktur dan pola ruang</strong> pada dasarnya memetakan distribusi sumber daya: kawasan lindung mengikuti jasa ekosistem; kawasan budidaya mengikuti stok dan lahan produktif.</li>
+            <li><strong>Kesesuaian lahan</strong> adalah penilaian antara karakter sumber daya lahan dan tuntutan penggunaan — aplikasi langsung pandangan fungsional Zimmermann.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1.2 KLASIFIKASI -->
+    <section class="sec" id="sub-12" aria-labelledby="s12-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">1.2 · Klasifikasi</p>
+          <h2 class="h2" id="s12-title">Klasifikasi sumber daya: terbarukan, tidak terbarukan, dan jasa lingkungan</h2>
+          <p class="sec-desc">Tidak ada satu klasifikasi tunggal yang "benar" — setiap skema menjawab pertanyaan analitis yang berbeda. Tiga sumbu: keterbaruan, jasa ekosistem, kelembagaan.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>1.2.1 · Sumbu keterbaruan: kontinum, bukan dikotomi</h3>
+          <ul>
+            <li><strong>Tidak terbarukan (stok)</strong> — mineral dan bahan bakar fosil; dibedakan yang <em>dapat didaur ulang</em> (aluminium, tembaga) dan yang <em>terdegradasi saat digunakan</em> (energi fosil, prinsip entropi).</li>
+            <li><strong>Terbarukan aliran</strong> — surya, angin, pasang surut: pemanfaatannya tidak mengurangi ketersediaan bagi pihak lain pada waktu yang sama.</li>
+            <li><strong>Terbarukan stok biologis</strong> — hutan, perikanan, air tanah, tanah: memiliki <span class="term" data-gloss="zona-kritis">zona kritis</span>; di bawah ambang tertentu regenerasi gagal dan sumber daya fungsional berubah menjadi tidak terbarukan.</li>
+          </ul>
+          <figure class="viz">
+            <div class="mermaid-box" id="mm-klasifikasi" role="img" aria-label="Diagram klasifikasi sumber daya alam dan lingkungan"></div>
+            <figcaption><strong>Gbr. 1.1</strong> — Klasifikasi sumber daya dan dua titik kritisnya (garis oker): deplesi stok terdegradasi dan kegagalan regenerasi di zona kritis.</figcaption>
+          </figure>
+          <p><strong>Pesan utama bagi perencana:</strong> dikotomi "terbarukan vs tidak terbarukan" menyesatkan bila dibaca statis. Air adalah terbarukan dalam siklus hidrologi, tetapi dapat menjadi tidak terbarukan secara fungsional dalam satu dasawarsa ketika pengambilan melampaui pengisian (air tanah dalam Jakarta–Semarang) atau kualitasnya jatuh di bawah ambang kegunaan (DAS Citarum, Bab 5). <strong>Keterbaruan adalah properti <em>manajemen</em>, bukan hanya properti <em>fisik</em>.</strong></p>
+
+          <h3>1.2.2 · Jasa ekosistem: dari MEA ke IPBES</h3>
+          <p class="tbl-title">Tabel 1.1 — Empat skema klasifikasi jasa ekosistem</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Perbandingan skema klasifikasi jasa ekosistem">
+            <thead><tr><th scope="col">Skema</th><th scope="col">Tahun/Lembaga</th><th scope="col">Struktur</th><th scope="col">Catatan untuk perencana</th></tr></thead>
+            <tbody>
+              <tr><td><strong>MEA</strong></td><td>2005, Millennium Ecosystem Assessment</td><td>4 kategori: penyediaan, pengaturan, budaya, pendukung</td><td>Paling luas dipakai; kategori "pendukung" diperdebatkan karena berisiko penghitungan ganda dalam valuasi</td></tr>
+              <tr><td><strong>TEEB</strong></td><td>2010, UNEP</td><td>Adaptasi MEA; "pendukung" diganti "habitat"</td><td>Dirancang memasukkan nilai keanekaragaman hayati ke pengambilan keputusan</td></tr>
+              <tr><td><strong>CICES</strong></td><td>V5.1 (2018), untuk akun PBB (SEEA)</td><td>Hierarki 5 tingkat; 3 seksi biotik + perluasan abiotik; 84 kelas jasa</td><td>Standar akuntansi ekosistem; cocok untuk neraca SDA daerah yang konsisten</td></tr>
+              <tr><td><strong>IPBES — NCP</strong></td><td>2019, Global Assessment</td><td>18 kategori kontribusi alam kepada manusia: material, pengaturan, non-material</td><td>Mengakomodasi nilai relasional dan pengetahuan lokal; relevan untuk keadilan lingkungan</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p>Konteks besaran: dari 18 kategori NCP yang dinilai IPBES (2019), <strong>14 menunjukkan penurunan global</strong> — degradasi jasa ekosistem bersifat sistemik. Sebagai ilustrasi skala ekonomi, Costanza et al. (1997, <em>Nature</em>) mengestimasi nilai 17 jasa ekosistem dari 16 bioma sebesar rata-rata US$33 triliun/tahun — melampaui PDB global saat itu (estimasi minimum; ketidakpastian besar). Kritik Wallace (2007) mengingatkan tipologi MEA mencampur <em>proses</em> dan <em>jasa</em> — tabel MEA adalah satu posisi dalam debat yang masih hidup, bukan titik akhir.</p>
+
+          <h3>1.2.3 · Sumbu kelembagaan: siapa dapat dikecualikan?</h3>
+          <p class="tbl-title">Tabel 1.2 — Matriks ekskludabilitas × rivalitas</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Matriks jenis barang berdasarkan ekskludabilitas dan rivalitas">
+            <thead><tr><th scope="col"></th><th scope="col">Rival</th><th scope="col">Tidak rival</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Dapat dieksklusi</strong></td><td>Barang privat — lahan berhak milik, mineral berizin</td><td>Barang klub — jaringan air PDAM berlangganan</td></tr>
+              <tr><td><strong>Sulit dieksklusi</strong></td><td><strong>Sumber daya milik bersama (<span class="term" data-gloss="cpr">common-pool</span>)</strong> — perikanan, air tanah, DAS</td><td>Barang publik — iklim stabil, kualitas udara regional</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p><span class="term" data-gloss="hardin">Hardin (1968)</span> memformulasikan dilema CPR sebagai tragedi milik bersama; <span class="term" data-gloss="ostrom">Ostrom (1990)</span> membantah keniscayaannya dengan bukti empiris lintas negara. Relevansi langsung Indonesia: <strong>air tanah perkotaan adalah CPR</strong> — rival dan sulit dieksklusi — persis konfigurasi yang paling rawan overekstraksi dan paling menuntut kelembagaan kolektif, bukan sekadar larangan administratif.</p>
+
+          <h3>1.2.4 · Sintesis klasifikasi untuk perencanaan</h3>
+          <p class="tbl-title">Tabel 1.3 — Klasifikasi sumber daya dan contoh relevansinya bagi PWK di Indonesia</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Klasifikasi sumber daya dengan contoh Indonesia">
+            <thead><tr><th scope="col">Kategori</th><th scope="col">Sub-kategori</th><th scope="col">Contoh Indonesia</th><th scope="col">Isu perencanaan khas</th></tr></thead>
+            <tbody>
+              <tr><td>Tidak terbarukan — stok</td><td>Dapat didaur ulang</td><td>Bijih nikel (Sulawesi, Malut), tembaga (Papua)</td><td>Umur tambang vs umur rencana tata ruang; reklamasi; warisan pascatambang</td></tr>
+              <tr><td>Tidak terbarukan — stok</td><td>Terdegradasi saat dipakai</td><td>Batu bara (Kalimantan, Sumatra), migas</td><td>Transisi energi; daerah tertinggal pasca-ekstraksi</td></tr>
+              <tr><td>Terbarukan — aliran</td><td>—</td><td>Surya, angin (NTT), panas bumi (busur vulkanik)</td><td>Kesesuaian tapak EBT vs kawasan lindung; transmisi lintas wilayah</td></tr>
+              <tr><td>Terbarukan — stok biologis</td><td>Dengan zona kritis</td><td>Perikanan (WPP), hutan, air tanah (cekungan Jakarta–Bandung–Semarang), tanah LP2B</td><td>Ambang pemanfaatan; kuota; zona bebas sumur</td></tr>
+              <tr><td>Jasa ekosistem</td><td>Penyediaan</td><td>Air baku DAS, pangan, kayu</td><td>Keterkaitan hulu–hilir; PES antarwilayah</td></tr>
+              <tr><td>Jasa ekosistem</td><td>Regulasi &amp; pemeliharaan</td><td>Mangrove, hutan hulu, RTH kota</td><td>Infrastruktur hijau-biru; mitigasi bencana berbasis ekosistem</td></tr>
+              <tr><td>Jasa ekosistem</td><td>Budaya</td><td>Wisata alam, nilai sakral bentang alam</td><td>Identitas wilayah; ekonomi wisata vs konservasi</td></tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEPPER: LIMA MEKANISME KELANGKAAN BUATAN -->
+    <section class="sec sec-deep" id="mekanisme" aria-labelledby="mekanisme-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Panduan bertahap</p>
+          <h2 class="h2" id="mekanisme-title">Lima mekanisme kelangkaan buatan</h2>
+          <p class="sec-desc">Kelangkaan buatan jarang bekerja sendiri — kelima mekanisme ini dapat beroperasi bersamaan. Telaah satu per satu, lengkap dengan contoh Aral dan Indonesia.</p>
+        </div>
+        <div class="stepper card" role="region" aria-label="Langkah mekanisme kelangkaan buatan" aria-live="polite" id="stepper-box">
+          <div class="stepper-pos" id="stepper-pos">Langkah 1 dari 5</div>
+          <div class="stepper-stage" id="stepper-stage"></div>
+          <div class="stepper-nav">
+            <button type="button" class="btn btn-ghost" id="step-prev"><span class="icon" data-lucide="chevron-left"></span> Sebelumnya</button>
+            <div class="stepper-dots" id="stepper-dots" aria-hidden="true"></div>
+            <button type="button" class="btn btn-primary" id="step-next">Berikutnya <span class="icon" data-lucide="chevron-right"></span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1.3 KELANGKAAN -->
+    <section class="sec" id="sub-13" aria-labelledby="s13-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">1.3 · Kelangkaan &amp; keterbatasan</p>
+          <h2 class="h2" id="s13-title">Karakteristik, kelangkaan, dan keterbatasan sumber daya</h2>
+          <p class="sec-desc">Kelangkaan bukan kondisi fisik semata — ia hubungan antara ketersediaan, tuntutan, dan keputusan. Empat dimensi yang harus dibedakan tegas.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>1.3.1 · Empat dimensi kelangkaan</h3>
+          <ol>
+            <li><strong>Kelangkaan absolut (fisik)</strong> — jumlah total terbatas; berlaku pasti untuk stok geologis.</li>
+            <li><strong>Kelangkaan relatif-ekonomis</strong> — sumber ada, tetapi biaya akses/ekstraksi naik: air tersedia di Kalimantan, tetapi tidak di tempat dan waktu yang dibutuhkan warga Jakarta.</li>
+            <li><strong>Kelangkaan struktural-institusional</strong> — fisiknya cukup, tata kelola gagal mengalirkannya.</li>
+            <li><strong><span class="term" data-gloss="kelangkaan-buatan">Kelangkaan buatan</span></strong> — keputusan manusia mengubah melimpah menjadi langka; arketipenya Laut Aral (studi kasus bab ini).</li>
+          </ol>
+          <p>Membedakan keempatnya adalah kompetensi inti perencana, karena <strong>intervensi yang tepat berbeda untuk tiap jenis</strong>: kelangkaan fisik menuntut substitusi/efisiensi; kelangkaan buatan menuntut diagnosis kelembagaan.</p>
+
+          <h3>1.3.2 · Ambang ekologis dan substitusi yang terbatas</h3>
+          <p>Keterbatasan bukan hanya soal "habis", tetapi soal <strong>ambang</strong> dan <strong>ketakterbalikan</strong>. Ekosistem dapat bergeser ke keadaan alternatif yang sulit dipulihkan — danau menjadi gurun garam; akuifer termampatkan. Dalam perdebatan keberlanjutan, ini membedakan <strong>keberlanjutan lemah</strong> (modal alam tergantikan modal buatan) dan <strong>keberlanjutan kuat</strong> (sebagian modal alam kritis dan tak tergantikan — Bab 4).</p>
+          <div class="callout callout-warn">
+            <span class="icon" data-lucide="triangle-alert"></span>
+            <p>Untuk sumber daya dengan ambang dan ketakterbalikan — akuifer tertekan, lahan pertanian subur, terumbu karang — keputusan tata ruang bersifat <strong>keputusan sekali jalan</strong>: konversi yang salah tidak dapat dibatalkan dengan biaya yang masuk akal. Inilah dasar normatif instrumen <span class="term" data-gloss="lp2b">LP2B</span> (UU No. 41/2009) dan kawasan lindung RTRW.</p>
+          </div>
+
+          <h3>1.3.3 · Mengukur kelangkaan: guna dan jebakan indikator tunggal</h3>
+          <p>Indikator yang paling banyak dikutip adalah <span class="term" data-gloss="falkenmark">indikator Falkenmark</span> untuk air. Namun Damkjaer &amp; Taylor (2017) menunjukkan dasar empiris ambangnya lemah, dan indikator per kapita mengabaikan variasi musiman, kualitas, dan akses.</p>
+          <p><strong>Ilustrasi Indonesia:</strong> Kementerian PU (2012) menyatakan potensi air Pulau Jawa hanya ±4,5% potensi nasional, dengan ketersediaan ±1.500 m³/kapita/tahun — di bawah ambang <em>water stress</em> — sementara Sensus 2020 (BPS) mencatat 56,10% penduduk (151,59 juta jiwa) tinggal di Jawa yang luasnya hanya ±7% wilayah nasional. Mismatch antara lokasi pasokan dan lokasi permintaan inilah yang dibedah lebih lanjut di subbab 1.4.</p>
+
+          <h3>1.3.4 · Implikasi bagi perencanaan</h3>
+          <ul>
+            <li>Kelangkaan adalah <strong>sinyal perencanaan</strong>: menunjukkan di mana alokasi ruang dan investasi harus berubah — bukan hanya di mana harga naik.</li>
+            <li>Kelangkaan buatan menuntut <strong>diagnosis kelembagaan</strong>: pertanyaannya bukan "berapa sisa sumber daya" melainkan "aturan dan keputusan apa yang membuatnya langka".</li>
+            <li>Indikator kelangkaan dalam KLHS wajib disertai <strong>metadata dan uji sensitivitas</strong> — sejalan dengan prinsip triangulasi Bab 3.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1.4 DISTRIBUSI SPASIAL -->
+    <section class="sec" id="sub-14" aria-labelledby="s14-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">1.4 · Distribusi spasial</p>
+          <h2 class="h2" id="s14-title">Distribusi spasial sumber daya dan implikasinya bagi perencanaan</h2>
+          <p class="sec-desc">Distribusi adalah variabel perencanaan, bukan sekadar peta latar — mismatch pasokan–permintaan dan ketimpangan beban adalah pola sistemik urbanisasi.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>1.4.1 · Ketimpangan alami: endowment tidak merata</h3>
+          <p>Sumber daya terdistribusi sangat tidak merata karena proses geologis, klimatik, dan biogeografis. Di Indonesia: potensi air terkonsentrasi di luar Jawa sementara permintaan di Jawa; batu bara dan mineral di Sumatra, Kalimantan, Sulawesi, Papua sementara pusat konsumsi energi di Jawa; panas bumi mengikuti busur vulkanik.</p>
+          <p>Ketimpangan alami melahirkan <strong>arus sumber daya antarwilayah</strong>: air virtual dalam pangan yang dikirim ke kota, energi dalam interkoneksi, ikan dari WPP ke pasar urban. Kota modern hidup dari <span class="term" data-gloss="telecoupling">metabolisme</span> yang menarik sumber daya dari hinterland jauh — bukan dari sumber daya dalam batas administratifnya.</p>
+          <p>Bukti empiris mismatch pasokan–permintaan hampir universal: kawasan metropolitan Madrid makin bergantung daerah pinggiran seiring sprawl (González-García et al., 2020); kota besar mengimpor jasa ekosistem dari basin di luar batasnya sehingga solusinya menuntut kerja sama antar-yurisdiksi (Vargas et al., 2022).</p>
+
+          <h3>1.4.2 · Ketimpangan buatan: pemisahan spasial manfaat dan beban</h3>
+          <p>Yang lebih strategis bagi PWK adalah ketimpangan yang <strong>diproduksi oleh keputusan</strong>: manfaat dinikmati di satu tempat, beban degradasi ditanggung di tempat lain — inti persoalan <span class="term" data-gloss="keadilan-lingkungan">keadilan lingkungan</span>. Studi kasus Aral memberi anatomi paling jelas: manfaat irigasi menyebar ke seluruh ekonomi kapas Asia Tengah, beban menumpuk pada masyarakat delta Karakalpakstan.</p>
+          <p>Pada skala nasional, literatur <span class="term" data-gloss="resource-curse">kutukan sumber daya</span> (Auty, 1993; Sachs &amp; Warner, 2001) menemukan korelasi historis kelimpahan–pembangunan lambat, dengan hasil yang sangat bergantung kualitas kelembagaan. Dibaca spasial: daerah kaya ekstraktif tidak otomatis sejahtera bila nilai tambah mengalir keluar dan biaya lingkungan tertinggal di dalam. Bukti Indonesia yang tajam: di Jakarta, <em>mereka yang menyebabkan subsiden</em> (penyedapan air tanah industri/gedung) <em>bukan mereka yang paling menderita</em> (kampung pesisir utara) — Batubara et al. (2023).</p>
+
+          <h3>1.4.3 · Implikasi bagi struktur ruang, pola ruang, dan instrumen</h3>
+          <ul>
+            <li><strong>Struktur ruang</strong> menentukan arah arus sumber daya: penempatan jaringan air, energi, pangan adalah keputusan tentang wilayah mana yang mengekspor dan mengimpor.</li>
+            <li><strong>Pola ruang</strong> (lindung–budidaya) seyogianya memetakan jasa ekosistem dan zona kritis; kawasan lindung adalah pengakuan spasial atas sumber daya yang tidak tergantikan.</li>
+            <li><strong>KLHS</strong> menguji ketimpangan manfaat–beban antaralternatif kebijakan sebelum ditetapkan (PP No. 22/2021); analisis keadilan lingkungan dapat menjadi kriteria evaluasi (Bab 8).</li>
+            <li><strong>Sumber daya lintas batas administrasi</strong> (DAS, cekungan air tanah, WPP) menuntut tata kelola multi-level — tidak ada satu pemda pun yang yurisdiksinya mencakup satu DAS utuh.</li>
+            <li><strong>Ketidakpastian data</strong> distribusi sumber daya harus dinyatakan eksplisit dalam dokumen rencana, bukan disembunyikan di balik angka tunggal (Bab 3).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDI KASUS: LAUT ARAL -->
+    <section class="sec sec-deep" id="studi-kasus" aria-labelledby="sk-title">
+      <div class="wrap">
+        <div class="case-plate">
+          <p class="eyebrow"><span class="case-pin" aria-hidden="true"></span>Studi Kasus · Degradasi Laut Aral</p>
+          <h2 class="h2" id="sk-title">Anatomi kelangkaan buatan</h2>
+          <p class="case-meta">44°N 60°E · Asia Tengah · Danau terminal · Skala dua generasi</p>
+          <p class="lead">Laut Aral — danau terbesar keempat dunia pada 1960 (±68.000 km²; salinitas ±10 g/L) — menyusut 74% luasnya dan kehilangan 90% volumenya dalam dua generasi. Penyebabnya bukan perubahan iklim, melainkan keputusan irigasi: pengalihan aliran Amu Darya dan Syr Darya untuk budi daya kapas "emas putih".</p>
+
+          <h3>Kronologi ringkas</h3>
+          <div class="timeline" id="timeline" role="list" aria-label="Kronologi degradasi dan pemulihan parsial Laut Aral"></div>
+
+          <h3>Analisis 1 — Membaca kasus dengan klasifikasi sumber daya</h3>
+          <ul>
+            <li><strong>Air danau</strong>: terbarukan-stok yang bergantung pada aliran sungai — terbarukan hanya sepanjang inflow dipertahankan. Pengalihan aliran mengubah sifat fungsionalnya menjadi tidak terbarukan dalam skala dasawarsa.</li>
+            <li><strong>Perikanan</strong>: stok biologis yang melewati <span class="term" data-gloss="zona-kritis">zona kritisnya</span> — dari >34.000 ton/tahun (1961) menjadi <3.000 ton/tahun (1980), lalu praktis berhenti.</li>
+            <li><strong>Jasa ekosistem yang hilang</strong> mencakup ketiga seksi CICES: penyediaan (ikan, air), regulasi &amp; pemeliharaan (moderasi iklim lokal, penahan debu), dan budaya (identitas masyarakat pesisir).</li>
+          </ul>
+
+          <h3>Analisis 2 — Mengapa ini kelangkaan buatan?</h3>
+          <p>Desikasi Aral "berutang secara dominan pada ekspansi irigasi yang menguras kedua sungai tributarinya" (Micklin, 2007). <a href="#mekanisme">Lima mekanisme</a> terlihat semua: <strong>overekstraksi</strong> inflow (irigasi menyerap 84% pengambilan air basin, 62% hilang lewat evaporasi-rembesan); <strong>degradasi kualitas</strong> (salinisasi danau dan tanah irigasi); <strong>pengalihan alokasi</strong> dari danau ke kapas; <strong>kegagalan kelembagaan cekungan</strong> (tidak ada otoritas lintas republik yang berfungsi); dan <strong>lock-in infrastruktur</strong> irigasi yang membuat koreksi mahal secara politik. Stok fisik air regional tidak "habis" — ia dialihkan oleh keputusan, dan biayanya ditumpuk pada satu titik spasial.</p>
+
+          <h3>Analisis 3 — Ketimpangan distribusi spasial manfaat dan beban</h3>
+          <ul>
+            <li><strong>Penerima manfaat</strong>: ekonomi irigasi kapas di hulu–tengah DAS (Uzbekistan, Turkmenistan) dan anggaran negara Soviet — manfaatnya menyebar dan segera.</li>
+            <li><strong>Penanggung beban</strong>: masyarakat delta dan pesisir — terutama Karakalpakstan dan Kyzylorda: hilangnya mata pencaharian perikanan, krisis air minum, badai debu-garam berpestisida (garam toksik tercatat hingga 1.000 km jauhnya), dan beban kesehatan multifaktor. Beban menumpuk, tertunda, dan menimpa kelompok dengan daya politik terkecil — pola khas ketidakadilan lingkungan.</li>
+            <li><strong>Asimetri pemulihan</strong>: Bendung Kokaral (2005, Bank Dunia) memulihkan Aral <strong>Utara</strong> — volume +68% (2008), salinitas turun separuh, produksi ikan naik >3× — sementara Aral <strong>Selatan</strong> sebagian besar tetap kering. Pemulihan parsial pun bergeografi pemenang dan tertinggal.</li>
+          </ul>
+
+          <h3>Pelajaran untuk perencana Indonesia</h3>
+          <ol>
+            <li><strong>Skala analisis mengikuti sistem sumber daya</strong> (cekungan/DAS), bukan batas administrasi — kegagalan melembagakan pengelolaan lintas yurisdiksi adalah akar bencana.</li>
+            <li><strong>Penilaian ex-ante (padanan KLHS)</strong> atas kebijakan pengalihan sumber daya harus menguji neraca air jangka panjang, bukan hanya manfaat jangka pendek.</li>
+            <li><strong>Ambang dan ketakterbalikan harus eksplisit</strong>: begitu danau terminal melewati ambang salinitas-volume, opsi kebijakan menyempit drastis.</li>
+            <li><strong>Analisis distribusi manfaat–beban adalah kewajiban analitis</strong>, bukan pelengkap: peta siapa-di mana-menerima-apa adalah bagian dari diagnosis.</li>
+          </ol>
+          <p class="note">Sumber utama: Micklin (1988, Science; 2007, Annu. Rev. Earth Planet. Sci.); Small et al. (2003); Bank Dunia (2014); ulasan kesehatan Water (2021) dan Ambio (2026). Perbandingan metode data hidrologis observasional vs estimasi model restorasi menggambarkan pentingnya triangulasi sumber (Bab 3).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PADANAN INDONESIA -->
+    <section class="sec" id="padanan" aria-labelledby="padanan-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">Padanan Indonesia</p>
+          <h2 class="h2" id="padanan-title">Kelangkaan buatan di halaman sendiri</h2>
+          <p class="sec-desc">Pola Aral — keputusan menciptakan kelangkaan di tengah kelimpahan — berulang dalam slow-motion di Indonesia.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>Danau Limboto (Gorontalo) — degradasi kualitas/pendangkalan</h3>
+          <p>Danau tektonik yang menyusut akibat sedimentasi masif dari degradasi DAS hulu: dari ±7.000 ha (1932; kedalaman rata-rata ±30 m) menjadi ±3.000 ha dengan kedalaman ±2,5 m pada 1990–2004 — penyusutan ±62,6% dalam 52 tahun. Mekanismenya berbeda dari Aral (pendangkalan, bukan pengalihan aliran), tetapi polanya sama: <strong>keputusan penggunaan lahan di hulu menghapus sumber daya danau di hilir</strong>.</p>
+          <h3>Air tanah Jakarta–Semarang — tragedi milik bersama yang sesungguhnya</h3>
+          <p>Overekstraksi air tanah perkotaan memicu penurunan muka tanah: di Jakarta Pusat terukur 2–15 cm/tahun (2010–2022); analisis PS-InSAR menunjukkan laju rata-rata ±−5,71 cm/tahun, dominan di Jakarta Utara dan Barat (Handika et al., 2024). InSAR memetakan subsiden hingga 22 cm/tahun di sembilan kota Indonesia, terkorelasi dengan ekstraksi air tanah industri-agrikultur (Chaussard et al., 2013). Sumber daya "terbarukan" berubah fungsional menjadi tidak terbarukan — <span class="term" data-gloss="cpr">akuifer termampatkan, intrusi air laut</span> — oleh keputusan kolektif yang tak terkoordinasi.</p>
+          <h3>Semarang: kelangkaan di tengah kelimpahan</h3>
+          <p>Curah hujan >2.000 mm/tahun, tetapi Sungai Semarang tercemar sehingga tak layak — kota bergantung air tanah → subsiden >8 cm/tahun → inundasi pesisir; >1 juta penduduk berisiko terendam 2050 (Gell et al., 2025). Identik dengan Aral dalam satu hal: keputusan (membiarkan pencemaran + mendorong ekstraksi) menciptakan kelangkaan di tengah kelimpahan hidrologis.</p>
+          <div class="callout callout-ok">
+            <span class="icon" data-lucide="scale"></span>
+            <p><strong>Catatan skala dan reversibilitas:</strong> Aral adalah deplesi permukaan raksasa dalam basin endoreik kering (praktis irreversibel); kasus Jawa adalah deplesi akuifer alluvial yang masih sebagian dapat dipulihkan bila ekstraksi dihentikan — model manajemen air tanah Semarang menunjukkan muka air bisa pulih (Lo et al., 2021).</p>
+          </div>
+          <p class="note">Literatur jurnal internasional untuk padanan Indonesia masih terbatas; sebagian rujukan jurnal nasional — perlakukan sebagai bukti lokal ilustratif, bukan generalisasi nasional.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RANGKUMAN -->
+    <section class="sec" id="rangkuman" aria-labelledby="rangkuman-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Rangkuman</p>
+        <h2 class="h2" id="rangkuman-title">Pokok pembelajaran</h2>
+        <ul class="objective-list" id="rangkuman-list">
+          <li>Sumber daya bersifat <strong>fungsional dan dinamis</strong> ("resources are not, they become" — Zimmermann, 1933): teknologi, kelembagaan, dan keputusan perencanaan ikut menentukan apa yang menjadi sumber daya.</li>
+          <li>Definisi legal Indonesia (UU No. 32/2009) membingkai SDA sebagai <strong>kesatuan ekosistem</strong>; daya dukung dan daya tampung menjadi muatan wajib KLHS (PP No. 22/2021).</li>
+          <li>Klasifikasi terbarukan–tidak terbarukan adalah <strong>continuum dengan zona kritis</strong>; jasa ekosistem diklasifikasikan MEA, TEEB, CICES, dan NCP IPBES — 14 dari 18 kategori NCP menurun global.</li>
+          <li>Kelangkaan dapat bersifat <strong>absolut, ekonomis, struktural-institusional, atau buatan</strong>; kelangkaan buatan bekerja melalui lima mekanisme.</li>
+          <li>Distribusi spasial — alami maupun buatan — <strong>memisahkan penerima manfaat dan penanggung beban</strong>; inilah inti keadilan lingkungan dan alasan analisis sumber daya adalah analisis tata ruang.</li>
+          <li>Laut Aral merangkum seluruh bab: klasifikasi yang salah baca, kelangkaan yang direkayasa keputusan, dan geometri timpang manfaat-hulu/beban-hilir.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="sec sec-deep" id="quiz" aria-labelledby="quiz-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Checkpoint</p>
+          <h2 class="h2" id="quiz-title">Uji pemahaman</h2>
+          <p class="sec-desc">Lima soal pilihan ganda dari materi di atas. Jawab, periksa hasil secara langsung, dan peroleh skor beserta umpan balik.</p>
+        </div>
+        <div class="quiz card" id="quiz-box">
+          <div id="quiz-root"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DISKUSI -->
+    <section class="sec" id="diskusi" aria-labelledby="diskusi-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Diskusi</p>
+          <h2 class="h2" id="diskusi-title">Pertanyaan diskusi</h2>
+          <p class="sec-desc">Soal terbuka untuk dibedah bersama. Klik kartu untuk membuka petunjuk arah pembahasannya.</p>
+        </div>
+        <div class="acc" id="diskusi-list"></div>
+      </div>
+    </section>
+
+    <!-- LATIHAN -->
+    <section class="sec sec-deep" id="latihan" aria-labelledby="latihan-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Latihan</p>
+          <h2 class="h2" id="latihan-title">Latihan mandiri</h2>
+          <p class="sec-desc">Tugas penerapan. Tandai saat selesai — progres tersimpan otomatis di perangkat ini.</p>
+        </div>
+        <div class="lat-progress" role="status" aria-live="polite">
+          <div class="lat-bar"><div class="lat-bar-fill" id="lat-fill"></div></div>
+          <span class="lat-count" id="lat-count">0 / 3 selesai</span>
+        </div>
+        <ol class="lat-list" id="latihan-list"></ol>
+      </div>
+    </section>
+
+    <!-- PUSTAKA -->
+    <section class="sec" id="pustaka" aria-labelledby="pustaka-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Referensi</p>
+        <h2 class="h2" id="pustaka-title">Daftar pustaka</h2>
+        <div id="pustaka-list"></div>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-dialog" role="document">
+        <button type="button" class="modal-close" data-close-modal aria-label="Tutup dialog"><span class="icon" data-lucide="x"></span></button>
+        <p class="eyebrow" id="modal-eyebrow"></p>
+        <h3 class="h3" id="modal-title"></h3>
+        <div class="modal-body" id="modal-body"></div>
+      </div>
+    </div>
+
+    <span id="tooltip" class="tooltip" role="tooltip" hidden></span>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot-inner">
+      <p class="foot-copy">© <span data-current-year></span> <a href="https://khair.am" target="_blank" rel="noopener noreferrer">Hafizhul Khair</a></p>
+      <p class="foot-modified">Terakhir diperbarui: <time data-last-modified datetime="2026-08-25"></time></p>
+    </div>
+  </footer>
+
+  <button type="button" id="to-top" class="to-top" aria-label="Kembali ke atas" hidden><span class="icon" data-lucide="arrow-up"></span></button>
+
+  <!-- Library via CDN, versi ter-pin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lucide@0.462.0/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+
+  <!-- Konten (paling awal) lalu logika -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/stepper.js"></script>
+  <script src="assets/js/quiz.js"></script>
+  <script src="assets/js/extras.js"></script>
+  <script src="assets/js/footer.js"></script>
+</body>
+</html>
