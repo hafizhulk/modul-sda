@@ -236,16 +236,57 @@
       ].join("\n"),
       "mm-cld": [
         "flowchart TD",
-        'A["Permintaan perumahan & komersial"] -->|+| B["Harga lahan peri-urban"]',
-        'B -->|+| C["Konversi sawah → terbangun"]',
-        'C -->|+| D["Pasokan lahan terbangun"]',
-        'D -->|-| A',
-        'C -->|+| E["Kehilangan fungsi tata air sawah"]',
-        'E -->|+| F["Risiko & kerugian banjir"]',
-        'F -->|+| G["Biaya proteksi & tekanan regulasi"]',
-        'G -->|-| A',
+        'A["Permintaan perumahan & komersial"] -->|＋| B["Harga lahan peri-urban"]',
+        'B -->|＋| C["Konversi sawah → terbangun"]',
+        'C -->|＋| D["Pasokan lahan terbangun"]',
+        'D -->|−| A',
+        'C -->|＋| E["Kehilangan fungsi tata air sawah"]',
+        'E -->|＋| F["Risiko & kerugian banjir"]',
+        'F -->|＋| G["Biaya proteksi & tekanan regulasi"]',
+        'G -->|−| A',
         "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
         'class C,E leak'
+      ].join("\n"),
+      "mm-dpsir": [
+        "flowchart LR",
+        'D["D · Driving forces"] --> P["P · Pressures"]',
+        'P --> S["S · State"]',
+        'S --> I["I · Impact"]',
+        'I --> R["R · Response"]',
+        'R -. umpan balik .-> D',
+        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
+        'class I leak'
+      ].join("\n"),
+      "mm-triangulasi": [
+        "flowchart TD",
+        'M["Baca metadata kedua sumber"] --> B["Identifikasi perbedaan definisi / metode / cakupan"]',
+        'B --> C{"Apakah selisih dapat dijelaskan?"}',
+        'C -->|Ya| D["Laporkan rentang + konteks; bandingkan yang sepadan"]',
+        'C -->|Tidak| E["Susun estimasi ketiga independen; verifikasi lapangan"]',
+        'D --> F["Rekomendasi tangguh pada seluruh rentang bukti"]',
+        'E --> F',
+        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
+        'class C leak'
+      ].join("\n"),
+      "mm-aliran": [
+        "flowchart LR",
+        'POT["Potensi<br/>kapasitas menyediakan"] --> ALIR["Aliran<br/>jasa yang terpakai"]',
+        'ALIR --> PERM["Permintaan<br/>kebutuhan masyarakat"]',
+        'PERM -. mismatch spasial .-> POT',
+        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
+        'class ALIR leak'
+      ].join("\n"),
+      "mm-pes": [
+        "flowchart TD",
+        'S1["Pajak BBM 3,5%"] --> F["FONAFIFO<br/>dana perwalian"]',
+        'S2["Tarif air Canon del Agua 25%"] --> F',
+        'S3["Hibah & kontrak hidroelektrik"] --> F',
+        'F --> L["Pemilik lahan<br/>kontrak konservasi/reboisasi"]',
+        'L --> J["4 jasa hutan<br/>biodiversitas, DAS, scenic, karbon"]',
+        'J --> B1["Pengguna air & pariwisata"]',
+        'J --> B2["Masyarakat global (karbon)"]',
+        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
+        'class F leak'
       ].join("\n")
     };
   }

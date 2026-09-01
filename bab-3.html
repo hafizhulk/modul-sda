@@ -3,51 +3,525 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Modul SDL — II-03 Arsitektur Data Spasial dan Nonspasial. Segera tersedia." />
-  <title>SDL · II-03 — Segera</title>
+  <meta name="description" content="Modul SDL Bab 3 — Arsitektur Data Spasial dan Nonspasial: jenis dan sumber data, indikator dan skala, metadata, validitas dan triangulasi, keterbatasan bukti, dan studi kasus dua angka deforestasi." />
+  <title>SDL · II-03 Arsitektur Data Spasial dan Nonspasial</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body class="landing-page">
+<body class="with-rail">
   <div id="progress-track" role="presentation" aria-hidden="true"><div id="progress-bar"></div></div>
 
   <header class="site-header" id="site-header">
     <div class="wrap header-inner">
+      <button type="button" class="rail-toggle" id="rail-toggle" aria-expanded="false" aria-controls="rail" aria-label="Buka daftar isi">
+        <span class="icon" data-lucide="list"></span>
+      </button>
       <a class="brand" href="index.html" aria-label="Beranda modul SDL">
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-text">Sumber Daya &amp; <strong>Lingkungan</strong></span>
       </a>
+      <div class="chapter-nav" id="chapter-nav">
+        <button type="button" class="chapter-btn" id="chapter-btn" aria-haspopup="menu" aria-expanded="false" aria-label="Pilih bab">
+          <span class="sheet-code">II-03</span>
+          <span class="chapter-btn-label" id="chapter-btn-label">Bab 3</span>
+          <span class="icon chev" data-lucide="chevron-down"></span>
+        </button>
+        <div class="chapter-menu" id="chapter-menu" role="menu" hidden></div>
+      </div>
       <button type="button" id="theme-toggle" class="icon-btn" aria-label="Alihkan tema terang/gelap" aria-pressed="false">
         <span class="icon" data-lucide="sun"></span>
       </button>
     </div>
   </header>
 
-  <main id="top" class="landing-main">
-    <section class="grid-paper hero">
+  <aside class="rail" id="rail" aria-label="Daftar isi bab">
+    <p class="rail-title">II-03 · Legenda</p>
+    <p class="rail-label">Materi</p>
+    <a class="rail-item" href="#pendahuluan"><span class="rail-code">PD</span> Pendahuluan</a>
+    <a class="rail-item" href="#objectives"><span class="rail-code">00</span> Tujuan pembelajaran</a>
+    <a class="rail-item" href="#sub-31"><span class="rail-code">01</span> Jenis &amp; sumber data</a>
+    <a class="rail-item" href="#sub-32"><span class="rail-code">02</span> Indikator &amp; skala</a>
+    <a class="rail-item" href="#dpsir"><span class="rail-code">PR</span> Rantai DPSIR</a>
+    <a class="rail-item" href="#sub-33"><span class="rail-code">03</span> Metadata &amp; dokumentasi</a>
+    <a class="rail-item" href="#sub-34"><span class="rail-code">04</span> Validitas &amp; triangulasi</a>
+    <a class="rail-item" href="#sub-35"><span class="rail-code">05</span> Keterbatasan bukti</a>
+    <a class="rail-item" href="#studi-kasus"><span class="rail-code">SC</span> Studi kasus · deforestasi</a>
+    <p class="rail-label">Penutup</p>
+    <a class="rail-item" href="#rangkuman"><span class="rail-code">RK</span> Rangkuman</a>
+    <a class="rail-item" href="#quiz"><span class="rail-code">QZ</span> Kuis</a>
+    <a class="rail-item" href="#diskusi"><span class="rail-code">DS</span> Diskusi</a>
+    <a class="rail-item" href="#latihan"><span class="rail-code">LT</span> Latihan</a>
+    <a class="rail-item" href="#pustaka"><span class="rail-code">PB</span> Pustaka</a>
+  </aside>
+  <div class="rail-backdrop" aria-hidden="true"></div>
+
+  <main id="top" class="content">
+
+    <section class="grid-paper hero" id="hero" aria-labelledby="hero-title">
       <div class="wrap hero-copy">
-        <p class="eyebrow">Bagian II · Modul Ajar S2 PWK</p>
-        <h1><span class="sheet-code">II-03</span> Arsitektur Data Spasial dan Nonspasial</h1>
-        <p class="lead">Bab ini sedang disiapkan dan akan segera tersedia.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="index.html"><span class="icon" data-lucide="arrow-left"></span> Kembali ke daftar bab</a>
-          <a class="btn btn-ghost" href="bab-1.html"><span class="icon" data-lucide="book-open"></span> Buka Bab 1</a>
+        <p class="eyebrow">Bagian II · Data &amp; Diagnosis Lingkungan · Modul Ajar S2 PWK</p>
+        <h1 id="hero-title">Arsitektur Data Spasial dan Nonspasial<span class="tone">: indikator, metadata, dan triangulasi bukti</span></h1>
+      </div>
+      <div class="wrap stat-strip" aria-label="Angka kunci bab">
+        <div class="stat"><span class="stat-num">104 rb</span><span class="stat-lbl">deforestasi netto 2021–2022 — angka resmi terendah (KLHK)</span></div>
+        <div class="stat"><span class="stat-num">6,25 vs 0,09 ha</span><span class="stat-lbl">MMU resmi vs piksel GFW — sumber selisih spasial</span></div>
+        <div class="stat"><span class="stat-num">Juli–Juni ≠ Kalender</span><span class="stat-lbl">periode KLHK vs GFW — selisih temporal</span></div>
+      </div>
+    </section>
+
+    <!-- PENDAHULUAN -->
+    <section class="sec" id="pendahuluan" aria-labelledby="pd-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Pendahuluan</p>
+        <h2 class="h2" id="pd-title">Diagnosis yang baik berdiri di atas arsitektur data yang disadari</h2>
+        <div class="prose">
+          <p>Diagnosis lingkungan yang baik berdiri di atas arsitektur data yang disadari secara sadar (<em>deliberate</em>): data apa yang dipakai, dari sumber mana, pada skala apa, dengan definisi dan mutu bagaimana, dan dengan ketidakpastian seberapa besar. Bab ini membangun kompetensi tersebut dalam lima subbab — jenis dan sumber data (3.1), indikator dan skala (3.2), metadata (3.3), validitas dan triangulasi (3.4), serta keterbatasan bukti dalam keputusan perencanaan (3.5) — dan ditutup dengan studi kasus perbedaan angka deforestasi resmi dan penginderaan jauh.</p>
+          <p>Kompetensi bab ini menjadi fondasi Tugas 1 (diagnosis lingkungan terintegrasi, dikumpulkan setelah Bab 6). Kaidah pembacaan: kotak berlabel <strong>[Fakta]</strong> berisi temuan empiris; <strong>[Regulasi]</strong> berisi ketentuan normatif; <strong>[Desain]</strong> berisi asumsi atau pilihan metodologis; <strong>[Analisis]</strong> berisi interpretasi penulis untuk didiskusikan.</p>
         </div>
       </div>
     </section>
+
+    <!-- TUJUAN -->
+    <section class="sec" id="objectives" aria-labelledby="obj-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Tujuan pembelajaran</p>
+        <h2 class="h2" id="obj-title">Setelah mempelajari bab ini, mahasiswa mampu…</h2>
+        <ul class="objective-list" id="objectives-list"></ul>
+      </div>
+    </section>
+
+    <!-- KATA KUNCI -->
+    <section class="sec sec-kw" id="kata-kunci" aria-labelledby="kw-title">
+      <div class="wrap">
+        <p class="eyebrow center-eyebrow">Kata kunci</p>
+        <h2 class="h2 sr-only" id="kw-title">Kata kunci bab ini</h2>
+        <div class="kw-cloud" id="kw-cloud" aria-label="Daftar kata kunci"></div>
+      </div>
+    </section>
+
+    <!-- 3.1 JENIS & SUMBER DATA -->
+    <section class="sec" id="sub-31" aria-labelledby="s31-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">3.1 · Jenis &amp; sumber data</p>
+          <h2 class="h2" id="s31-title">Jenis dan sumber data spasial dan nonspasial</h2>
+          <p class="sec-desc">Dua keluarga data, jembatan di antaranya, dan hirarki sumber resmi Indonesia.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>3.1.1 · Dua keluarga data dan jembatan di antaranya</h3>
+          <p><span class="term" data-gloss="data-spasial">Data spasial</span> memiliki referensi geografis — posisi dalam sistem koordinat — sehingga dapat dipetakan dan dianalisis secara keruangan. <span class="term" data-gloss="data-nonspasial">Data nonspasial</span> adalah atribut tabular, dokumen, atau deret waktu yang tidak memiliki geometri, tetapi hampir selalu dapat dikaitkan ke unit spasial melalui kode wilayah atau titik sampling. Keterkaitan inilah yang membuat keduanya satu arsitektur: statistik kemiskinan BPS (nonspasial) menjadi peta kantong miskin (spasial) setelah digabungkan dengan batas administrasi.</p>
+
+          <p class="tbl-title">Tabel 3.1 — Jenis data yang relevan untuk PWK</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Jenis data spasial dan nonspasial">
+            <thead><tr><th scope="col">Jenis</th><th scope="col">Contoh</th><th scope="col">Kekuatan</th><th scope="col">Keterbatasan tipikal</th></tr></thead>
+            <tbody>
+              <tr><td>Vektor — titik</td><td>Sumur pantau, stasiun kualitas air</td><td>Presisi lokasi; siap diuji lapangan</td><td>Representativitas spasial terbatas</td></tr>
+              <tr><td>Vektor — garis</td><td>Jalan, sungai, pipa</td><td>Analisis jaringan &amp; keterjangkauan</td><td>Kelengkapan atribut tidak merata</td></tr>
+              <tr><td>Vektor — poligon</td><td>Batas administrasi, pola ruang RTRW</td><td>Kompatibel dengan kebijakan</td><td>Batas admin ≠ batas proses ekologis</td></tr>
+              <tr><td>Raster — citra</td><td>Landsat, Sentinel</td><td>Cakupan luas, seri waktu panjang</td><td>Awan, resolusi, bias klasifikasi</td></tr>
+              <tr><td>Raster — grid model</td><td>DEM, grid iklim BMKG</td><td>Kontinu secara spasial</td><td>Ketidakpastian model menempel pada piksel</td></tr>
+              <tr><td>Tabular/statistik</td><td>BPS SLHI, neraca air</td><td>Baku, berkala, dapat diaudit</td><td>Agregasi sembunyikan variasi lokal</td></tr>
+              <tr><td>Dokumen &amp; naratif</td><td>RTRW, KLHS, FGD</td><td>Konteks &amp; pengetahuan lokal</td><td>Tidak terstandar; perlu pengkodean</td></tr>
+              <tr><td>Deret waktu sensor</td><td>Logger muka air, PM2.5</td><td>Resolusi temporal tinggi</td><td>Cakupan titik sempit; kalibrasi</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <h3>3.1.2 · Data primer, sekunder, dan tersier</h3>
+          <ul>
+            <li><strong>Primer</strong> — survei lapangan, pemantauan kualitas air/udara untuk tujuan analisis sendiri. Mahal tetapi terkendali mutunya.</li>
+            <li><strong>Sekunder</strong> — produk lembaga formal: RBI dari <span class="term" data-gloss="data-spasial">BIG</span>, tutupan lahan KLHK, statistik BPS. Tulang punggung diagnosis perencanaan.</li>
+            <li><strong>Tersier/agregasi</strong> — dasbor Global Forest Watch, OpenStreetMap. Berguna untuk ilustrasi tren dan deteksi dini, tetapi <strong>bukan</strong> dasar klaim tanpa pembacaan metode — pelajaran studi kasus bab ini.</li>
+          </ul>
+
+          <h3>3.1.3 · Sumber data resmi Indonesia</h3>
+          <p class="tbl-title">Tabel 3.2 — Sumber data pokok untuk konteks Indonesia</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Sumber data resmi Indonesia">
+            <thead><tr><th scope="col">Instansi</th><th scope="col">Data pokok yang relevan</th></tr></thead>
+            <tbody>
+              <tr><td>BIG</td><td>Peta RBI, batas wilayah, IGD; Jaringan Informasi Geospasial Nasional; Ina-Geoportal</td></tr>
+              <tr><td>BPS</td><td>Statistik Lingkungan Hidup (SLHI), tabel deforestasi netto, statistik lahan/penduduk</td></tr>
+              <tr><td>Kemenhut / KLHK</td><td>Peta penutupan lahan 23 kelas, statistik deforestasi bruto/netto (NFMS), kondisi DAS, IKLH</td></tr>
+              <tr><td>ATR/BPN</td><td>Pola ruang RTRW/RDTR, data alih fungsi lahan</td></tr>
+              <tr><td>BMKG</td><td>Data iklim dan curah hujan (stasiun dan grid)</td></tr>
+              <tr><td>ESDM</td><td>Neraca energi, cadangan minerba dan migas, cekungan air tanah</td></tr>
+              <tr><td>Bappenas</td><td>RPJMN, KLHS RPJMN, data pembangunan daerah</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <div class="callout callout-ok">
+            <span class="icon" data-lucide="scale"></span>
+            <p><strong>Kerangka kelembagaan data geospasial &amp; statistik.</strong> UU 4/2011 (Informasi Geospasial) membedakan IGD (BIG) dan IGT (kementerian tematik) dan mewajibkan berbagi melalui simpul jaringan. Perpres 27/2014 (JIGN), Perpres 9/2016 jo. 23/2021 (Satu Peta 1:50.000), dan Perpres 39/2019 (Satu Data Indonesia) adalah jawaban kelembagaan atas persoalan klasik: banyak peta, banyak versi, satu wilayah.</p>
+          </div>
+
+          <h3>3.1.4 · Land cover vs land use &amp; sumber internasional</h3>
+          <p><span class="term" data-gloss="land-cover">SEEA Central Framework</span> membedakan <em>land cover</em> (tutupan fisik-biologis yang teramati) dan <em>land use</em> (fungsi/tujuan pemanfaatan) mengacu FAO LCCS. Perbedaan ini penting: banyak polemik deforestasi sesungguhnya berasal dari pencampuran definisi tutupan vs penggunaan lahan. Pembanding internasional (FAO FAOSTAT, Hansen et al. 2013 via Global Forest Watch) berguna untuk uji kewajaran angka nasional, tetapi definisi dan resolusinya sering tidak identik dengan kebutuhan regulasi nasional — inti studi kasus Bab 3.</p>
+          <p class="note">Implication: KLHS RTRW/RDTR menuntut penggabungan IGT (tutupan lahan, DAS, risiko) dengan data nonspasial (emisi, kualitas air) dalam satu matriks diagnosis. Perencana yang tidak mendokumentasikan asal-usul datanya mewariskan risiko: rekomendasi tidak dapat dilacak balik ke bukti (Bab 10).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3.2 INDIKATOR & SKALA -->
+    <section class="sec" id="sub-32" aria-labelledby="s32-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">3.2 · Indikator &amp; skala</p>
+          <h2 class="h2" id="s32-title">Indikator lingkungan dan skala analisis</h2>
+          <p class="sec-desc">Penyederhanaan yang disengaja, jebakan skala, dan MAUP.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>3.2.1 · Indikator sebagai penyederhanaan</h3>
+          <p>Indikator menyederhanakan fenomena kompleks menjadi sesuatu yang terukur, dapat dikomunikasikan, dan relevan bagi keputusan. Kriteria indikator yang baik: relevan terhadap pertanyaan kebijakan, sensitif terhadap perubahan, dapat diukur dengan sumber daya yang ada, tersedia berkala, dan mudah dipahami pengambil keputusan.</p>
+          <p>Dua kerangka dominan:</p>
+          <ul>
+            <li><strong>PSR — Pressure–State–Response</strong> (OECD, 1993): aktivitas manusia menekan lingkungan, mengubah kondisi, masyarakat merespons.</li>
+            <li><strong><span class="term" data-gloss="dpsir">DPSIR — Driving forces–Pressures–State–Impact–Response</span></strong> (EEA, 1999): turunan PSR yang memisahkan pendorong struktural dari tekanan langsung, dan dampak dari keadaan itu sendiri. Terus dikembangkan dengan dimensi temporal.</li>
+          </ul>
+
+          <p class="tbl-title">Tabel 3.3 — Contoh penerapan DPSIR</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Contoh DPSIR untuk dua isu">
+            <thead><tr><th scope="col">Komponen</th><th scope="col">Isu: banjir rob pesisir</th><th scope="col">Isu: alih fungsi lahan peri-urban</th></tr></thead>
+            <tbody>
+              <tr><td>Driving force</td><td>Pertumbuhan penduduk &amp; beban bangunan</td><td>Urbanisasi &amp; harga lahan</td></tr>
+              <tr><td>Pressure</td><td>Pengambilan air tanah berlebih</td><td>Konversi sawah ke terbangun</td></tr>
+              <tr><td>State</td><td>Penurunan muka tanah (cm/tahun)</td><td>Luas &amp; fragmentasi lahan pertanian</td></tr>
+              <tr><td>Impact</td><td>Luas genangan, kerugian ekonomi</td><td>Ketahanan pangan, fungsi resapan hilang</td></tr>
+              <tr><td>Response</td><td>Pembatasan air tanah, tanggul</td><td>LP2B, insentif, zonasi RDTR</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <h3>3.2.2 · Skala analisis: tiga dimensi</h3>
+          <ol>
+            <li><strong>Spasial</strong> — resolusi piksel (30 m Landsat), skala kartografis (1:50.000), dan <span class="term" data-gloss="mmu">minimum mapping unit</span>. Dua peta dengan MMU berbeda tidak dapat dibandingkan luasnya secara langsung.</li>
+            <li><strong>Temporal</strong> — tahun kalender vs Juli–Juni, data tunggal vs rerata 30 tahun, hujan vs kemarau.</li>
+            <li><strong>Tematik</strong> — 23 kelas penutupan lahan nasional vs legenda 6 kelas buatan menghasilkan statistik berbeda.</li>
+          </ol>
+
+          <h3>3.2.3 · MAUP dan kesesatan ekologis</h3>
+          <p><span class="term" data-gloss="maup">MAUP</span> (Openshaw, 1984): unit agregasi spasial arbitrer; statistik ringkasan bergantung bentuk dan ukuran unit. Dua efek: <strong>efek skala</strong> (korelasi menguat pada unit lebih besar) dan <strong>efek zonasi</strong> (hasil berubah ketika data dikelompokkan ulang pada skala sama). Kerabatnya: <span class="term" data-gloss="ecological-fallacy">kesesatan ekologis</span> — inferensi lintas level agregasi tidak sah — dan padanan temporalnya.</p>
+          <div class="callout callout-warn">
+            <span class="icon" data-lucide="triangle-alert"></span>
+            <p><strong>Praktik baik:</strong> laporkan pada level data diambil, jangan menurunkan klaim; analisis hidrologi pakai unit DAS/sub-DAS, kebijakan pada unit administratif — jembatani keduanya secara eksplisit; uji sensitivitas terhadap zonasi dan laporkan rentang hasilnya.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEPPER DPSIR -->
+    <section class="sec sec-deep" id="dpsir" aria-labelledby="dpsir-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Panduan bertahap</p>
+          <h2 class="h2" id="dpsir-title">Rantai DPSIR: dari pendorong ke respons</h2>
+          <p class="sec-desc">Bukan sekadar singkatan — DPSIR menghubungkan Urbanisasi (D), Ekspansi sawit (P), Luas hutan (S), Emisi karbon (I), hingga Moratorium (R) dalam satu rantai.</p>
+        </div>
+        <div class="stepper card" role="region" aria-label="Langkah rantai DPSIR" aria-live="polite" id="stepper-box">
+          <div class="stepper-pos" id="stepper-pos">Langkah 1 dari 5</div>
+          <div class="stepper-stage" id="stepper-stage"></div>
+          <div class="stepper-nav">
+            <button type="button" class="btn btn-ghost" id="step-prev"><span class="icon" data-lucide="chevron-left"></span> Sebelumnya</button>
+            <div class="stepper-dots" id="stepper-dots" aria-hidden="true"></div>
+            <button type="button" class="btn btn-primary" id="step-next">Berikutnya <span class="icon" data-lucide="chevron-right"></span></button>
+          </div>
+        </div>
+        <figure class="viz">
+          <div class="mermaid-box" id="mm-dpsir" role="img" aria-label="Diagram alir DPSIR"></div>
+          <figcaption><strong>Gbr. 3.1</strong> — DPSIR menyederhanakan fenomena kompleks menjadi rantai yang dapat diuji: laju deforestasi bukan angka lepas, melainkan simpul State di antara Pressure dan Impact.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 3.3 METADATA -->
+    <section class="sec" id="sub-33" aria-labelledby="s33-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">3.3 · Metadata &amp; dokumentasi</p>
+          <h2 class="h2" id="s33-title">Metadata dan dokumentasi data</h2>
+          <p class="sec-desc">Syarat sebuah data dapat diaudit — dan syarat sebuah analisis dapat direplikasi.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>3.3.1 · Elemen minimal metadata</h3>
+          <p><span class="term" data-gloss="metadata">Metadata</span> adalah "data tentang data" — tanpa metadata, angka terbaik sekalipun tidak dapat diaudit. Elemen minimal untuk diagnosis lingkungan:</p>
+          <p class="tbl-title">Tabel 3.4 — Elemen minimal metadata untuk diagnosis lingkungan</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Elemen metadata minimal">
+            <thead><tr><th scope="col">Kelompok</th><th scope="col">Elemen</th><th scope="col">Pertanyaan kunci</th></tr></thead>
+            <tbody>
+              <tr><td>Identifikasi</td><td>Judul, produsen, tanggal rilis, versi</td><td>Siapa memproduksi, kapan, versi ke berapa?</td></tr>
+              <tr><td>Ruang</td><td>Sistem koordinat, skala/resolusi, MMU, cakupan</td><td>Bisa digabung dengan data lain secara sah?</td></tr>
+              <tr><td>Waktu</td><td>Tahun/periode perekaman, frekuensi</td><td>Juli–Juni atau Januari–Desember?</td></tr>
+              <tr><td>Metode</td><td>Sensor, teknik klasifikasi, prosedur lapangan</td><td>Terukur di lapangan atau estimasi model/citra?</td></tr>
+              <tr><td>Konsep</td><td>Definisi kelas, ambang, legenda</td><td>"Hutan" versi siapa?</td></tr>
+              <tr><td>Mutu</td><td>Akurasi posisi/tematik, kelengkapan, lineage</td><td>Ada uji akurasi? Sampel referensi apa?</td></tr>
+              <tr><td>Akses</td><td>Lisensi, format, kontak, kendala</td><td>Boleh dipakai untuk apa?</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <h3>3.3.2 · Standar dan infrastruktur Indonesia</h3>
+          <p>Indonesia memberlakukan <span class="term" data-gloss="iso19115">standar metadata geospasial</span>: SNI 8843-1:2019, SNI ISO 19115-2:2020 (akuisisi &amp; pemrosesan), SNI ISO 19115-3:2021 (skema XML), dan SNI ISO 19157:2015 (kualitas). Metadata dipublikasikan melalui JIGN dan Ina-Geoportal (tanahair.indonesia.go.id) yang dikelola BIG. Untuk data statistik, Perpres 39/2019 (Satu Data Indonesia) menempatkan metadata sebagai pilar tata kelola. Di tingkat praktik, prinsip <span class="term" data-gloss="fair">FAIR — Findable, Accessible, Interoperable, Reusable</span> (Wilkinson et al., 2016) layak diadopsi untuk arsip tugas akhir: penamaan konsisten, kamus data, changelog, dan lineage.</p>
+
+          <h3>3.3.3 · Dokumentasi analisis, bukan hanya data</h3>
+          <p>Untuk Tugas 1, dokumentasikan minimal: daftar data + tautan &amp; tanggal unduh; setiap transformasi (reproyeksi, clip, reklasifikasi, agregasi) beserta parameternya; keputusan ketika sumber berbeda; dan keterbatasan yang diketahui. Inilah yang memungkinkan pemeriksaan keterlacakan bukti–rekomendasi di Bab 10.</p>
+          <div class="callout callout-ok">
+            <span class="icon" data-lucide="clipboard-check"></span>
+            <p><strong>Kotak — sepuluh pertanyaan sebelum memakai sebuah angka:</strong> (1) Apa yang diukur? (2) Definisi/ambang apa? (3) Siapa produsen &amp; mandatnya? (4) Tahun/periode? (5) Cakupan geografis? (6) Metode? (7) Skala/resolusi/MMU? (8) Bruto atau netto? (9) Ada uji akurasi &amp; interval kepercayaan? (10) Data lapangan atau estimasi model/citra? Jika ≥3 pertanyaan tak terjawab, <em>angka belum layak jadi dasar rekomendasi</em>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3.4 VALIDITAS, KETIDAKPASTIAN, TRIANGULASI -->
+    <section class="sec" id="sub-34" aria-labelledby="s34-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">3.4 · Validitas &amp; triangulasi</p>
+          <h2 class="h2" id="s34-title">Validitas, ketidakpastian, dan triangulasi data</h2>
+          <p class="sec-desc">Dari validitas konstruk hingga protokol ketika sumber saling berbeda.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>3.4.1 · Validitas: apakah kita mengukur yang kita maksud?</h3>
+          <p><span class="term" data-gloss="validitas-konstruk">Validitas konstruk</span> adalah pertanyaan paling mendasar: "kehilangan tutupan pohon" (<em>tree cover loss</em>) bukan "deforestasi"; "luas terbangun" bukan "urbanisasi". Ketidakcocokan konstruk tidak dapat diperbaiki dengan data lebih teliti — hanya dengan memilih indikator yang tepat. Studi kasus bab ini menunjukkan bagaimana satu kata ("deforestasi") menampung dua konstruk berbeda.</p>
+
+          <h3>3.4.2 · Akurasi dan protokol Olofsson</h3>
+          <p>Bedakan tiga akurasi: <strong>posisi</strong>, <strong>tematik</strong>, dan <strong>temporal</strong>. Akurasi tematik diuji dengan matriks galat terhadap sampel referensi (overall accuracy, user's/producer's accuracy).</p>
+          <p><span class="term" data-gloss="olofsson">Praktik baik Olofsson et al. (2014)</span> — kini rujukan standar: (i) desain sampling probabilistik; (ii) data referensi lebih akurat dari peta yang dinilai; (iii) matriks galat dalam proporsi luas; (iv) luas kelas perubahan diestimasi dari sampel referensi — bukan dihitung dari piksel; (v) ketidakpastian sebagai interval kepercayaan; dan (vi) galat referensi dievaluasi. Konsekuensinya: <strong>angka luas dari peta adalah estimasi dengan selang ketidakpastian, bukan sensus kebenaran</strong>.</p>
+
+          <h3>3.4.3 · Anatomi ketidakpastian</h3>
+          <ul>
+            <li><strong>Definisi</strong> — konstruk berbeda (tutupan pohon vs hutan permanen).</li>
+            <li><strong>Pengukuran</strong> — instrumen &amp; kalibrasi.</li>
+            <li><strong>Klasifikasi</strong> — galat komisi/omisi.</li>
+            <li><strong>Skala/agregasi</strong> — MAUP, MMU.</li>
+            <li><strong>Temporal</strong> — periode &amp; lag.</li>
+            <li><strong>Model</strong> — asumsi &amp; parameter.</li>
+          </ul>
+          <p>Bias sistematis lebih berbahaya daripada galat acak karena tidak hilang dengan penambahan sampel. Dalam rantai analisis, galat merambat: peta tutupan → model erosi → estimasi sedimentasi waduk menumpuk ketidakpastian tiap lapisnya — laporkan hasil akhir sebagai <em>rentang</em>.</p>
+
+          <h3>3.4.4 · Triangulasi (Denzin) dan operasionalisasinya</h3>
+          <p><span class="term" data-gloss="triangulasi">Empat tipe triangulasi</span> (Denzin, 1978): data, peneliti, teori, dan metode. Hasilnya bisa <strong>konvergen</strong> (saling menguatkan), <strong>komplementer</strong> (saling melengkapi), atau <strong>divergen</strong> (saling berbeda) — dan divergensi bukan kegagalan, melainkan temuan yang harus dipetakan.</p>
+          <figure class="viz">
+            <div class="mermaid-box" id="mm-triangulasi" role="img" aria-label="Alur protokol triangulasi"></div>
+            <figcaption><strong>Gbr. 3.2</strong> — Protokol ketika sumber berbeda: baca metadata → identifikasi perbedaan → uji apakah selisih dapat dijelaskan → laporkan rentang — bukan rata-rata.</figcaption>
+          </figure>
+          <p>Untuk diagnosis lingkungan:</p>
+          <ol>
+            <li><strong>Triangulasi sumber</strong> — resmi × penginderaan jauh × pemantauan lapangan × pengetahuan lokal.</li>
+            <li><strong>Triangulasi metode</strong> — deskriptif × overlay spasial × wawancara/FGD.</li>
+            <li><strong>Triangulasi temporal</strong> — tren jangka panjang × snapshot terbaru.</li>
+            <li><strong>Protokol ketika sumber berbeda</strong> — baca metadata kedua sumber; identifikasi perbedaan definisi/metode/cakupan; uji apakah selisih dapat dijelaskan; laporkan keduanya dengan konteksnya; bila perlu, susun estimasi ketiga yang independen.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3.5 KETERBATASAN BUKTI -->
+    <section class="sec" id="sub-35" aria-labelledby="s35-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">3.5 · Keterbatasan bukti</p>
+          <h2 class="h2" id="s35-title">Keterbatasan bukti dalam pengambilan keputusan</h2>
+          <p class="sec-desc">Bukti selalu tertinggal dari keputusan — bagaimana merencanakan secara jujur di bawah ketidakpastian.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>3.5.1 · Bukti selalu tertinggal dari keputusan</h3>
+          <p>Perencana bekerja dengan data yang basi (rilis tertinggal 1–3 tahun), kasar (resolusi tidak sesuai skala keputusan), berubah definisi di tengah seri, dan tidak merata (daerah kaya data vs miskin data). Sementara keputusan tata ruang tidak bisa menunggu data sempurna. Pertanyaannya bukan "apakah data kita sempurna" melainkan "apakah keterbatasannya diketahui, diungkapkan, dan diperhitungkan".</p>
+          <div class="callout callout-warn">
+            <span class="icon" data-lucide="scale"></span>
+            <p><strong>Asas kehati-hatian.</strong> UU 32/2009 Pasal 2 menempatkan <span class="term" data-gloss="precautionary">asas kehati-hatian lingkungan</span> sebagai salah satu asas: ketidakpastian ilmiah bukan alasan menunda pencegahan kerusakan. PP 22/2021 mewajibkan KLHS (termasuk analisis daya dukung dan daya tampung) sebagai dasar kebijakan/rencana — yang menuntut pengungkapan mutu bukti di baliknya.</p>
+          </div>
+
+          <h3>3.5.2 · Dari prediksi tunggal ke ketangguhan lintas skenario</h3>
+          <p>Ketika ketidakpastian dalam (tanpa konsensus model, parameter, maupun probabilitas masa depan), pendekatan "prediksi lalu optimalkan" rapuh. Literatur <span class="term" data-gloss="robust-decision"><em>Decision Making under Deep Uncertainty</em> (DMDU): Robust Decision Making</span> menguji strategi pada ratusan–ribuan himpunan asumsi untuk menemukan strategi yang <em>tangguh</em> — cukup baik di banyak masa depan — alih-alih optimal pada satu prediksi (Lempert et al., 2003; 2024). Ini menjadi jembatan ke Bab 9 (skenario dan strategi terintegrasi).</p>
+
+          <h3>3.5.3 · Kaidah jujur menyajikan bukti yang terbatas</h3>
+          <ol>
+            <li>Sajikan <strong>rentang dan sumber</strong>, bukan satu angka tunggal, bila estimasi kredibel berbeda.</li>
+            <li>Selalu lampirkan <strong>tahun, cakupan, satuan, metode, dan sumber primer</strong> pada setiap angka.</li>
+            <li>Bedakan <strong>tren</strong> dari <strong>level</strong>: dua sumber bisa sepakat arah (turun/naik) meski besarnya berbeda.</li>
+            <li>Jangan memilih angka yang "nyaman" secara politik — <em>cherry-picking</em> meruntuhkan kredibilitas.</li>
+            <li>Nyatakan apa yang <strong>tidak diketahui</strong> dan konsekuensinya bagi rekomendasi.</li>
+            <li>Rancang rekomendasi yang tetap masuk akal pada <strong>seluruh rentang bukti</strong> (prinsip ketangguhan).</li>
+          </ol>
+          <div class="callout callout-ok">
+            <span class="icon" data-lucide="clipboard-check"></span>
+            <p><strong>Checklist kesiapan bukti untuk KLHS/RTRW.</strong> Sebelum indikator masuk dokumen: (a) metadata lengkap; (b) skala sesuai skala keputusan; (c) definisi konsisten sepanjang seri; (d) ketidakpastian terkuantifikasi; (e) perbedaan antarsumber telah dipetakan; (f) keterlacakan bukti–rekomendasi dapat diaudit pihak ketiga.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDI KASUS: DUA ANGKA DEFORESTASI -->
+    <section class="sec sec-deep" id="studi-kasus" aria-labelledby="sk-title">
+      <div class="wrap">
+        <div class="case-plate">
+          <p class="eyebrow"><span class="case-pin" aria-hidden="true"></span>Studi Kasus · Dua Angka Deforestasi</p>
+          <h2 class="h2" id="sk-title">Statistik resmi versus estimasi penginderaan jauh</h2>
+          <p class="case-meta">Indonesia · Kementerian Kehutanan / KLHK × Global Forest Watch / Auriga · 2021–2025</p>
+          <p class="lead">Berapa laju deforestasi Indonesia? Pertanyaan yang tampak sederhana, tetapi jawabannya bergantung pada siapa yang menghitung dan dengan konstruk apa. Sekurangnya tiga keluarga angka beredar — statistik resmi pemerintah, produk penginderaan jauh global (GFW/University of Maryland), dan estimasi independen organisasi masyarakat sipil — ketiganya sahih menurut metodenya masing-masing, dan ketiganya berbeda.</p>
+
+          <h3>A. Angka-angkanya</h3>
+          <p class="tbl-title">Tabel 3.5 — Tiga keluarga angka deforestasi Indonesia (contoh lintas tahun)</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Perbandingan tiga keluarga angka deforestasi">
+            <thead><tr><th scope="col">Sumber</th><th scope="col">Tahun/periode</th><th scope="col">Angka</th><th scope="col">Catatan</th></tr></thead>
+            <tbody>
+              <tr><td><strong>KLHK</strong> (NFMS, rilis Jun 2023)</td><td>2021–2022</td><td><strong>104.000 ha netto</strong> (bruto 119.400 ha; reforestasi 15.400 ha)</td><td>Angka terendah sejak pencatatan; turun 8,4% dari 2020–2021</td></tr>
+              <tr><td><strong>Kemenhut</strong> (rilis Feb 2025)</td><td>2024</td><td><strong>175.400 ha netto</strong> (bruto 216.200 ha)</td><td>Bruto 216,2 ribu − reforestasi 40,8 ribu ha</td></tr>
+              <tr><td><strong>GFW/UMD</strong> (dasbor 2026)</td><td>2025</td><td><strong>~300.000 ha hutan alam</strong></td><td>≈220 Mt CO₂ (model emisi); hutan primer 2002–2025: 11 juta ha</td></tr>
+              <tr><td><strong>Auriga / Simontini</strong></td><td>2024</td><td><strong>261.575 ha</strong> (2023: 257.384 ha)</td><td>Independen; lebih tinggi dari resmi 2024, lebih rendah dari GFW</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p><strong>Ilustrasi risiko salah baca:</strong> sebuah laporan media pernah mengutip "kehilangan hutan 1,4 juta ha pada 2023" — hampir pasti merujuk total <em>tree cover loss</em> GFW (yang mencakup rotasi tanam pada perkebunan), bukan deforestasi; tanpa membaca metadata, angka semacam ini mudah dikutip sebagai "deforestasi" dan menggelembungkan persepsi.</p>
+
+          <h3>B. Mengapa angkanya berbeda: bedah metadata</h3>
+          <p class="tbl-title">Tabel 3.6 — Bedah metadata KLHK vs GFW/Hansen–UMD</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Bedah metadata perbandingan deforestasi">
+            <thead><tr><th scope="col">Dimensi</th><th scope="col">KLHK / Kemenhut</th><th scope="col">GFW / Hansen–UMD</th></tr></thead>
+            <tbody>
+              <tr><td>Entitas yang diukur</td><td>Deforestasi: perubahan <strong>permanen</strong> hutan menjadi bukan hutan</td><td><em>Tree cover loss</em>: gangguan tajuk pada piksel</td></tr>
+              <tr><td>Definisi "hutan"</td><td>7 kelas tutupan hutan dari legenda 23 kelas nasional</td><td>Vegetasi &gt;5 m, tajuk &gt;30% — termasuk hutan tanaman/sawit; ada subset "hutan primer"</td></tr>
+              <tr><td>Metode</td><td>Interpretasi visual on-screen Landsat, MMU 6,25 ha</td><td>Klasifikasi otomatis deret waktu Landsat, piksel 0,09 ha</td></tr>
+              <tr><td>Periode</td><td>Juli–Juni</td><td>Tahun kalender</td></tr>
+              <tr><td>Akuntansi</td><td>Bruto dan netto (bruto − reforestasi)</td><td>Kehilangan bruto; gain terpisah</td></tr>
+              <tr><td>Cakupan</td><td>Dalam &amp; luar kawasan hutan, terpisah</td><td>Seluruh daratan global</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p><strong>Empat mekanisme selisih:</strong> (1) definisi/konstruk — GFW mencatat hilangnya tajuk termasuk panen rotasi yang akan ditanami kembali; (2) resolusi &amp; MMU — piksel 30 m menangkap pembukaan kecil yang hilang pada MMU 6,25 ha; (3) periode — selisih 6 bulan menggeser atribusi kebakaran; (4) akuntansi — membandingkan netto resmi dengan bruto GFW mencampurkan pembilang berbeda.</p>
+          <p>Temuan Margono et al. (2014): kehilangan hutan primer 2000–2012 sebesar 6,02 juta ha dengan laju yang <strong>meningkat</strong> 47.600 ha/tahun, dan ~40% kehilangan di dalam peruntukan hutan yang membatasi/melarang pembukaan — bukti bahwa masalahnya bukan sekadar statistik, melainkan tata kelola.</p>
+
+          <h3>C. Membaca keduanya secara jujur</h3>
+          <div class="callout callout-ok">
+            <span class="icon" data-lucide="scale"></span>
+            <p><strong>Rekomendasi penyajian:</strong> (1) Laporkan minimal dua angka berdampingan dengan metadata ringkas — bukan satu angka tunggal. (2) Bandingkan hanya yang sepadan: bruto–bruto; hutan primer–hutan alam; periode sama. (3) Pisahkan <em>tren</em> dari <em>level</em>: pada 2021–2022 baik seri resmi maupun GFW sama-sama menunjukkan tren turun, meski level berbeda. (4) Untuk pelaporan nasional (FOLU Net Sink, KLHS) pakai angka resmi sebagai rujukan normatif dan GFW sebagai kontrol kewajaran; untuk analisis spasial hotspots pakai GFW dengan verifikasi lapangan.</p>
+          </div>
+          <p><strong>Contoh narasi jujur untuk KLHS:</strong> <em>"Deforestasi netto resmi 2021–2022 tercatat 104 ribu ha (bruto 119,4 ribu ha; KLHK, 2023, Juli–Juni, interpretasi visual Landsat). Produk penginderaan jauh mencatat kehilangan hutan alam ±300 ribu ha pada 2025 (GFW/UMD, tahun kalender, 30 m; konstruk berbeda sehingga tidak dapat dibandingkan langsung). Kedua seri konsisten menunjukkan tren penurunan jangka panjang dengan kenaikan kembali pada 2023–2024."</em></p>
+          <p class="note">Sumber rinci angka lintas tahun (2021–2025) ada pada bab_3.md: KLHK 104.000 ha (2022), Auriga 230–230.760 ha (2022), Kemenhut 119–145 ribu ha/thn (2020–2023), Auriga 257.384 ha (2023), NFMS-Norwegia 0,13 jt ha/thn (2022–2023), Kemenhut 175,4 ribu ha (2024), Auriga 261.575 ha (2024), pemerintah 166.450 ha vs Auriga 433.751 ha (2025).</p>
+
+          <h3>D. Fokus diskusi kelas</h3>
+          <ol>
+            <li>Selisih mana yang dapat dijelaskan murni oleh perbedaan metadata, dan mana yang menyiratkan perbedaan substantif di lapangan?</li>
+            <li>Angka mana yang akan Anda pakai untuk (a) KLHS RTRW, (b) komunikasi publik, (c) target kinerja kementerian — dan mengapa?</li>
+            <li>Apa konsekuensi keadilan lingkungan bila definisi resmi mengecualikan kehilangan tutupan pohon di luar kawasan hutan dari "deforestasi"?</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- RANGKUMAN -->
+    <section class="sec" id="rangkuman" aria-labelledby="rangkuman-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Rangkuman</p>
+        <h2 class="h2" id="rangkuman-title">Pokok pembelajaran</h2>
+        <ul class="objective-list" id="rangkuman-list">
+          <li>Data spasial dan nonspasial adalah <strong>satu arsitektur</strong>: raster, vektor, tabel, dan narasi saling melengkapi — dengan land cover vs land use sebagai beda konstruk yang paling sering disalahpahami.</li>
+          <li>Indikator yang baik menghubungkan pendorong → tekanan → kondisi → dampak → respons; kerangka PSR/DPSIR menuntut kesepadanan <strong>skala spasial, temporal, dan tematik</strong> — MAUP mengingatkan bahwa unit agregasi arbitrer.</li>
+          <li>Metadata (ISO 19115 / FAIR) adalah <strong>syarat audit</strong>: tanpa definisi, periode, MMU, dan metode, angka terbaik sekalipun belum layak jadi dasar rekomendasi.</li>
+          <li>Validitas konstruk didahulukan dari akurasi; praktik baik Olofsson menuntut <strong>interval kepercayaan</strong> — dan triangulasi Denzin menilai hasil sebagai konvergen, komplementer, atau divergen.</li>
+          <li>Bukti selalu terbatas; prinsip <strong>kehati-hatian</strong> dan strategi <strong>Robust Decision Making</strong> menuntut rekomendasi yang tangguh pada seluruh rentang bukti — laporkan rentang, bukan titik tunggal.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="sec sec-deep" id="quiz" aria-labelledby="quiz-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Checkpoint</p>
+          <h2 class="h2" id="quiz-title">Uji pemahaman</h2>
+          <p class="sec-desc">Lima soal pilihan ganda dari materi di atas. Jawab, periksa hasil secara langsung, dan peroleh skor beserta umpan balik.</p>
+        </div>
+        <div class="quiz card" id="quiz-box">
+          <div id="quiz-root"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DISKUSI -->
+    <section class="sec" id="diskusi" aria-labelledby="diskusi-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Diskusi</p>
+          <h2 class="h2" id="diskusi-title">Pertanyaan diskusi</h2>
+          <p class="sec-desc">Soal terbuka untuk dibedah bersama. Klik kartu untuk membuka petunjuk arah pembahasannya.</p>
+        </div>
+        <div class="acc" id="diskusi-list"></div>
+      </div>
+    </section>
+
+    <!-- LATIHAN -->
+    <section class="sec sec-deep" id="latihan" aria-labelledby="latihan-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Latihan</p>
+          <h2 class="h2" id="latihan-title">Latihan mandiri</h2>
+          <p class="sec-desc">Tugas penerapan. Tandai saat selesai — progres tersimpan otomatis di perangkat ini.</p>
+        </div>
+        <div class="lat-progress" role="status" aria-live="polite">
+          <div class="lat-bar"><div class="lat-bar-fill" id="lat-fill"></div></div>
+          <span class="lat-count" id="lat-count">0 / 3 selesai</span>
+        </div>
+        <ol class="lat-list" id="latihan-list"></ol>
+      </div>
+    </section>
+
+    <!-- PUSTAKA -->
+    <section class="sec" id="pustaka" aria-labelledby="pustaka-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Referensi</p>
+        <h2 class="h2" id="pustaka-title">Daftar pustaka</h2>
+        <div id="pustaka-list"></div>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-dialog" role="document">
+        <button type="button" class="modal-close" data-close-modal aria-label="Tutup dialog"><span class="icon" data-lucide="x"></span></button>
+        <p class="eyebrow" id="modal-eyebrow"></p>
+        <h3 class="h3" id="modal-title"></h3>
+        <div class="modal-body" id="modal-body"></div>
+      </div>
+    </div>
+
+    <span id="tooltip" class="tooltip" role="tooltip" hidden></span>
   </main>
 
   <footer class="site-footer">
     <div class="wrap foot-inner">
       <p class="foot-copy">© <span data-current-year></span> <a href="https://khair.am" target="_blank" rel="noopener noreferrer">Hafizhul Khair</a></p>
-      <p class="foot-modified">Terakhir diperbarui: <time data-last-modified datetime="2026-08-25"></time></p>
+      <p class="foot-modified">Terakhir diperbarui: <time data-last-modified datetime="2026-09-01"></time></p>
     </div>
   </footer>
 
+  <button type="button" id="to-top" class="to-top" aria-label="Kembali ke atas" hidden><span class="icon" data-lucide="arrow-up"></span></button>
+
+  <!-- Library via CDN, versi ter-pin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lucide@0.462.0/dist/umd/lucide.min.js"></script>
-  <script src="assets/js/landing.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+
+  <!-- Konten (paling awal) lalu logika -->
+  <script src="assets/js/data-bab3.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/stepper.js"></script>
+  <script src="assets/js/quiz.js"></script>
+  <script src="assets/js/extras.js"></script>
   <script src="assets/js/footer.js"></script>
 </body>
 </html>
