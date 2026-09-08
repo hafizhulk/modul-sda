@@ -5,10 +5,10 @@
 window.APP_DATA = {};
 
 APP_DATA.OBJECTIVES = [
-  "Menjelaskan konsep daya dukung, daya tampung, dan jasa ekosistem serta keterkaitannya.",
+  "Menjelaskan konsep daya dukung, daya tampung, jasa ekosistem, serta keterkaitannya.",
   "Mengukur kebutuhan–ketersediaan sumber daya, kapasitas asimilasi, dan defisit ekologis.",
   "Memetakan jasa ekosistem beserta penyedia dan penerima manfaatnya.",
-  "Menganalisis sinergi, konflik antarfungsi, dan trade-off pembangunan.",
+  "Menganalisis sinergi, konflik antarfungsi, dan trade-off dalam pembangunan.",
   "Menurunkan implikasi kapasitas lingkungan terhadap intensitas dan pola pemanfaatan ruang."
 ];
 
@@ -36,7 +36,7 @@ APP_DATA.GLOSSARY = {
   "jasa-ekosistem": {
     term: "Jasa ekosistem",
     en: "ecosystem services",
-    def: "Manfaat yang diperoleh manusia dari ekosistem — MA (2005): pendukung, penyedia, pengaturan, budaya; TEEB/CICES memisahkan jasa final dari proses pendukung."
+    def: "Manfaat yang diperoleh manusia dari ekosistem. MA (2005) membaginya menjadi jasa pendukung, penyediaan, pengaturan, dan budaya; TEEB/CICES membedakan jasa final dari proses pendukung."
   },
   "cices": {
     term: "CICES",

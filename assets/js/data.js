@@ -9,7 +9,7 @@ window.APP_DATA = {};
 
 /* Tujuan pembelajaran (rendered di bagian Objectives) */
 APP_DATA.OBJECTIVES = [
-  "Menjelaskan pengertian dan ruang lingkup sumber daya alam dan lingkungan dalam konteks perencanaan wilayah dan kota.",
+  "Menjelaskan pengertian dan ruang lingkup sumber daya alam serta lingkungan dalam perencanaan wilayah dan kota.",
   "Membedakan klasifikasi sumber daya terbarukan, tidak terbarukan, dan jasa lingkungan.",
   "Menganalisis karakteristik kelangkaan, keterbatasan, dan distribusi spasial sumber daya.",
   "Mengaitkan konsep sumber daya dengan persoalan perencanaan wilayah dan kota."
@@ -25,7 +25,7 @@ APP_DATA.GLOSSARY = {
   "zimmermann": {
     term: "Tesis Zimmermann",
     en: "\"resources are not, they become\"",
-    def: "Sumber daya tidak ada dengan sendirinya, melainkan menjadi: alam menyediakan bahan netral (neutral stuff); penilaian manusia melalui kebutuhan, pengetahuan, teknologi, dan kelembagaan yang mengubahnya menjadi sumber daya (Zimmermann, 1933)."
+    def: "Sumber daya tidak ada dengan sendirinya, melainkan menjadi sumber daya ketika manusia menilainya berguna. Alam menyediakan bahan netral (neutral stuff), sedangkan kebutuhan, pengetahuan, teknologi, dan kelembagaan mengubahnya menjadi sumber daya (Zimmermann, 1933)."
   },
   "natural-capital": {
     term: "Modal alam",

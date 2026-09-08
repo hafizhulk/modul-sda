@@ -5,7 +5,7 @@
 window.APP_DATA = {};
 
 APP_DATA.OBJECTIVES = [
-  "Menganalisis hubungan potensi sumber daya lokal dengan struktur wilayah.",
+  "Menganalisis hubungan antara potensi sumber daya lokal dan struktur wilayah.",
   "Mengidentifikasi pengaruh pertumbuhan penduduk, urbanisasi, kegiatan ekonomi, dan investasi terhadap pemanfaatan sumber daya.",
   "Menganalisis komponen, aliran sumber daya, dan hubungan sebab-akibat dalam sistem sosial-ekologis.",
   "Mengevaluasi umpan balik, ambang perubahan, dan respons sistem."
@@ -55,7 +55,7 @@ APP_DATA.GLOSSARY = {
   "ses": {
     term: "Sistem sosial-ekologis",
     en: "social-ecological system (SES)",
-    def: "Sistem terpadu di mana sub-sistem sosial (manusia, ekonomi, kelembagaan) dan ekologis (ekosistem, sumber daya alam) saling terkait dan berevolusi bersama (Berkes & Folke, 1998)."
+    def: "Sistem terpadu yang menghubungkan sub-sistem sosial (manusia, ekonomi, dan kelembagaan) dengan sub-sistem ekologis (ekosistem dan sumber daya alam). Keduanya saling memengaruhi dan berevolusi bersama (Berkes & Folke, 1998)."
   },
   "sesf": {
     term: "SESF Ostrom",

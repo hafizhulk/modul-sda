@@ -90,7 +90,7 @@ APP_DATA.GLOSSARY = {
   "triangulasi": {
     term: "Triangulasi",
     en: "triangulation",
-    def: "Strategi validasi Denzin (1978): membandingkan data, metode, teori, dan peneliti. Hasil bisa konvergen, komplementer, atau divergen — divergensi adalah temuan, bukan kegagalan."
+    def: "Strategi validasi menurut Denzin (1978) dengan membandingkan data, metode, teori, dan peneliti. Hasilnya dapat konvergen, saling melengkapi, atau berbeda. Perbedaan merupakan temuan yang perlu dijelaskan, bukan kegagalan."
   },
   "ketidakpastian-epistemik": {
     term: "Ketidakpastian epistemik",
