@@ -3,51 +3,439 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Modul SDL — IV-09 Skenario, Strategi Terintegrasi, dan Implementasi. Segera tersedia." />
-  <title>SDL · IV-09 — Segera</title>
+  <meta name="description" content="Modul SDL Bab 9 — Skenario, Strategi Terintegrasi, dan Implementasi: sintesis bukti, skenario, integrasi strategi spasial–nonspasial, program prioritas, pembiayaan, indikator KHD, studi kasus IKN dan KLHS-nya." />
+  <title>SDL · IV-09 Skenario, Strategi Terintegrasi, dan Implementasi</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body class="landing-page">
+<body class="with-rail">
   <div id="progress-track" role="presentation" aria-hidden="true"><div id="progress-bar"></div></div>
 
   <header class="site-header" id="site-header">
     <div class="wrap header-inner">
+      <button type="button" class="rail-toggle" id="rail-toggle" aria-expanded="false" aria-controls="rail" aria-label="Buka daftar isi">
+        <span class="icon" data-lucide="list"></span>
+      </button>
       <a class="brand" href="index.html" aria-label="Beranda modul SDL">
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-text">Sumber Daya &amp; <strong>Lingkungan</strong></span>
       </a>
+      <div class="chapter-nav" id="chapter-nav">
+        <button type="button" class="chapter-btn" id="chapter-btn" aria-haspopup="menu" aria-expanded="false" aria-label="Pilih bab">
+          <span class="sheet-code">IV-09</span>
+          <span class="chapter-btn-label" id="chapter-btn-label">Bab 9</span>
+          <span class="icon chev" data-lucide="chevron-down"></span>
+        </button>
+        <div class="chapter-menu" id="chapter-menu" role="menu" hidden></div>
+      </div>
       <button type="button" id="theme-toggle" class="icon-btn" aria-label="Alihkan tema terang/gelap" aria-pressed="false">
         <span class="icon" data-lucide="sun"></span>
       </button>
     </div>
   </header>
 
-  <main id="top" class="landing-main">
-    <section class="grid-paper hero">
+  <aside class="rail" id="rail" aria-label="Daftar isi bab">
+    <p class="rail-title">IV-09 · Legenda</p>
+    <p class="rail-label">Materi</p>
+    <a class="rail-item" href="#pendahuluan"><span class="rail-code">PD</span> Pendahuluan</a>
+    <a class="rail-item" href="#objectives"><span class="rail-code">00</span> Tujuan pembelajaran</a>
+    <a class="rail-item" href="#sub-91"><span class="rail-code">01</span> Sintesis bukti &amp; tujuan</a>
+    <a class="rail-item" href="#sub-92"><span class="rail-code">02</span> Skenario</a>
+    <a class="rail-item" href="#skenario"><span class="rail-code">SP</span> 6 langkah skenario</a>
+    <a class="rail-item" href="#sub-93"><span class="rail-code">03</span> Strategi terintegrasi</a>
+    <a class="rail-item" href="#sub-94"><span class="rail-code">04</span> Program &amp; tahapan</a>
+    <a class="rail-item" href="#sub-95"><span class="rail-code">05</span> Pembiayaan &amp; MEL</a>
+    <a class="rail-item" href="#studi-kasus"><span class="rail-code">SC</span> Studi kasus · IKN</a>
+    <p class="rail-label">Penutup</p>
+    <a class="rail-item" href="#rangkuman"><span class="rail-code">RK</span> Rangkuman</a>
+    <a class="rail-item" href="#quiz"><span class="rail-code">QZ</span> Kuis</a>
+    <a class="rail-item" href="#diskusi"><span class="rail-code">DS</span> Diskusi</a>
+    <a class="rail-item" href="#latihan"><span class="rail-code">LT</span> Latihan</a>
+    <a class="rail-item" href="#pustaka"><span class="rail-code">PB</span> Pustaka</a>
+  </aside>
+  <div class="rail-backdrop" aria-hidden="true"></div>
+
+  <main id="top" class="content">
+
+    <section class="grid-paper hero" id="hero" aria-labelledby="hero-title">
       <div class="wrap hero-copy">
-        <p class="eyebrow">Bagian IV · Modul Ajar S2 PWK</p>
-        <h1><span class="sheet-code">IV-09</span> Skenario, Strategi Terintegrasi, dan Implementasi</h1>
-        <p class="lead">Bab ini sedang disiapkan dan akan segera tersedia.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="index.html"><span class="icon" data-lucide="arrow-left"></span> Kembali ke daftar bab</a>
-          <a class="btn btn-ghost" href="bab-1.html"><span class="icon" data-lucide="book-open"></span> Buka Bab 1</a>
+        <p class="eyebrow">Bagian IV · Strategi &amp; Komunikasi Kebijakan · Modul Ajar S2 PWK</p>
+        <h1 id="hero-title">Skenario, Strategi Terintegrasi, dan Implementasi<span class="tone">: dari bukti ke keputusan</span></h1>
+      </div>
+      <div class="wrap stat-strip" aria-label="Angka kunci bab">
+        <div class="stat"><span class="stat-num">5 tahap</span><span class="stat-lbl">IKN 2022–2045 (Perpres 63/2022) — 6 aspek kerangka implementasi</span></div>
+        <div class="stat"><span class="stat-num">Rp466 T</span><span class="stat-lbl">kebutuhan indikatif IKN — KPBU 54,2% · swasta/BUMN 26,4% · APBN ~19%</span></div>
+        <div class="stat"><span class="stat-num">256.142 ha</span><span class="stat-lbl">kawasan IKN — KIPP sebagai pembangunan awal</span></div>
+      </div>
+    </section>
+
+    <!-- PENDAHULUAN -->
+    <section class="sec" id="pendahuluan" aria-labelledby="pd-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Pendahuluan</p>
+        <h2 class="h2" id="pd-title">Posisi Bab 9 dalam alur buku</h2>
+        <div class="prose">
+          <p>Bab 3–6 menghasilkan <em>diagnosis</em> (apa masalahnya, di mana, seberapa parah); Bab 7 menganalisis <em>instrumen dan kesenjangan implementasi</em>; Bab 8 menghasilkan <em>masalah yang terstruktur dan alternatif yang dievaluasi</em>. Bab 9 menjawab tiga pertanyaan yang tersisa:</p>
+          <ol>
+            <li><strong>Ke mana</strong> wilayah ini ingin diarahkan jika masa depan tidak pasti? (Isu strategis → tujuan → skenario)</li>
+            <li><strong>Dengan apa</strong> tujuan dicapai? (Integrasi strategi spasial dan nonspasial)</li>
+            <li><strong>Siapa melakukan apa, kapan, dengan dana apa, dan bagaimana keberhasilan diukur?</strong> (Implementasi, pembiayaan, indikator, pembelajaran adaptif)</li>
+          </ol>
+          <p>Prinsip bab ini adalah sebagai berikut: <strong>strategi yang baik bukan sekadar dokumen yang lengkap, melainkan rangkaian keputusan yang mengungkapkan asumsi, mempertimbangkan risiko, dan dapat dikoreksi</strong> (Holling, 1978; Walters, 1986).</p>
         </div>
       </div>
     </section>
+
+    <!-- TUJUAN -->
+    <section class="sec" id="objectives" aria-labelledby="obj-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Tujuan pembelajaran</p>
+        <h2 class="h2" id="obj-title">Setelah mempelajari bab ini, mahasiswa mampu…</h2>
+        <ul class="objective-list" id="objectives-list"></ul>
+      </div>
+    </section>
+
+    <!-- KATA KUNCI -->
+    <section class="sec sec-kw" id="kata-kunci" aria-labelledby="kw-title">
+      <div class="wrap">
+        <p class="eyebrow center-eyebrow">Kata kunci</p>
+        <h2 class="h2 sr-only" id="kw-title">Kata kunci bab ini</h2>
+        <div class="kw-cloud" id="kw-cloud" aria-label="Daftar kata kunci"></div>
+      </div>
+    </section>
+
+    <!-- 9.1 SINTESIS BUKTI -->
+    <section class="sec" id="sub-91" aria-labelledby="s91-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">9.1 · Sintesis bukti</p>
+          <h2 class="h2" id="s91-title">Sintesis bukti, isu strategis, tujuan, dan sasaran</h2>
+          <p class="sec-desc">Dari bukti menjadi isu strategis — empat uji materialitas, arah, keterpengaruhan, dan keterkaitan silang.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>9.1.1 · Dari bukti menjadi isu strategis</h3>
+          <p>Isu strategis bukan daftar masalah, melainkan <strong>tensi atau pilihan yang harus diselesaikan perencanaan</strong> — bukan "banjir sering terjadi", tetapi "banjir rob pesisir utara akan meluas dalam skenario iklim apapun; apakah struktur ruang dipertahankan dengan infrastruktur pelindung, atau direlokasi bertahap?". Diagnosis Bab 3–6 menjadi isu strategis melalui empat uji:</p>
+          <ol>
+            <li><strong>Materialitas</strong> — dampaknya besar terhadap daya dukung/jasa ekosistem atau kelompok rentan?</li>
+            <li><strong>Arah perubahan</strong> — tren BAU memburuk, melampaui ambang ekologis/sosial?</li>
+            <li><strong>Keterpengaruhan</strong> — instrumen yang tersedia (Bab 7) dapat mengubah lintasan?</li>
+            <li><strong>Keterkaitan silang</strong> — apakah isu berinteraksi sinergis atau saling mengunci?</li>
+          </ol>
+          <div class="callout callout-ok">
+            <span class="icon" data-lucide="clipboard-check"></span>
+            <p><strong>Kotak 9.1 — Membedakan jenis pernyataan.</strong> <em>Fakta empiris</em>: "Tutupan vegetasi di KIPP IKN menurun 18,1% (2021–2026, PlanetScope)" — <em>Ketentuan regulasi</em>: "Perpres 63/2022 membagi pembangunan IKN dalam lima tahap 2022–2045" — <em>Asumsi desain</em>: "Skenario kompak menekan permintaan lahan 30% lebih rendah" — <em>Interpretasi</em>: "Batas ekologis kawasan lindung merupakan red line."</p>
+          </div>
+
+          <h3>9.1.2 · Tujuan dan sasaran: hierarki logika hasil</h3>
+          <p>Tujuan (<em>goal</em>) adalah kondisi akhir yang diinginkan; sasaran (<em>objective</em>) adalah pencapaian terukur dan berjangka menuju tujuan. Setiap sasaran idealnya SMART dan <strong>terhubung terbalik ke isu strategis serta bukti</strong> — indikator, baseline, target, tahun, dan sumber verifikasi. <span class="term" data-gloss="results-chain">Theory of change</span> menjadi tulang punggung: isu strategis → tujuan → sasaran → strategi → program → keluaran–hasil–dampak. Kerangka OECD DAC (relevansi, koherensi, efektivitas, efisiensi, dampak, keberlanjutan) dapat dipinjam untuk memeriksa logika tujuan–sasaran sebelum strategi dirinci.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9.2 SKENARIO -->
+    <section class="sec" id="sub-92" aria-labelledby="s92-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">9.2 · Skenario</p>
+          <h2 class="h2" id="s92-title">Perumusan skenario pembangunan wilayah/kota</h2>
+          <p class="sec-desc">Kontras, logis, terukur — bukan variasi kosmetik.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>9.2.1 · Apa yang dimaksud skenario</h3>
+          <p>Skenario adalah <strong>gambaran alternatif masa depan yang masuk akal, konsisten internal, dan berbeda sungguh-sungguh</strong> — untuk menguji ketangguhan strategi, bukan meramal. Tiga fungsi: eksploratif (apa yang mungkin terjadi), normatif (masa depan yang diinginkan), dan prediktif (<span class="term" data-gloss="bau">BAU</span>). Tiga sifat wajib: <strong>kontras</strong> pada driver pemandu, <strong>logis</strong> (rantai sebab-akibat dapat diceritakan/dimodelkan), dan <strong>terukur</strong> dengan indikator yang sama (Tabel 8.x Bab 8 dapat dipakai kembali).</p>
+
+          <p class="tbl-title">Tabel 9.1 — Dua skenario pembangunan wilayah pesisir perkotaan (ilustrasi)</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Dua skenario pesisir perkotaan">
+            <thead><tr><th scope="col">Dimensi</th><th scope="col">Skenario A — Business-as-Usual</th><th scope="col">Skenario B — Jalur Transisi Berkelanjutan</th></tr></thead>
+            <tbody>
+              <tr><td>Driver kota</td><td>Permukiman mengikuti tren 20 tahun; RTRW belum efektif</td><td>Kompaksi kota ditegakkan; TOD di koridor transportasi umum</td></tr>
+              <tr><td>Lahan &amp; ekosistem</td><td>Konversi mangrove/sawah berlanjut; fragmentasi meningkat</td><td>LP2B + sabuk hijau-biru dipulihkan; biaya alih fungsi diinternalisasi</td></tr>
+              <tr><td>Air &amp; iklim</td><td>Ekstraksi air tanah naik; rob meluas</td><td>Moratorium sumur zona kritis; air daur ulang + hijau peredam rob</td></tr>
+              <tr><td>Ekonomi</td><td>PDB tinggi jangka pendek, beban bencana naik di 15+ tahun</td><td>Lebih lambat tahun awal, kerugian risiko menurun, pasar hijau terbuka</td></tr>
+              <tr><td>Keadilan</td><td>Beban rob pada kelompok miskin pesisir</td><td>Kompensasi &amp; skema PES/bantuan relokasi transparan</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <h3>9.2.2 · Integrasi dengan instrumen normatif</h3>
+          <p>Skenario bukan pengganti RTRW — ia <strong>masukan ke KLHS RTRW (PP 22/2021)</strong> untuk menentukan batas ekologis dan arah pengembangan. Pada megaproyek (IKN), KLHS justru menjadi mekanisme untuk menguji skenario pembangunan terhadap daya dukung–daya tampung (Pasal 15 UU 32/2009 jo. UU 6/2023; PP 22/2021).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEPPER 6 LANGKAH SKENARIO -->
+    <section class="sec sec-deep" id="skenario" aria-labelledby="skenario-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Panduan bertahap</p>
+          <h2 class="h2" id="skenario-title">6 langkah penyusunan skenario</h2>
+          <p class="sec-desc">Dari cakrawala 20–25 tahun hingga uji ketangguhan strategi low-regret vs contingent.</p>
+        </div>
+        <div class="stepper card" role="region" aria-label="Langkah penyusunan skenario" aria-live="polite" id="stepper-box">
+          <div class="stepper-pos" id="stepper-pos">Langkah 1 dari 6</div>
+          <div class="stepper-stage" id="stepper-stage"></div>
+          <div class="stepper-nav">
+            <button type="button" class="btn btn-ghost" id="step-prev"><span class="icon" data-lucide="chevron-left"></span> Sebelumnya</button>
+            <div class="stepper-dots" id="stepper-dots" aria-hidden="true"></div>
+            <button type="button" class="btn btn-primary" id="step-next">Berikutnya <span class="icon" data-lucide="chevron-right"></span></button>
+          </div>
+        </div>
+        <figure class="viz">
+          <div class="mermaid-box" id="mm-skenario" role="img" aria-label="Diagram alur 6 langkah skenario"></div>
+          <figcaption><strong>Gbr. 9.1</strong> — Alur 6 langkah skenario: cakrawala → driver → narasi → translasi spasial → skor indikator → uji ketangguhan.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 9.3 STRATEGI TERINTEGRASI -->
+    <section class="sec" id="sub-93" aria-labelledby="s93-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">9.3 · Strategi terintegrasi</p>
+          <h2 class="h2" id="s93-title">Integrasi strategi spasial–nonspasial</h2>
+          <p class="sec-desc">Lima kolom yang harus terisi — sel kosong berarti kelemahan rancangan.</p>
+        </div>
+        <div class="sec-body prose">
+          <p class="tbl-title">Tabel 9.2 — Bingkai 5 kolom integrasi strategi (contoh rob pesisir)</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Bingkai 5 kolom strategi terintegrasi">
+            <thead><tr><th scope="col">Kolom bingkai</th><th scope="col">Contoh untuk isu rob pesisir</th></tr></thead>
+            <tbody>
+              <tr><td>1. Solusi berbasis alam (NbS)</td><td>Restorasi mangrove–sabuk pantai; <em>sponge city</em>; pengisian ulang akuifer</td></tr>
+              <tr><td>2. Adaptasi iklim</td><td>Penataan mundur permukiman di zona tak terhindarkan; pengerukan standar infrastruktur kritis</td></tr>
+              <tr><td>3. Pengurangan risiko bencana</td><td>Sistem peringatan dini rob; jalur evakuasi vertikal; pelatihan siaga</td></tr>
+              <tr><td>4. Potensi lokal</td><td>Ekonomi biru perikanan-pergaraman; jasa mangrove (PES/karbon biru)</td></tr>
+              <tr><td>5. Inovasi teknologi</td><td>Sensor banjir IoT; citra/PLE untuk pemantauan muka tanah; sistem informasi lahan terpadu</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p>Definisi kerja <span class="term" data-gloss="nbs">NbS</span> mengikuti IUCN (Cohen-Shacham et al., 2016) dengan 8 kriteria <em>Global Standard</em> (IUCN, 2020). <span class="term" data-gloss="sponge-city">Sponge city</span> dan adaptasi-PRB mengacu Sendai Framework (UNDRR, 2015) &amp; Perpres 87/2020. <span class="term" data-gloss="sendai">NbS</span> membutuhkan waktu bertahun-tahun untuk berfungsi tetapi memberi cobenefit, sementara tanggul memberi efektivitas cepat tetapi mengundur investasi adaptif — sequencing hybrid sering paling realistis: NbS sebagai trimester pertama, infrastruktur abu menyusul.</p>
+          <figure class="viz">
+            <div class="mermaid-box" id="mm-nbs" role="img" aria-label="Diagram integrasi 5 kolom strategi"></div>
+            <figcaption><strong>Gbr. 9.2</strong> — Lima kolom harus terisi; sel kosong = kelemahan rancangan. Tiap trade-off diperiksa pada tiap skenario, bukan hanya BAU.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9.4 PROGRAM PRIORITAS -->
+    <section class="sec" id="sub-94" aria-labelledby="s94-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">9.4 · Program prioritas</p>
+          <h2 class="h2" id="s94-title">Program prioritas, tahapan, pembagian peran, koordinasi, dan kemitraan</h2>
+          <p class="sec-desc">Dari strategi ke program yang mengikat kegiatan, waktu, aktor, dan anggaran.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>Empat uji prioritas</h3>
+          <ol>
+            <li><strong>Distribusi margin</strong> — manfaat marjinal per rupiah tertinggi atau kerugian terhindarkan terbesar?</li>
+            <li><strong>Keterkuncian teknis</strong> — precondition untuk program lain? (perlindungan DAS hulu = prasyarat PDAM hilir)</li>
+            <li><strong>Urgensi waktu</strong> — jendela ambang yang tertutup bila tertunda?</li>
+            <li><strong>Kelayakan kelembagaan &amp; fiskal</strong> — kewenangan aktor mana yang dapat mengeksekusi (Bab 7)?</li>
+          </ol>
+          <h3>Tahapan</h3>
+          <p>Tigapenggal: (a) fondasi/penyiapan (lembaga, aturan, pilot, MOU); (b) perluasan (scaling); (c) hilirisasi (rutin &amp; pembiayaan berkelanjutan). Perpres 63/2022 mengilustrasikan 5 tahap 2022–2045 dengan 6 aspek (lahan; kelembagaan; kerja sama antardaerah; pendanaan-investasi; partisipasi; monev).</p>
+          <p class="tbl-title">Tabel 9.3 — Format matriks program prioritas (isi pada latihan)</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Format matriks program prioritas">
+            <thead><tr><th scope="col">Program</th><th scope="col">Tahap</th><th scope="col">Penanggung jawab</th><th scope="col">Pendukung</th><th scope="col">Biaya awal</th><th scope="col">Sumber dana</th><th scope="col">Indikator keluaran</th><th scope="col">Hasil</th><th scope="col">Dampak</th></tr></thead>
+            <tbody>
+              <tr><td><em>(isi)</em></td><td>T1/T2/T3</td><td>OPD/lembaga</td><td>aktor lain</td><td>Rp/unit + asumsi</td><td>APBN/APBD/KPBU/PES</td><td>output</td><td>outcome</td><td>impact</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p class="note">Indikasi biaya harus menyebut satuan &amp; asumsi (order-of-magnitude, bukan angka final); kolom risiko tidak boleh kosong.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9.5 PEMBIAYAAN, RISIKO, MEL -->
+    <section class="sec" id="sub-95" aria-labelledby="s95-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">9.5 · Pembiayaan &amp; MEL adaptif</p>
+          <h2 class="h2" id="s95-title">Pembiayaan, risiko implementasi, indikator KHD, serta pemantauan, evaluasi, dan pembelajaran adaptif</h2>
+          <p class="sec-desc">Blended finance, trigger-based planning, dan results chain yang dapat diaudit.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>9.5.1 · Pembiayaan campuran</h3>
+          <ul>
+            <li><strong>Anggaran publik</strong> (APBN/APBD) — barang publik murni: kawasan lindung, sistem peringatan, data dasar</li>
+            <li><strong>KPBU</strong> — infrastruktur besar dengan aliran kas</li>
+            <li><strong>Swasta/BUMN-BUMD</strong> — monetisasi langsung</li>
+            <li><strong>PES/kredit karbon-biodiversitas</strong> — mengaitkan penyedia–penerima manfaat (uji adisionalitas)</li>
+            <li><strong>Dana internasional &amp; donor</strong> — bila koheren dengan mandat</li>
+          </ul>
+          <p><strong>Jendela kritis pendanaan:</strong> kapan dana harus cair agar program tidak <em>stranded</em>; cost-overrun megaproyek hijau-abu sering &gt;20% (Flyvbjerg et al.).</p>
+
+          <h3>9.5.2 · Risiko implementasi</h3>
+          <p class="tbl-title">Tabel 9.4 — Tiga risiko implementasi umum beserta mitigasi</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Risiko implementasi dan mitigasi">
+            <thead><tr><th scope="col">#</th><th scope="col">Risiko</th><th scope="col">Leading indicator</th><th scope="col">Mitigasi</th><th scope="col">Meja sinyal-trigger</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Politik-kelembagaan: pergantian pimpinan mengubah prioritas</td><td>Anggaran LH menyusut 2 th berturut; pergantian Kepala OPD</td><td>Hilirisasi mandat ke Perda/Perpres; diversifikasi jangkar lintas OPD</td><td>Evaluasi tiap pergantian TA</td></tr>
+              <tr><td>2</td><td>Ekologis/hidrologis: ambang terlewati sebelum mitigasi berfungsi</td><td>Indikator ambang mendekati batas</td><td>Desain bertingkat: no-regret segera + skala penuh saat sinyal; cadangan ekosistem</td><td>Pemantauan kuartalan</td></tr>
+              <tr><td>3</td><td>Sosial-keadilan: kelompok rentan terdisplasi</td><td>Keluhan menumpuk; ketimpangan akses manfaat</td><td>Ganti rugi adil + PADIATAPA pada desain</td><td>Audit sosial tahunan</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <h3>9.5.3 · Indikator KHD &amp; MEL adaptif</h3>
+          <p>Hierarki: <span class="term" data-gloss="logframe">keluaran</span> (km mangrove ditanam) → <span class="term" data-gloss="logframe">hasil</span> (risiko rob menurun) → <span class="term" data-gloss="logframe">dampak</span> (ketahanan pesisir meningkat). Rancangan pemantauan mengikat bukti ke keputusan: sumber data, frekuensi, penanggung jawab, ambang sinyal, respons terkait. <span class="term" data-gloss="mel-adaptif">Pembelajaran adaptif</span> menutup siklus: rancang sebagai eksperimen, pantau, bandingkan aktual vs prediksi, ubah rancangan bila divergensi di luar toleransi (OECD DAC: relevansi, koherensi, efektivitas, efisiensi, dampak, keberlanjutan).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDI KASUS IKN -->
+    <section class="sec sec-deep" id="studi-kasus" aria-labelledby="sk-title">
+      <div class="wrap">
+        <div class="case-plate">
+          <p class="eyebrow"><span class="case-pin" aria-hidden="true"></span>Studi Kasus · Ibu Kota Nusantara (IKN)</p>
+          <h2 class="h2" id="sk-title">Pembangunan IKN dan KLHS-nya</h2>
+          <p class="case-meta">UU 3/2022 jo. UU 21/2023 · Perpres 63/2022 · 5 tahap 2022–2045 · ±256.142 ha · KLHS MP IKN 2020 (Bappenas)</p>
+          <p class="lead">IKN — meliputi Penajam Paser Utara &amp; Kutai Kartanegara, Kalimantan Timur — ditetapkan sebagai daerah khusus setingkat provinsi melalui Otorita IKN (setingkat kementerian). Klaim keberlanjutan "forest city, sponge city, smart city" harus diperlakukan sebagai <strong>skenario normatif</strong> yang diuji terhadap bukti, bukan sebagai fakta.</p>
+
+          <h3>Konteks &amp; bingkai regulasi</h3>
+          <p>UU 3/2022 (15 Feb 2022, diubah UU 21/2023) + Perpres 63/2022 (18 Apr 2022): 5 tahap — I 2022–2024; II 2025–2029; III 2030–2034; IV 2035–2039; V 2040–2045 — dengan 6 aspek kerangka implementasi (lahan; kelembagaan; kerja sama antardaerah; pendanaan-investasi; partisipasi; monev). Kewajiban KLHS mengacu Pasal 15 UU 32/2009 jo. PP 22/2021: untuk KRP berdampak penting, pemerintah wajib menyusun KLHS agar prinsip berkelanjutan menjadi dasar pembangunan wilayah.</p>
+
+          <h3>Skenario &amp; klaim keberlanjutan: forest city</h3>
+          <p>Tiga sasaran identitas — <span class="term" data-gloss="forest-city">forest city</span>, sponge city, smart city — dijabarkan menjadi porsi RTH/biru dominan &amp; bangunan hijau (±75% ruang hijau pada kawasan pemerintahan). Model desain mengintegrasikan vegetasi &amp; pengelolaan aliran material — konversi limbah organik ke pupuk-biogas-pakan-ikan — untuk menopang ekonomi kawasan (Zuhdi et al., IPB, 2024).</p>
+
+          <h3>Bukti empiris menguji klaim</h3>
+          <ol>
+            <li><strong>Perubahan tutupan lahan terukur:</strong> PlanetScope 2021–2026 atas KIPP (pracetak arXiv 2026, belum peer-review) — lahan terbangun +670%, vegetasi −18,1%, NDVI −17,2%, karbon −0,28%; puncak pembukaan 2023–2024. Interpretasi: tekanan ekologis nyata fase konstruksi — restorasi pasca-tekanan, bukan pencegahan.</li>
+            <li><strong>Respons iklim lokal:</strong> Samboja &amp; Sepaku — peningkatan lahan terbangun/pertanian berkorelasi dengan kenaikan suhu permukaan; hubungan dengan curah hujan lebih lemah (JPPIPA Unram, 2022 — cakupan terbatas, ekstrapolasi terbatas).</li>
+            <li><strong>Lintasan historis-kelembagaan:</strong> Sepaku sebagai kelanjutan ekstraksi hutan (HTI/HPH); keberhasilan forest city bergantung pada tata kelola tenure &amp; pelibatan masyarakat lokal, bukan hanya desain fisik (<em>Water Alternatives</em>, 19(1), 2026).</li>
+          </ol>
+          <div class="callout callout-warn">
+            <span class="icon" data-lucide="triangle-alert"></span>
+            <p><strong>Diskusi analitis:</strong> bukti tidak membuktikan "forest city gagal" maupun "tercapai" — bukti menunjukkan tekanan nyata fase konstruksi, menaruh beban pembuktian pada integrasi strategi nonspasial &amp; monev adaptif §9.3–9.5.</p>
+          </div>
+
+          <h3>Implementasi &amp; pembiayaan</h3>
+          <p>Kebutuhan total ±<strong>Rp466 triliun</strong> (indikatif): <strong>KPBU ±Rp252,5 T (54,2%)</strong>, <strong>swasta/BUMN ±Rp123,2 T (26,4%)</strong>, <strong>APBN ±Rp89,4–90,4 T (≈19%)</strong> — indikasi rencana, perlu verifikasi RPJMN/laporan realisasi Otorita IKN. Tiga proyek KPBU hunian ASN-Hankam senilai Rp41 T telah berjalan sebagai model risk-sharing (Bappenas-Kemenkeu-LKPP). Risiko yang perlu dipantau: beban fiskal, risiko lingkungan-reputasi, &amp; konflik hak tanah masyarakat adat (Pasal 16A UU IKN tentang perpanjangan hak).</p>
+          <p class="note">Perbedaan angka APBN (Rp89,4 vs 90,4 T) ditampilkan berdampingan — praktik triangulasi Bab 3.</p>
+
+          <h3>Pelajaran untuk analisis magister</h3>
+          <ul>
+            <li><strong>Skenario vs asumsi:</strong> uji klaim keberlanjutan dengan bukti terukur (tutupan, indikator iklim lokal, keadilan sosial).</li>
+            <li><strong>Batas spasial:</strong> bedakan KIPP vs kawasan IKN 256.142 ha vs wilayah partner Kaltim.</li>
+            <li><strong>Provenance angka:</strong> pisahkan indikasi rencana dari realisasi; bedakan angka pemerintah vs independen.</li>
+            <li><strong>Keadilan lingkungan:</strong> trade-off pembangunan tidak boleh hilang dari matriks keputusan.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- RANGKUMAN -->
+    <section class="sec" id="rangkuman" aria-labelledby="rangkuman-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Rangkuman</p>
+        <h2 class="h2" id="rangkuman-title">Pokok pembelajaran</h2>
+        <ul class="objective-list" id="rangkuman-list">
+          <li>Isu strategis dirumuskan melalui 4 uji (materialitas, arah, keterpengaruhan, keterkaitan silang) dan hierarki logika hasil (tujuan → sasaran SMART → strategi → program → KHD).</li>
+          <li>Skenario yang bermutu bersifat kontras, logis, terukur — disusun dalam 6 langkah dan diuji ketangguhannya (robust vs contingent, trigger-based planning).</li>
+          <li>Integrasi strategi menuntut 5 kolom terisi (NbS, adaptasi, PRB, potensi lokal, inovasi) — sel kosong berarti kelemahan rancangan; trade-off diperiksa pada tiap skenario.</li>
+          <li>Program prioritas diuji dengan 4 uji (margin, keterkuncian teknis, urgensi waktu, kelayakan kelembagaan-fiskal) dan dirinci dalam matriks program dengan pembagian peran &amp; koordinasi multi-level.</li>
+          <li>Pembiayaan campuran &amp; risiko implementasi harus eksplisit — dengan leading indicator &amp; meja sinyal-trigger; MEL adaptif menutup siklus (rancang sebagai eksperimen, pantau vs prediksi, ubah rancangan).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="sec sec-deep" id="quiz" aria-labelledby="quiz-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Checkpoint</p>
+          <h2 class="h2" id="quiz-title">Uji pemahaman</h2>
+          <p class="sec-desc">Lima soal pilihan ganda dari materi di atas. Jawab, periksa hasil secara langsung, dan peroleh skor beserta umpan balik.</p>
+        </div>
+        <div class="quiz card" id="quiz-box">
+          <div id="quiz-root"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DISKUSI -->
+    <section class="sec" id="diskusi" aria-labelledby="diskusi-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Diskusi</p>
+          <h2 class="h2" id="diskusi-title">Pertanyaan diskusi</h2>
+          <p class="sec-desc">Soal terbuka untuk dibedah bersama. Klik kartu untuk membuka petunjuk arah pembahasannya.</p>
+        </div>
+        <div class="acc" id="diskusi-list"></div>
+      </div>
+    </section>
+
+    <!-- LATIHAN -->
+    <section class="sec sec-deep" id="latihan" aria-labelledby="latihan-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Latihan</p>
+          <h2 class="h2" id="latihan-title">Latihan mandiri</h2>
+          <p class="sec-desc">Tugas penerapan. Tandai saat selesai — progres tersimpan otomatis di perangkat ini.</p>
+        </div>
+        <div class="lat-progress" role="status" aria-live="polite">
+          <div class="lat-bar"><div class="lat-bar-fill" id="lat-fill"></div></div>
+          <span class="lat-count" id="lat-count">0 / 3 selesai</span>
+        </div>
+        <ol class="lat-list" id="latihan-list"></ol>
+      </div>
+    </section>
+
+    <!-- PUSTAKA -->
+    <section class="sec" id="pustaka" aria-labelledby="pustaka-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Referensi</p>
+        <h2 class="h2" id="pustaka-title">Daftar pustaka</h2>
+        <div id="pustaka-list"></div>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-dialog" role="document">
+        <button type="button" class="modal-close" data-close-modal aria-label="Tutup dialog"><span class="icon" data-lucide="x"></span></button>
+        <p class="eyebrow" id="modal-eyebrow"></p>
+        <h3 class="h3" id="modal-title"></h3>
+        <div class="modal-body" id="modal-body"></div>
+      </div>
+    </div>
+
+    <span id="tooltip" class="tooltip" role="tooltip" hidden></span>
   </main>
 
   <footer class="site-footer">
     <div class="wrap foot-inner">
       <p class="foot-copy">© <span data-current-year></span> <a href="https://khair.am" target="_blank" rel="noopener noreferrer">Hafizhul Khair</a></p>
-      <p class="foot-modified">Terakhir diperbarui: <time data-last-modified datetime="2026-08-25"></time></p>
+      <p class="foot-modified">Terakhir diperbarui: <time data-last-modified datetime="2026-09-01"></time></p>
     </div>
   </footer>
 
+  <button type="button" id="to-top" class="to-top" aria-label="Kembali ke atas" hidden><span class="icon" data-lucide="arrow-up"></span></button>
+
+  <!-- Library via CDN, versi ter-pin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lucide@0.462.0/dist/umd/lucide.min.js"></script>
-  <script src="assets/js/landing.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+
+  <!-- Konten (paling awal) lalu logika -->
+  <script src="assets/js/data-bab9.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/stepper.js"></script>
+  <script src="assets/js/quiz.js"></script>
+  <script src="assets/js/extras.js"></script>
   <script src="assets/js/footer.js"></script>
 </body>
 </html>

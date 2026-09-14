@@ -3,51 +3,390 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Modul SDL — IV-10 Komunikasi Kebijakan dan Penjaminan Mutu. Segera tersedia." />
-  <title>SDL · IV-10 — Segera</title>
+  <meta name="description" content="Modul SDL Bab 10 — Komunikasi Kebijakan dan Penjaminan Mutu: laporan berbasis bukti, Toulmin, visualisasi, policy brief, keterlacakan bukti–rekomendasi, konsistensi internal, studi kasus KLHS RTRW." />
+  <title>SDL · IV-10 Komunikasi Kebijakan dan Penjaminan Mutu</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body class="landing-page">
+<body class="with-rail">
   <div id="progress-track" role="presentation" aria-hidden="true"><div id="progress-bar"></div></div>
-
   <header class="site-header" id="site-header">
     <div class="wrap header-inner">
+      <button type="button" class="rail-toggle" id="rail-toggle" aria-expanded="false" aria-controls="rail" aria-label="Buka daftar isi">
+        <span class="icon" data-lucide="list"></span>
+      </button>
       <a class="brand" href="index.html" aria-label="Beranda modul SDL">
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-text">Sumber Daya &amp; <strong>Lingkungan</strong></span>
       </a>
+      <div class="chapter-nav" id="chapter-nav">
+        <button type="button" class="chapter-btn" id="chapter-btn" aria-haspopup="menu" aria-expanded="false" aria-label="Pilih bab">
+          <span class="sheet-code">IV-10</span>
+          <span class="chapter-btn-label" id="chapter-btn-label">Bab 10</span>
+          <span class="icon chev" data-lucide="chevron-down"></span>
+        </button>
+        <div class="chapter-menu" id="chapter-menu" role="menu" hidden></div>
+      </div>
       <button type="button" id="theme-toggle" class="icon-btn" aria-label="Alihkan tema terang/gelap" aria-pressed="false">
         <span class="icon" data-lucide="sun"></span>
       </button>
     </div>
   </header>
-
-  <main id="top" class="landing-main">
-    <section class="grid-paper hero">
+  <aside class="rail" id="rail" aria-label="Daftar isi bab">
+    <p class="rail-title">IV-10 · Legenda</p>
+    <p class="rail-label">Materi</p>
+    <a class="rail-item" href="#pendahuluan"><span class="rail-code">PD</span> Pendahuluan</a>
+    <a class="rail-item" href="#objectives"><span class="rail-code">00</span> Tujuan pembelajaran</a>
+    <a class="rail-item" href="#sub-101"><span class="rail-code">01</span> Laporan berbasis bukti</a>
+    <a class="rail-item" href="#toulmin"><span class="rail-code">SP</span> Model Toulmin</a>
+    <a class="rail-item" href="#sub-102"><span class="rail-code">02</span> Visualisasi</a>
+    <a class="rail-item" href="#sub-103"><span class="rail-code">03</span> Policy brief</a>
+    <a class="rail-item" href="#sub-104"><span class="rail-code">04</span> Keterlacakan &amp; konsistensi</a>
+    <a class="rail-item" href="#traceability"><span class="rail-code">TR</span> Builder keterlacakan</a>
+    <a class="rail-item" href="#sub-105"><span class="rail-code">05</span> Refleksi &amp; finalisasi</a>
+    <a class="rail-item" href="#studi-kasus"><span class="rail-code">SC</span> Studi kasus · KLHS RTRW</a>
+    <p class="rail-label">Penutup</p>
+    <a class="rail-item" href="#rangkuman"><span class="rail-code">RK</span> Rangkuman</a>
+    <a class="rail-item" href="#quiz"><span class="rail-code">QZ</span> Kuis</a>
+    <a class="rail-item" href="#diskusi"><span class="rail-code">DS</span> Diskusi</a>
+    <a class="rail-item" href="#latihan"><span class="rail-code">LT</span> Latihan</a>
+    <a class="rail-item" href="#pustaka"><span class="rail-code">PB</span> Pustaka</a>
+  </aside>
+  <div class="rail-backdrop" aria-hidden="true"></div>
+  <main id="top" class="content">
+    <section class="grid-paper hero" id="hero" aria-labelledby="hero-title">
       <div class="wrap hero-copy">
-        <p class="eyebrow">Bagian IV · Modul Ajar S2 PWK</p>
-        <h1><span class="sheet-code">IV-10</span> Komunikasi Kebijakan dan Penjaminan Mutu</h1>
-        <p class="lead">Bab ini sedang disiapkan dan akan segera tersedia.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="index.html"><span class="icon" data-lucide="arrow-left"></span> Kembali ke daftar bab</a>
-          <a class="btn btn-ghost" href="bab-1.html"><span class="icon" data-lucide="book-open"></span> Buka Bab 1</a>
+        <p class="eyebrow">Bagian IV · Strategi &amp; Komunikasi Kebijakan · Modul Ajar S2 PWK</p>
+        <h1 id="hero-title">Komunikasi Kebijakan dan Penjaminan Mutu<span class="tone">: dari analisis ke keputusan</span></h1>
+      </div>
+      <div class="wrap stat-strip" aria-label="Angka kunci bab">
+        <div class="stat"><span class="stat-num">6 unsur</span><span class="stat-lbl">Model Toulmin — klaim, data, warrant, backing, qualifier, rebuttal</span></div>
+        <div class="stat"><span class="stat-num">2–4 hal</span><span class="stat-lbl">policy brief — lead-with-the-finding, bukan built-up</span></div>
+        <div class="stat"><span class="stat-num">7 langkah</span><span class="stat-lbl">telaah KLHS RTRW — dari inventarisasi hingga simpulan</span></div>
+      </div>
+    </section>
+    <section class="sec" id="pendahuluan" aria-labelledby="pd-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Pendahuluan</p>
+        <h2 class="h2" id="pd-title">Analisis yang tidak dikomunikasikan tidak mengubah keputusan</h2>
+        <div class="prose">
+          <p>Bab 3–6 membekali mahasiswa dengan diagnosis; Bab 7 dengan peta kebijakan; Bab 8 dengan penstrukturan masalah dan evaluasi alternatif; serta Bab 9 dengan skenario dan strategi. <strong>Bab penutup</strong> ini menjawab pertanyaan yang paling praktis: <em>bagaimana hasil analisis disampaikan kepada pengambil keputusan, dan bagaimana mutunya dijamin sebelum diserahkan?</em></p>
+          <p>Literatur SEA global menunjukkan efektivitas kajian lingkungan hanya pada tingkat <strong>moderat</strong>, dan kualitas laporan serta komunikasi adalah salah satu penentunya. Tinjauan mutu SEA secara eksplisit mencakup kejelasan bahasa, penggunaan peta/ilustrasi, dan penjelasan pendekatan penilaian — bukan hanya kebenaran teknis.</p>
         </div>
       </div>
     </section>
+    <section class="sec" id="objectives" aria-labelledby="obj-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Tujuan pembelajaran</p>
+        <h2 class="h2" id="obj-title">Setelah mempelajari bab ini, mahasiswa mampu…</h2>
+        <ul class="objective-list" id="objectives-list"></ul>
+      </div>
+    </section>
+    <section class="sec sec-kw" id="kata-kunci" aria-labelledby="kw-title">
+      <div class="wrap">
+        <p class="eyebrow center-eyebrow">Kata kunci</p>
+        <h2 class="h2 sr-only" id="kw-title">Kata kunci bab ini</h2>
+        <div class="kw-cloud" id="kw-cloud" aria-label="Daftar kata kunci"></div>
+      </div>
+    </section>
+    <section class="sec" id="sub-101" aria-labelledby="s101-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">10.1 · Laporan berbasis bukti</p>
+          <h2 class="h2" id="s101-title">Penyusunan <span class="term" data-gloss="laporan-berbasis-bukti">laporan berbasis bukti</span></h2>
+          <p class="sec-desc">Empat jenis pernyataan yang harus dibedakan secara eksplisit.</p>
+        </div>
+        <div class="sec-body prose">
+          <p><span class="term" data-gloss="laporan-berbasis-bukti">Laporan berbasis bukti</span> adalah dokumen yang setiap pernyataan kuncinya dapat ditelusuri ke bukti yang jelas, seperti data primer atau sekunder resmi, literatur peer-reviewed, atau asumsi yang dinyatakan secara terbuka.</p>
+          <p class="tbl-title">Tabel 10.1 — Empat jenis pernyataan (aturan disiplin berbasis bukti)</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Empat jenis pernyataan">
+            <thead><tr><th>Jenis pernyataan</th><th>Ciri</th><th>Contoh</th><th>Cara melabelinya</th></tr></thead>
+            <tbody>
+              <tr><td>Fakta empiris</td><td>Hasil pengukuran/observasi</td><td>Deforestasi netto Y ha menurut KLHK</td><td>Sumber, tahun, metode</td></tr>
+              <tr><td>Ketentuan regulasi</td><td>Isi norma hukum</td><td>KLHS wajib menjadi bagian penyusunan RTRW</td><td>Nomor &amp; pasal regulasi</td></tr>
+              <tr><td>Asumsi desain/model</td><td>Pilihan analis</td><td>Asumsi laju pertumbuhan 1,2%/tahun</td><td>Ditandai asumsi + sensitivitasnya</td></tr>
+              <tr><td>Interpretasi/analisis</td><td>Penalaran penulis</td><td>Pola ini mengindikasikan fragmentasi</td><td>Didirikan di atas fakta + warrant eksplisit</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <h3>Struktur logis laporan teknis</h3>
+          <ol>
+            <li><strong>Ringkasan eksekutif</strong> — masalah, temuan kunci, rekomendasi utama.</li>
+            <li><strong>Konteks &amp; perumusan masalah</strong> — dari pohon masalah Bab 8.</li>
+            <li><strong>Data &amp; metode</strong> — sumber, tahun, skala, metode, keterbatasan, triangulasi (Bab 3).</li>
+            <li><strong>Temuan</strong> — disajikan tanpa interpretasi berlebihan; setiap angka disertai metadata.</li>
+            <li><strong>Analisis &amp; interpretasi</strong> — trade-off, keadilan lingkungan, ketidakpastian; <span class="term" data-gloss="warrant">warrant</span> &amp; <span class="term" data-gloss="qualifier">qualifier</span> dinyatakan eksplisit.</li>
+            <li><strong>Rekomendasi</strong> — setiap rekomendasi menunjuk kembali ke temuan bernomor.</li>
+            <li><strong>Lampiran keterlacakan</strong> — metadata, matriks bukti–rekomendasi, log revisi.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <section class="sec sec-deep" id="toulmin" aria-labelledby="toulmin-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Panduan bertahap</p>
+          <h2 class="h2" id="toulmin-title">Model <span class="term" data-gloss="model-toulmin">Toulmin</span> — 6 unsur argumentasi</h2>
+          <p class="sec-desc">Penulis kuat pada klaim &amp; data, lemah pada <span class="term" data-gloss="warrant">warrant</span> &amp; <span class="term" data-gloss="rebuttal">rebuttal</span> — di sanalah lompatan logika bersembunyi.</p>
+        </div>
+        <div class="stepper card" role="region" aria-label="Langkah model Toulmin" aria-live="polite" id="stepper-box">
+          <div class="stepper-pos" id="stepper-pos">Langkah 1 dari 6</div>
+          <div class="stepper-stage" id="stepper-stage"></div>
+          <div class="stepper-nav">
+            <button type="button" class="btn btn-ghost" id="step-prev"><span class="icon" data-lucide="chevron-left"></span> Sebelumnya</button>
+            <div class="stepper-dots" id="stepper-dots" aria-hidden="true"></div>
+            <button type="button" class="btn btn-primary" id="step-next">Berikutnya <span class="icon" data-lucide="chevron-right"></span></button>
+          </div>
+        </div>
+        <figure class="viz">
+          <div class="mermaid-box" id="mm-toulmin" role="img" aria-label="Diagram model Toulmin 6 unsur"></div>
+          <figcaption><strong>Gbr. 10.1</strong> — Model Toulmin: klaim ditopang data, dihubungkan warrant, diperkuat backing, dibatasi qualifier, dan diuji rebuttal.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="sec" id="sub-102" aria-labelledby="s102-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">10.2 · Visualisasi</p>
+          <h2 class="h2" id="s102-title">Visualisasi: tabel, grafik, peta, dan diagram</h2>
+          <p class="sec-desc">Bukan hiasan, melainkan alat berpikir bersama.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>Memilih bentuk: pertanyaan menentukan wadah</h3>
+          <p class="tbl-title">Tabel 10.2 — Pertanyaan keputusan → bentuk visual</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Pertanyaan dan bentuk visual">
+            <thead><tr><th>Pertanyaan keputusan</th><th>Bentuk yang tepat</th><th>Hindari</th></tr></thead>
+            <tbody>
+              <tr><td>Berapa besar, tepatnya, nilai tiap unit?</td><td>Tabel</td><td>Grafik batang dengan puluhan batang</td></tr>
+              <tr><td>Bagaimana kecenderungan dari waktu ke waktu?</td><td>Grafik garis</td><td>Diagram lingkaran (pie)</td></tr>
+              <tr><td>Bagaimana perbandingan antarkategori?</td><td>Grafik batang horizontal terurut</td><td>Grafik 3D</td></tr>
+              <tr><td>Di mana konsentrasi dan simpangannya?</td><td>Peta tematik</td><td>Peta tanpa kelas &amp; legenda</td></tr>
+              <tr><td>Bagaimana sebab-akibat berputar?</td><td>Diagram loop kausal (Bab 2)</td><td>Narasi panjang tanpa diagram</td></tr>
+              <tr><td>Bagaimana struktur argumen?</td><td>Pohon masalah–tujuan (Bab 8)</td><td>Gambar dekoratif</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p><strong>Kaidah integritas</strong> (<span class="term" data-gloss="data-ink-ratio">Tufte</span>): sumbu proporsional dari nol; <span class="term" data-gloss="data-ink-ratio">rasio tinta-data</span> dimaksimalkan; klasifikasi peta didokumentasikan. <strong>Peta tematik</strong> menggunakan <span class="term" data-gloss="variabel-visual-bertin">variabel visual Bertin</span> — hue/value warna, ukuran, bentuk, pola — value untuk kuantitatif bertingkat, hue untuk kualitatif. Gunakan palet aman buta warna dan sertakan elemen wajib: judul informatif, legenda, skala, arah utara, sumber &amp; tahun.</p>
+        </div>
+      </div>
+    </section>
+    <section class="sec" id="sub-103" aria-labelledby="s103-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">10.3 · Policy brief</p>
+          <h2 class="h2" id="s103-title"><span class="term" data-gloss="policy-brief">Policy brief</span> dan argumentasi akademik</h2>
+          <p class="sec-desc">Lead-with-the-finding vs built-up — ringkas, persuasif, tetapi tetap akademik.</p>
+        </div>
+        <div class="sec-body prose">
+          <p><span class="term" data-gloss="policy-brief">Policy brief</span> menyajikan temuan riset dan rekomendasi kepada pengambil keputusan nonspecialis — lead-with-the-finding, bukan built-up akademik.</p>
+          <p class="tbl-title">Tabel 10.3 — Struktur <span class="term" data-gloss="policy-brief">policy brief</span> 2–4 halaman</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Struktur policy brief">
+            <thead><tr><th>Komponen</th><th>Isi</th><th>Takaran indikatif</th></tr></thead>
+            <tbody>
+              <tr><td>Judul</td><td>Menyatakan pesan/rekomendasi</td><td>1 baris</td></tr>
+              <tr><td>Ringkasan eksekutif</td><td>Masalah + solusi</td><td>≤200 kata</td></tr>
+              <tr><td>Konteks</td><td>Temuan kunci &amp; besaran persoalan</td><td>≤500 kata</td></tr>
+              <tr><td>Kritik opsi</td><td>Perbandingan opsi, keadilan</td><td>1–1,5 hal</td></tr>
+              <tr><td>Rekomendasi</td><td>2–4 rekomendasi spesifik</td><td>≤1.000 kata</td></tr>
+              <tr><td>Rujukan</td><td>Sumber bukti</td><td>Daftar ringkas</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <div class="callout callout-ok">
+            <span class="icon" data-lucide="clipboard-check"></span>
+            <p><strong>Checklist 10.3.4 — 5 butir:</strong> (1) masalah dengan angka, lokasi, pihak terdampak di 300 kata pertama; (2) perbandingan ≥2 opsi + trade-off distributif; (3) setiap rekomendasi terlacak ke bukti; (4) keterbatasan dinyatakan; (5) halaman pertama cukup untuk keputusan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec" id="sub-104" aria-labelledby="s104-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">10.4 · Keterlacakan &amp; konsistensi</p>
+          <h2 class="h2" id="s104-title"><span class="term" data-gloss="keterlacakan">Keterlacakan</span> bukti–rekomendasi dan <span class="term" data-gloss="konsistensi-internal">konsistensi internal</span></h2>
+          <p class="sec-desc">Jika satu mata rantai putus, rekomendasi menjadi opini.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>Matriks keterlacakan</h3>
+          <p class="tbl-title">Tabel 10.4 — Format matriks <span class="term" data-gloss="keterlacakan">keterlacakan</span></p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Format matriks keterlacakan">
+            <thead><tr><th>ID Rekomendasi</th><th>Isu strategis (Bab 9)</th><th>Temuan kunci</th><th>Data &amp; sumber</th><th>Alternatif &amp; hasil MCE (Bab 8)</th><th>Indikator keberhasilan</th><th>Risiko bila tak dijalankan</th></tr></thead>
+            <tbody>
+              <tr><td>R1</td><td>...</td><td>T2, T5</td><td>BPS 2024; peta BIG</td><td>A2</td><td>...</td><td>...</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <h3><span class="term" data-gloss="lompatan-logika">Lompatan logika</span></h3>
+          <ul>
+            <li>Ekstrapolasi diam-diam: tren 5 tahun diproyeksikan 20 tahun tanpa asumsi.</li>
+            <li>Korelasi menjadi kausasi.</li>
+            <li>Normatif menjadi empiris.</li>
+            <li>Anomali menjadi aturan.</li>
+            <li>Pembingkaian selektif visual.</li>
+          </ul>
+          <h3><span class="term" data-gloss="konsistensi-internal">Konsistensi internal</span> — 5 bidang</h3>
+          <ol>
+            <li>Angka — sama tidak boleh berbeda antarbab.</li>
+            <li>Terminologi — daya dukung, kerentanan, ketahanan konsisten dengan Bab 4 &amp; 6.</li>
+            <li>Batas spasial-temporal — wilayah studi &amp; horizon tahun konsisten.</li>
+            <li>Silang instrumen — rekomendasi spasial konsisten dengan program &amp; pembiayaan Bab 9.</li>
+            <li>Regulasi — rujukan status terkini (PP 46/2016 → PP 22/2021).</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <section class="sec sec-deep" id="traceability" aria-labelledby="traceability-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Builder interaktif</p>
+          <h2 class="h2" id="traceability-title">Matriks <span class="term" data-gloss="keterlacakan">keterlacakan</span> — bangun rantai bukti Anda</h2>
+          <p class="sec-desc">Tambahkan baris rekomendasi Anda sendiri, lihat apakah setiap rekomendasi memiliki temuan dan data pendukung — dan ekspor sebagai CSV untuk lampiran.</p>
+        </div>
+        <div id="traceability-root"></div>
+      </div>
+    </section>
+    <section class="sec" id="sub-105" aria-labelledby="s105-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">10.5 · Refleksi &amp; finalisasi</p>
+          <h2 class="h2" id="s105-title">Refleksi, revisi, dan finalisasi dokumen strategi terintegrasi</h2>
+          <p class="sec-desc">Tugas 2 sebagai paket akhir yang dapat diaudit.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>Refleksi sebagai keterampilan profesional</h3>
+          <ul>
+            <li>Substansi: jika satu bukti kunci keliru, rekomendasi mana yang ikut runtuh?</li>
+            <li>Proses: di titik mana Anda mengambil jalan pintas?</li>
+            <li>Posisi &amp; keadilan: suara siapa yang tidak hadir?</li>
+          </ul>
+          <h3>Protokol peer review — 6 butir</h3>
+          <ol>
+            <li>Apakah masalah, metode, &amp; batasan data dinyatakan jelas?</li>
+            <li>Apakah peta/tabel/grafik membantu keputusan &amp; menyertakan elemen wajib?</li>
+            <li>Apakah setiap rekomendasi terlacak ke bukti?</li>
+            <li>Apakah ada <span class="term" data-gloss="lompatan-logika">lompatan logika</span> atau <span class="term" data-gloss="warrant">warrant</span> tidak dinyatakan?</li>
+            <li>Apakah trade-off &amp; dampak distributif hadir?</li>
+            <li>Apakah ketidakpastian &amp; keterbatasan dinyatakan jujur?</li>
+          </ol>
+          <p><strong>Paket pengumpulan Tugas 2:</strong> dokumen utama (maks. 25 hal di luar lampiran) + <span class="term" data-gloss="policy-brief">policy brief</span> 2 halaman + satu peta/grafik kunci + lampiran mutu: matriks keterlacakan, catatan peer review + log revisi, daftar metadata.</p>
+          <figure class="viz">
+            <div class="mermaid-box" id="mm-trace" role="img" aria-label="Diagram rantai keterlacakan bukti–rekomendasi"></div>
+            <figcaption><strong>Gbr. 10.2</strong> — Rantai <span class="term" data-gloss="keterlacakan">keterlacakan</span>: data → temuan → isu strategis → alternatif → MCE → rekomendasi → indikator KHD.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section class="sec sec-deep" id="studi-kasus" aria-labelledby="sk-title">
+      <div class="wrap">
+        <div class="case-plate">
+          <p class="eyebrow"><span class="case-pin" aria-hidden="true"></span>Studi Kasus · <span class="term" data-gloss="klhs-rtrw">KLHS RTRW</span> Daerah</p>
+          <h2 class="h2" id="sk-title">Menelaah dokumen <span class="term" data-gloss="klhs-rtrw">KLHS RTRW</span> daerah</h2>
+          <p class="case-meta">UU 32/2009 Psl.15–16 · PP 22/2021 · 6 muatan wajib KLHS</p>
+          <p class="lead"><span class="term" data-gloss="klhs-rtrw">KLHS untuk RTRW</span> adalah contoh paling nyata komunikasi kebijakan berbasis bukti di Indonesia: analisis sistematis, visualisasi spasial, dan rekomendasi perbaikan — dengan muatan wajib 6 hal: daya dukung–daya tampung, dampak &amp; risiko, jasa ekosistem, efisiensi SDA, kerentanan &amp; adaptasi iklim, ketahanan keanekaragaman hayati.</p>
+          <h3>Protokol telaah 7 langkah</h3>
+          <ol>
+            <li>Inventarisasi struktur — petakan bab KLHS terhadap 6 muatan wajib.</li>
+            <li>Uji kapasitas — apakah klaim D3TLH didukung perhitungan atau hanya narasi?</li>
+            <li><span class="term" data-gloss="keterlacakan">Keterlacakan</span> — pilih 5 rekomendasi utama, lacak mundur ke temuan &amp; data.</li>
+            <li>Kualitas visual — nilai minimal 3 peta dan 2 tabel.</li>
+            <li><span class="term" data-gloss="lompatan-logika">Lompatan logika</span> — identifikasi minimal 2 <span class="term" data-gloss="warrant">warrant</span> tidak dinyatakan.</li>
+            <li>Keadilan &amp; partisipasi — apakah dampak distributif dibahas?</li>
+            <li>Kesimpulan telaah — 3 kekuatan, 3 kelemahan, 1 rekomendasi perbaikan dokumen.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <section class="sec" id="rangkuman" aria-labelledby="rangkuman-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Rangkuman</p>
+        <h2 class="h2" id="rangkuman-title">Pokok pembelajaran</h2>
+        <ul class="objective-list" id="rangkuman-list">
+          <li><span class="term" data-gloss="laporan-berbasis-bukti">Laporan berbasis bukti</span> membedakan fakta empiris, regulasi, asumsi, dan interpretasi — dan setiap pernyataan kunci dapat dilacak pada bukti eksplisit.</li>
+          <li>Model <span class="term" data-gloss="model-toulmin">Toulmin 6 unsur</span> mengungkap di mana <span class="term" data-gloss="lompatan-logika">lompatan logika</span> bersembunyi — hampir selalu di <span class="term" data-gloss="warrant">warrant</span> yang tidak dinyatakan.</li>
+          <li>Visualisasi menjawab pertanyaan keputusan yang jelas, jujur terhadap data, dan membawa ketidakpastian ke permukaan.</li>
+          <li><span class="term" data-gloss="policy-brief">Policy brief</span> memakai lead-with-the-finding (2–4 halaman) — kesimpulan di awal.</li>
+          <li><span class="term" data-gloss="keterlacakan">Keterlacakan</span> (matriks 7 kolom) dan <span class="term" data-gloss="konsistensi-internal">konsistensi 5 bidang</span> adalah inti penjaminan mutu — dilengkapi peer review 6 butir dan log revisi untuk Tugas 2.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="sec sec-deep" id="quiz" aria-labelledby="quiz-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Checkpoint</p>
+          <h2 class="h2" id="quiz-title">Uji pemahaman</h2>
+          <p class="sec-desc">Lima soal pilihan ganda dari materi di atas. Jawab, periksa hasil secara langsung, dan peroleh skor beserta umpan balik.</p>
+        </div>
+        <div class="quiz card" id="quiz-box">
+          <div id="quiz-root"></div>
+        </div>
+      </div>
+    </section>
+    <section class="sec" id="diskusi" aria-labelledby="diskusi-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Diskusi</p>
+          <h2 class="h2" id="diskusi-title">Pertanyaan diskusi</h2>
+          <p class="sec-desc">Soal terbuka untuk dibedah bersama. Klik kartu untuk membuka petunjuk arah pembahasannya.</p>
+        </div>
+        <div class="acc" id="diskusi-list"></div>
+      </div>
+    </section>
+    <section class="sec sec-deep" id="latihan" aria-labelledby="latihan-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Latihan</p>
+          <h2 class="h2" id="latihan-title">Latihan mandiri</h2>
+          <p class="sec-desc">Tugas penerapan. Tandai saat selesai — progres tersimpan otomatis di perangkat ini.</p>
+        </div>
+        <div class="lat-progress" role="status" aria-live="polite">
+          <div class="lat-bar"><div class="lat-bar-fill" id="lat-fill"></div></div>
+          <span class="lat-count" id="lat-count">0 / 4 selesai</span>
+        </div>
+        <ol class="lat-list" id="latihan-list"></ol>
+      </div>
+    </section>
+    <section class="sec" id="pustaka" aria-labelledby="pustaka-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Referensi</p>
+        <h2 class="h2" id="pustaka-title">Daftar pustaka</h2>
+        <div id="pustaka-list"></div>
+      </div>
+    </section>
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-dialog" role="document">
+        <button type="button" class="modal-close" data-close-modal aria-label="Tutup dialog"><span class="icon" data-lucide="x"></span></button>
+        <p class="eyebrow" id="modal-eyebrow"></p>
+        <h3 class="h3" id="modal-title"></h3>
+        <div class="modal-body" id="modal-body"></div>
+      </div>
+    </div>
+    <span id="tooltip" class="tooltip" role="tooltip" hidden></span>
   </main>
-
   <footer class="site-footer">
     <div class="wrap foot-inner">
       <p class="foot-copy">© <span data-current-year></span> <a href="https://khair.am" target="_blank" rel="noopener noreferrer">Hafizhul Khair</a></p>
-      <p class="foot-modified">Terakhir diperbarui: <time data-last-modified datetime="2026-08-25"></time></p>
+      <p class="foot-modified">Terakhir diperbarui: <time data-last-modified datetime="2026-09-01"></time></p>
     </div>
   </footer>
-
+  <button type="button" id="to-top" class="to-top" aria-label="Kembali ke atas" hidden><span class="icon" data-lucide="arrow-up"></span></button>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lucide@0.462.0/dist/umd/lucide.min.js"></script>
-  <script src="assets/js/landing.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+  <script src="assets/js/data-bab10.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/stepper.js"></script>
+  <script src="assets/js/quiz.js"></script>
+  <script src="assets/js/extras.js"></script>
+  <script src="assets/js/bab10.js"></script>
   <script src="assets/js/footer.js"></script>
 </body>
 </html>

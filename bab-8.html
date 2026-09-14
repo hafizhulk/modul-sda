@@ -3,51 +3,479 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Modul SDL — IV-08 Penstrukturan Masalah dan Evaluasi Multikriteria. Segera tersedia." />
-  <title>SDL · IV-08 — Segera</title>
+  <meta name="description" content="Modul SDL Bab 8 — Penstrukturan Masalah dan Evaluasi Multikriteria: perumusan masalah inti, pemangku kepentingan & pohon masalah, alternatif kebijakan, kriteria MCDA, pembobotan AHP, skoring, analisis sensitivitas, studi kasus reklamasi pesisir vs kawasan lindung." />
+  <title>SDL · IV-08 Penstrukturan Masalah dan Evaluasi Multikriteria</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body class="landing-page">
+<body class="with-rail">
   <div id="progress-track" role="presentation" aria-hidden="true"><div id="progress-bar"></div></div>
 
   <header class="site-header" id="site-header">
     <div class="wrap header-inner">
+      <button type="button" class="rail-toggle" id="rail-toggle" aria-expanded="false" aria-controls="rail" aria-label="Buka daftar isi">
+        <span class="icon" data-lucide="list"></span>
+      </button>
       <a class="brand" href="index.html" aria-label="Beranda modul SDL">
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-text">Sumber Daya &amp; <strong>Lingkungan</strong></span>
       </a>
+      <div class="chapter-nav" id="chapter-nav">
+        <button type="button" class="chapter-btn" id="chapter-btn" aria-haspopup="menu" aria-expanded="false" aria-label="Pilih bab">
+          <span class="sheet-code">IV-08</span>
+          <span class="chapter-btn-label" id="chapter-btn-label">Bab 8</span>
+          <span class="icon chev" data-lucide="chevron-down"></span>
+        </button>
+        <div class="chapter-menu" id="chapter-menu" role="menu" hidden></div>
+      </div>
       <button type="button" id="theme-toggle" class="icon-btn" aria-label="Alihkan tema terang/gelap" aria-pressed="false">
         <span class="icon" data-lucide="sun"></span>
       </button>
     </div>
   </header>
 
-  <main id="top" class="landing-main">
-    <section class="grid-paper hero">
+  <aside class="rail" id="rail" aria-label="Daftar isi bab">
+    <p class="rail-title">IV-08 · Legenda</p>
+    <p class="rail-label">Materi</p>
+    <a class="rail-item" href="#pendahuluan"><span class="rail-code">PD</span> Pendahuluan</a>
+    <a class="rail-item" href="#objectives"><span class="rail-code">00</span> Tujuan pembelajaran</a>
+    <a class="rail-item" href="#sub-81"><span class="rail-code">01</span> Perumusan masalah inti</a>
+    <a class="rail-item" href="#penstrukturan"><span class="rail-code">SP</span> Empat tahap penstrukturan</a>
+    <a class="rail-item" href="#sub-82"><span class="rail-code">02</span> Pemangku kepentingan &amp; pohon</a>
+    <a class="rail-item" href="#sub-83"><span class="rail-code">03</span> Alternatif kebijakan</a>
+    <a class="rail-item" href="#sub-84"><span class="rail-code">04</span> Kriteria evaluasi</a>
+    <a class="rail-item" href="#sub-85"><span class="rail-code">05</span> Pembobotan &amp; sensitivitas</a>
+    <a class="rail-item" href="#mce"><span class="rail-code">MC</span> Kalkulator MCE</a>
+    <a class="rail-item" href="#studi-kasus"><span class="rail-code">SC</span> Studi kasus · Benoa</a>
+    <p class="rail-label">Penutup</p>
+    <a class="rail-item" href="#rangkuman"><span class="rail-code">RK</span> Rangkuman</a>
+    <a class="rail-item" href="#quiz"><span class="rail-code">QZ</span> Kuis</a>
+    <a class="rail-item" href="#diskusi"><span class="rail-code">DS</span> Diskusi</a>
+    <a class="rail-item" href="#latihan"><span class="rail-code">LT</span> Latihan</a>
+    <a class="rail-item" href="#pustaka"><span class="rail-code">PB</span> Pustaka</a>
+  </aside>
+  <div class="rail-backdrop" aria-hidden="true"></div>
+
+  <main id="top" class="content">
+
+    <section class="grid-paper hero" id="hero" aria-labelledby="hero-title">
       <div class="wrap hero-copy">
-        <p class="eyebrow">Bagian IV · Modul Ajar S2 PWK</p>
-        <h1><span class="sheet-code">IV-08</span> Penstrukturan Masalah dan Evaluasi Multikriteria</h1>
-        <p class="lead">Bab ini sedang disiapkan dan akan segera tersedia.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="index.html"><span class="icon" data-lucide="arrow-left"></span> Kembali ke daftar bab</a>
-          <a class="btn btn-ghost" href="bab-1.html"><span class="icon" data-lucide="book-open"></span> Buka Bab 1</a>
+        <p class="eyebrow">Bagian IV · Strategi &amp; Komunikasi Kebijakan · Modul Ajar S2 PWK</p>
+        <h1 id="hero-title">Penstrukturan Masalah dan Evaluasi Multikriteria<span class="tone">: menjembatani diagnosis dan strategi</span></h1>
+      </div>
+      <div class="wrap stat-strip" aria-label="Angka kunci bab">
+        <div class="stat"><span class="stat-num">4 tahap</span><span class="stat-lbl">penstrukturan masalah — dari problem sensing ke pilihan definisi</span></div>
+        <div class="stat"><span class="stat-num">6 kriteria</span><span class="stat-lbl">MCDA — ekologis, efisiensi, sosial, kelembagaan, keadilan, ketahanan</span></div>
+        <div class="stat"><span class="stat-num">3 alternatif</span><span class="stat-lbl">yang benar-benar berbeda desain, bukan kosmetik</span></div>
+      </div>
+    </section>
+
+    <!-- PENDAHULUAN -->
+    <section class="sec" id="pendahuluan" aria-labelledby="pd-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Pendahuluan</p>
+        <h2 class="h2" id="pd-title">Mengapa bab ini menjembatani diagnosis dan strategi</h2>
+        <div class="prose">
+          <p>Bab 1–7 membekali mahasiswa dengan fondasi konseptual, arsitektur data, diagnosis degradasi dan risiko, serta peta kebijakan beserta kesenjangan implementasinya. Namun, bukti yang banyak tidak otomatis menghasilkan keputusan yang baik. Masalah lingkungan sering bersifat <em>wicked</em>: melibatkan banyak aktor dan definisi masalah, memiliki tujuan yang tidak dapat dimaksimalkan sekaligus, serta tidak menyediakan satu solusi yang "benar secara teknis" (Dorst, 2006; Hisschemöller &amp; Hoppe, 1996).</p>
+          <p>Antara <em>diagnosis</em> (Bab 3–6) dan <em>strategi</em> (Bab 9) diperlukan dua keterampilan: <strong>penstrukturan masalah</strong> — mengubah mess menjadi rumusan yang spesifik ruang-waktu — dan <strong>evaluasi multikriteria</strong> — membandingkan alternatif secara transparan tanpa berpura-pura kompromi tidak ada. Peta konsep: masalah kacau → perumusan inti (8.1) → aktor &amp; pohon &amp; ToC (8.2) → alternatif kontras (8.3) → kriteria (8.4) → pembobotan–skoring–sensitivitas (8.5) → skenario strategi (Bab 9).</p>
+          <p class="note">Pembeda konsisten: <strong>fakta empiris</strong>, <strong>ketentuan regulasi</strong>, <strong>asumsi desain/model</strong>, dan <strong>interpretasi/analisis</strong>.</p>
         </div>
       </div>
     </section>
+
+    <!-- TUJUAN -->
+    <section class="sec" id="objectives" aria-labelledby="obj-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Tujuan pembelajaran</p>
+        <h2 class="h2" id="obj-title">Setelah mempelajari bab ini, mahasiswa mampu…</h2>
+        <ul class="objective-list" id="objectives-list"></ul>
+      </div>
+    </section>
+
+    <!-- KATA KUNCI -->
+    <section class="sec sec-kw" id="kata-kunci" aria-labelledby="kw-title">
+      <div class="wrap">
+        <p class="eyebrow center-eyebrow">Kata kunci</p>
+        <h2 class="h2 sr-only" id="kw-title">Kata kunci bab ini</h2>
+        <div class="kw-cloud" id="kw-cloud" aria-label="Daftar kata kunci"></div>
+      </div>
+    </section>
+
+    <!-- 8.1 PERUMUSAN MASALAH INTI -->
+    <section class="sec" id="sub-81" aria-labelledby="s81-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">8.1 · Perumusan masalah inti</p>
+          <h2 class="h2" id="s81-title">Perumusan masalah inti dan hubungan penyebab–dampak</h2>
+          <p class="sec-desc">Fenomena vs masalah kebijakan — dan risiko kesalahan Tipe III.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>8.1.1 · Masalah kebijakan versus fenomena</h3>
+          <p>Fenomena ("banjir rob makin sering") baru menjadi <em>masalah kebijakan</em> ketika dirumuskan sebagai kesenjangan antara keadaan sekarang dan yang diinginkan, yang dapat dijembatani tindakan otoritatif pada ruang-waktu tertentu. Dunn (2017) menegaskan: masalah kebijakan adalah konstruksi analitis — dipilih, dibatasi, dan dibingkai. Kesalahan paling mahal bukanlah salah hitung, melainkan <span class="term" data-gloss="kesalahan-tipe-iii">kesalahan Tipe III</span>: menyelesaikan masalah yang salah. Contoh: merumuskan masalah sebagai "kurangnya tanggul" padahal akar strukturalnya adalah ekstraksi air tanah dan insentif pesisir (Bab 6).</p>
+
+          <h3>8.1.2 · Empat tahap penstrukturan masalah</h3>
+          <p class="tbl-title">Tabel 8.1 — Empat tahap penstrukturan masalah</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Empat tahap penstrukturan masalah">
+            <thead><tr><th scope="col">Tahap</th><th scope="col">Pertanyaan kunci</th><th scope="col">Keluaran</th></tr></thead>
+            <tbody>
+              <tr><td>1. Merasakan masalah</td><td>Mengapa keadaan ini kacau? Untuk siapa?</td><td>Inventaris gejala, pihak, batas wilayah</td></tr>
+              <tr><td>2. Kategorisasi masalah</td><td>Kesenjangan apa yang memisahkan sekarang dan diinginkan?</td><td>Daftar kesenjangan bernilai bagi aktor</td></tr>
+              <tr><td>3. Dekomposisi</td><td>Kesenjangan mana yang berpotensi dijembatani? Oleh instrumen apa?</td><td>Rantai penyebab–dampak; isu tatakelola teridentifikasi</td></tr>
+              <tr><td>4. Pilihan definisi masalah</td><td>Di mana peluang nyata perbaikan?</td><td>Definisi masalah yang siap diladeni alternatif</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p>Ciri konteks SDA: rumusan harus menyertakan <strong>batas ruang-waktu</strong> (DAS, pesisir, siklus hidrologis), <strong>batas tanggung jawab kelembagaan</strong>, dan <strong>sikap terhadap ketidakpastian</strong> (faktual vs perkiraan model). Literatur menyarankan menggabungkan data resmi kuantitatif dengan narasi pemangku kepentingan sebagai <em>joint knowledge</em> sejak tahap pertama.</p>
+
+          <h3>8.1.3 · Rantai penyebab–dampak</h3>
+          <p>Kerangka Bab 2 (loop kausal), Bab 4 (tekanan kapasitas-jasa), dan Bab 5 (sumber–jalur–penerima) adalah material mentah untuk rantai di sini. Tiga aturan disiplin pohon masalah: <strong>mekanisme, bukan asosiasi</strong>; <strong>jangkauan ruang-waktu</strong> (hulu–hilir DAS); dan <strong>padankan dengan kerangka teruji</strong> (DPSIR untuk fragmentasi hutan Indonesia, transmigrasi–pertambangan–perkebunan → tekanan → kondisi → dampak → respons).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEPPER 4 TAHAP -->
+    <section class="sec sec-deep" id="penstrukturan" aria-labelledby="penstrukturan-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Panduan bertahap</p>
+          <h2 class="h2" id="penstrukturan-title">Empat tahap penstrukturan masalah</h2>
+          <p class="sec-desc">Proses iteratif antara <em>puzzling</em> dan <em>powering</em> — dari merasakan kekacauan hingga definisi yang siap diladeni kebijakan.</p>
+        </div>
+        <div class="stepper card" role="region" aria-label="Langkah penstrukturan masalah" aria-live="polite" id="stepper-box">
+          <div class="stepper-pos" id="stepper-pos">Langkah 1 dari 4</div>
+          <div class="stepper-stage" id="stepper-stage"></div>
+          <div class="stepper-nav">
+            <button type="button" class="btn btn-ghost" id="step-prev"><span class="icon" data-lucide="chevron-left"></span> Sebelumnya</button>
+            <div class="stepper-dots" id="stepper-dots" aria-hidden="true"></div>
+            <button type="button" class="btn btn-primary" id="step-next">Berikutnya <span class="icon" data-lucide="chevron-right"></span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8.2 PEMANGKU KEPENTINGAN, POHON MASALAH, TOC -->
+    <section class="sec" id="sub-82" aria-labelledby="s82-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">8.2 · Aktor &amp; pohon masalah</p>
+          <h2 class="h2" id="s82-title">Pemangku kepentingan, pohon masalah–tujuan, dan theory of change</h2>
+          <p class="sec-desc">Analisis kekuasaan, bukan sekadar daftar — plus mekanisme perantara yang dapat diuji.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>8.2.1 · Analisis pemangku kepentingan sebagai analisis kekuasaan</h3>
+          <p>Reed et al. (2009) menekankan metode yang eksplisit dan tertelusur. Dua pelajaran empiris Indonesia: konflik sering terletak pada <strong>ketimpangan kuasa dan akses</strong> (Bulungan: masyarakat vs perusahaan pemurnian batubara &amp; logging; Yasmi, 2003) — bukan data — dan <strong>legalitas formal ≠ keabsahan sosial</strong> (tambang di hutan lindung: UU 41/1999, UU 3/2020, PP 22/2021 vs pemanfaatan nyata). Ringkas dengan <span class="term" data-gloss="stakeholder-grid">matriks pengaruh × kepentingan</span> plus kolom perspektif aktor terhadap definisi masalah dan sumber hak/klaim.</p>
+
+          <h3>8.2.2 · Pohon masalah dan pohon tujuan</h3>
+          <p><span class="term" data-gloss="pohon-masalah">Pohon masalah</span>: batang masalah inti, akar penyebab langsung/tidak langsung, tajuk dampak langsung/tidak langsung — tiap panah adalah mekanisme yang teruji. <span class="term" data-gloss="pohon-tujuan">Pohon tujuan</span> adalah negasi tiap simpul, mengekspos tujuan yang saling bertentangan (investasi pelabuhan vs mangrove) yang harus diladeni alternatif (8.3), bukan dihapus dengan retorika win–win.</p>
+          <figure class="viz">
+            <div class="mermaid-box" id="mm-pohon" role="img" aria-label="Diagram pohon masalah menjadi pohon tujuan"></div>
+            <figcaption><strong>Gbr. 8.1</strong> — Dari pohon masalah (akar penyebab → dampak) ke pohon tujuan (means–ends) — konflik distributif diekspos, bukan disembunyikan.</figcaption>
+          </figure>
+
+          <h3>8.2.3 · Theory of change</h3>
+          <p><span class="term" data-gloss="theory-of-change">ToC</span> adalah urutan hipotesis intervensi → keluaran → hasil → dampak jangka panjang, disertai asumsi yang dapat diuji dan indikator tiap tautan. Berbeda dari pohon tujuan, ToC mewajibkan jawaban "mekanisme perantara apa, dengan syarat kelembagaan-lingkungan apa, oleh aktor siapa". ToC yang realistis mengikat manfaat ekologis dan sosial-ekonomi di tingkat lokal terlebih dahulu sebelum klaim dampak nasional (Sayer et al., 2018).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8.3 ALTERNATIF KEBIJAKAN -->
+    <section class="sec" id="sub-83" aria-labelledby="s83-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">8.3 · Alternatif kebijakan</p>
+          <h2 class="h2" id="s83-title">Pembentukan alternatif kebijakan yang benar-benar berbeda</h2>
+          <p class="sec-desc">Bukan gradasi kosmetik 838 → 600 → 400 ha dengan desain sama.</p>
+        </div>
+        <div class="sec-body prose">
+          <p>Kekeliruan lazim: tiga alternatif hanya berbeda intensitas — ketiganya membaca konflik dengan cara yang sama. Alternatif bermutu berbeda pada <strong>bagaimana masalah dibingkai</strong>, <strong>siapa disasar</strong>, dan <strong>instrumen utama</strong> (Bab 7). Kriteria desain:</p>
+          <ul>
+            <li>Berbeda secara kerangka masalah, bukan gradasi kuantitatif;</li>
+            <li>Saling eksklusif minimum pada struktur keputusan (izinkan–kondisional–lindungi);</li>
+            <li>Dapat dijalankan secara administratif pada kewenangan nyata (PP 21/2021, UU 1/2014 jo. 27/2007);</li>
+            <li>Termasuk alternatif non-spasial (instrumen ekonomi, kolaboratif, pengaturan hak).</li>
+          </ul>
+
+          <p class="tbl-title">Tabel 8.2 — Tiga alternatif yang berbeda secara struktural (pesisir/lindung)</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Tiga alternatif kebijakan pesisir">
+            <thead><tr><th scope="col">Alternatif</th><th scope="col">Deskripsi Inti</th><th scope="col">Perbedaan Struktural</th></tr></thead>
+            <tbody>
+              <tr><td><strong>A. Bisnis-seperti-biasa</strong></td><td>Reklamasi/pertambangan dilanjutkan sesuai izin, tanpa perubahan batas lindung</td><td>Prioritas ekonomi jangka pendek, minim mitigasi</td></tr>
+              <tr><td><strong>B. Zonasi terbatas + mitigasi</strong></td><td>Diizinkan hanya di sub-zona luar penyangga, wajib rehabilitasi &amp; pemantauan</td><td>Zonasi bertingkat dengan syarat kinerja lingkungan</td></tr>
+              <tr><td><strong>C. Larangan/redesain ketat</strong></td><td>Dihentikan/direlokasi keluar kawasan lindung; kompensasi &amp; alih ke ekowisata</td><td>Integritas ekologis jangka panjang; alih model ekonomi lokal</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <h3>Prosedur kerja</h3>
+          <ol>
+            <li>Ambil 4 tahap penstrukturan (8.1.2) &amp; matriks aktor (8.2.1).</li>
+            <li>Untuk tiap akar penyebab utama, rumuskan alternatif yang menyasar mekanisme penyebabnya secara langsung, bukan gejalanya.</li>
+            <li>Tambahkan alternatif "tunda/ekspresikan kembali" sebagai pembanding bersyarat ketika bukti kedaluwarsa atau risiko tinggi.</li>
+            <li>Pastikan tiap alternatif punya ToC-nya sendiri dengan asumsi terbeda.</li>
+            <li>Uji kelayakan terhadap RTRW/RDTR &amp; kewenangan; catat gap sebagai risiko/premis.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8.4 KRITERIA EVALUASI -->
+    <section class="sec" id="sub-84" aria-labelledby="s84-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">8.4 · Kriteria evaluasi</p>
+          <h2 class="h2" id="s84-title">Kriteria evaluasi yang layak untuk konteks SDA–lingkungan</h2>
+          <p class="sec-desc">Tujuh keluarga kriteria — relevan, dapat diukur, tidak redundan, tidak bertentangan secara logika.</p>
+        </div>
+        <div class="sec-body prose">
+          <p class="tbl-title">Tabel 8.3 — Keluarga kriteria MCDA untuk pesisir/lindung</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Keluarga kriteria MCDA">
+            <thead><tr><th scope="col">Keluarga kriteria</th><th scope="col">Contoh indikator</th><th scope="col">Prinsip evaluasi</th></tr></thead>
+            <tbody>
+              <tr><td>Ekologis</td><td>tutupan mangrove/ekosistem prioritas, fragmentasi, daya tampung</td><td>fungsi &amp; integritas ekosistem terjaga/dipulihkan</td></tr>
+              <tr><td>Efisiensi sumber daya</td><td>return ekonomi per ha, loss-of-service jasa ekosistem</td><td>manfaat bersih optimal, tidak menutup opsi masa depan</td></tr>
+              <tr><td>Sosial-ekonomi</td><td>lapangan kerja lokal, ketahanan pangan nelayan</td><td>beban tidak ditimpakan pada rentan</td></tr>
+              <tr><td>Kelembagaan</td><td>kapasitas pelaksana, biaya transaksi</td><td>executable oleh aktor/kewenangan ada</td></tr>
+              <tr><td>Kesesuaian regulasi</td><td>RTRW/RDTR (UU 26/2007), KLHS (UU 32/2009), WP3K</td><td>koheren dengan hierarki rencana</td></tr>
+              <tr><td>Keadilan</td><td>Gini dampak, keterwakilan, hak ulayat</td><td>tidak ada kelompok bebannya sistemik</td></tr>
+              <tr><td>Ketahanan/resiliensi</td><td>buffer bahaya iklim, fleksibilitas opsi</td><td>robust &amp; adaptif</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <h3>Basis normatif Indonesia</h3>
+          <ul>
+            <li>UU 32/2009 jo. UU 6/2023 — KLHS sebagai dasar KRP.</li>
+            <li>PP 22/2021 — KLHS, daya dukung–daya tampung, integrasi ke RTRW/RDTR.</li>
+            <li>UU 26/2007 jo. PP 21/2021 — struktur/pola ruang, kawasan lindung sebagai kriteria kepatuhan spasial.</li>
+            <li>UU 41/2009 &amp; UU 17/2019 — mandat absolut (LP2B, SDA) yang keluar dari tawar-menawar.</li>
+          </ul>
+          <p class="note">KLHS sering dikerjakan di akhir sehingga berubah dari penyaring alternatif menjadi justifikasi pasca-keputusan — latihan Bab 8 dirancang untuk menempatkan MCDA sebagai alat <em>upstream</em>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8.5 PEMBOBOTAN & SENSITIVITAS -->
+    <section class="sec" id="sub-85" aria-labelledby="s85-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">8.5 · Pembobotan &amp; sensitivitas</p>
+          <h2 class="h2" id="s85-title">Pembobotan, skoring, analisis sensitivitas, dan justifikasi prioritas</h2>
+          <p class="sec-desc">Bobot bersifat normatif — harus didokumentasikan, bukan dianggap fakta objektif.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>Metode inti</h3>
+          <p>Definisi kriteria → standardisasi skor → pembobotan → agregasi (<span class="term" data-gloss="wlc">WLC</span>) → sensitivitas → rekomendasi. Pembobotan via <span class="term" data-gloss="ahp">AHP</span> (Saaty, 1990) dengan uji rasio konsistensi; alternatif: pembobotan sama, deliberatif, berbasis dokumen, atau hybrid. Semua indikator dinormalisasi ke skala sama (1–5 atau 0–1); agregasi berasumsi kompensatoris/non-kompensatoris — pilihan normatif yang harus dinyatakan.</p>
+
+          <p class="tbl-title">Tabel 8.4 — Contoh ilustratif skoring (skala 1–5, ilustratif — bukan data lapangan)</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Contoh skoring MCE 7 kriteria">
+            <thead><tr><th scope="col">Kriteria</th><th scope="col">Bobot</th><th scope="col">A</th><th scope="col">B</th><th scope="col">C</th></tr></thead>
+            <tbody>
+              <tr><td>Ekologis</td><td>0,15</td><td>1</td><td>3</td><td>5</td></tr>
+              <tr><td>Efisiensi SDA</td><td>0,15</td><td>4</td><td>3</td><td>2</td></tr>
+              <tr><td>Sosial-ekonomi</td><td>0,25</td><td>5</td><td>4</td><td>2</td></tr>
+              <tr><td>Kelembagaan</td><td>0,15</td><td>2</td><td>3</td><td>3</td></tr>
+              <tr><td>Kesesuaian regulasi</td><td>0,10</td><td>2</td><td>3</td><td>3</td></tr>
+              <tr><td>Keadilan</td><td>0,10</td><td>1</td><td>3</td><td>4</td></tr>
+              <tr><td>Ketahanan</td><td>0,10</td><td>2</td><td>3</td><td>5</td></tr>
+              <tr><td><strong>Skor tertimbang</strong></td><td>1,00</td><td><strong>2,80</strong></td><td><strong>3,25</strong></td><td><strong>3,20</strong></td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p><strong>Interpretasi baseline:</strong> B unggul tipis atas C (3,25 vs 3,20) — alternatif kondisional menang karena menjaga ruang kelola kolektif sambil mencegah opsi irreversibel; A tertinggal karena keadilan &amp; kesesuaian regulasi rendah.</p>
+
+          <p class="tbl-title">Tabel 8.5 — Uji sensitivitas (ubah satu bobot, tahan total =1)</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Uji sensitivitas MCE">
+            <thead><tr><th scope="col">Skenario</th><th scope="col">Perubahan</th><th scope="col">Skor A</th><th scope="col">Skor B</th><th scope="col">Skor C</th><th scope="col">Peringkat 1</th></tr></thead>
+            <tbody>
+              <tr><td>Baseline</td><td>–</td><td>2,80</td><td>3,25</td><td>3,20</td><td>B</td></tr>
+              <tr><td>Pro-ekonomi</td><td>ekologis 0,05, sosial-ekonomi 0,35</td><td>3,20</td><td>3,35</td><td>2,90</td><td>B</td></tr>
+              <tr><td>Pro-lingkungan</td><td>ekologis 0,30, sosial-ekonomi 0,10</td><td>2,20</td><td>3,10</td><td>3,75</td><td><strong>C</strong></td></tr>
+              <tr><td>Bobot rata</td><td>0,143 semua</td><td>2,43</td><td>3,14</td><td>3,57</td><td>C</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p>Kesimpulan sensitivitas: robust terhadap skenario pro-ekonomi (tetap B), tetapi sensitif terhadap bobot ekologis (berpindah ke C). Justifikasi jujur: "pilih B secara kondisional, dengan kewajiban kajian daya dukung &amp; ikatan kolaboratif; jika KLHS dikuatkan, maka C mengambil alih."</p>
+
+          <h3>Disiplin justifikasi prioritas</h3>
+          <ol>
+            <li>Fakta empiris (tahun, sumber, metode) yang menyandar skor kunci;</li>
+            <li>Ketentuan regulasi yang membatasi alternatif;</li>
+            <li>Asumsi pemodelan (skala skor, fungsi nilai, bobot) beserta alasan;</li>
+            <li>Interpretasi trade-off nyata, pihak menang/kalah, &amp; implementability;</li>
+            <li>Log sensitivitas: skenario bobot, ambang perubahan peringkat, &amp; implikasi.</li>
+          </ol>
+          <figure class="viz">
+            <div class="mermaid-box" id="mm-mce" role="img" aria-label="Diagram alur MCDA"></div>
+            <figcaption><strong>Gbr. 8.2</strong> — Alur MCDA: kriteria → pembobotan (AHP) → skoring → agregasi WLC → sensitivitas OAT → justifikasi prioritas.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- MCE KALKULATOR INTERAKTIF -->
+    <section class="sec sec-deep" id="mce" aria-labelledby="mce-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Kalkulator interaktif</p>
+          <h2 class="h2" id="mce-title">Uji sensitivitas MCE secara langsung</h2>
+          <p class="sec-desc">Geser bobot tiap kriteria dan lihat peringkat berubah seketika — semua skor ilustratif, ganti dengan data wilayah studi Anda saat latihan.</p>
+        </div>
+        <div id="mce-root"></div>
+      </div>
+    </section>
+
+    <!-- STUDI KASUS -->
+    <section class="sec sec-deep" id="studi-kasus" aria-labelledby="sk-title">
+      <div class="wrap">
+        <div class="case-plate">
+          <p class="eyebrow"><span class="case-pin" aria-hidden="true"></span>Studi Kasus · Konflik Pesisir vs Kawasan Lindung</p>
+          <h2 class="h2" id="sk-title">Reklamasi pesisir atau pertambangan versus kawasan lindung</h2>
+          <p class="case-meta">Teluk Benoa, Bali · Bangka Belitung (RZWP3K) · Morowali (nikel) · Bulungan (hutan)</p>
+          <p class="lead">Indonesia memiliki sejarah panjang konflik pemanfaatan ruang antara proyek pembangunan (reklamasi, pelabuhan, tambang) dan kawasan lindung — reklamasi 838 ha di Teluk Benoa (SK Gubernur No. 2138/02-C/HK/2012) yang ditolak ForBALI dan akhirnya tidak berjalan, menjadi laboratorium penstrukturan masalah multi-aktor.</p>
+
+          <h3>Konteks</h3>
+          <ul>
+            <li><strong>Teluk Benoa, Bali:</strong> izin reklamasi ±838 ha kepada PT Tirta Wahana Bali Internasional; penolakan adat, akademisi, ForBALI; proyek tidak berjalan, izin tidak berlaku. Argumen: ekologis (mangrove, daya dukung), sosial-budaya (masyarakat adat), prosedural (keterlibatan aktor &amp; revisi RTRW).</li>
+            <li><strong>Pertambangan di/keliling hutan lindung:</strong> UU 41/1999 membatasi tambang di hutan lindung (hanya bawah tanah; larangan terbuka); PP 22/2021 &amp; UU 3/2020 mengatur reklamasi/pascatambang — review MDPI Land (2021) menemukan kesenjangan besar antara kewajiban pemulihan ekologis dan praktik lapangan.</li>
+          </ul>
+
+          <h3>Fokus analisis</h3>
+          <ul>
+            <li><strong>Penstrukturan multi-aktor:</strong> cabang pendorong investasi/fiskal, infrastruktur/pelabuhan, fragmentasi jasa mangrove, ketidakpastian kelembagaan (izin, revisi RTRW, perizinan tidak inklusif).</li>
+            <li><strong>Alternatif non-kosmetik:</strong> bukan "838 vs 600 ha", melainkan izinkan-kondisional dengan site-level proof, tunda–restrukturisasi partisipatif, atau alih ke ekonomi biru pada perlindungan penuh.</li>
+            <li><strong>Kriteria &amp; ketentuan normatif:</strong> RTRW/RDTR (UU 26/2007, PP 21/2021), KLHS (UU 32/2009, PP 22/2021), sektoral (UU 41/1999, UU 3/2020, UU 1/2014) + keadilan (masyarakat adat Bulungan vs sumber air).</li>
+          </ul>
+
+          <p class="tbl-title">Tabel 8.6 — Evaluasi keberlanjutan Teluk Benoa (MDS 43,15%)</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Indeks keberlanjutan Teluk Benoa">
+            <thead><tr><th scope="col">Dimensi</th><th scope="col">Indeks</th><th scope="col">Kategori</th></tr></thead>
+            <tbody>
+              <tr><td>Lingkungan</td><td>—</td><td>—</td></tr>
+              <tr><td>Sosial</td><td>—</td><td>—</td></tr>
+              <tr><td>Ekonomi</td><td>—</td><td>—</td></tr>
+              <tr><td>Pemanfaatan ruang laut</td><td>27,05%</td><td>Terendah</td></tr>
+              <tr><td><strong>Keseluruhan</strong></td><td><strong>43,15%</strong></td><td><strong>Tidak/kurang berkelanjutan</strong></td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p class="note">MDS 4 dimensi Teluk Benoa menyimpulkan reklamasi "tidak/kurang berkelanjutan". Kasus Bangka Belitung: RZWP3K sebagai arena kontestasi PAD timah vs ekologi. Morowali: tata ruang sebagai legitimasi ekstraktivisme hijau — keadilan harus dievaluasi setara dengan efisiensi.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RANGKUMAN -->
+    <section class="sec" id="rangkuman" aria-labelledby="rangkuman-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Rangkuman</p>
+        <h2 class="h2" id="rangkuman-title">Pokok pembelajaran</h2>
+        <ul class="objective-list" id="rangkuman-list">
+          <li>Masalah kebijakan adalah konstruksi analitis — kesalahan paling mahal adalah <strong>kesalahan Tipe III</strong> (menyelesaikan masalah yang salah), bukan salah hitung.</li>
+          <li>Penstrukturan masalah menuntut <strong>4 tahap</strong> yang eksplisit pada batas ruang-waktu, tanggung jawab kelembagaan, dan sikap terhadap ketidakpastian.</li>
+          <li><span class="term" data-gloss="pohon-masalah">Pohon masalah</span> → <span class="term" data-gloss="pohon-tujuan">pohon tujuan</span> → <span class="term" data-gloss="theory-of-change">theory of change</span> mengekspos tujuan yang saling bertentangan dan mekanisme perantara yang dapat diuji.</li>
+          <li>Alternatif harus <strong>berbeda secara struktural</strong> (bukan kosmetik) dan diuji pada 7 keluarga kriteria yang tidak redundan.</li>
+          <li>MCDA dengan <span class="term" data-gloss="ahp">AHP</span> &amp; <span class="term" data-gloss="wlc">WLC</span> harus disertai <span class="term" data-gloss="analisis-sensitivitas">analisis sensitivitas</span> — peringkat 1 robust terhadap pro-ekonomi (tetap B) tetapi sensitif terhadap bobot ekologis (berpindah ke C).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="sec sec-deep" id="quiz" aria-labelledby="quiz-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Checkpoint</p>
+          <h2 class="h2" id="quiz-title">Uji pemahaman</h2>
+          <p class="sec-desc">Lima soal pilihan ganda dari materi di atas. Jawab, periksa hasil secara langsung, dan peroleh skor beserta umpan balik.</p>
+        </div>
+        <div class="quiz card" id="quiz-box">
+          <div id="quiz-root"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DISKUSI -->
+    <section class="sec" id="diskusi" aria-labelledby="diskusi-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Diskusi</p>
+          <h2 class="h2" id="diskusi-title">Pertanyaan diskusi</h2>
+          <p class="sec-desc">Soal terbuka untuk dibedah bersama. Klik kartu untuk membuka petunjuk arah pembahasannya.</p>
+        </div>
+        <div class="acc" id="diskusi-list"></div>
+      </div>
+    </section>
+
+    <!-- LATIHAN -->
+    <section class="sec sec-deep" id="latihan" aria-labelledby="latihan-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Latihan</p>
+          <h2 class="h2" id="latihan-title">Latihan mandiri</h2>
+          <p class="sec-desc">Tugas penerapan. Tandai saat selesai — progres tersimpan otomatis di perangkat ini.</p>
+        </div>
+        <div class="lat-progress" role="status" aria-live="polite">
+          <div class="lat-bar"><div class="lat-bar-fill" id="lat-fill"></div></div>
+          <span class="lat-count" id="lat-count">0 / 3 selesai</span>
+        </div>
+        <ol class="lat-list" id="latihan-list"></ol>
+      </div>
+    </section>
+
+    <!-- PUSTAKA -->
+    <section class="sec" id="pustaka" aria-labelledby="pustaka-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Referensi</p>
+        <h2 class="h2" id="pustaka-title">Daftar pustaka</h2>
+        <div id="pustaka-list"></div>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-dialog" role="document">
+        <button type="button" class="modal-close" data-close-modal aria-label="Tutup dialog"><span class="icon" data-lucide="x"></span></button>
+        <p class="eyebrow" id="modal-eyebrow"></p>
+        <h3 class="h3" id="modal-title"></h3>
+        <div class="modal-body" id="modal-body"></div>
+      </div>
+    </div>
+
+    <span id="tooltip" class="tooltip" role="tooltip" hidden></span>
   </main>
 
   <footer class="site-footer">
     <div class="wrap foot-inner">
       <p class="foot-copy">© <span data-current-year></span> <a href="https://khair.am" target="_blank" rel="noopener noreferrer">Hafizhul Khair</a></p>
-      <p class="foot-modified">Terakhir diperbarui: <time data-last-modified datetime="2026-08-25"></time></p>
+      <p class="foot-modified">Terakhir diperbarui: <time data-last-modified datetime="2026-09-01"></time></p>
     </div>
   </footer>
 
+  <button type="button" id="to-top" class="to-top" aria-label="Kembali ke atas" hidden><span class="icon" data-lucide="arrow-up"></span></button>
+
+  <!-- Library via CDN, versi ter-pin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lucide@0.462.0/dist/umd/lucide.min.js"></script>
-  <script src="assets/js/landing.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+
+  <!-- Konten (paling awal) lalu logika -->
+  <script src="assets/js/data-bab8.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/stepper.js"></script>
+  <script src="assets/js/quiz.js"></script>
+  <script src="assets/js/extras.js"></script>
+  <script src="assets/js/bab8.js"></script>
   <script src="assets/js/footer.js"></script>
 </body>
 </html>

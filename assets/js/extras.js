@@ -287,6 +287,110 @@
         'J --> B2["Masyarakat global (karbon)"]',
         "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
         'class F leak'
+      ].join("\n"),
+      "mm-spr": [
+        "flowchart LR",
+        'S["Sumber<br/>titik vs area"] --> P["Jalur paparan<br/>air, udara, tanah, rantai pangan"]',
+        'P --> R["Penerima<br/>manusia, ekosistem, aset"]',
+        'S -. kendalikan sumber .-> R',
+        'P -. putus jalur .-> R',
+        'R -. lindungi reseptor .-> R',
+        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
+        'class P leak'
+      ].join("\n"),
+      "mm-hierarki": [
+        "flowchart TD",
+        'A["RPJPN SDGs"] --> B["RPJMN dan RPPLH"]',
+        'B --> C["RTRWN"]',
+        'C --> D["RTRW Prov"]',
+        'D --> E["RDTR"]',
+        'E --> F["KKPR AMDAL UKL UPL"]',
+        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
+        'class E leak'
+      ].join("\n"),
+      "mm-gap": [
+        "flowchart LR",
+        'A["Koherensi"] --> B["Kepatuhan"]',
+        'B --> C["Kapasitas"]',
+        'C --> G["Gap"]',
+        'G -.-> A',
+        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
+        'class G leak'
+      ].join("\n"),
+      "mm-pohon": [
+        "flowchart TD",
+        'R1["Akar: investasi pelabuhan"] --> C["Masalah inti<br/>tekanan pesisir thd mangrove"]',
+        'R2["Akar: fragmentasi jasa"] --> C',
+        'R3["Akar: kelembagaan lemah"] --> C',
+        'C --> D1["Dampak: hilangnya tangkapan"]',
+        'C --> D2["Dampak: banjir rob"]',
+        'C --> D3["Dampak: konflik tenurial"]',
+        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
+        'class C leak'
+      ].join("\n"),
+      "mm-mce": [
+        "flowchart LR",
+        'A["Kriteria<br/>7 keluarga"] --> B["Pembobotan<br/>AHP"]',
+        'B --> C["Skoring<br/>1–5"]',
+        'C --> D["Agregasi<br/>WLC"]',
+        'D --> E["Sensitivitas<br/>OAT"]',
+        'E --> F["Rekomendasi<br/>+ justifikasi"]',
+        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
+        'class D leak'
+      ].join("\n"),
+      "mm-skenario": [
+        "flowchart LR",
+        'A["1. Cakrawala<br/>20–25 tahun"] --> B["2. Driver<br/>2–4 kritis"]',
+        'B --> C["3. Narasi<br/>BAU vs transisi"]',
+        'C --> D["4. Translasi spasial<br/>CA–CLUE"]',
+        'D --> E["5. Skor indikator<br/>jejak, air, risiko"]',
+        'E --> F["6. Uji ketangguhan<br/>robust vs contingent"]',
+        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
+        'class E leak'
+      ].join("\n"),
+      "mm-nbs": [
+        "flowchart TD",
+        'A["Isu rob pesisir"] --> B["NbS: mangrove, sponge city"]',
+        'A --> C["Adaptasi: mundur, standar infra"]',
+        'A --> D["PRB: peringatan dini, evakuasi"]',
+        'A --> E["Potensi lokal: ekowisata, PES"]',
+        'A --> F["Inovasi: IoT, PLE"]',
+        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
+        'class A leak'
+      ].join("\n"),
+      "mm-toulmin": [
+        "flowchart LR",
+        'G["Data/bukti<br/>peta, BPS, jurnal"] --> W["Warrant<br/>prinsip ekologi"]',
+        'W --> C["Klaim"]',
+        'B["Backing<br/>literatur"] --> W',
+        'C --> Q["Qualifier"]',
+        'R["Rebuttal"] -.-> C',
+        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
+        'class C leak'
+      ].join("\n"),
+      "mm-trace": [
+        "flowchart LR",
+        'D["Data<br/>BIG BPS KLHK"] --> T["Temuan<br/>T2 T5"]',
+        'T --> I["Isu strategis<br/>Bab 9"]',
+        'I --> A["Alternatif<br/>A2"]',
+        'A --> M["Evaluasi MCE<br/>Bab 8"]',
+        'M --> R["Rekomendasi<br/>R1"]',
+        'R --> K["Indikator KHD<br/>keluaran–hasil–dampak"]',
+        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
+        'class R leak'
+      ].join("\n"),
+      "mm-cascade-bab6": [
+        "flowchart TD",
+        'H["Bahaya: subsiden ＋ pasang"] --> G["Genangan rob"]',
+        'G --> J["Kerusakan jalan & drainase"]',
+        'J --> L["Gangguan logistik & pelabuhan"]',
+        'L --> E["Penurunan pendapatan pesisir"]',
+        'E --> V["Kerentanan naik"]',
+        'G --> W["Intrusi air laut ke sumur"]',
+        'W --> V',
+        'V -. levee effect .-> H',
+        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
+        'class H leak'
       ].join("\n")
     };
   }

@@ -3,51 +3,433 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Modul SDL — III-07 Kebijakan, Instrumen, dan Kesenjangan Implementasi. Segera tersedia." />
-  <title>SDL · III-07 — Segera</title>
+  <meta name="description" content="Modul SDL Bab 7 — Kebijakan, Instrumen, dan Kesenjangan Implementasi: hierarki tiga rel kebijakan, KLHS sebagai penghubung, kewenangan & peran aktor, instrumen perencanaan–perizinan–pengawasan–insentif, kerangka 3C+G, studi kasus LP2B & pembanding ECR Tiongkok." />
+  <title>SDL · III-07 Kebijakan, Instrumen, dan Kesenjangan Implementasi</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body class="landing-page">
+<body class="with-rail">
   <div id="progress-track" role="presentation" aria-hidden="true"><div id="progress-bar"></div></div>
 
   <header class="site-header" id="site-header">
     <div class="wrap header-inner">
+      <button type="button" class="rail-toggle" id="rail-toggle" aria-expanded="false" aria-controls="rail" aria-label="Buka daftar isi">
+        <span class="icon" data-lucide="list"></span>
+      </button>
       <a class="brand" href="index.html" aria-label="Beranda modul SDL">
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-text">Sumber Daya &amp; <strong>Lingkungan</strong></span>
       </a>
+      <div class="chapter-nav" id="chapter-nav">
+        <button type="button" class="chapter-btn" id="chapter-btn" aria-haspopup="menu" aria-expanded="false" aria-label="Pilih bab">
+          <span class="sheet-code">III-07</span>
+          <span class="chapter-btn-label" id="chapter-btn-label">Bab 7</span>
+          <span class="icon chev" data-lucide="chevron-down"></span>
+        </button>
+        <div class="chapter-menu" id="chapter-menu" role="menu" hidden></div>
+      </div>
       <button type="button" id="theme-toggle" class="icon-btn" aria-label="Alihkan tema terang/gelap" aria-pressed="false">
         <span class="icon" data-lucide="sun"></span>
       </button>
     </div>
   </header>
 
-  <main id="top" class="landing-main">
-    <section class="grid-paper hero">
+  <aside class="rail" id="rail" aria-label="Daftar isi bab">
+    <p class="rail-title">III-07 · Legenda</p>
+    <p class="rail-label">Materi</p>
+    <a class="rail-item" href="#pendahuluan"><span class="rail-code">PD</span> Pendahuluan</a>
+    <a class="rail-item" href="#objectives"><span class="rail-code">00</span> Tujuan pembelajaran</a>
+    <a class="rail-item" href="#sub-71"><span class="rail-code">01</span> Prinsip &amp; hierarki kebijakan</a>
+    <a class="rail-item" href="#sub-72"><span class="rail-code">02</span> Keterkaitan tiga rel</a>
+    <a class="rail-item" href="#sub-73"><span class="rail-code">03</span> Kewenangan &amp; peran aktor</a>
+    <a class="rail-item" href="#instrumen"><span class="rail-code">SP</span> Lima instrumen kebijakan</a>
+    <a class="rail-item" href="#sub-74"><span class="rail-code">04</span> Matriks &amp; titik rawan</a>
+    <a class="rail-item" href="#sub-75"><span class="rail-code">05</span> Kerangka 3C+G</a>
+    <a class="rail-item" href="#studi-kasus"><span class="rail-code">SC</span> Studi kasus · LP2B</a>
+    <a class="rail-item" href="#pembanding"><span class="rail-code">MB</span> Pembanding · ECR Tiongkok</a>
+    <p class="rail-label">Penutup</p>
+    <a class="rail-item" href="#rangkuman"><span class="rail-code">RK</span> Rangkuman</a>
+    <a class="rail-item" href="#quiz"><span class="rail-code">QZ</span> Kuis</a>
+    <a class="rail-item" href="#diskusi"><span class="rail-code">DS</span> Diskusi</a>
+    <a class="rail-item" href="#latihan"><span class="rail-code">LT</span> Latihan</a>
+    <a class="rail-item" href="#pustaka"><span class="rail-code">PB</span> Pustaka</a>
+  </aside>
+  <div class="rail-backdrop" aria-hidden="true"></div>
+
+  <main id="top" class="content">
+
+    <section class="grid-paper hero" id="hero" aria-labelledby="hero-title">
       <div class="wrap hero-copy">
-        <p class="eyebrow">Bagian III · Modul Ajar S2 PWK</p>
-        <h1><span class="sheet-code">III-07</span> Kebijakan, Instrumen, dan Kesenjangan Implementasi</h1>
-        <p class="lead">Bab ini sedang disiapkan dan akan segera tersedia.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="index.html"><span class="icon" data-lucide="arrow-left"></span> Kembali ke daftar bab</a>
-          <a class="btn btn-ghost" href="bab-1.html"><span class="icon" data-lucide="book-open"></span> Buka Bab 1</a>
+        <p class="eyebrow">Bagian III · Kebijakan &amp; Tata Kelola · Modul Ajar S2 PWK</p>
+        <h1 id="hero-title">Kebijakan, Instrumen, dan Kesenjangan Implementasi<span class="tone">: dari norma ke praktik</span></h1>
+      </div>
+      <div class="wrap stat-strip" aria-label="Angka kunci bab">
+        <div class="stat"><span class="stat-num">3 rel</span><span class="stat-lbl">hierarki kebijakan — pembangunan 20/5/1 th, tata ruang 20 th, lingkungan 30 th (RPPLH)</span></div>
+        <div class="stat"><span class="stat-num">566 RDTR</span><span class="stat-lbl">terintegrasi OSS (Apr 2026) — jauh dari seluruh kabupaten/kota</span></div>
+        <div class="stat"><span class="stat-num">12,8%</span><span class="stat-lbl">lahan terlindungi terkonversi di peri-urban Malang — gap LP2B</span></div>
+      </div>
+    </section>
+
+    <!-- PENDAHULUAN -->
+    <section class="sec" id="pendahuluan" aria-labelledby="pd-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Pendahuluan</p>
+        <h2 class="h2" id="pd-title">Mengapa norma sering tidak menjadi hasil</h2>
+        <div class="prose">
+          <p>Pencantuman prinsip keberlanjutan dalam konstitusi dan peraturan perundang-undangan tidak serta-merta menjamin hasil lingkungan yang baik. Hasil tersebut sangat bergantung pada desain kelembagaan dan mekanisme akuntabilitas. Bab ini membahas kesenjangan antara norma dan hasil, dari prinsip hukum pembangunan berkelanjutan hingga instrumen operasional di lapangan, serta alasan kesenjangan itu dapat tetap lebar.</p>
+          <p>Bab ini membedakan <strong>fakta empiris</strong> (temuan literatur atau data resmi yang mencantumkan sumber, tahun, dan metode), <strong>ketentuan regulasi</strong> (isi normatif, bukan klaim tentang praktik), serta <strong>interpretasi</strong>. Gunakan pembedaan ini saat mengerjakan latihan.</p>
         </div>
       </div>
     </section>
+
+    <!-- TUJUAN -->
+    <section class="sec" id="objectives" aria-labelledby="obj-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Tujuan pembelajaran</p>
+        <h2 class="h2" id="obj-title">Setelah mempelajari bab ini, mahasiswa mampu…</h2>
+        <ul class="objective-list" id="objectives-list"></ul>
+      </div>
+    </section>
+
+    <!-- KATA KUNCI -->
+    <section class="sec sec-kw" id="kata-kunci" aria-labelledby="kw-title">
+      <div class="wrap">
+        <p class="eyebrow center-eyebrow">Kata kunci</p>
+        <h2 class="h2 sr-only" id="kw-title">Kata kunci bab ini</h2>
+        <div class="kw-cloud" id="kw-cloud" aria-label="Daftar kata kunci"></div>
+      </div>
+    </section>
+
+    <!-- 7.1 HIERARKI -->
+    <section class="sec" id="sub-71" aria-labelledby="s71-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">7.1 · Hierarki kebijakan</p>
+          <h2 class="h2" id="s71-title">Prinsip pembangunan berkelanjutan dan hierarki kebijakan</h2>
+          <p class="sec-desc">Tiga rel yang harus berjalan sejajar — dan KLHS sebagai rel penghubung.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>7.1.1 · Pembangunan berkelanjutan sebagai prinsip hukum</h3>
+          <p>Keseluruhan instrumen PPLH berakar pada <strong>UU 32/2009</strong> (jo. UU 6/2023) yang menempatkan prinsip tanggung jawab negara, keberlanjutan, keserasian/keseimbangan, integritas, <span class="term" data-gloss="pembangunan-berkelanjutan">kehati-hatian</span>, keadilan, pencemar membayar, partisipatif, kearifan lokal, tata kelola baik, dan otonomi daerah — ditegaskan kembali dalam <strong>PP 22/2021</strong>. Konsekuensinya: RTRW dan RPJMD secara legal <em>tidak netral</em> terhadap lingkungan — keduanya wajib menjalani uji keberlanjutan via <span class="term" data-gloss="klhs">KLHS</span>.</p>
+
+          <h3>7.1.2 · Tiga rel yang harus berjalan sejajar</h3>
+          <p class="tbl-title">Tabel 7.1 — Tiga keluarga sistem perencanaan (hierarki)</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Tiga rel hierarki kebijakan">
+            <thead><tr><th scope="col">Rel kebijakan</th><th scope="col">Peraturan utama</th><th scope="col">Produk rencana</th><th scope="col">Jangka waktu</th></tr></thead>
+            <tbody>
+              <tr><td>Pembangunan</td><td>UU 25/2004 (SPPN)</td><td>RPJP–RPJMN–RPJMD/RKPD</td><td>20 / 5 / 1 tahun</td></tr>
+              <tr><td>Penataan ruang</td><td>UU 26/2007 jo. PP 21/2021</td><td>RTRWN–RTRW Prov–RTRW Kab/Kota–RDTR</td><td>20 tahun (RDTR operasional)</td></tr>
+              <tr><td>Lingkungan hidup</td><td>UU 32/2009 jo. PP 22/2021</td><td>RPPLH (nasional–provinsi–kab/kota)</td><td>30 tahun</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p><span class="term" data-gloss="hierarki-kebijakan">KLHS</span> (PP 22/2021) mewajibkan prasyarat atas KRP yang berpotensi menimbulkan dampak — termasuk KLHS RPJMN/RPJMD dan KLHS RTRW/RDTR. Dengan demikian, KLHS secara desain memaksa pertimbangan <span class="term" data-gloss="d3tlh">D3TLH</span> masuk ke pembangunan dan tata ruang. Titik rawan justru pada tataran sektoral: kebijakan pertanian (UU 41/2009 LP2B), kehutanan, minerba, perumahan, dan energi masing-masing membawa mandat yang tidak selalu konsisten dengan RTRW maupun RPPLH — sumber struktural <em>incoherence</em>.</p>
+          <figure class="viz">
+            <div class="mermaid-box" id="mm-hierarki" role="img" aria-label="Diagram piramida tiga rel kebijakan"></div>
+            <figcaption><strong>Gbr. 7.1</strong> — Tiga rel kebijakan yang dipertemukan KLHS. Satu gap pada jenjang mana pun (mis. RDTR belum ada) membuat pilar di bawahnya kehilangan pijakan hukum.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7.2 KETERKAITAN -->
+    <section class="sec" id="sub-72" aria-labelledby="s72-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">7.2 · Keterkaitan</p>
+          <h2 class="h2" id="s72-title">Keterkaitan kebijakan lingkungan, penataan ruang, dan pembangunan daerah</h2>
+          <p class="sec-desc">Mekanisme formal vs praktik de facto — di mana mata rantai putus.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>7.2.1 · Mekanisme formal</h3>
+          <ol>
+            <li><strong>KLHS sebagai prasyarat</strong> — PP 22/2021 mensyaratkan KLHS untuk disahkannya KRP; hasil KLHS menjadi rekomendasi yang harus ditindaklanjuti.</li>
+            <li><strong>D3TLH sebagai dasar</strong> — RTRW wajib mempertimbangkan D3TLH; RPPLH menyediakan baseline.</li>
+            <li><strong>Perizinan berbasis ruang</strong> — <span class="term" data-gloss="kkpr">KKPR</span> menjadi prasyarat <span class="term" data-gloss="oss-rba">perizinan berusaha berbasis risiko (OSS-RBA)</span> — tata ruang menjadi "gerbang" investasi.</li>
+          </ol>
+
+          <h3>7.2.2 · Keterkaitan de facto</h3>
+          <p>Penilaian cepat dokumen KLHS di Palu menemukan isu perubahan iklim belum terintegrasi memadai dan dokumen KLHS yang tersedia sangat terbatas (Umam et al., IOP). Temuan sejalan untuk KLHS RPJMD Gunung Mas: efektivitas masih terbatas dan sangat bergantung kapasitas &amp; komitmen kelembagaan daerah. Literatur peer-reviewed yang mengevaluasi kualitas dan tindak lanjut KLHS RTRW/RDTR se-Indonesia masih sangat terbatas — generalisasi nasional harus diperlakukan sebagai ekstrapolasi hati-hati.</p>
+
+          <div class="callout callout-warn">
+            <span class="icon" data-lucide="triangle-alert"></span>
+            <p><strong>Kerangka analisis 3 mata rantai.</strong> <strong>Input</strong> — apakah D3TLH &amp; KLHS menjadi masukan perumusan atau hanya lampiran? <strong>Proses</strong> — apakah ada forum berwenang memutus (Bappeda–DLH–ATR/BPN)? <strong>Output–outcome</strong> — apakah rekomendasi KLHS tercermin dalam struktur/pola ruang &amp; APBD dan apakah kondisi lingkungan membaik? Gap dapat terjadi di setiap mata rantai.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7.3 KEWENANGAN & PERAN -->
+    <section class="sec" id="sub-73" aria-labelledby="s73-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">7.3 · Kewenangan &amp; aktor</p>
+          <h2 class="h2" id="s73-title">Pembagian kewenangan serta peran pemerintah, masyarakat, dunia usaha, dan kelompok terdampak</h2>
+          <p class="sec-desc">Saling ketergantungan tanpa hierarki perintah langsung — dan asimetri kapasitas sebagai sumber gap.</p>
+        </div>
+        <div class="sec-body prose">
+          <h3>7.3.1 · Pembagian kewenangan antarlevel</h3>
+          <p class="tbl-title">Tabel 7.2 — Pembagian kewenangan urusan lingkungan hidup (UU 23/2014 &amp; PP 22/2021)</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Pembagian kewenangan lingkungan hidup">
+            <thead><tr><th scope="col">Sub-bidang urusan</th><th scope="col">Pusat</th><th scope="col">Provinsi</th><th scope="col">Kabupaten/Kota</th></tr></thead>
+            <tbody>
+              <tr><td>Perencanaan LH</td><td>RPPLH nasional</td><td>RPPLH provinsi</td><td>RPPLH kabupaten/kota</td></tr>
+              <tr><td>KLHS</td><td>KRP nasional</td><td>KRP provinsi</td><td>KRP kabupaten/kota</td></tr>
+              <tr><td>Pengendalian pencemaran</td><td>Lintas provinsi / lintas negara</td><td>Lintas kabupaten/kota dalam satu provinsi</td><td>Dalam satu kabupaten/kota</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p>Kewenangan kabupaten/kota (UU 32/2009 Psl.63 ayat 3): penetapan kebijakan PPLH daerah, KLHS/RPPLH/AMDAL-UKL-UPL, inventarisasi SDA &amp; emisi GRK, fasilitasi sengketa — sebagai urusan wajib non-pelayanan dasar sehingga sering kalah prioritas anggaran dibanding pendidikan &amp; kesehatan. Desain ini menciptakan <em>saling ketergantungan tanpa hierarki perintah langsung</em>; kesiapan kabupaten/kota menentukan kualitas ujung tombak, tetapi kapasitasnya paling timpang.</p>
+
+          <h3>7.3.2 · Peran non-pemerintah</h3>
+          <p>UU 32/2009 memberi masyarakat hak atas lingkungan baik &amp; sehat, hak informasi &amp; peran, serta mekanisme keberatan dalam AMDAL/KLHS. <strong>Kelompok terdampak</strong> adalah subjek hak prosedural &amp; keadilan lingkungan. Dunia usaha berperan ganda (objek regulasi &amp; pelaku pembangunan), sementara CSO/LSM, perguruan tinggi, dan media berperan sebagai penyeimbang informasi &amp; pemantau independen.</p>
+          <p>Studi partisipatif menunjukkan bahasa partisipasi tidak otomatis memperdalam demokrasi lokal: tata kelola desa cenderung sentralisasi kembali karena agenda partisipasi ditautkan pada percepatan infrastruktur nasional. Desain partisipatif perlu dievaluasi pada <em>siapa yang akhirnya memutuskan</em>, bukan sekadar berapa rapat digelar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEPPER 5 INSTRUMEN -->
+    <section class="sec sec-deep" id="instrumen" aria-labelledby="instrumen-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Panduan bertahap</p>
+          <h2 class="h2" id="instrumen-title">Lima fungsi instrumen kebijakan</h2>
+          <p class="sec-desc">Dari perencanaan yang memberi arah hingga insentif yang mengoreksi perilaku — masing-masing dengan titik rawan tipikal.</p>
+        </div>
+        <div class="stepper card" role="region" aria-label="Langkah instrumen kebijakan" aria-live="polite" id="stepper-box">
+          <div class="stepper-pos" id="stepper-pos">Langkah 1 dari 5</div>
+          <div class="stepper-stage" id="stepper-stage"></div>
+          <div class="stepper-nav">
+            <button type="button" class="btn btn-ghost" id="step-prev"><span class="icon" data-lucide="chevron-left"></span> Sebelumnya</button>
+            <div class="stepper-dots" id="stepper-dots" aria-hidden="true"></div>
+            <button type="button" class="btn btn-primary" id="step-next">Berikutnya <span class="icon" data-lucide="chevron-right"></span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7.4 MATRIKS INSTRUMEN -->
+    <section class="sec" id="sub-74" aria-labelledby="s74-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">7.4 · Titik rawan</p>
+          <h2 class="h2" id="s74-title">Matriks instrumen dan titik rawan tipikal</h2>
+          <p class="sec-desc">Di mana desain di atas kertas paling sering tersendat di lapangan.</p>
+        </div>
+        <div class="sec-body prose">
+          <p class="tbl-title">Tabel 7.3 — Matriks instrumen, fungsi &amp; penanda gap</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Matriks instrumen kebijakan">
+            <thead><tr><th scope="col">Instrumen</th><th scope="col">Fungsi utama</th><th scope="col">Titik rawan tipikal</th><th scope="col">Penanda gap terukur</th></tr></thead>
+            <tbody>
+              <tr><td>RPPLH/KLHS</td><td>Penjamin keberlanjutan rencana</td><td>Data D3TLH tak mutakhir; rekomendasi tak mengikat pasal RTRW</td><td>% rekomendasi KLHS diadopsi pasal RTRW</td></tr>
+              <tr><td>AMDAL/UKL-UPL/SPPL</td><td>Pencegahan dampak proyek</td><td>Independensi studi; tindak lanjut RKL-RPL lemah</td><td>Rasio proyek terpantau vs terizin</td></tr>
+              <tr><td>KKPR/PBR</td><td>Penjembat ruang–izin</td><td>RDTR minus; data LP2B belum presisi</td><td>Waktu &amp; hasil sinkronisasi KKPR</td></tr>
+              <tr><td>Pengawasan</td><td>Kepatuhan</td><td>Kapasitas lapangan terbatas</td><td>Frekuensi inspeksi; rasio temuan–sanksi</td></tr>
+              <tr><td>Insentif–disinsentif</td><td>Koreksi perilaku</td><td>Penagihan lemah; insentif tak berkelanjutan</td><td>Realisasi pemulihan; nilai sanksi tertagih</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p>Secara teoretis, <span class="term" data-gloss="cac-mbi">instrumen CAC</span> menawarkan prediktabilitas tetapi kaku &amp; mahal biaya kepatuhan, sementara <span class="term" data-gloss="cac-mbi">MBI</span> mendorong efisiensi tetapi butuh pemantauan transaksi yang kompleks. Pilihan bergantung kapasitas kelembagaan. Studi Sidoarjo (KKPR–OSS): kendala teknis sistem, kurang koordinasi, SDM tidak memadai, keterlambatan RDTR, &amp; ketidaksesuaian dengan RTRW — jarak desain–praktik yang nyata.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7.5 KERANGKA 3C+G -->
+    <section class="sec" id="sub-75" aria-labelledby="s75-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">7.5 · Kerangka diagnosis</p>
+          <h2 class="h2" id="s75-title">Koherensi, kepatuhan, kapasitas &amp; gap (3C+G)</h2>
+          <p class="sec-desc">Salah diagnosis berakibat salah resep — bedakan akar gap sebelum meresepkan kebijakan.</p>
+        </div>
+        <div class="sec-body prose">
+          <ul>
+            <li><strong><span class="term" data-gloss="koherensi">Koherensi</span></strong> — konsistensi tujuan antarkebijakan &amp; antarlevel; inkoherensi saat mandat sektoral bertabrakan atau RTRW tidak sesuai RPPLH/KLHS.</li>
+            <li><strong><span class="term" data-gloss="kepatuhan">Kepatuhan</span></strong> — probabilitas terdeteksi, besaran sanksi, biaya kepatuhan, legitimasi aturan.</li>
+            <li><strong><span class="term" data-gloss="kapasitas-kelembagaan">Kapasitas</span></strong> — anggaran, SDM, data, peranti, kepemimpinan pada level pelaksana (kab/kota paling kritis).</li>
+            <li><strong><span class="term" data-gloss="implementation-gap">Gap</span></strong> — kesenjangan terukur antara janji &amp; hasil; dilacak pada rantai input–proses–output–dampak; dibedakan <em>policy adoption gap</em> vs <em>policy outcome gap</em> serta jebakan kegagalan insentif &amp; komunikasi (masing-masing 31 &amp; 47 studi).</li>
+          </ul>
+          <p><strong>Akar Indonesia</strong> (fakta regional, ekstrapolasi hati-hati): koordinasi antarpemerintahan &amp; alokasi sumber daya sebagai tantangan utama desentralisasi; <em>strategic maintenance of bureaucratic comfort zones</em> — institusi mempertahankan status quo manfaat-biayanya sehingga reformasi kalah oleh inersia.</p>
+          <figure class="viz">
+            <div class="mermaid-box" id="mm-gap" role="img" aria-label="Diagram kerangka 3C+G implementation gap"></div>
+            <figcaption><strong>Gbr. 7.2</strong> — Mendiagnosis akar gap menentukan resep: gap kapasitas → anggaran/pelatihan, gap kepatuhan → penegakan/sinyal harga, gap koherensi → harmonisasi norma.</figcaption>
+          </figure>
+          <div class="callout callout-warn">
+            <span class="icon" data-lucide="triangle-alert"></span>
+            <p><strong>Kotak — salah diagnosis, salah resep.</strong> Ambil satu gap; tanyakan: apakah ia semata gap kapasitas, gap kepatuhan, atau gap koherensi? Jawaban yang salah menghasilkan kebijakan yang tidak menyentuh akar masalah.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDI KASUS LP2B -->
+    <section class="sec sec-deep" id="studi-kasus" aria-labelledby="sk-title">
+      <div class="wrap">
+        <div class="case-plate">
+          <p class="eyebrow"><span class="case-pin" aria-hidden="true"></span>Studi Kasus · LP2B</p>
+          <h2 class="h2" id="sk-title">Implementasi LP2B — Mandat versus Praktik</h2>
+          <p class="case-meta">UU 41/2009 · PP 1/2011 · Pasal 44 (larang alih fungsi) &amp; Pasal 72 (sanksi) · RTRW/Perda</p>
+          <p class="lead"><span class="term" data-gloss="lp2b">LP2B</span> mewajibkan penetapan kawasan/lahan/cadangan pertanian pangan berkelanjutan pada RTRW provinsi/kabupaten/kota, melindungi dari alih fungsi, serta menyediakan insentif bagi petani. Pasal 44 melarang alih fungsi lahan LP2B yang telah ditetapkan — kecuali untuk kepentingan umum dengan kajian kelayakan strategis, rencana alih fungsi, pembebasan hak, dan penyediaan lahan pengganti 1–3× luas — sementara Pasal 72 hanya berfungsi efektif bila kabupaten/kota telah menetapkan LP2B dalam RTRW-nya.</p>
+
+          <h3>Mandat versus praktik: apa kata bukti</h3>
+          <ol>
+            <li><strong>Implementasi lambat &amp; "perencanaan di atas kertas".</strong> Banyak daerah masih berhenti pada inventarisasi/identifikasi sebelum payung Perda yang menjadikan LP2B mengikat operasional.</li>
+            <li><strong>Capaian penetapan sangat kecil.</strong> Purbalingga — peta sebaran lahan sawah existing (2015) &amp; rencana LP2B; capaian sangat kecil karena LP2B belum ditetapkan sebagai Perda sehingga belum berpayung hukum operasional (Repositori UGM — ilustratif).</li>
+            <li><strong>Frasa pengecualian membuka celah.</strong> Norma pengecualian kepentingan umum pada Pasal 44 ditafsirkan luas; ketidaksinkronan norma melemahkan kepastian hukum.</li>
+            <li><strong>Alih fungsi tetap berjalan.</strong> ±320.000 ha lahan sawah hilang dalam satu dekade terakhir (kajian BPK Sulbar) vs pencetakan sawah baru 40.000–50.000 ha/tahun (indikatif — verifikasi BPS/Kementan); peri-urban Malang — 12,8% lahan pertanian terlindungi terkonversi (Maulana et al., 2026 — kasus lokal, tidak dapat digeneralisasi).</li>
+          </ol>
+
+          <p class="tbl-title">Tabel 7.4 — Membaca akar gap LP2B dengan kerangka 3C+G</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Akar gap LP2B dengan 3C+G">
+            <thead><tr><th scope="col">Komponen</th><th scope="col">Letak gap LP2B</th><th scope="col">Manifestasi</th></tr></thead>
+            <tbody>
+              <tr><td>Koherensi</td><td>RPPLH–RTRW–RPJMD tidak konsisten; konflik pangan vs perumahan/industri</td><td>LP2B tercantum di peta, tetapi rencana jalan/industri tetap menekan koridor yang sama</td></tr>
+              <tr><td>Kepatuhan</td><td>Pengecualian kepentingan umum + biaya kepatuhan tinggi; peluang tak terdeteksi besar</td><td>Penjualan bertahap "alih sesuai" tanpa penetapan resmi; interpretasi "kepentingan umum" yang ekstensif</td></tr>
+              <tr><td>Kapasitas</td><td>Keterlambatan Perda LP2B; petakan belum presisi skala RDTR; SDM pengawas terbatas</td><td>Data LP2B statis (mis. 2015) tak ter-update ke OSS; KKPR lolos tanpa cek tumpang-tindih</td></tr>
+              <tr><td>Gap terukur</td><td colspan="2">% LP2B ditetapkan Perda; ha LP2B hilang/tahun vs lahan pengganti tersedia; jumlah KKPR ditolak karena tumpang-tindih LP2B</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <p class="note">Temuan lintang: (i) harmonisasi RTRW/RDTR &amp; KKPR-OSS, (ii) banyak daerah berhenti pada inventarisasi — belum penetapan Perda, (iii) kendala dominan: ketidaksinkronan regulasi, penegakan lemah, koordinasi minim, data berbasis nama-alamat terbatas, sosialisasi belum optimal, konflik kepentingan, (iv) insentif-disinsentif belum konsisten meski penerimaan sosial tinggi, (v) LP2B berpengaruh positif terhadap persentase sawah tetapi tertekan kepadatan penduduk &amp; properti.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PEMBANDING ECR -->
+    <section class="sec" id="pembanding" aria-labelledby="pembanding-title">
+      <div class="wrap grid-main">
+        <div class="sec-head">
+          <p class="eyebrow">Pembanding</p>
+          <h2 class="h2" id="pembanding-title">Garis Merah Ekologis (ECR) Tiongkok</h2>
+          <p class="sec-desc">Instrumen batas spasial berbasis jasa ekosistem — pelajaran transferibilitas bagi LP2B.</p>
+        </div>
+        <div class="sec-body prose">
+          <p>ECR mendefinisikan ruang lingkup minimum perlindungan ekologis — garis batas keamanan ekologis — dan masuk ke UU Perlindungan Lingkungan Tiongkok (2014) setelah menjadi strategi nasional 2013. Berbeda dari LP2B yang fokus pada lahan pangan, ECR mengintegrasikan penilaian jasa ekosistem multipel, keanekaragaman hayati, titik rawan ekologis, dan struktur lanskap secara simultan.</p>
+          <ul>
+            <li><strong>Berbasis sains jasa ekosistem:</strong> studi Shanghai menunjukkan inklusi jasa ekosistem menaikkan perlindungan habitat terestrial sebesar <strong>174%</strong> dibanding skenario alternatif (Bai et al., 2018, <em>Nature Communications</em> 9:3032).</li>
+            <li><strong>Dibangun untuk no-net-loss:</strong> tidak ada perubahan bersih tutupan lahan &amp; tidak ada kehilangan bersih keanekaragaman hayati &amp; degradasi jasa ekosistem dalam area kritis; berpotensi membantu target pasca-2020 (<em>Conservation Letters</em>, 15:e12853).</li>
+            <li><strong>Terbukti melambatkan penurunan:</strong> studi Nanjing 2005–2018 dengan penginderaan jauh menemukan delineasi ECR mampu memperlambat laju penurunan nilai jasa ekosistem, meski penurunan masih terjadi — batas ruang bukan pengganti pengelolaan intensitas.</li>
+          </ul>
+          <p><strong>Pelajaran bagi LP2B:</strong> ECR bekerja ketika (i) batas ditarik berbasis penilaian jasa ekosistem &amp; sensitivitas ekologis (bukan harga tanah), (ii) dikunci pada UU &amp; sistem perencanaan teritorial nasional–lokal, serta (iii) capaian dipantau dengan indikator no-net-loss &amp; penginderaan jauh berkala. LP2B tersumbat pada legitimasi petakan, penguncian Perda, dan pemantauan yang belum berjalan. Perbedaan politik-administratif (komando terpusat Tiongkok vs harmonisasi desentralisasi Indonesia) membatasi replikasi langsung — adaptasi harus memilih instrumen yang paling transferabel (penilaian sains &amp; monitoring) tanpa mengimpor model komando.</p>
+          <div class="callout callout-warn">
+            <span class="icon" data-lucide="triangle-alert"></span>
+            <p><strong>Tantangan serupa, konteks berbeda.</strong> Kemajuan ECR dihambat koordinasi tidak memadai, pemantauan lemah, &amp; penegakan kurang kuat — serta "participation gap" aktor non-negara lokal (Kostka &amp; Mol). LP2B menghadapi pola sama dengan karakter kelembagaan berbeda; struktur vertikal-horizontal terfragmentasi menyebabkan arah nasional terdilusi di tingkat lokal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RANGKUMAN -->
+    <section class="sec" id="rangkuman" aria-labelledby="rangkuman-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Rangkuman</p>
+        <h2 class="h2" id="rangkuman-title">Pokok pembelajaran</h2>
+        <ul class="objective-list" id="rangkuman-list">
+          <li>Prinsip pembangunan berkelanjutan (UU 32/2009) adalah norma hukum, bukan sekadar etika — konsekuensinya: RTRW &amp; RPJMD wajib menjalani KLHS.</li>
+          <li>Tiga rel kebijakan (pembangunan, tata ruang, lingkungan) dipertemukan KLHS sebagai rel penghubung; gap pada satu jenjang (mis. RDTR belum terintegrasi OSS) melumpuhkan pilar di bawahnya.</li>
+          <li>Pembagian kewenangan (UU 23/2014) menciptakan saling ketergantungan tanpa hierarki perintah langsung — kapasitas kabupaten/kota sebagai ujung tombak paling timpang.</li>
+          <li>Lima fungsi instrumen (perencanaan, pencegahan, perizinan, pengawasan, insentif) masing-masing memiliki titik rawan tipikal — pilihan CAC vs MBI bergantung kapasitas kelembagaan.</li>
+          <li>Kerangka <strong>3C+G</strong> memaksa diagnosis akar gap yang tepat (koherensi vs kepatuhan vs kapasitas) sebelum meresepkan kebijakan — LP2B &amp; ECR menunjukkan instrumen batas spasial hanya bekerja bila sains, penguncian hukum, &amp; pemantauan berjalan bersama.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="sec sec-deep" id="quiz" aria-labelledby="quiz-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Checkpoint</p>
+          <h2 class="h2" id="quiz-title">Uji pemahaman</h2>
+          <p class="sec-desc">Lima soal pilihan ganda dari materi di atas. Jawab, periksa hasil secara langsung, dan peroleh skor beserta umpan balik.</p>
+        </div>
+        <div class="quiz card" id="quiz-box">
+          <div id="quiz-root"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DISKUSI -->
+    <section class="sec" id="diskusi" aria-labelledby="diskusi-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Diskusi</p>
+          <h2 class="h2" id="diskusi-title">Pertanyaan diskusi</h2>
+          <p class="sec-desc">Soal terbuka untuk dibedah bersama. Klik kartu untuk membuka petunjuk arah pembahasannya.</p>
+        </div>
+        <div class="acc" id="diskusi-list"></div>
+      </div>
+    </section>
+
+    <!-- LATIHAN -->
+    <section class="sec sec-deep" id="latihan" aria-labelledby="latihan-title">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Latihan</p>
+          <h2 class="h2" id="latihan-title">Latihan mandiri</h2>
+          <p class="sec-desc">Tugas penerapan. Tandai saat selesai — progres tersimpan otomatis di perangkat ini.</p>
+        </div>
+        <div class="lat-progress" role="status" aria-live="polite">
+          <div class="lat-bar"><div class="lat-bar-fill" id="lat-fill"></div></div>
+          <span class="lat-count" id="lat-count">0 / 4 selesai</span>
+        </div>
+        <ol class="lat-list" id="latihan-list"></ol>
+      </div>
+    </section>
+
+    <!-- PUSTAKA -->
+    <section class="sec" id="pustaka" aria-labelledby="pustaka-title">
+      <div class="wrap panel wide">
+        <p class="eyebrow">Referensi</p>
+        <h2 class="h2" id="pustaka-title">Daftar pustaka</h2>
+        <div id="pustaka-list"></div>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-dialog" role="document">
+        <button type="button" class="modal-close" data-close-modal aria-label="Tutup dialog"><span class="icon" data-lucide="x"></span></button>
+        <p class="eyebrow" id="modal-eyebrow"></p>
+        <h3 class="h3" id="modal-title"></h3>
+        <div class="modal-body" id="modal-body"></div>
+      </div>
+    </div>
+
+    <span id="tooltip" class="tooltip" role="tooltip" hidden></span>
   </main>
 
   <footer class="site-footer">
     <div class="wrap foot-inner">
       <p class="foot-copy">© <span data-current-year></span> <a href="https://khair.am" target="_blank" rel="noopener noreferrer">Hafizhul Khair</a></p>
-      <p class="foot-modified">Terakhir diperbarui: <time data-last-modified datetime="2026-08-25"></time></p>
+      <p class="foot-modified">Terakhir diperbarui: <time data-last-modified datetime="2026-09-01"></time></p>
     </div>
   </footer>
 
+  <button type="button" id="to-top" class="to-top" aria-label="Kembali ke atas" hidden><span class="icon" data-lucide="arrow-up"></span></button>
+
+  <!-- Library via CDN, versi ter-pin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lucide@0.462.0/dist/umd/lucide.min.js"></script>
-  <script src="assets/js/landing.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+
+  <!-- Konten (paling awal) lalu logika -->
+  <script src="assets/js/data-bab7.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/stepper.js"></script>
+  <script src="assets/js/quiz.js"></script>
+  <script src="assets/js/extras.js"></script>
   <script src="assets/js/footer.js"></script>
 </body>
 </html>
