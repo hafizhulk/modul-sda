@@ -43,6 +43,11 @@ APP_DATA.GLOSSARY = {
     en: "Common International Classification of Ecosystem Services",
     def: "Klasifikasi hierarkis jasa final (V5.1) yang menjadi basis pemetaan Eropa (MAES) dan SEEA-EA PBB; memisahkan jasa dari manfaat."
   },
+  "teeb": {
+    term: "TEEB",
+    en: "The Economics of Ecosystems and Biodiversity",
+    def: "Inisiatif ekonomi jasa ekosistem (Kumar, 2010) yang menghilangkan kategori jasa pendukung karena dianggap proses penunjang, bukan jasa akhir — berbeda dari MA (2005) dan CICES V5.1."
+  },
   "stok-aliran": {
     term: "Potensi–aliran–permintaan",
     en: "potential–flow–demand (Burkhard)",
@@ -157,7 +162,7 @@ APP_DATA.STEPS = [
   {
     icon: "siren",
     title: "3 · Ambang batas ekologis",
-    body: "Banyak sistem menunjukkan respons tak-linier: sekali melewati ambang, perubahan sulit balik. Planetary boundaries (Rockström 2009) adalah padanannya global. Indikator DDTLH dibaca sebagai zona risiko bertingkat (aman–waspada–terlampaui), bukan angka tunggal.",
+    body: "Perubahan lingkungan tidak selalu bertahap. Jika tekanan melewati ambang tertentu, fungsi ekosistem dapat berubah cepat dan sulit pulih. Konsep planetary boundaries (Rockström, 2009) membahas ambang pada skala global. Karena itu, status DDTLH sebaiknya dibaca sebagai tingkat risiko: aman, waspada, atau terlampaui.",
     note: "Pesan Bab 2: DDTLH normatif harus jauh dari ambang ekologis sesungguhnya — risiko ambang normatif terlalu longgar."
   },
   {
@@ -231,7 +236,7 @@ APP_DATA.QUIZ = [
 
 /* Diskusi */
 APP_DATA.DISKUSI = [
-  { q: "Jika suatu DAS menunjukkan defisit penyediaan pangan, hasil air, dan sekuestrasi karbon di kawasan perkotaan utara sementara surplus di selatan (seperti Fenghe, Tiongkok), bagaimana implikasinya bila neraca kabupaten/kota Anda hanya dilaporkan sebagai angka agregat?", h: "Rujuk Tabel 4.2.5: neraca agregat menutupi heterogenitas lokal. Diskusikan perlunya neraca sub-wilayah/spasial — pelajaran studi DAS Dongjiang soal tekanan hilir yang besar vs hulu kecil." },
+  { q: "Jika suatu DAS menunjukkan defisit penyediaan pangan, hasil air, dan sekuestrasi karbon di kawasan perkotaan hilir sementara surplus di hulu (seperti DAS Dongjiang, Tiongkok, pada subbab 4.2.1), bagaimana implikasinya bila neraca kabupaten/kota Anda hanya dilaporkan sebagai angka agregat?", h: "Rujuk Tabel 4.1: neraca agregat menutupi heterogenitas lokal. Diskusikan perlunya neraca sub-wilayah/spasial — tekanan hilir yang besar vs hulu yang kecil." },
   { q: "Skema PES Kosta Rika dinilai 'kecil namun signifikan' additionality-nya. Apakah program tersebut tetap layak disebut berhasil dari sudut legitimasi dan norma sosial, bukan hanya hektar hutan?", h: "Rujuk Legrand et al. (2011): dampak langsung rendah tetapi perbaikan efisiensi besar; nilai program mungkin lebih besar pada legitimasi konservasi dan infrastruktur kelembagaan daripada hektar semata." },
   { q: "Mengapa pemilihan ekivalensi faktor gha yang berbeda dapat mengubah status suatu wilayah dari cadangan menjadi defisit ekologis, dan apa implikasinya bagi penggunaan EF sebagai alat alokasi ruang?", h: "EF sangat sensitif faktor konversi (model/asumsi); gunakan sebagai indikator komunikatif defisit agregat, bukan alat alokasi RTRW — bandingkan dengan neraca kebutuhan–ketersediaan yang lebih operasional." },
   { q: "Dalam kasus Singapura, integrasi satu otoritas (PUB) menyatukan drainase, tangkapan, pengolahan, dan distribusi. Apa hambatan replikasi model ini di wilayah Anda (fragmentasi kewenangan, data, politik anggaran) dan satu instrumen yang layak dipinjam?", h: "Bandingkan fragmentasi DAS lintas kabupaten/kota di Indonesia dengan model closed-loop PUB + ABC Waters; identifikasi hambatan transferabilitas dan satu instrumen adaptif." }
@@ -258,6 +263,13 @@ APP_DATA.PUSTAKA = [
     "Turkelboom, F., et al. (2018). When we cannot have it all. Ecosystem Services, 29(C): 566–578.",
     "Wackernagel, M., et al. (1999). National natural capital accounting with the ecological footprint concept. Ecological Economics, 29(3).",
     "Wackernagel, M., & Rees, W. (1996). Our Ecological Footprint. New Society Publishers.",
+    "Bott, L.M., et al. (2021). Land subsidence in Jakarta and Semarang Bay. Ocean & Coastal Management, 211: 105775.",
+    "Chaussard, E., Amelung, F., Abidin, H., & Hong, S.-H. (2013). Sinking cities in Indonesia. Remote Sensing of Environment, 128: 150–161.",
+    "Handika, R., Widodo, J., & Pravitasari, A.E. (2024). Combined land subsidence analysis in Jakarta based on PS-InSAR and MICMAC methods. Jurnal Teknologi Lingkungan, 25(1): 137–145.",
+    "Irawan, A.M., Marfai, M.A., Nugraheni, I.R., et al. (2021). Comparison between averaged and localised subsidence measurements for coastal floods projection in 2050 Semarang, Indonesia. Urban Climate, 35: 100760.",
+    "Liu, D., & Borthwick, A.G.L. (2011). Measurement and assessment of carrying capacity of the environment in Ningbo, China. Journal of Environmental Management, 92(9): 2047–2053.",
+    "Schulp, C.J.E., Burkhard, B., Maes, J., Van Vliet, J., & Verburg, P.H. (2014). Uncertainties in ecosystem service maps: A comparison on the European scale. PLOS ONE, 9(10): e109643.",
+    "Sánchez-Azofeifa, G.A., et al. (2007). Costa Rica’s payment for environmental services program: Intention, implementation, and impact. Conservation Biology, 21(5): 1165–1173.",
     "Millennium Ecosystem Assessment (2005). Ecosystems and Human Well-being: Synthesis. Island Press.",
     "TEEB (2010). The Economics of Ecosystems and Biodiversity: Ecological and Economic Foundations.",
     "Haines-Young, R., & Potschin, M. (2018). CICES V5.1."

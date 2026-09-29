@@ -163,7 +163,7 @@ APP_DATA.STEPS = [
   {
     icon: "map",
     title: "S — State",
-    body: "Kondisi sumber daya saat ini: luas tutupan hutan, kualitas air, konsentrasi PM2.5. State adalah potret — bukan film — sehingga periode perekaman menentukan nilainya.",
+    body: "Kondisi lingkungan pada waktu pengamatan, misalnya luas tutupan hutan, mutu air, atau konsentrasi PM2.5. Indikator ini menunjukkan keadaan pada periode tertentu; untuk melihat perubahan, bandingkan beberapa periode yang sepadan.",
     note: "State KLHK: luas 7 kelas hutan (MMU 6,25 ha). State GFW: tutupan tajuk >30% (piksel 0,09 ha)."
   },
   {
@@ -175,7 +175,7 @@ APP_DATA.STEPS = [
   {
     icon: "shield-check",
     title: "R — Response",
-    body: "Respons kebijakan dan masyarakat: moratorium, LP2B, Satu Peta, pemulihan. Respons yang baik menutup loop dengan mengubah driving forces — bukan sekadar mengobati state.",
+    body: "Respons pemerintah dan masyarakat dapat berupa moratorium, LP2B, Satu Peta, atau pemulihan. Respons yang efektif mengurangi penyebab tekanan, bukan hanya memperbaiki gejala yang sudah terlihat.",
     note: "DPSIR bersifat linear; sistem nyata memiliki umpan balik (response mengubah driving forces) — lihat Bab 2."
   }
 ];

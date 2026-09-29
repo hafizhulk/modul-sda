@@ -102,6 +102,11 @@ APP_DATA.GLOSSARY = {
     en: "environmental carrying capacity",
     def: "Daya dukung dan daya tampung lingkungan hidup — muatan wajib KLHS (PP No. 22/2021); upaya menerjemahkan ambang ekologis menjadi ambang normatif yang dapat ditegakkan."
   },
+  "klhs": {
+    term: "KLHS",
+    en: "strategic environmental assessment",
+    def: "Kajian Lingkungan Hidup Strategis — instrumen menguji ketimpangan manfaat–beban antaralternatif kebijakan sebelum ditetapkan; analisis daya dukung–daya tampung adalah muatan wajibnya (PP No. 22/2021)."
+  },
   "maladaptasi": {
     term: "Maladaptasi",
     en: "maladaptation",
@@ -146,12 +151,12 @@ APP_DATA.STEPS = [
     icon: "users",
     title: "1 · Pertumbuhan penduduk",
     body: "Pertambahan penduduk meningkatkan kebutuhan lahan permukiman, pangan, air, dan energi. Namun pengaruhnya selalu dimediasi oleh kepadatan, konsumsi per kapita, dan kelembagaan — pendorong mendasar, bukan penyebab langsung.",
-    note: "Penduduk Indonesia 270,2 juta (SP2020); di Peri-urban Malang faktor demografi jadi konstruk sentral keputusan petani menjual lahan (Hasyim dkk., 2024)."
+    note: "Penduduk Indonesia 270,2 juta (SP2020); di peri-urban Malang faktor demografi jadi konstruk sentral keputusan petani menjual lahan (Hasyim dkk., 2024)."
   },
   {
     icon: "tower-control",
     title: "2 · Urbanisasi",
-    body: "56,7% penduduk Indonesia tinggal di perkotaan (2020) → proyeksi 66,6% (2035) → 72,9% (2045). Urbanisasi di Asia Tenggara memiliki ciri desakota (McGee, 1991): perluasan kota ke perdesaan di koridor antarkota, membentuk bentang alam campuran pertanian–nonpertanian.",
+    body: "Pada 2020, 56,7% penduduk Indonesia tinggal di perkotaan. Angka ini diproyeksikan menjadi 66,6% pada 2035 dan sekitar 73% pada 2045 (Bappenas, Indonesia Emas). Di koridor antarkota Asia Tenggara, urbanisasi sering membentuk desakota: wilayah yang mencampur kegiatan pertanian dan nonpertanian (McGee, 1991).",
     note: "Di Greater Bandung, zona peri-urban radius 10–20 km menjadi zona kinerja tinggi dengan tekanan konversi terbesar (Mulya dkk., 2026)."
   },
   {
@@ -261,7 +266,11 @@ APP_DATA.PUSTAKA = [
     "Scheffer, M., dkk. (2001). Catastrophic shifts in ecosystems. Nature, 413, 591–596.",
     "Scheffer, M., dkk. (2009). Early-warning signals for critical transitions. Nature, 461, 53–59.",
     "Rizq, B., dkk. (2025). Urban expansion and rice supply vulnerability in Purwokerto. IOP Conf. Series: Earth & Env. Sci., 1556, 012095.",
-    "Maulana, I.N.H., dkk. (2026). Land conversion, spatial governance failure, and food security in peri-urban Malang. Jurnal Mediasosian, 10(1)."
+    "Maulana, I.N.H., dkk. (2026). Land conversion, spatial governance failure, and food security in peri-urban Malang. Jurnal Mediasosian, 10(1).",
+    "Pribadi, D.O., & Pauleit, S. (2015). The dynamics of peri-urban agriculture during rapid urbanization of Jabodetabek Metropolitan Area. Land Use Policy, 48, 13–24.",
+    "Fang, X., Ghazali, S., Azadi, H., Skominas, R., & Scheffran, J. (2024). Agricultural land conversion and ecosystem services loss: A meta-analysis. Environment, Development and Sustainability, 26(9), 23215–23243.",
+    "Rustiadi, E., Pribadi, D.O., Pravitasari, A.E., Indraprahasta, G.S., & Iman, L.S. (2015). Jabodetabek megacity: From city development toward urban complex management system. Dalam R.B. Singh (Ed.), Urban Development Challenges, Risks and Resilience in Asian Mega Cities. Springer.",
+    "Chaussard, E., Amelung, F., Abidin, H., & Hong, S.-H. (2013). Sinking cities in Indonesia: ALOS PALSAR detects rapid subsidence due to groundwater and gas extraction. Remote Sensing of Environment, 128, 150–161."
   ] },
   { group: "Buku dan karya seminal", items: [
     "Alonso, W. (1964). Location and Land Use. Harvard University Press.",

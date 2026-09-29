@@ -17,6 +17,11 @@ APP_DATA.GLOSSARY = {
     en: "sustainable development principle",
     def: "Memenuhi kebutuhan generasi kini tanpa mengorbankan generasi mendatang — menjadi prinsip hukum UU 32/2009 (tanggung jawab negara, keberlanjutan, kehati-hatian, polluter pays, partisipatif, kearifan lokal) jo. PP 22/2021."
   },
+  "kehati-hatian": {
+    term: "Prinsip kehati-hatian",
+    en: "precautionary principle",
+    def: "Bila ada ancaman kerusakan serius atau irreversibel, ketiadaan kepastian ilmiah penuh bukan alasan menunda pencegahan (UU 32/2009)."
+  },
   "hierarki-kebijakan": {
     term: "Hierarki tiga rel kebijakan",
     en: "three-track policy hierarchy",
@@ -55,7 +60,7 @@ APP_DATA.GLOSSARY = {
   "ecr": {
     term: "Ecological Conservation Redline (ECR)",
     en: "Ecological Conservation Redline (China)",
-    def: "Kebijakan 2017 — garis batas keamanan ekologis berbasis penilaian jasa ekosistem multipel, masuk UU Perlindungan Lingkungan 2014; no-net-loss tutupan lahan & keanekaragaman hayati; Shanghai +174% perlindungan habitat."
+    def: "Garis batas keamanan ekologis Tiongkok — strategi nasional 2013, UU Perlindungan Lingkungan 2014, pedoman nasional 2017; berbasis penilaian jasa ekosistem multipel; no-net-loss tutupan lahan & keanekaragaman hayati; Shanghai +174% perlindungan habitat."
   },
   "implementation-gap": {
     term: "Implementation gap",
@@ -141,8 +146,8 @@ APP_DATA.STEPS = [
   {
     icon: "file-check",
     title: "3 · Perizinan — KKPR → PBR",
-    body: "KKPR sebagai prasyarat OSS-RBA: KKKPR (Konfirmasi, otomatis) bila RDTR terintegrasi OSS; PKKPR (Persetujuan, ≤20 hari via Forum Penataan Ruang) bila belum. RDTR minus = KKPR mengambang.",
-    note: "Fakta: 566 RDTR terintegrasi OSS (Apr 2026) — jauh dari seluruh kabupaten/kota."
+    body: "KKPR menjadi syarat dalam OSS-RBA. Jika RDTR sudah terhubung dengan OSS, kesesuaian dapat dikonfirmasi melalui KKKPR. Jika belum, diperlukan proses persetujuan PKKPR melalui Forum Penataan Ruang. Ketersediaan RDTR yang jelas membantu membuat keputusan perizinan lebih pasti.",
+    note: "Fakta: 566 RDTR terintegrasi OSS (Apr 2026, ATR/BPN) — jauh dari seluruh kabupaten/kota."
   },
   {
     icon: "eye",
@@ -182,7 +187,7 @@ APP_DATA.QUIZ = [
       "KKKPR memerlukan AMDAL, PKKPR tidak."
     ],
     answer: 1,
-    pembahasan: "566 RDTR terintegrasi OSS (Apr 2026) — jauh dari seluruh kabupaten/kota; di lokasi tanpa RDTR terintegrasi, KKPR beralih ke PKKPR yang memerlukan kajian substantif."
+    pembahasan: "566 RDTR terintegrasi OSS (Apr 2026, ATR/BPN) — jauh dari seluruh kabupaten/kota; di lokasi tanpa RDTR terintegrasi, KKPR beralih ke PKKPR yang memerlukan kajian substantif."
   },
   {
     q: "Mengapa sanksi pidana Pasal 72 UU 41/2009 tentang LP2B hanya efektif bila LP2B telah ditetapkan dalam RTRW via Perda?",
@@ -223,7 +228,7 @@ APP_DATA.QUIZ = [
 APP_DATA.DISKUSI = [
   { q: "Petakan hierarki tiga rel kebijakan untuk isu 'perlindungan lahan sawah' di wilayah studi Anda: dari RPJPN/SDGs → RPJMN/RPPLH → RTRWN → RTRW Prov/Kab/Kota → RDTR → KKPR/AMDAL. Di jenjang mana gap paling nyata dan mengapa?", h: "Gunakan Tabel 7.1 (tiga rel) dan piramida kebijakan Subbab 7.1.2. Periksa apakah RDTR telah terintegrasi OSS — bila belum, gap berada pada rantai perizinan (PKKPR). Tunjukkan satu Perda/RTRW spesifik sebagai bukti." },
   { q: "Bandingkan desain vs praktik satu instrumen (KLHS RTRW, AMDAL, atau KKPR) di wilayah studi Anda. Apakah prasyarat data D3TLH/RPPLH terpenuhi? Apakah rekomendasi instrumen masuk pasal operasional RTRW/RDTR?", h: "Gunakan matriks instrumen 7.4.6: identifikasi titik rawan tipikal (mis. KLHS: D3TLH tak mutakhir; KKPR: RDTR minus) dan satu contoh konkret dengan penanda gap terukur (% adopsi rekomendasi KLHS, rasio terpantau vs terizin)." },
-  { q: "Untuk isu LP2B di wilayah peri-urban: petakan aktor (pemilik sawah, pengembang, Dinas Pertanian, Bappeda, BPN, penegak hukum, konsumen perkotaan). Insentif dan beban siapa yang paling menentukan kepatuhan, dan mengapa instrumen insentif LP2B belum konsisten?", h: "Gunakan pemetaan aktor 7.3.2 dan kerangka 3C+G: akar kepatuhan (biaya kepatuhan tinggi, deteksi rendah) vs akar kapasitas (anggaran insentif, sosialisasi). Rujuk Serang & Sukabumi sebagai pembanding." },
+  { q: "Untuk isu LP2B di wilayah peri-urban: petakan aktor (pemilik sawah, pengembang, Dinas Pertanian, Bappeda, BPN, penegak hukum, konsumen perkotaan). Insentif dan beban siapa yang paling menentukan kepatuhan, dan mengapa instrumen insentif LP2B belum konsisten?", h: "Gunakan pemetaan aktor 7.3.2 dan kerangka 3C+G: akar kepatuhan (biaya kepatuhan tinggi, deteksi rendah) vs akar kapasitas (anggaran insentif, sosialisasi). Bandingkan dengan kasus LP2B di wilayah Anda." },
   { q: "ECR Tiongkok diklaim menaikkan perlindungan habitat 174% di Shanghai. Syarat apa yang membuat instrumen batas spasial bekerja di Tiongkok tetapi tersumbat pada LP2B, dan apa yang dapat diadaptasi tanpa replikasi mentah?", h: "Bandingkan tiga syarat ECR: batas berbasis sains jasa ekosistem, penguncian pada UU & sistem perencanaan teritorial, pemantauan no-net-loss via penginderaan jauh. LP2B tersumbat pada presisi petakan, Perda tertunda, monitoring belum berjalan — adaptasi perlu harmonisasi desentralisasi, bukan komando terpusat." }
 ];
 
@@ -243,13 +248,13 @@ APP_DATA.PUSTAKA = [
     "Zhang et al. (2021). Spatial pattern change and ecosystem service value dynamics of ECR. Int. J. Environ. Res. Public Health, 18(8), 4224.",
     "Conservation Letters, 15, e12853 (2022). China's ECR and post-2020 targets.",
     "Umam, A.H., et al. Rapid assessment of climate change issues through SEA: case of Palu. IOP Conf. Ser.: Earth Environ. Sci. DOI: 10.1088/1755-1315/644/1/012045.",
-    "Telaah KLHS RPJMD Gunung Mas (2026). Jurnal Business Administration, Talenta USU.",
+    "Contoh telaah KLHS RPJMD kabupaten (mis. Gunung Mas) — telusuri di jurnal administrasi publik dan repositori kampus.",
     "Multilevel environmental governance in Indonesia. IJMRA (2024).",
     "Repositori UGM: Implementasi LP2B di Purbalingga — peta existing 2015, belum Perda.",
     "Environmental Governance in Indonesia. Springer Open (2023). DOI: 10.1007/978-3-031-15904-6.",
-    "Suryani, S.P. (2026). Implementasi LP2B di Kota Palu. Jurnal Santina.",
-    "Land Conversion, Spatial Governance Failure, and Local … Maulana et al. (2026). Mediasosian, 10(1). (12,8% lahan terlindungi terkonversi).",
-    "Wiley Ecological Economics / Environmental Governance (2026). Strategic maintenance of bureaucratic comfort zones."
+    "Studi-studi implementasi LP2B tingkat kota (mis. Palu) — telusuri di jurnal dan repositori kampus.",
+    "Maulana, I.N.H., dkk. (2026). Land conversion, spatial governance failure, and food security in peri-urban Malang. Jurnal Mediasosian, 10(1).",
+    "Literatur tata kelola lingkungan tentang inersia birokrasi (bureaucratic comfort zones) — telusuri di Ecological Economics / Environmental Governance."
   ] },
   { group: "Regulasi rujukan normatif", items: [
     "UU No. 32/2009 tentang PPLH (jo. UU 6/2023).",
@@ -259,6 +264,7 @@ APP_DATA.PUSTAKA = [
     "UU No. 41/2009 tentang LP2B; PP No. 1/2011 tentang Penetapan dan Pengalihan LP2B.",
     "UU No. 23/2014 tentang Pemerintahan Daerah.",
     "PP No. 5/2021 jo. PP No. 28/2025 tentang Perizinan Berusaha Berbasis Risiko (OSS-RBA, KKPR).",
-    "Peraturan ATR/BPN 13/2021 (KKPR)."
+    "Peraturan ATR/BPN 13/2021 (KKPR).",
+    "Kementerian ATR/BPN (2026). Capaian RDTR terintegrasi OSS (data April 2026: 566 RDTR)."
   ] }
 ];

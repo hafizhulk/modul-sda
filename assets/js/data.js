@@ -147,7 +147,7 @@ APP_DATA.STEPS = [
   {
     icon: "gauge",
     title: "1 · Overekstraksi melampaui regenerasi",
-    body: "Laju ambil melebihi laju pulih — perikanan ditangkap lebih cepat dari reproduksinya, air tanah dipompa lebih cepat dari pengisian akuifer. Sumber daya terbarukan berperilaku seperti stok yang dideplesi.",
+    body: "Kelangkaan muncul ketika sumber daya diambil lebih cepat daripada kemampuan alam memulihkannya. Contohnya, ikan ditangkap sebelum populasinya pulih atau air tanah dipompa lebih cepat daripada pengisian akuifer.",
     note: "Contoh: cekungan air tanah Jakarta–Semarang; iktiofauna Laut Aral yang runtuh dari >34.000 ton/tahun (1961) menjadi praktis berhenti (1980-an)."
   },
   {
@@ -165,14 +165,14 @@ APP_DATA.STEPS = [
   {
     icon: "lock-open",
     title: "4 · Kegagalan hak milik / akses terbuka",
-    body: "Tanpa aturan eksklusi, insentif individual menghancurkan stok kolektif — dilema Hardin (1968). Ostrom (1990) menunjukkan jalan keluarnya: tata kelola kolektif dengan prinsip desain kelembagaan.",
+    body: "Jika akses tidak diatur, setiap pengguna terdorong mengambil lebih banyak sehingga cadangan bersama menurun. Hardin (1968) menjelaskan dilema ini. Ostrom (1990) menunjukkan bahwa aturan dan pengawasan bersama dapat membantu mengatasinya.",
     note: "Contoh: air tanah perkotaan — rival dan sulit dieksklusi; persis konfigurasi CPR paling rawan."
   },
   {
     icon: "anchor",
     title: "5 · Penguncian teknologi-infrastruktur (lock-in)",
     body: "Investasi besar pada satu pola pemanfaatan (waduk, kanal, jaringan irigasi) membuat koreksi arah mahal secara politik-ekonomi, bahkan setelah biaya lingkungannya diketahui.",
-    note: "Contoh: sistem kanal irigasi Aral; rekonstitusi penuh laut memerlukan inflow ±65 km³/tahun — praktis mustahil (studi 2023)."
+    note: "Contoh: sistem kanal irigasi Aral; rekonstitusi penuh laut memerlukan inflow ±65 km³/tahun — praktis mustahil (Micklin, 2007)."
   }
 ];
 
@@ -184,7 +184,7 @@ APP_DATA.TIMELINE = [
   { year: "1987", title: "Danau terbelah", text: "Aral terpisah menjadi Aral Utara (Kecil) dan Aral Selatan (Besar); muka air terus turun menuju total −23 m." },
   { year: "2007", title: "Desikasi masif terdokumentasi", text: "Luas menyusut 74%, volume −90%, salinitas Aral Selatan >100 g/L; dasar laut menjadi Aralkum Desert — sumber badai debu-garam berpestisida (Micklin, 2007)." },
   { year: "2005–2008", title: "Pemulihan parsial Aral Utara", text: "Bendung Kokaral (13 km, dukungan Bank Dunia) selesai 2005; pada 2008 volume Aral Utara +68%, salinitas turun separuh, produksi ikan naik >3× (Bank Dunia, 2014)." },
-  { year: "Kini", title: "Restorasi penuh tidak realistis", text: "Rekonstitusi penuh memerlukan pasokan ±65 km³ air/tahun — praktis mustahil dengan kebutuhan irigasi yang berlanjut (studi 2023). Pemulihan parsial pun bergeografi pemenang dan tertinggal." }
+  { year: "Kini", title: "Restorasi penuh tidak realistis", text: "Rekonstitusi penuh memerlukan pasokan ±65 km³ air/tahun — praktis mustahil dengan kebutuhan irigasi yang berlanjut (Micklin, 2007). Pemulihan parsial pun bergeografi pemenang dan tertinggal." }
 ];
 
 /* Checkpoint quiz — soal pilihan ganda + pembahasan */
@@ -231,7 +231,7 @@ APP_DATA.QUIZ = [
       "Kelangkaan alamiah akibat iklim kering."
     ],
     answer: 2,
-    pembahasan: "Stok fisik air melimpah, tetapi kegagalan pengelolaan (pencemaran + ekstraksi tak terkoordinasi) menciptakan kelangkaan di tengah kelimpahan — padanan fungsional penyadapan Amu Darya–Syr Darya (Gell et al., 2025)."
+    pembahasan: "Stok fisik air melimpah, tetapi kegagalan pengelolaan (pencemaran + ekstraksi tak terkoordinasi) menciptakan kelangkaan di tengah kelimpahan — padanan fungsional penyadapan Amu Darya–Syr Darya (Irawan et al., 2021)."
   },
   {
     q: "Pelajaran utama kasus Laut Aral bagi perencana wilayah Indonesia adalah…",
@@ -275,6 +275,10 @@ APP_DATA.PUSTAKA = [
     "Wallace, K. J. (2007). Classification of ecosystem services: Problems and solutions. Biological Conservation, 139(3–4), 235–246.",
     "Aryal, K., Maraseni, T. N., & Apan, A. (2021). How much do we know about trade-offs in ecosystem services? Science of the Total Environment.",
     "Batubara, B., Kooy, M., & Zwarteveen, M. (2023). Politicising land subsidence in Jakarta. Geoforum.",
+    "Bott, L. M., Schöne, T., Illigner, J., Haghshenas Haghighi, M., Gisevius, K., & Braun, B. (2021). Land subsidence in Jakarta and Semarang Bay: The relationship between physical processes, risk perception, and household adaptation. Ocean & Coastal Management, 211, 105775.",
+    "Guo, J., et al. (2017). Biocapacity optimization in regional planning. Scientific Reports, 7, 41150.",
+    "Handika, R., Widodo, J., & Pravitasari, A. E. (2024). Combined land subsidence analysis in Jakarta based on PS-InSAR and MICMAC methods. Jurnal Teknologi Lingkungan, 25(1), 137–145.",
+    "Irawan, A. M., Marfai, M. A., Nugraheni, I. R., et al. (2021). Comparison between averaged and localised subsidence measurements for coastal floods projection in 2050 Semarang, Indonesia. Urban Climate, 35, 100760.",
     "Chaussard, E., Amelung, F., Abidin, H., & Hong, S.-H. (2013). Sinking cities in Indonesia. Remote Sensing of Environment, 128, 150–161.",
     "González-García, A., Palomo, I., González, J. A., López, C. A., & Montes, C. (2020). Quantifying spatial supply-demand mismatches in ecosystem services. Land Use Policy, 94, 104493.",
     "Nahib, I., et al. (2023). Spatial-temporal changes in water supply and demand in the Citarum Watershed. Sustainability, 15(1), 562."

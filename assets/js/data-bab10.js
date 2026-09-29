@@ -126,7 +126,7 @@ APP_DATA.STEPS = [
   {
     icon: "link-2",
     title: "3 · Warrant — penghubung",
-    body: "Apa yang menghubungkan bukti dengan klaim? Prinsip ekologi bentang lahan: konversi sawah → hilangnya fungsi hidrologis. Warrant harus dinyatakan eksplisit agar dapat diuji.",
+    body: "Jelaskan alasan mengapa bukti mendukung klaim. Misalnya, terangkan bagaimana perubahan sawah menjadi kawasan terbangun dapat mengurangi kemampuan lahan menyerap air. Alasan penghubung ini harus ditulis jelas agar pembaca dapat memeriksanya.",
     note: "Lompatan logika hampir selalu terjadi di warrant yang tidak dinyatakan."
   },
   {
@@ -138,7 +138,7 @@ APP_DATA.STEPS = [
   {
     icon: "help-circle",
     title: "5 · Qualifier — tingkat kepastian",
-    body: "Seberapa pasti klaimnya? '...umumnya menurunkan', '...pada kondisi DAS yang telah terfragmentasi'. Qualifier membedakan klaim yang qualified dari klaim absolut.",
+    body: "Nyatakan batas kepastian klaim. Ungkapan seperti 'umumnya menurunkan' atau 'pada DAS yang telah terfragmentasi' menunjukkan kapan temuan berlaku dan mencegah kesimpulan yang terlalu mutlak.",
     note: "Tanpa qualifier, klaim terkesan deterministik dan mudah dipatahkan."
   },
   {
@@ -214,7 +214,7 @@ APP_DATA.QUIZ = [
 APP_DATA.DISKUSI = [
   { q: "Ambil satu paragraf analisis dari draf Tugas 2 Anda dan bedah dengan model Toulmin: identifikasi klaim, data, warrant, backing, qualifier, dan rebuttal. Warrant mana yang tidak dinyatakan dan bagaimana Anda memperbaikinya?", h: "Fokus pada warrant — prinsip penghubung. Jika warrant adalah 'konversi sawah → hilangnya fungsi hidrologis', nyatakan backing (jurnal peri-urbanisasi) dan qualifier ('umumnya', 'pada DAS terfragmentasi')." },
   { q: "Bandingkan satu peta di dokumen KLHS RTRW daerah dengan kaidah Bertin dan Tufte: apakah hue/value dipakai dengan benar, apakah ketidakpastian dikomunikasikan (fuzziness/peta reliabilitas), dan apakah elemen wajib (judul informatif, legenda, skala, sumber, tahun) lengkap?", h: "Gunakan variabel visual Bertin: value untuk kuantitatif bertingkat, hue untuk kualitatif. Periksa palet buta warna (ColorBrewer) dan sumber/tahun di legenda." },
-  { q: "Susun draf policy brief 2 halaman dari Tugas 2 Anda: apakah 5 checklist Subbab 10.3.4 terpenuhi (angka & pihak terdampak di 300 kata pertama, perbandingan opsi, keterlacakan, keterbatasan, halaman pertama cukup untuk keputusan)?", h: "Struktur: judul pesan → ringkasan eksekutif ≤200 kata → konteks ≤500 kata → kritik opsi 1–1,5 hal → rekomendasi ≤1.000 kata + rujukan ringkas. Total 2–4 halaman." },
+  { q: "Susun draf policy brief 2–4 halaman dari Tugas 2 Anda: apakah 5 checklist Subbab 10.3 terpenuhi (angka & pihak terdampak di 300 kata pertama, perbandingan opsi, keterlacakan, keterbatasan, halaman pertama cukup untuk keputusan)?", h: "Struktur: judul pesan → ringkasan eksekutif ≤150 kata → konteks ≤300 kata → kritik opsi 0,5–1 hal → rekomendasi ≤500 kata + rujukan ringkas. Total 2–4 halaman." },
   { q: "Pilih 5 rekomendasi utama Tugas 2 Anda dan buat matriks keterlacakan mini. Rekomendasi mana yang 'yatim' (temuan tanpa rekomendasi) atau 'panti kosong' (rekomendasi tanpa temuan), dan lompatan logika apa yang Anda temukan?", h: "Periksa dua arah: maju (temuan → rekomendasi) dan mundur (rekomendasi → temuan). Temukan warrant tidak dinyatakan, ekstrapolasi diam-diam, atau normatif menjadi empiris." }
 ];
 
@@ -222,7 +222,7 @@ APP_DATA.DISKUSI = [
 APP_DATA.LATIHAN = [
   { t: "Policy brief dari Tugas 2: ubah dokumen strategi terintegrasi menjadi policy brief 2 halaman untuk pengambil keputusan daerah — judul berbentuk pesan, ringkasan ≤200 kata, konteks berangka, perbandingan ≥2 opsi dengan trade-off distributif, 2–4 rekomendasi operasional, dan satu larik keterbatasan bukti.", tag: "Policy brief" },
   { t: "Satu visual penentu: buat satu peta atau grafik yang merangkum argumen utama strategi Anda. Terapkan kaidah Subbab 10.2 (elemen peta wajib: judul informatif, legenda, skala, arah utara, sumber, tahun, sistem koordinat; palet aksesibel; penanda ketidakpastian bila relevan) dan tulis 3 kalimat: keputusan apa yang seharusnya diambil pembaca setelah melihat visual ini.", tag: "Visual" },
-  { t: "Peer review silang: bertukar naskah Tugas 2 dengan rekan; gunakan protokol 6 butir Subbab 10.5.2 (masalah/metode/batasan, visual, keterlacakan, lompatan logika, trade-off/keadilan, ketidakpastian). Tulis minimal 3 komentar substansial (bukan redaksional) dan tanggapi dalam log revisi (diterima/ditolak + alasan).", tag: "Peer review" },
+  { t: "Peer review silang: bertukar naskah Tugas 2 dengan rekan; gunakan protokol 6 butir Subbab 10.5 (masalah/metode/batasan, visual, keterlacakan, lompatan logika, trade-off/keadilan, ketidakpastian). Tulis minimal 3 komentar substansial (bukan redaksional) dan tanggapi dalam log revisi (diterima/ditolak + alasan).", tag: "Peer review" },
   { t: "Tugas 2 — pengumpulan: kumpulkan paket final — dokumen strategi terintegrasi yang telah direvisi (maks. 25 halaman di luar lampiran), policy brief, visual kunci, dan lampiran mutu (matriks keterlacakan untuk ≥5 rekomendasi + log revisi + metadata). Pastikan setiap angka di ringkasan eksekutif tertelusur ke sumbernya.", tag: "Tugas 2" }
 ];
 

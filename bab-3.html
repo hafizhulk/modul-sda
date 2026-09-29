@@ -77,9 +77,9 @@
     <section class="sec" id="pendahuluan" aria-labelledby="pd-title">
       <div class="wrap panel wide">
         <p class="eyebrow">Pendahuluan</p>
-        <h2 class="h2" id="pd-title">Diagnosis yang baik berdiri di atas arsitektur data yang disadari</h2>
+        <h2 class="h2" id="pd-title">Diagnosis yang baik dimulai dari data yang jelas</h2>
         <div class="prose">
-          <p>Diagnosis lingkungan yang baik bertumpu pada arsitektur data yang dirancang secara sadar: data apa yang digunakan, dari sumber mana, pada skala apa, dengan definisi dan mutu seperti apa, serta seberapa besar ketidakpastiannya. Bab ini membahas lima aspek tersebut: jenis dan sumber data (3.1), indikator dan skala (3.2), metadata (3.3), validitas dan triangulasi (3.4), serta keterbatasan bukti dalam keputusan perencanaan (3.5). Pembahasan ditutup dengan studi kasus perbedaan angka deforestasi resmi dan hasil penginderaan jauh.</p>
+          <p>Diagnosis lingkungan hanya sekuat data yang mendasarinya. Sebelum menganalisis, perencana perlu mengetahui sumber, definisi, skala, mutu, dan ketidakpastian setiap data. Bab ini membahas jenis dan sumber data (3.1), indikator dan skala (3.2), metadata (3.3), validitas serta triangulasi (3.4), dan batas penggunaan bukti dalam keputusan perencanaan (3.5). Sebagai contoh, kita akan membandingkan angka deforestasi resmi dengan hasil penginderaan jauh.</p>
           <p>Kompetensi bab ini menjadi fondasi Tugas 1 (diagnosis lingkungan terintegrasi, dikumpulkan setelah Bab 6). Kaidah pembacaan: kotak berlabel <strong>[Fakta]</strong> berisi temuan empiris; <strong>[Regulasi]</strong> berisi ketentuan normatif; <strong>[Desain]</strong> berisi asumsi atau pilihan metodologis; <strong>[Analisis]</strong> berisi interpretasi penulis untuk didiskusikan.</p>
         </div>
       </div>
@@ -113,7 +113,7 @@
         </div>
         <div class="sec-body prose">
           <h3>3.1.1 · Dua keluarga data dan jembatan di antaranya</h3>
-          <p><span class="term" data-gloss="data-spasial">Data spasial</span> memiliki referensi geografis — posisi dalam sistem koordinat — sehingga dapat dipetakan dan dianalisis secara keruangan. <span class="term" data-gloss="data-nonspasial">Data nonspasial</span> adalah atribut tabular, dokumen, atau deret waktu yang tidak memiliki geometri, tetapi hampir selalu dapat dikaitkan ke unit spasial melalui kode wilayah atau titik sampling. Keterkaitan inilah yang membuat keduanya satu arsitektur: statistik kemiskinan BPS (nonspasial) menjadi peta kantong miskin (spasial) setelah digabungkan dengan batas administrasi.</p>
+          <p><span class="term" data-gloss="data-spasial">Data spasial</span> memiliki lokasi yang dapat dinyatakan dalam sistem koordinat. Karena itu, data tersebut dapat dipetakan dan dianalisis menurut letaknya. <span class="term" data-gloss="data-nonspasial">Data nonspasial</span>, seperti tabel, dokumen, dan deret waktu, tidak memiliki bentuk geometri. Namun, keduanya dapat dihubungkan melalui kode wilayah atau lokasi pengamatan. Misalnya, angka kemiskinan BPS dapat dipetakan setelah digabungkan dengan batas administrasi yang sesuai.</p>
 
           <p class="tbl-title">Tabel 3.1 — Jenis data yang relevan untuk PWK</p>
           <div class="tbl-wrap">
@@ -162,7 +162,7 @@
           </div>
 
           <h3>3.1.4 · Land cover vs land use &amp; sumber internasional</h3>
-          <p><span class="term" data-gloss="land-cover">SEEA Central Framework</span> membedakan <em>land cover</em> (tutupan fisik-biologis yang teramati) dan <em>land use</em> (fungsi/tujuan pemanfaatan) mengacu FAO LCCS. Perbedaan ini penting: banyak polemik deforestasi sesungguhnya berasal dari pencampuran definisi tutupan vs penggunaan lahan. Pembanding internasional (FAO FAOSTAT, Hansen et al. 2013 via Global Forest Watch) berguna untuk uji kewajaran angka nasional, tetapi definisi dan resolusinya sering tidak identik dengan kebutuhan regulasi nasional — inti studi kasus Bab 3.</p>
+          <p><span class="term" data-gloss="land-cover">SEEA Central Framework</span> membedakan <em>land cover</em>, yaitu tutupan fisik dan biologis yang teramati, dari <em>land use</em>, yaitu tujuan penggunaan lahan. Pembedaan ini mengacu pada FAO LCCS dan penting saat membaca angka deforestasi. Data internasional, seperti FAOSTAT dan Global Forest Watch, dapat dipakai untuk membandingkan tren. Namun, definisi dan resolusinya perlu diperiksa sebelum dibandingkan dengan angka resmi Indonesia. Studi kasus pada akhir bab memperlihatkan akibat jika perbedaan itu diabaikan.</p>
           <p class="note"><strong>Implikasi:</strong> KLHS RTRW/RDTR memerlukan penggabungan IGT (tutupan lahan, DAS, dan risiko) dengan data nonspasial (emisi dan kualitas air) dalam satu matriks diagnosis. Jika asal-usul data tidak didokumentasikan, rekomendasi tidak dapat ditelusuri kembali ke bukti yang mendasarinya (Bab 10).</p>
         </div>
       </div>
@@ -207,7 +207,7 @@
           </ol>
 
           <h3>3.2.3 · MAUP dan kesesatan ekologis</h3>
-          <p><span class="term" data-gloss="maup">MAUP</span> (Openshaw, 1984): unit agregasi spasial arbitrer; statistik ringkasan bergantung bentuk dan ukuran unit. Dua efek: <strong>efek skala</strong> (korelasi menguat pada unit lebih besar) dan <strong>efek zonasi</strong> (hasil berubah ketika data dikelompokkan ulang pada skala sama). Kerabatnya: <span class="term" data-gloss="ecological-fallacy">kesesatan ekologis</span> — inferensi lintas level agregasi tidak sah — dan padanan temporalnya.</p>
+          <p><span class="term" data-gloss="maup">MAUP</span> (Openshaw, 1984) menjelaskan bahwa hasil statistik dapat berubah ketika batas atau ukuran wilayah analisis diubah. <strong>Efek skala</strong> terjadi saat hasil berubah karena unit wilayah diperbesar atau diperkecil. <strong>Efek zonasi</strong> terjadi saat unit berukuran sama dikelompokkan dengan batas yang berbeda. Karena itu, hubungan yang terlihat pada tingkat kabupaten tidak boleh langsung dianggap berlaku bagi setiap desa atau orang di dalamnya. Kekeliruan terakhir disebut <span class="term" data-gloss="ecological-fallacy">kesesatan ekologis</span>.</p>
           <div class="callout callout-warn">
             <span class="icon" data-lucide="triangle-alert"></span>
             <p><strong>Praktik baik:</strong> laporkan pada level data diambil, jangan menurunkan klaim; analisis hidrologi pakai unit DAS/sub-DAS, kebijakan pada unit administratif — jembatani keduanya secara eksplisit; uji sensitivitas terhadap zonasi dan laporkan rentang hasilnya.</p>
@@ -382,7 +382,7 @@
             </tbody>
           </table>
           </div>
-          <p><strong>Ilustrasi risiko salah baca:</strong> sebuah laporan media pernah mengutip "kehilangan hutan 1,4 juta ha pada 2023" — hampir pasti merujuk total <em>tree cover loss</em> GFW (yang mencakup rotasi tanam pada perkebunan), bukan deforestasi; tanpa membaca metadata, angka semacam ini mudah dikutip sebagai "deforestasi" dan menggelembungkan persepsi.</p>
+          <p><strong>Ilustrasi risiko salah baca:</strong> sejumlah pemberitaan media pernah mengutip "kehilangan hutan 1,4 juta ha pada 2023" — hampir pasti merujuk total <em>tree cover loss</em> GFW (yang mencakup rotasi tanam pada perkebunan), bukan deforestasi; tanpa membaca metadata, angka semacam ini mudah dikutip sebagai "deforestasi" dan menggelembungkan persepsi.</p>
 
           <h3>B. Mengapa angkanya berbeda: bedah metadata</h3>
           <p class="tbl-title">Tabel 3.6 — Bedah metadata KLHK vs GFW/Hansen–UMD</p>
@@ -408,7 +408,7 @@
             <p><strong>Rekomendasi penyajian:</strong> (1) Laporkan minimal dua angka berdampingan dengan metadata ringkas — bukan satu angka tunggal. (2) Bandingkan hanya yang sepadan: bruto–bruto; hutan primer–hutan alam; periode sama. (3) Pisahkan <em>tren</em> dari <em>level</em>: pada 2021–2022 baik seri resmi maupun GFW sama-sama menunjukkan tren turun, meski level berbeda. (4) Untuk pelaporan nasional (FOLU Net Sink, KLHS) pakai angka resmi sebagai rujukan normatif dan GFW sebagai kontrol kewajaran; untuk analisis spasial hotspots pakai GFW dengan verifikasi lapangan.</p>
           </div>
           <p><strong>Contoh narasi jujur untuk KLHS:</strong> <em>"Deforestasi netto resmi 2021–2022 tercatat 104 ribu ha (bruto 119,4 ribu ha; KLHK, 2023, Juli–Juni, interpretasi visual Landsat). Produk penginderaan jauh mencatat kehilangan hutan alam ±300 ribu ha pada 2025 (GFW/UMD, tahun kalender, 30 m; konstruk berbeda sehingga tidak dapat dibandingkan langsung). Kedua seri konsisten menunjukkan tren penurunan jangka panjang dengan kenaikan kembali pada 2023–2024."</em></p>
-          <p class="note">Sumber rinci angka lintas tahun (2021–2025) ada pada bab_3.md: KLHK 104.000 ha (2022), Auriga 230–230.760 ha (2022), Kemenhut 119–145 ribu ha/thn (2020–2023), Auriga 257.384 ha (2023), NFMS-Norwegia 0,13 jt ha/thn (2022–2023), Kemenhut 175,4 ribu ha (2024), Auriga 261.575 ha (2024), pemerintah 166.450 ha vs Auriga 433.751 ha (2025).</p>
+          <p class="note">Ilustrasi divergensi antar sumber: untuk 2025, angka pemerintah (±166 ribu ha) jauh di bawah pemantau independen (Auriga ±434 ribu ha; GFW ±300 ribu ha hutan alam) — perbedaan definisi dan periode pengamatan, bukan "salah" (bandingkan Tabel 3.5). Selalu cantumkan sumber–definisi–periode pada setiap angka yang Anda kutip.</p>
 
           <h3>D. Fokus diskusi kelas</h3>
           <ol>
@@ -426,11 +426,11 @@
         <p class="eyebrow">Rangkuman</p>
         <h2 class="h2" id="rangkuman-title">Pokok pembelajaran</h2>
         <ul class="objective-list" id="rangkuman-list">
-          <li>Data spasial dan nonspasial adalah <strong>satu arsitektur</strong>: raster, vektor, tabel, dan narasi saling melengkapi — dengan land cover vs land use sebagai beda konstruk yang paling sering disalahpahami.</li>
-          <li>Indikator yang baik menghubungkan pendorong → tekanan → kondisi → dampak → respons; kerangka PSR/DPSIR menuntut kesepadanan <strong>skala spasial, temporal, dan tematik</strong> — MAUP mengingatkan bahwa unit agregasi arbitrer.</li>
-          <li>Metadata (ISO 19115 / FAIR) adalah <strong>syarat audit</strong>: tanpa definisi, periode, MMU, dan metode, angka terbaik sekalipun belum layak jadi dasar rekomendasi.</li>
-          <li>Validitas konstruk didahulukan dari akurasi; praktik baik Olofsson menuntut <strong>interval kepercayaan</strong> — dan triangulasi Denzin menilai hasil sebagai konvergen, komplementer, atau divergen.</li>
-          <li>Bukti selalu terbatas; prinsip <strong>kehati-hatian</strong> dan strategi <strong>Robust Decision Making</strong> menuntut rekomendasi yang tangguh pada seluruh rentang bukti — laporkan rentang, bukan titik tunggal.</li>
+          <li>Data spasial menunjukkan lokasi, sedangkan data nonspasial memberi keterangan tambahan. Keduanya perlu dihubungkan dengan definisi dan unit wilayah yang sesuai.</li>
+          <li>Indikator harus menjawab pertanyaan perencanaan pada skala ruang dan waktu yang tepat. Hasil analisis dapat berubah jika batas atau ukuran wilayah diganti (MAUP).</li>
+          <li>Metadata mencatat definisi, periode, metode, dan mutu data. Tanpanya, angka sulit diperiksa atau dibandingkan secara adil.</li>
+          <li>Pastikan indikator benar-benar mengukur konsep yang dimaksud. Setelah itu, periksa akurasi dan bandingkan hasil dari beberapa sumber melalui triangulasi.</li>
+          <li>Bukti selalu memiliki keterbatasan. Sampaikan rentang ketidakpastian dan jelaskan bagaimana rekomendasi tetap dapat digunakan ketika angka berubah.</li>
         </ul>
       </div>
     </section>

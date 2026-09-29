@@ -91,6 +91,11 @@ APP_DATA.GLOSSARY = {
     term: "Kotak 5.1 — Dua angka deforestasi",
     en: "two deforestation numbers",
     def: "KLHK (netto/bruto; Landsat 30 m; definisi hutan administratif Indonesia) vs GFW (tree cover / hutan primer; definisi internasional). Perbedaan bukan 'salah', melainkan metadata berbeda — triangulasi (Bab 3)."
+  },
+  "lp2b": {
+    term: "LP2B / KP2B",
+    en: "sustainable food-crop land",
+    def: "Lahan Pertanian Pangan Berkelanjutan (UU 41/2009) dan Kawasan (KP2B)-nya — instrumen perlindungan lahan pangan dari alih fungsi; dipakai Bab 5 sebagai penanda konflik rencana vs kawasan lindung."
   }
 };
 
@@ -114,11 +119,11 @@ APP_DATA.KEYWORDS = [
   { t: "Lahan kritis", to: "#sub-52" },
   { t: "SPR — sumber–jalur–penerima", to: "#spr" },
   { t: "Jalur paparan (air, udara, rantai pangan)", to: "#spr" },
-  { t: "Baku mutu PP 22/2021", to: "#sub-54" },
-  { t: "Indeks Pencemar (Kepmen 115/2003)", to: "#sub-54" },
-  { t: "D3TLH & status mutu", to: "#sub-54" },
-  { t: "Ketimpangan paparan", to: "#sub-55" },
-  { t: "Keadilan lingkungan (3 dimensi)", to: "#sub-55" },
+  { t: "Baku mutu PP 22/2021", to: "#sub-53" },
+  { t: "Indeks Pencemar (Kepmen 115/2003)", to: "#sub-53" },
+  { t: "D3TLH & status mutu", to: "#sub-53" },
+  { t: "Ketimpangan paparan", to: "#sub-54" },
+  { t: "Keadilan lingkungan (3 dimensi)", to: "#sub-54" },
   { t: "DAS Citarum & Perpres 15/2018", to: "#studi-kasus" },
   { t: "Murray–Darling: SDL & MDBA", to: "#pembanding" },
   { t: "Kotak 5.1 — dua angka deforestasi", to: "#sub-51" }
@@ -135,8 +140,8 @@ APP_DATA.STEPS = [
   {
     icon: "route",
     title: "2 · Jalur paparan",
-    body: "Medium dan proses transport — arus sungai, dispersi atmosfer, infiltrasi air tanah, rantai makanan dan bioakumulasi pada sedimen/ikan. Jalur mengalami dilusi dan transformasi.",
-    note: "Bantar Panjang (Citarum): Hg dari air → sedimen → organisme; Roosmini dkk.: logam berat air–sedimen–ikan → paparan via konsumsi ikan."
+    body: "Jalur menunjukkan bagaimana pencemar bergerak dari sumber ke penerima dampak. Contohnya melalui aliran sungai, udara, resapan air tanah, atau rantai makanan. Selama bergerak, konsentrasi dan bentuk pencemar dapat berubah.",
+    note: "Bantarpanjang (Citarum): Hg dari air → sedimen → organisme; Roosmini dkk.: logam berat air–sedimen–ikan → paparan via konsumsi ikan."
   },
   {
     icon: "heart-pulse",

@@ -1,6 +1,6 @@
 /**
  * data-bab6.js — Konten Bab 6: Perubahan Iklim, Risiko Bencana, dan Ketahanan.
- * Setiap halaman bab memuat TEPAT SATU file data. Tugas 1 (sintesis Bab 3–6) diskip sesuai keputusan.
+ * Setiap halaman bab memuat TEPAT SATU file data (data-bab6.js untuk Bab 6).
  */
 window.APP_DATA = {};
 
@@ -8,7 +8,7 @@ APP_DATA.OBJECTIVES = [
   "Menganalisis risiko berdasarkan bahaya (hazard), paparan (exposure), kerentanan (vulnerability), dan kapasitas (capacity).",
   "Mengevaluasi ketidakpastian iklim serta risiko majemuk (compound risk) dan risiko berantai (cascading risk).",
   "Merumuskan implikasi risiko terhadap pola ruang, infrastruktur, permukiman, pelayanan dasar, dan ekonomi wilayah.",
-  "Menyusun diagnosis lingkungan terintegrasi — pengantar sintesis Bab 3–6 tanpa pengumpulan Tugas 1 pada bab ini."
+  "Menyusun diagnosis lingkungan terintegrasi sebagai sintesis Bab 3–6."
 ];
 
 APP_DATA.GLOSSARY = {
@@ -120,12 +120,12 @@ APP_DATA.STEPS = [
     icon: "clock-3",
     title: "3 · Temporal",
     body: "Bahaya berurutan di lokasi sama sebelum pemulihan tuntas — gelombang panas beruntun; banjir berulang yang mengikis kapasitas coping rumah tangga pesisir.",
-    note: "Zscheischler et al. 2025: kekeringan-panas majemuk makin mungkin pada iklim menghangat."
+    note: "Peristiwa majemuk kekeringan–panas makin mungkin pada iklim yang menghangat (Zscheischler et al., 2020)."
   },
   {
     icon: "globe-2",
     title: "4 · Spasial + Cascading",
-    body: "Bahaya serempak di banyak lokasi terhubung (gagal panen serentak di beberapa lumbung) DAN rantai berantai lintas sistem: bahaya fisik → infrastruktur → layanan → ekonomi-sosial → umpan balik maladaptif.",
+    body: "Bahaya dapat terjadi bersamaan di beberapa wilayah yang saling terhubung, misalnya gagal panen di beberapa daerah pangan. Dampaknya juga dapat merambat: bahaya merusak infrastruktur, mengganggu layanan, lalu menekan kegiatan ekonomi dan kondisi sosial.",
     note: "Kegagalan satu infrastruktur (energi/air/transport/telekom) memicu kegagalan berjenjang — perlu identifikasi interdependensi, simulasi kegagalan, strategi pemulihan."
   }
 ];
@@ -212,12 +212,12 @@ APP_DATA.PUSTAKA = [
   { group: "Jurnal peer-reviewed (rujukan utama)", items: [
     "Abidin, H.Z., et al. (2015). Study on the risk and impacts of land subsidence in Jakarta. PIAHS, 372, 115–120.",
     "Chaussard, E., Amelung, F., Abidin, H.Z., & Hong, S.-H. (2013). Sinking cities in Indonesia: ALOS PALSAR. Remote Sensing of Environment, 128, 150–161.",
+    "Bott, L.M., et al. (2021). Land subsidence in Jakarta and Semarang Bay. Ocean & Coastal Management, 211: 105775.",
     "Marchau, V.A.W.J., et al. (2019). Decision Making under Deep Uncertainty: From Theory to Practice. Springer.",
     "Reisinger, A., et al. (2020). The concept of risk in the IPCC Sixth Assessment Report. IPCC.",
     "Werners, et al. (2024). Lessons from a decade of adaptive pathways studies. Global Environmental Change.",
     "Zscheischler, J., et al. (2020). A typology of compound weather and climate events. Nature Reviews Earth & Environment, 1, 333–347.",
-    "Zscheischler, J., et al. (2025). Chronology of compound events 2024. (Telaah kronologi peristiwa majemuk).",
-    "Kajian subsiden Jakarta: subsiden kumulatif >4 m sejak 1970-an; laju pantai 9,5–21,5 cm/tahun (Chaussard); tipikal 3–10 cm/tahun, titik tertentu 20–28 cm/tahun (Abidin; Urban Science 2025).",
+    "Kajian subsiden Jakarta: subsiden kumulatif >4 m sejak 1970-an; laju pantai 9,5–21,5 cm/tahun (Chaussard et al., 2013); tipikal 3–10 cm/tahun, titik tertentu 20–28 cm/tahun (Abidin et al., 2015).",
     "Kajian polder Semarang (AACL Bioflux, 13(6), 2020); rob 23 Mei 2022 (elevasi pasang 210 cm, genangan ~100 cm).",
     "Room for the River: Rhein 16.000 m³/s, 34 lokasi, €2,3 miliar (arsip program 2006–2019)."
   ] },

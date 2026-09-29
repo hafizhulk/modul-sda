@@ -340,11 +340,11 @@
       ].join("\n"),
       "mm-skenario": [
         "flowchart LR",
-        'A["1. Cakrawala<br/>20–25 tahun"] --> B["2. Driver<br/>2–4 kritis"]',
-        'B --> C["3. Narasi<br/>BAU vs transisi"]',
-        'C --> D["4. Translasi spasial<br/>CA–CLUE"]',
-        'D --> E["5. Skor indikator<br/>jejak, air, risiko"]',
-        'E --> F["6. Uji ketangguhan<br/>robust vs contingent"]',
+        'A["Langkah 1<br/>Cakrawala 20–25 tahun"] --> B["Langkah 2<br/>Driver 2–4 kritis"]',
+        'B --> C["Langkah 3<br/>Narasi BAU vs transisi"]',
+        'C --> D["Langkah 4<br/>Translasi spasial CA–CLUE"]',
+        'D --> E["Langkah 5<br/>Skor indikator jejak, air, risiko"]',
+        'E --> F["Langkah 6<br/>Uji ketangguhan robust vs contingent"]',
         "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
         'class E leak'
       ].join("\n"),

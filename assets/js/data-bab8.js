@@ -25,7 +25,7 @@ APP_DATA.GLOSSARY = {
   "penstrukturan-masalah": {
     term: "Penstrukturan masalah",
     en: "problem structuring",
-    def: "Proses iteratif puzzling (berpikir) dan powering (berpolitik) untuk mengubah mess menjadi definisi masalah yang spesifik ruang-waktu dan siap diladeni alternatif kebijakan."
+    def: "Proses iteratif puzzling (berpikir) dan powering (berpolitik) untuk mengubah mess menjadi definisi masalah yang spesifik ruang-waktu dan siap dijawab alternatif kebijakan."
   },
   "pohon-masalah": {
     term: "Pohon masalah",
@@ -35,7 +35,7 @@ APP_DATA.GLOSSARY = {
   "pohon-tujuan": {
     term: "Pohon tujuan",
     en: "objective tree",
-    def: "Pemetaan ulang pohon masalah menjadi pernyataan positif; mengekspos tujuan yang saling bertentangan (mis. pertumbuhan pelabuhan vs perlindungan mangrove) yang harus diladeni alternatif kebijakan, bukan dihapus dengan retorika win–win."
+    def: "Pemetaan ulang pohon masalah menjadi pernyataan positif; mengekspos tujuan yang saling bertentangan (mis. pertumbuhan pelabuhan vs perlindungan mangrove) yang harus dijawab oleh alternatif kebijakan, bukan dihapus dengan retorika win–win."
   },
   "theory-of-change": {
     term: "Theory of change (ToC)",
@@ -124,7 +124,7 @@ APP_DATA.STEPS = [
   {
     icon: "search",
     title: "1 · Merasakan masalah",
-    body: "Mengapa keadaan ini kacau? Untuk siapa? Inventarisasi gejala, pihak, dan batas wilayah masalah — menggabungkan data resmi kuantitatif dengan narasi pemangku kepentingan sebagai joint knowledge sejak awal.",
+    body: "Mulailah dengan bertanya: gejala apa yang terlihat, siapa yang terdampak, dan di mana batas wilayah masalah? Gabungkan angka resmi dengan pengalaman para pihak agar rumusan awal tidak hanya mencerminkan satu sudut pandang.",
     note: "Keluaran: inventaris gejala, peta aktor awal, batas ruang-waktu masalah."
   },
   {
@@ -142,7 +142,7 @@ APP_DATA.STEPS = [
   {
     icon: "target",
     title: "4 · Pilihan definisi masalah",
-    body: "Di mana peluang nyata untuk perbaikan? Definisi masalah yang siap diladeni alternatif kebijakan — spesifik ruang-waktu, dalam otoritas perencana, dan jujur terhadap ketidakpastian (mana faktual, mana perkiraan model).",
+    body: "Di mana peluang nyata untuk perbaikan? Definisi masalah yang siap dijawab alternatif kebijakan — spesifik ruang-waktu, dalam otoritas perencana, dan jujur terhadap ketidakpastian (mana faktual, mana perkiraan model).",
     note: "Keluaran: definisi masalah inti yang siap diuji dengan alternatif kebijakan."
   }
 ];
@@ -172,34 +172,34 @@ APP_DATA.QUIZ = [
   {
     q: "Menurut Dunn (2017), kesalahan Tipe III dalam analisis kebijakan berarti…",
     options: [
-      "Salah hitung skor multikriteria karena pembobotan keliru.",
       "Menyelesaikan masalah yang salah — merumuskan masalah sebagai 'kurangnya tanggul' padahal akar strukturalnya adalah ekstraksi air tanah dan insentif pesisir.",
+      "Salah hitung skor multikriteria karena pembobotan keliru.",
       "Memilih alternatif dengan skor total terendah.",
       "Mengabaikan analisis sensitivitas."
     ],
-    answer: 1,
+    answer: 0,
     pembahasan: "Kesalahan Tipe III adalah kesalahan penstrukturan masalah: analisis yang cermat tetapi untuk masalah yang salah dibingkai — lebih mahal daripada salah hitung."
   },
   {
     q: "Perbedaan pohon masalah dan pohon tujuan terletak pada…",
     options: [
       "Pohon masalah berisi solusi, pohon tujuan berisi masalah.",
-      "Pohon masalah memetakan kondisi tidak diinginkan (akar penyebab → dampak); pohon tujuan memetakan ulang menjadi kondisi positif dan mengekspos tujuan yang saling bertentangan.",
       "Keduanya identik, hanya beda istilah.",
+      "Pohon masalah memetakan kondisi tidak diinginkan (akar penyebab → dampak); pohon tujuan memetakan ulang menjadi kondisi positif dan mengekspos tujuan yang saling bertentangan.",
       "Pohon tujuan tidak memerlukan mekanisme kausal."
     ],
-    answer: 1,
-    pembahasan: "Pohon tujuan adalah negasi tiap simpul pohon masalah; tujuannya mengekspos konflik tujuan (pertumbuhan pelabuhan vs mangrove) yang harus diladeni alternatif kebijakan."
+    answer: 2,
+    pembahasan: "Pohon tujuan adalah negasi tiap simpul pohon masalah; tujuannya mengekspos konflik tujuan (pertumbuhan pelabuhan vs mangrove) yang harus dijawab oleh alternatif kebijakan."
   },
   {
     q: "Alternatif kebijakan yang 'kosmetik' gagal karena…",
     options: [
       "Skor totalnya selalu rendah.",
-      "Ketiganya hanya berbeda intensitas (mis. 838 ha vs 600 ha) tetapi membaca konflik dengan cara yang sama — tidak berbeda pada kerangka masalah, sasaran, dan instrumen utama.",
       "Tidak melibatkan pemangku kepentingan.",
-      "Melanggar ketentuan RTRW."
+      "Melanggar ketentuan RTRW.",
+      "Ketiganya hanya berbeda intensitas (mis. 838 ha vs 600 ha) tetapi membaca konflik dengan cara yang sama — tidak berbeda pada kerangka masalah, sasaran, dan instrumen utama."
     ],
-    answer: 1,
+    answer: 3,
     pembahasan: "Alternatif bermutu harus berbeda secara kerangka masalah, sasaran, dan instrumen — saling eksklusif minimum pada struktur keputusan, bukan gradasi kuantitatif satu desain."
   },
   {
@@ -217,18 +217,18 @@ APP_DATA.QUIZ = [
     q: "Tanpa analisis sensitivitas, peringkat MCDA tidak dapat dianggap robust karena…",
     options: [
       "Skor total selalu berubah secara acak.",
-      "Peringkat dapat berbalik ketika bobot bergeser dalam rentang yang masuk akal — sensitivitas menguji kekokohan dan mengungkap kriteria penentu.",
       "Analisis sensitivitas hanya untuk metode AHP.",
+      "Peringkat dapat berbalik ketika bobot bergeser dalam rentang yang masuk akal — sensitivitas menguji kekokohan dan mengungkap kriteria penentu.",
       "Sensitivitas hanya relevan untuk kriteria ekologis."
     ],
-    answer: 1,
+    answer: 2,
     pembahasan: "Malczewski (2006): peringkat harus diuji terhadap ketidakpastian bobot/skor; tanpa ini, 'pemenang' tidak dapat dianggap robust."
   }
 ];
 
 /* Diskusi */
 APP_DATA.DISKUSI = [
-  { q: "Rumuskan satu masalah inti (core problem) untuk wilayah studi Anda sebagai kesenjangan terbatas ruang-waktu. Siapa aktor yang dirugikan/diuntungkan, dan mengapa definisi tersebut siap diladeni alternatif kebijakan?", h: "Gunakan 4 tahap penstrukturan (8.1.2): dari problem sensing → kategorisasi → dekomposisi → pilihan definisi. Batasi ruang (DAS/pesisir) dan otoritas (kabupaten/KLHK) serta sikap terhadap ketidakpastian." },
+  { q: "Rumuskan satu masalah inti (core problem) untuk wilayah studi Anda sebagai kesenjangan terbatas ruang-waktu. Siapa aktor yang dirugikan/diuntungkan, dan mengapa definisi tersebut siap dijawab alternatif kebijakan?", h: "Gunakan 4 tahap penstrukturan (8.1.2): dari problem sensing → kategorisasi → dekomposisi → pilihan definisi. Batasi ruang (DAS/pesisir) dan otoritas (kabupaten/KLHK) serta sikap terhadap ketidakpastian." },
   { q: "Susun matriks pengaruh × kepentingan untuk kasus reklamasi/pertambangan vs kawasan lindung di wilayah studi Anda. Kelompok mana yang berpengaruh rendah tetapi kepentingannya tinggi, dan bagaimana memastikan suaranya masuk ke pohon masalah?", h: "Rujuk Reed et al. (2009): kualitas input partisipasi menentukan legitimasi. Tambahkan kolom perspektif aktor terhadap definisi masalah dan sumber hak/klaim." },
   { q: "Bandingkan pohon masalah dan pohon tujuan untuk isu yang sama: tujuan mana yang saling bertentangan dan mengapa retorika 'win–win' berbahaya pada tahap ini?", h: "Pohon tujuan mengekspos konflik distributif (investasi pelabuhan vs mangrove). Alternatif kebijakan harus meladeni konflik tersebut secara eksplisit, bukan menghapusnya." },
   { q: "Ambil satu dokumen RTRW/RDTR/KLHS daerah: apakah evaluasi alternatif di dalamnya benar-benar multikriteria dan membuka asumsi, atau sudah menutup pilihan sejak awal? Kutip bagian dokumen dan beri label [F/R/A/I].", h: "Periksa apakah alternatif benar-benar berbeda desain, kriteria mencakup 7 keluarga, bobot didokumentasikan, dan sensitivitas diuji — atau hanya justifikasi pasca-keputusan (Bab 7)." }
@@ -245,6 +245,8 @@ APP_DATA.LATIHAN = [
 APP_DATA.PUSTAKA = [
   { group: "Jurnal & panduan metode", items: [
     "Dunn, W.N. (2017). Public Policy Analysis (6th ed.). Routledge.",
+    "Dorst, K. (2006). Design problems and design paradoxes. Design Issues, 22(3), 4–17.",
+    "Hisschemöller, M., & Hoppe, R. (1996). Coping with intractable controversies: The case for problem structuring in policy design and analysis. Knowledge and Technology Policy, 8(4), 40–60.",
     "Malczewski, J. (2006). GIS-based multicriteria decision analysis. Int. J. Geographical Information Science, 20(7), 703–726.",
     "Reed, M.S., et al. (2009). Who's in and why? A typology of stakeholder analysis methods. J. Environmental Management, 90(5), 1933–1949.",
     "Saaty, T.L. (1990). How to make a decision: The analytic hierarchy process. European J. Operational Research, 48(1), 9–26.",

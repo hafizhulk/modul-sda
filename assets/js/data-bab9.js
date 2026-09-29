@@ -149,7 +149,7 @@ APP_DATA.STEPS = [
   {
     icon: "shield-check",
     title: "6 · Uji ketangguhan strategi",
-    body: "Strategi robust/low-regret = layak pada semua skenario; strategi contingent = diaktifkan bila sinyal skenario tertentu muncul (trigger-based planning).",
+    body: "Uji apakah strategi tetap bermanfaat dalam beberapa skenario. Langkah yang berguna pada hampir semua kondisi dapat dimulai lebih awal. Langkah lain disiapkan untuk dijalankan ketika tanda perubahan tertentu muncul.",
     note: "Hasil skenario menjadi masukan KLHS RTRW (PP 22/2021) untuk mengunci batas ekologis dan arah pengembangan."
   }
 ];
