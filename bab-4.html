@@ -154,15 +154,41 @@
           <p><em>Status = Ketersediaan lahan − Kebutuhan lahan</em> (kebutuhan = penduduk × standar per kapita per fungsi). Untuk air: ketersediaan (debit andalan, biasanya 80%) vs kebutuhan (domestik, industri, irigasi, pemeliharaan ekosistem) — di bawah UU 17/2019 tentang Sumber Daya Air. Studi-studi neraca DAS pesisir di Tiongkok (misalnya DAS Dongjiang) menunjukkan tekanan neraca <strong>heterogen secara spasial</strong>: kecil di hulu-tengah, besar di hilir — neraca agregat kabupaten dapat menutupi defisit lokal yang tajam.</p>
 
           <h3>4.2.2 · Kapasitas asimilasi</h3>
-          <p>Untuk pencemaran, ukuran daya tampung adalah <span class="term" data-gloss="kapasitas-asimilasi">beban maksimum polutan</span> tanpa melanggar baku mutu: <em>DT = f(Q, BM, Cs)</em> — karakteristik hidrologis media (Q), baku mutu (BM), konsentrasi existing (Cs). Liu & Borthwick (2011) mengembangkan pengukuran komprehensif untuk Ningbo, Tiongkok. Di Indonesia, daya tampung beban pencemaran air danau/waduk dipedomani Permen LH 28/2009.</p>
+          <p>Untuk pencemaran, <span class="term" data-gloss="kapasitas-asimilasi">kapasitas asimilasi</span> menyatakan sisa beban pencemar yang dapat diterima badan air tanpa melampaui baku mutu air penerima. Baku mutu menyatakan batas <strong>konsentrasi</strong> (misalnya mg/L), sedangkan kapasitas asimilasi menyatakan <strong>laju beban</strong> (misalnya kg/hari). Karena debit dan mutu awal berubah, kapasitas ini juga berubah. Di Indonesia, penetapan daya tampung beban pencemaran air danau/waduk dipedomani Permen LH 28/2009.</p>
+          <p class="tbl-title">Tabel 4.1 — Perbandingan baku mutu, kapasitas asimilasi, dan ambang ekologis</p>
+          <div class="tbl-wrap">
+          <table class="tbl" aria-label="Perbandingan baku mutu air penerima, kapasitas asimilasi, dan ambang ekologis">
+            <thead><tr><th scope="col">Aspek</th><th scope="col">Baku mutu air penerima</th><th scope="col">Kapasitas asimilasi</th><th scope="col">Ambang ekologis</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Yang dinilai</th><td>Batas konsentrasi parameter mutu air pada peruntukan tertentu</td><td>Sisa laju beban pencemar yang dapat diterima dengan mengacu pada baku mutu</td><td>Tingkat tekanan saat fungsi ekosistem berisiko berubah cepat</td></tr>
+              <tr><th scope="row">Satuan contoh</th><td>mg/L</td><td>kg/hari atau ton/tahun</td><td>Bergantung indikator: beban fosfor, klorofil-a, oksigen terlarut, dan lainnya</td></tr>
+              <tr><th scope="row">Dasar penentuan</th><td>Ketentuan mutu untuk kelas atau peruntukan badan air</td><td>Neraca beban dengan data debit, konsentrasi awal, dan baku mutu</td><td>Pemantauan dan kajian respons ekosistem setempat</td></tr>
+              <tr><th scope="row">Kegunaan</th><td>Menilai kepatuhan mutu air</td><td>Merencanakan pengurangan atau alokasi beban</td><td>Menetapkan pemicu kewaspadaan dan tindakan pencegahan</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p><strong>Contoh penerapan:</strong> pemerintah membandingkan beban BOD dari seluruh sumber domestik dan industri dengan sisa kapasitas suatu segmen sungai. Hasilnya dapat menjadi dasar pengurangan beban, peningkatan pengolahan air limbah, atau pembatasan tambahan beban. Efluen yang memenuhi baku mutu air limbah tetap dapat membuat baku mutu <em>air sungai</em> terlampaui jika beban dari semua sumber terlalu besar.</p>
+          <div class="callout callout-ok">
+            <span class="icon" data-lucide="calculator"></span>
+            <p><strong>Membaca notasi:</strong> <em>DT = f(Q, BM, C<sub>s</sub>)</em> berarti daya tampung (<em>DT</em>) bergantung pada debit sungai (<em>Q</em>), baku mutu air penerima (<em>BM</em>), dan konsentrasi awal di hulu (<em>C<sub>s</sub></em>). Ini menyatakan hubungan umum, bukan rumus hitung yang lengkap.</p>
+          </div>
+          <h4>Rumus umum daya tampung sederhana</h4>
+          <p>Untuk segmen sungai dengan aliran tunak, pencampuran sempurna, dan tanpa peluruhan atau beban tambahan yang belum dihitung, sisa daya tampung dapat ditulis:</p>
+          <div class="formula" role="math" aria-label="Daya tampung sama dengan debit kali selisih baku mutu dan konsentrasi hulu kali faktor konversi">DT = Q × (BM − C<sub>s</sub>) × F<sub>k</sub></div>
+          <p><em>DT</em> adalah sisa laju beban (kg/hari), <em>Q</em> debit sungai (m³/detik), <em>BM</em> baku mutu air penerima (mg/L), <em>C<sub>s</sub></em> konsentrasi awal di hulu (mg/L), dan <em>F<sub>k</sub></em> faktor konversi satuan. Untuk satuan tersebut, <em>F<sub>k</sub></em> = 86,4. Bila <em>C<sub>s</sub></em> sama dengan atau melebihi <em>BM</em>, tidak ada sisa kapasitas untuk beban baru; hasil negatif menandakan mutu awal sudah melampaui batas.</p>
+          <h4>Contoh perhitungan [MODEL/ASUMSI]</h4>
+          <p>Misalkan debit sungai saat kondisi rendah <em>Q</em> = 10 m³/detik, batas konsentrasi BOD yang dipakai dalam contoh <em>BM</em> = 3 mg/L, dan konsentrasi hulu <em>C<sub>s</sub></em> = 1,5 mg/L. Substitusi ke rumus umum memberi <strong>DT = 10 × (3 − 1,5) × 86,4 = 1.296 kg BOD/hari</strong>. Bila debit buangan 0,05 m³/detik dan konsentrasi BOD efluen 50 mg/L, bebannya <strong>0,05 × 50 × 86,4 = 216 kg/hari</strong>. Dalam neraca sederhana ini, sisa alokasi setelah satu buangan tersebut ialah <strong>1.080 kg/hari</strong>, selama belum ada beban tambahan lain yang belum dihitung.</p>
+          <p class="note">Angka 3 mg/L di sini adalah asumsi untuk latihan, bukan penetapan kelas air lokasi tertentu. Perhitungan ini mengabaikan tambahan debit buangan, perubahan debit musiman, pencampuran yang tidak sempurna, dan proses BOD di sungai. Untuk memeriksa konsentrasi setelah satu buangan dengan debitnya ikut dihitung, gunakan neraca pencampuran: <em>C<sub>hilir</sub> = (Q × C<sub>s</sub> + Q<sub>w</sub> × C<sub>w</sub>)/(Q + Q<sub>w</sub>)</em>; pada contoh ini hasilnya sekitar 1,74 mg/L. Penetapan daya tampung dan izin memerlukan data seluruh sumber serta metode yang sesuai badan air. Prinsip neraca pencampuran: <a href="https://www.epa.gov/sites/default/files/2015-09/documents/pwm_chapt_06.pdf" target="_blank" rel="noopener noreferrer">US EPA, <em>NPDES Permit Writers’ Manual</em>, Bab 6</a>.</p>
 
           <h3>4.2.3 · Ambang batas</h3>
           <p>Kemampuan lingkungan tidak selalu menurun secara bertahap. Ketika tekanan melewati <strong>ambang perubahan</strong>, fungsi ekosistem dapat berubah dengan cepat (Bab 2, subbab 2.5). Pada skala global, konsep <span class="term" data-gloss="ambang-batas"><em>planetary boundaries</em></span> menggambarkan batas ruang operasi yang aman bagi manusia (Rockström et al., 2009, <em>Nature</em>). Karena itu, indikator daya dukung dan daya tampung lebih berguna jika dibaca sebagai <strong>tingkat risiko</strong>: aman, waspada, atau terlampaui.</p>
+          <p><strong>Contoh penerapan:</strong> masukan fosfor dari pertanian dan permukiman dapat mendorong eutrofikasi dan ledakan alga di danau; saat alga terurai, oksigen terlarut dapat turun dan ikan terdampak. Pengelola dapat memantau beban fosfor, klorofil-a, dan oksigen terlarut, lalu menetapkan tingkat waspada setempat untuk memicu pengurangan pupuk, perbaikan sanitasi, dan pemulihan vegetasi sempadan. Nilai pemicunya harus ditetapkan dari kondisi danau dan hasil pemantauan; <a href="https://www.epa.gov/water-research/nutrient-indicator-research" target="_blank" rel="noopener noreferrer">US EPA mencatat ambang nutrien berbeda antar-danau</a>.</p>
+          <p><strong>Perbedaan untuk keputusan:</strong> baku mutu dipakai menilai konsentrasi terhadap ketentuan; kapasitas asimilasi menghitung ruang beban yang tersisa dengan baku mutu sebagai salah satu masukan; ambang ekologis membantu mengenali risiko perubahan fungsi ekosistem yang dapat terjadi dengan pola tidak linier. Status <em>waspada</em> pada contoh danau adalah rancangan pengelolaan, bukan kategori baku mutu yang berlaku otomatis.</p>
 
           <h3>4.2.4 · Defisit ekologis</h3>
           <p>Metode <span class="term" data-gloss="jejak-ekologis">jejak ekologis (EF) vs biokapasitas (BC)</span> dalam <span class="term" data-gloss="gha">hektar global (gha)</span> (Wackernagel & Rees, 1996): BC − EF &gt; 0 = <strong>cadangan ekologis</strong>; BC − EF &lt; 0 = <strong>defisit ekologis</strong> — dipenuhi impor biokapasitas, likuidasi aset, atau emisi CO₂. Perhitungan BC mengalikan luas bioproduktif dengan faktor ekuivalensi dan faktor hasil spesifik negara — sangat bergantung asumsi konversi. Kritik metodologis dalam literatur mengingatkan: jejak ekologis berguna sebagai <strong>indikator komunikatif</strong> defisit agregat, bukan alat alokasi ruang.</p>
 
-          <p class="tbl-title">Tabel 4.1 — Perbandingan empat metode pengukuran kapasitas</p>
+          <p class="tbl-title">Tabel 4.2 — Perbandingan empat metode pengukuran kapasitas</p>
           <div class="tbl-wrap">
           <table class="tbl" aria-label="Perbandingan metode pengukuran kapasitas lingkungan">
             <thead><tr><th scope="col">Metode</th><th scope="col">Satuan</th><th scope="col">Pertanyaan kunci</th><th scope="col">Skala cocok</th><th scope="col">Kelebihan</th><th scope="col">Keterbatasan</th></tr></thead>
@@ -209,7 +235,7 @@
         </div>
         <div class="sec-body prose">
           <h3>4.3.1 · Tipologi</h3>
-          <p class="tbl-title">Tabel 4.2 — Tipologi jasa ekosistem (MA 2005 → CICES V5.1)</p>
+          <p class="tbl-title">Tabel 4.3 — Tipologi jasa ekosistem (MA 2005 → CICES V5.1)</p>
           <div class="tbl-wrap">
           <table class="tbl" aria-label="Tipologi jasa ekosistem">
             <thead><tr><th scope="col">Kelompok (MA, 2005)</th><th scope="col">Contoh</th><th scope="col">Padanan CICES V5.1</th><th scope="col">Relevansi perencanaan</th></tr></thead>
@@ -303,7 +329,7 @@
             <li><strong>Distribusi:</strong> FONAFIFO mengelola dana umum → menyalurkan ke pemilik lahan (awal <em>first-come-first-served</em>, kemudian penargetan koridor biologis &amp; DAS strategis + LSM perantara seperti FUNDECOR).</li>
           </ul>
 
-          <p class="tbl-title">Tabel 4.3 — Penyedia dan penerima manfaat PES Kosta Rika</p>
+          <p class="tbl-title">Tabel 4.4 — Penyedia dan penerima manfaat PES Kosta Rika</p>
           <div class="tbl-wrap">
           <table class="tbl" aria-label="Penyedia dan penerima manfaat PES">
             <thead><tr><th scope="col">Pihak</th><th scope="col">Peran</th></tr></thead>

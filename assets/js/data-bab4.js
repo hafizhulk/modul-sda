@@ -61,7 +61,7 @@ APP_DATA.GLOSSARY = {
   "kapasitas-asimilasi": {
     term: "Kapasitas asimilasi",
     en: "assimilative capacity",
-    def: "Beban maksimum polutan yang dapat diterima media tanpa melanggar baku mutu; konsep DT = f(Q, BM, Cs). Untuk danau/waduk dipedomani Permen LH 28/2009."
+    def: "Sisa laju beban pencemar yang dapat diterima badan air tanpa melampaui baku mutu air penerima. Untuk sungai sederhana, DT = Q × (BM − Cs) × Fk; Fk = 86,4 jika Q dalam m³/detik, konsentrasi dalam mg/L, dan DT dalam kg/hari."
   },
   "ambang-batas": {
     term: "Ambang batas ekologis",
@@ -156,14 +156,14 @@ APP_DATA.STEPS = [
   {
     icon: "droplets",
     title: "2 · Kapasitas asimilasi / daya tampung beban",
-    body: "Beban maksimum polutan tanpa melanggar baku mutu: DT = f(Q, BM, Cs) — karakteristik hidrologis media, baku mutu, dan konsentrasi existing. Untuk danau/waduk: Permen LH 28/2009.",
-    note: "Pertanyaan: berapa beban maksimum tanpa melanggar baku mutu? Butuh data debit & mutu yang sering tidak lengkap."
+    body: "Sisa beban yang dapat diterima tanpa melampaui baku mutu air penerima. Rumus sungai sederhana: DT = Q × (BM − Cs) × Fk, dengan Fk = 86,4 untuk hasil kg/hari. Jika Q = 10 m³/detik, BM = 3 mg/L, dan Cs = 1,5 mg/L, maka DT = 1.296 kg/hari.",
+    note: "Baku mutu = batas konsentrasi; kapasitas asimilasi = sisa laju beban. Contoh mengasumsikan aliran tunak, pencampuran sempurna, dan tanpa peluruhan atau sumber lain."
   },
   {
     icon: "siren",
     title: "3 · Ambang batas ekologis",
-    body: "Perubahan lingkungan tidak selalu bertahap. Jika tekanan melewati ambang tertentu, fungsi ekosistem dapat berubah cepat dan sulit pulih. Konsep planetary boundaries (Rockström, 2009) membahas ambang pada skala global. Karena itu, status DDTLH sebaiknya dibaca sebagai tingkat risiko: aman, waspada, atau terlampaui.",
-    note: "Pesan Bab 2: DDTLH normatif harus jauh dari ambang ekologis sesungguhnya — risiko ambang normatif terlalu longgar."
+    body: "Perubahan lingkungan tidak selalu bertahap. Masukan fosfor ke danau dapat memicu ledakan alga dan penurunan oksigen. Pantau fosfor, klorofil-a, dan oksigen terlarut; tingkat waspada setempat dapat memicu pengurangan pupuk dan perbaikan sanitasi sebelum fungsi danau memburuk.",
+    note: "Tingkat waspada ialah rancangan pengelolaan, bukan kategori baku mutu otomatis. Nilai pemicunya harus ditentukan dari kondisi dan pemantauan danau."
   },
   {
     icon: "footprints",
@@ -236,7 +236,7 @@ APP_DATA.QUIZ = [
 
 /* Diskusi */
 APP_DATA.DISKUSI = [
-  { q: "Jika suatu DAS menunjukkan defisit penyediaan pangan, hasil air, dan sekuestrasi karbon di kawasan perkotaan hilir sementara surplus di hulu (seperti DAS Dongjiang, Tiongkok, pada subbab 4.2.1), bagaimana implikasinya bila neraca kabupaten/kota Anda hanya dilaporkan sebagai angka agregat?", h: "Rujuk Tabel 4.1: neraca agregat menutupi heterogenitas lokal. Diskusikan perlunya neraca sub-wilayah/spasial — tekanan hilir yang besar vs hulu yang kecil." },
+  { q: "Jika suatu DAS menunjukkan defisit penyediaan pangan, hasil air, dan sekuestrasi karbon di kawasan perkotaan hilir sementara surplus di hulu (seperti DAS Dongjiang, Tiongkok, pada subbab 4.2.1), bagaimana implikasinya bila neraca kabupaten/kota Anda hanya dilaporkan sebagai angka agregat?", h: "Rujuk Tabel 4.2: neraca agregat menutupi heterogenitas lokal. Diskusikan perlunya neraca sub-wilayah/spasial — tekanan hilir yang besar vs hulu yang kecil." },
   { q: "Skema PES Kosta Rika dinilai 'kecil namun signifikan' additionality-nya. Apakah program tersebut tetap layak disebut berhasil dari sudut legitimasi dan norma sosial, bukan hanya hektar hutan?", h: "Rujuk Legrand et al. (2011): dampak langsung rendah tetapi perbaikan efisiensi besar; nilai program mungkin lebih besar pada legitimasi konservasi dan infrastruktur kelembagaan daripada hektar semata." },
   { q: "Mengapa pemilihan ekivalensi faktor gha yang berbeda dapat mengubah status suatu wilayah dari cadangan menjadi defisit ekologis, dan apa implikasinya bagi penggunaan EF sebagai alat alokasi ruang?", h: "EF sangat sensitif faktor konversi (model/asumsi); gunakan sebagai indikator komunikatif defisit agregat, bukan alat alokasi RTRW — bandingkan dengan neraca kebutuhan–ketersediaan yang lebih operasional." },
   { q: "Dalam kasus Singapura, integrasi satu otoritas (PUB) menyatukan drainase, tangkapan, pengolahan, dan distribusi. Apa hambatan replikasi model ini di wilayah Anda (fragmentasi kewenangan, data, politik anggaran) dan satu instrumen yang layak dipinjam?", h: "Bandingkan fragmentasi DAS lintas kabupaten/kota di Indonesia dengan model closed-loop PUB + ABC Waters; identifikasi hambatan transferabilitas dan satu instrumen adaptif." }
@@ -283,6 +283,8 @@ APP_DATA.PUSTAKA = [
     "UU No. 17/2019 tentang Sumber Daya Air; UU No. 26/2007 tentang Penataan Ruang; PP No. 21/2021."
   ] },
   { group: "Laporan & pembanding", items: [
+    "US EPA (2010). NPDES Permit Writers’ Manual, Bab 6: neraca massa pencampuran air penerima (epa.gov/sites/default/files/2015-09/documents/pwm_chapt_06.pdf).",
+    "US EPA. Nutrient Indicator Research: indikator dan ambang nutrien danau (epa.gov/water-research/nutrient-indicator-research).",
     "World Bank (2014). Payments for Environmental Services in Costa Rica.",
     "GGBP (2014). Payment for Ecosystem Services in Costa Rica (Case Study).",
     "PUB Singapura — Four National Taps; ABC Waters Programme; Jacobs (2019), International Water Association (NEWater).",
