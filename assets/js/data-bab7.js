@@ -25,7 +25,7 @@ APP_DATA.GLOSSARY = {
   "hierarki-kebijakan": {
     term: "Hierarki tiga rel kebijakan",
     en: "three-track policy hierarchy",
-    def: "Pembangunan (UU 25/2004: RPJP 20 th–RPJMN 5 th–RPJMD/RKPD 1 th), Penataan Ruang (UU 26/2007 jo PP 21/2021: RTRWN–RTRW Prov–Kab/Kota–RDTR 20 th), Lingkungan Hidup (UU 32/2009 jo PP 22/2021: RPPLH 30 th)."
+    def: "Pembangunan (UU 25/2004: RPJPN/RPJPD 20 th – RPJMN/RPJMD 5 th – RKP/RKPD 1 th), Penataan Ruang (UU 26/2007 jo. UU 6/2023 & PP 21/2021: RTRWN – RTRW Prov – Kab/Kota – RDTR 20 th), Lingkungan Hidup (UU 32/2009 jo. UU 6/2023 & PP 22/2021: RPPLH 30 th)."
   },
   "klhs": {
     term: "KLHS",
@@ -227,7 +227,7 @@ APP_DATA.QUIZ = [
 /* Diskusi */
 APP_DATA.DISKUSI = [
   { q: "Petakan hierarki tiga rel kebijakan untuk isu 'perlindungan lahan sawah' di wilayah studi Anda: dari RPJPN/SDGs → RPJMN/RPPLH → RTRWN → RTRW Prov/Kab/Kota → RDTR → KKPR/AMDAL. Di jenjang mana gap paling nyata dan mengapa?", h: "Gunakan Tabel 7.1 (tiga rel) dan piramida kebijakan Subbab 7.1.2. Periksa apakah RDTR telah terintegrasi OSS — bila belum, gap berada pada rantai perizinan (PKKPR). Tunjukkan satu Perda/RTRW spesifik sebagai bukti." },
-  { q: "Bandingkan desain vs praktik satu instrumen (KLHS RTRW, AMDAL, atau KKPR) di wilayah studi Anda. Apakah prasyarat data D3TLH/RPPLH terpenuhi? Apakah rekomendasi instrumen masuk pasal operasional RTRW/RDTR?", h: "Gunakan matriks instrumen 7.4.6: identifikasi titik rawan tipikal (mis. KLHS: D3TLH tak mutakhir; KKPR: RDTR minus) dan satu contoh konkret dengan penanda gap terukur (% adopsi rekomendasi KLHS, rasio terpantau vs terizin)." },
+  { q: "Bandingkan desain vs praktik satu instrumen (KLHS RTRW, AMDAL, atau KKPR) di wilayah studi Anda. Apakah prasyarat data D3TLH/RPPLH terpenuhi? Apakah rekomendasi instrumen masuk pasal operasional RTRW/RDTR?", h: "Gunakan Tabel 7.3 pada Subbab 7.4: identifikasi titik rawan tipikal (mis. KLHS: D3TLH tak mutakhir; KKPR: RDTR minus) dan satu contoh konkret dengan penanda gap terukur (% adopsi rekomendasi KLHS, rasio terpantau vs terizin)." },
   { q: "Untuk isu LP2B di wilayah peri-urban: petakan aktor (pemilik sawah, pengembang, Dinas Pertanian, Bappeda, BPN, penegak hukum, konsumen perkotaan). Insentif dan beban siapa yang paling menentukan kepatuhan, dan mengapa instrumen insentif LP2B belum konsisten?", h: "Gunakan pemetaan aktor 7.3.2 dan kerangka 3C+G: akar kepatuhan (biaya kepatuhan tinggi, deteksi rendah) vs akar kapasitas (anggaran insentif, sosialisasi). Bandingkan dengan kasus LP2B di wilayah Anda." },
   { q: "ECR Tiongkok diklaim menaikkan perlindungan habitat 174% di Shanghai. Syarat apa yang membuat instrumen batas spasial bekerja di Tiongkok tetapi tersumbat pada LP2B, dan apa yang dapat diadaptasi tanpa replikasi mentah?", h: "Bandingkan tiga syarat ECR: batas berbasis sains jasa ekosistem, penguncian pada UU & sistem perencanaan teritorial, pemantauan no-net-loss via penginderaan jauh. LP2B tersumbat pada presisi petakan, Perda tertunda, monitoring belum berjalan — adaptasi perlu harmonisasi desentralisasi, bukan komando terpusat." }
 ];
@@ -242,29 +242,29 @@ APP_DATA.LATIHAN = [
 
 /* Pustaka */
 APP_DATA.PUSTAKA = [
-  { group: "Jurnal peer-reviewed & kajian", items: [
-    "Bai, Y., et al. (2018). Developing China's Ecological Redline Policy using ecosystem services assessments. Nature Communications, 9, 3032.",
-    "Tian, M., et al. (2022). Identifying ecological corridors for Chinese ecological conservation redline. PLOS ONE.",
-    "Zhang et al. (2021). Spatial pattern change and ecosystem service value dynamics of ECR. Int. J. Environ. Res. Public Health, 18(8), 4224.",
-    "Conservation Letters, 15, e12853 (2022). China's ECR and post-2020 targets.",
-    "Umam, A.H., et al. Rapid assessment of climate change issues through SEA: case of Palu. IOP Conf. Ser.: Earth Environ. Sci. DOI: 10.1088/1755-1315/644/1/012045.",
-    "Contoh telaah KLHS RPJMD kabupaten (mis. Gunung Mas) — telusuri di jurnal administrasi publik dan repositori kampus.",
-    "Multilevel environmental governance in Indonesia. IJMRA (2024).",
-    "Repositori UGM: Implementasi LP2B di Purbalingga — peta existing 2015, belum Perda.",
-    "Environmental Governance in Indonesia. Springer Open (2023). DOI: 10.1007/978-3-031-15904-6.",
-    "Studi-studi implementasi LP2B tingkat kota (mis. Palu) — telusuri di jurnal dan repositori kampus.",
-    "Maulana, I.N.H., dkk. (2026). Land conversion, spatial governance failure, and food security in peri-urban Malang. Jurnal Mediasosian, 10(1).",
-    "Literatur tata kelola lingkungan tentang inersia birokrasi (bureaucratic comfort zones) — telusuri di Ecological Economics / Environmental Governance."
+  { group: "Jurnal peer-reviewed & kajian akademik", items: [
+    "Bai, Y., Wong, C. P., Jiang, B., Hughes, A. C., Wang, M., & Wang, Q. (2018). Developing China's Ecological Redline Policy using ecosystem services assessments for land use planning. Nature Communications, 9, 3032. DOI: 10.1038/s41467-018-05306-1.",
+    "Choi, M., et al. (2022). China's Ecological Conservation Redline policy is a new opportunity to meet post-2020 protected area targets. Conservation Letters, 15, e12853. DOI: 10.1111/conl.12853.",
+    "Goedeking, N. (2025). Closing the implementation gap in urban climate policy. Environmental Politics. DOI: 10.1080/09644016.2025.2500188.",
+    "Howes, M., Wortley, L., Potts, R., Dedekorkut-Howes, A., Serrao-Neumann, S., Davidson, J., Smith, T., & Nunn, P. (2017). Environmental sustainability: A case of policy implementation failure? Sustainability, 9(2), 165. DOI: 10.3390/su9020165.",
+    "Kostka, G., & Mol, A. P. J. (2013). Implementation and participation in China's local environmental politics: Challenges and innovations. Journal of Environmental Policy & Planning, 15(1), 3–16.",
+    "Maulana, I. N. H., dkk. (2026). Land conversion, spatial governance failure, and local food security in peri-urban Malang. Jurnal Mediasosian, 10(1).",
+    "Stavins, R. N. (2003). Experience with market-based environmental policy instruments. Dalam Handbook of Environmental Economics (Vol. 1, hlm. 355–435). Elsevier.",
+    "Suryani, S. P. (2026). Implementasi kebijakan perlindungan lahan pertanian pangan berkelanjutan (LP2B). Jurnal Santina.",
+    "Tian, M., Chen, X., Gao, J., & Tian, Y. (2022). Identifying ecological corridors for the Chinese ecological conservation redline. PLOS ONE, 17(7), e0271076.",
+    "Triyono, dkk. (2023). Environmental Governance in Indonesia. Springer Open. DOI: 10.1007/978-3-031-15904-6.",
+    "Umam, A. H., dkk. (2021). Rapid assessment of climate change issues in Indonesia through Strategic Environmental Assessment: Case of Palu. IOP Conf. Series: Earth and Environmental Science, 644, 012045. DOI: 10.1088/1755-1315/644/1/012045.",
+    "Zhang, Y., Liu, Y., Zhang, Y., Kong, X., Jing, Y., Cai, E., ... & Wang, Y. (2021). Spatial pattern change and ecosystem service value dynamics of ecological and non-ecological redline areas in Nanjing, China. Int. J. Environ. Res. Public Health, 18(8), 4224."
   ] },
   { group: "Regulasi rujukan normatif", items: [
-    "UU No. 32/2009 tentang PPLH (jo. UU 6/2023).",
-    "PP No. 22/2021 tentang Penyelenggaraan PPLH.",
-    "UU No. 26/2007 tentang Penataan Ruang; PP No. 21/2021 tentang Penyelenggaraan Penataan Ruang.",
-    "UU No. 25/2004 tentang SPPN.",
-    "UU No. 41/2009 tentang LP2B; PP No. 1/2011 tentang Penetapan dan Pengalihan LP2B.",
+    "UU No. 32/2009 tentang Perlindungan dan Pengelolaan Lingkungan Hidup (jo. UU No. 6/2023).",
+    "PP No. 22/2021 tentang Penyelenggaraan Perlindungan dan Pengelolaan Lingkungan Hidup.",
+    "UU No. 26/2007 tentang Penataan Ruang (jo. UU No. 6/2023); PP No. 21/2021 tentang Penyelenggaraan Penataan Ruang.",
+    "UU No. 25/2004 tentang Sistem Perencanaan Pembangunan Nasional (SPPN).",
+    "UU No. 41/2009 tentang Perlindungan Lahan Pertanian Pangan Berkelanjutan; PP No. 1/2011 tentang Penetapan dan Alih Fungsi LP2B.",
     "UU No. 23/2014 tentang Pemerintahan Daerah.",
-    "PP No. 5/2021 jo. PP No. 28/2025 tentang Perizinan Berusaha Berbasis Risiko (OSS-RBA, KKPR).",
-    "Peraturan ATR/BPN 13/2021 (KKPR).",
+    "PP No. 5/2021 jo. PP No. 28/2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko (OSS-RBA, KKPR).",
+    "Peraturan Menteri ATR/BPN No. 13/2021 tentang Pelaksanaan Kesesuaian Kegiatan Pemanfaatan Ruang (KKPR).",
     "Kementerian ATR/BPN (2026). Capaian RDTR terintegrasi OSS (data April 2026: 566 RDTR)."
   ] }
 ];

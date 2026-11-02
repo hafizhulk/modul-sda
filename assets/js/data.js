@@ -20,7 +20,7 @@ APP_DATA.GLOSSARY = {
   "sda": {
     term: "Sumber daya alam",
     en: "natural resources",
-    def: "Unsur lingkungan hidup yang terdiri atas sumber daya hayati dan nonhayati yang secara keseluruhan membentuk kesatuan ekosistem (UU No. 32/2009 Pasal 1 ayat 9)."
+    def: "Unsur lingkungan hidup yang terdiri atas sumber daya hayati dan nonhayati yang secara keseluruhan membentuk kesatuan ekosistem (UU No. 32/2009 Pasal 1 angka 9)."
   },
   "zimmermann": {
     term: "Tesis Zimmermann",
@@ -85,7 +85,7 @@ APP_DATA.GLOSSARY = {
   "daya-tampung": {
     term: "Daya tampung lingkungan hidup",
     en: "assimilative capacity",
-    def: "Kemampuan lingkungan hidup menyerap zat, energi, dan/atau komponen lain yang masuk atau dimasukkan ke dalamnya (UU No. 32/2009 Pasal 1 ayat 8)."
+    def: "Kemampuan lingkungan hidup menyerap zat, energi, dan/atau komponen lain yang masuk atau dimasukkan ke dalamnya (UU No. 32/2009 Pasal 1 angka 8)."
   },
   "klhs": {
     term: "KLHS",
@@ -251,7 +251,7 @@ APP_DATA.DISKUSI = [
   { q: "Tarr et al. (2004, Bank Dunia) mengajukan pertanyaan counterfactual: apakah bencana Aral dapat dihindari bila harga air irigasi dihitung benar dan Uni Soviet mengimpor kapas? Bagaimana posisi Anda, dan apa implikasinya bagi pricing sumber daya publik di Indonesia?", h: "Pertimbangkan: harga sebagai sinyal kelangkaan vs hak akses; siapa yang menanggung bila harga dinaikkan; apakah instrumen harga cukup tanpa reformasi kelembagaan." },
   { q: "Aryal et al. (2021) menemukan >80% studi trade-off jasa ekosistem hanya memodelkan kendala biofisik tanpa fungsi utilitas pemangku kepentingan. Mengapa celah metodologis ini penting bagi praktik KLHS di daerah?", h: "Hubungkan dengan kriteria evaluasi multikriteria (Bab 8): siapa yang menentukan bobot, dan apa risikonya bila utilitas aktor lokal diabaikan sejak analisis." },
   { q: "Guo et al. (2017) menunjukkan optimasi biocapacity lewat tata guna lahan bisa menurunkan ecological overshoot 29–53% tetapi menuntut volume air tambahan besar. Apa pelajaran umumnya bagi intervensi perencanaan?", h: "Intervensi mengatasi kelangkaan satu sumber daya sering mentransfer tekanan ke sumber daya lain — analisis lintas sektor (air–energi–pangan–lahan) diperlukan sejak awal." },
-  { q: "Batubara et al. (2023) menyebut subsiden Jakarta sebagai proses urbanisasi kapitalistik: penyebab (industri/gedung penyedap air tanah) dan korban (kampung pesisir utara) berbeda kelompok. Bagaimana kerangka keadilan lingkungan membaca kasus ini, dan instrumen perencanaan apa yang dapat memutus rantainya?", h: "Petakan pemisahan spasial-sosial manfaat dan beban; kaitkan dengan zona bebas sumur, jaringan air pipa, dan penegakan perizinan — bandingkan dengan pola manfaat-hilir/beban-hilir Aral." }
+  { q: "Batubara et al. (2023) menyebut subsiden Jakarta sebagai proses urbanisasi kapitalistik: penyebab (industri/gedung penyedot air tanah) dan korban (kampung pesisir utara) berbeda kelompok. Bagaimana kerangka keadilan lingkungan membaca kasus ini, dan instrumen perencanaan apa yang dapat memutus rantainya?", h: "Petakan pemisahan spasial-sosial manfaat dan beban; kaitkan dengan zona bebas sumur, jaringan air pipa, dan penegakan perizinan — bandingkan dengan pola manfaat-hulu/beban-hilir Aral." }
 ];
 
 /* Latihan (checklist, localStorage) */
@@ -281,7 +281,9 @@ APP_DATA.PUSTAKA = [
     "Irawan, A. M., Marfai, M. A., Nugraheni, I. R., et al. (2021). Comparison between averaged and localised subsidence measurements for coastal floods projection in 2050 Semarang, Indonesia. Urban Climate, 35, 100760.",
     "Chaussard, E., Amelung, F., Abidin, H., & Hong, S.-H. (2013). Sinking cities in Indonesia. Remote Sensing of Environment, 128, 150–161.",
     "González-García, A., Palomo, I., González, J. A., López, C. A., & Montes, C. (2020). Quantifying spatial supply-demand mismatches in ecosystem services. Land Use Policy, 94, 104493.",
-    "Nahib, I., et al. (2023). Spatial-temporal changes in water supply and demand in the Citarum Watershed. Sustainability, 15(1), 562."
+    "Liu, J., Hull, V., Batistella, M., DeFries, R., Dietz, T., Fu, F., ... & Zhu, C. (2013). Framing sustainability in a telecoupled world. Ecology and Society, 18(2), 26.",
+    "Nahib, I., et al. (2023). Spatial-temporal changes in water supply and demand in the Citarum Watershed. Sustainability, 15(1), 562.",
+    "Vargas, L., Willemen, L., & Hein, L. (2022). Inter-jurisdictional ecosystem service flows and urban water security. Ecosystem Services."
   ] },
   { group: "Buku teks dan karya seminal", items: [
     "Auty, R. M. (1993). Sustaining Development in Mineral Economies: The Resource Curse Thesis. Routledge.",

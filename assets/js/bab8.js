@@ -26,7 +26,7 @@
       baseline:  [0.15, 0.15, 0.25, 0.15, 0.10, 0.10, 0.10],
       proEkonomi: [0.05, 0.15, 0.35, 0.15, 0.10, 0.10, 0.10],
       proLingkungan: [0.30, 0.15, 0.10, 0.15, 0.10, 0.10, 0.10],
-      rata:      [0.143,0.143,0.143,0.143,0.143,0.143,0.143]
+      rata:      [1/7, 1/7, 1/7, 1/7, 1/7, 1/7, 1/7]
     };
 
     function calcTotals() {
@@ -43,7 +43,9 @@
       var totals = calcTotals();
       var sorted = alts.slice().sort(function (a,b){ return totals[b.key] - totals[a.key]; });
       var sumW = criteria.reduce(function(s,c){ return s + c.weight; }, 0);
-      var sumWarn = Math.abs(sumW - 1) > 0.001 ? '<span class="b8-warn">Σ bobot = ' + sumW.toFixed(3) + ' — normalkan agar =1,00 untuk interpretasi yang sah</span>' : '<span class="b8-ok">Σ bobot = ' + sumW.toFixed(3) + ' ✓</span>';
+      var sumWarn = Math.abs(sumW - 1) > 0.001
+        ? '<span class="b8-warn">Σ bobot = ' + sumW.toFixed(3) + ' — <button type="button" class="b8-preset" id="b8-norm-btn" style="margin-left:.4rem;padding:.15rem .5rem;font-size:.82rem;">Normalkan (=1,00)</button></span>'
+        : '<span class="b8-ok">Σ bobot = ' + sumW.toFixed(3) + ' ✓</span>';
 
       var html = '';
       html += '<div class="b8-presets" role="group" aria-label="Preset sensitivitas">';
@@ -108,7 +110,7 @@
           render();
         });
       });
-      root.querySelectorAll(".b8-preset").forEach(function (btn) {
+      root.querySelectorAll(".b8-preset[data-preset]").forEach(function (btn) {
         btn.addEventListener("click", function () {
           var p = presets[btn.getAttribute("data-preset")];
           if (!p) return;
@@ -116,6 +118,18 @@
           render();
         });
       });
+      var normBtn = document.getElementById("b8-norm-btn");
+      if (normBtn) {
+        normBtn.addEventListener("click", function () {
+          var total = criteria.reduce(function (s, c) { return s + c.weight; }, 0);
+          if (total <= 0) {
+            criteria.forEach(function (c) { c.weight = 1 / criteria.length; });
+          } else {
+            criteria.forEach(function (c) { c.weight = c.weight / total; });
+          }
+          render();
+        });
+      }
       if (window.lucide && lucide.createIcons) { try { lucide.createIcons(); } catch(e){} }
     }
 

@@ -51,7 +51,7 @@
 
       // Tabel
       html += '<div class="tbl-wrap"><table class="tbl" aria-label="Matriks keterlacakan bukti–rekomendasi">';
-      html += '<thead><tr><th>ID</th><th>Rekomendasi</th><th>Isu strategis</th><th>Temuan</th><th>Data & sumber</th><th>MCE</th><th>Indikator / Risiko</th><th></th></tr></thead><tbody>';
+      html += '<thead><tr><th scope="col">ID</th><th scope="col">Rekomendasi</th><th scope="col">Isu strategis</th><th scope="col">Temuan</th><th scope="col">Data &amp; sumber</th><th scope="col">MCE</th><th scope="col">Indikator / Risiko</th><th scope="col"><span class="sr-only">Aksi</span></th></tr></thead><tbody>';
       if (rows.length === 0) {
         html += '<tr><td colspan="8" style="text-align:center;color:var(--muted);padding:1.2rem">Belum ada baris — tambahkan di atas. Contoh: R1 = rekomendasi pertama Tugas 2 Anda.</td></tr>';
       } else {

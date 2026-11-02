@@ -50,7 +50,7 @@ APP_DATA.GLOSSARY = {
   "sendai": {
     term: "Sendai Framework",
     en: "Sendai Framework for DRR 2015–2030",
-    def: "Kerangka global pengurangan risiko bencana (UNDRR) yang menjadi rujukan adaptasi-PRB; di Indonesia dioperasionalkan via Perpres 87/2020 (RPB Nasional)."
+    def: "Kerangka global pengurangan risiko bencana (UNDRR) yang menjadi rujukan adaptasi-PRB; di Indonesia dioperasionalkan melalui Perpres No. 87/2020 tentang Rencana Induk Penanggulangan Bencana (RIPB) 2020–2044."
   },
   "kpbu": {
     term: "KPBU",
@@ -226,22 +226,24 @@ APP_DATA.DISKUSI = [
 /* Latihan */
 APP_DATA.LATIHAN = [
   { t: "Skenario untuk wilayah studi Anda: rumuskan 2–3 skenario (BAU + ≥1 jalur kontras) dengan cakrawala ≥20 tahun, narasi ≤300 kata/skenario, 3–5 driver dan arahnya, matriks 2×2 bila relevan, dan tabel skenario versi Tabel 9.1 dengan indikator terukur + sumber baseline (Tugas 1). Sebutkan ≥2 asumsi desain per skenario.", tag: "Skenario" },
-  { t: "Matriks program prioritas: susun 3 program prioritas dengan format Tabel 9.2 — tahap (T1 fondasi/T2 perluasan/T3 hilirisasi), pembagian peran lintas kewenangan (Bab 7) + mekanisme koordinasi (lead agency/MOU/forum data bersama), indikasi biaya awal (satuan + asumsi + sumber), sumber dana (APBN/APBD/KPBU/PES/donor), dan indikator KHD (keluaran–hasil–dampak) dengan baseline & ambang sinyal.", tag: "Program" },
-  { t: "Risiko implementasi & mitigasi: identifikasi 3 risiko (pilih kategori politik-kelembagaan, ekologis/hidrologis, sosial-keadilan, fiskal, teknis) dengan bukti/preseden; rancang mitigasi pada Tabel 9.3 versi Anda — wajib menyertakan leading indicator terukur dan meja sinyal-trigger; untuk satu risiko sosial-keadilan, gambarkan stakeholder mapping dan usulkan mekanisme PADIATAPA.", tag: "Risiko" }
+  { t: "Matriks program prioritas: susun 3 program prioritas dengan format Tabel 9.3 — tahap (T1 fondasi/T2 perluasan/T3 hilirisasi), pembagian peran lintas kewenangan (Bab 7) + mekanisme koordinasi (lead agency/MOU/forum data bersama), indikasi biaya awal (satuan + asumsi + sumber), sumber dana (APBN/APBD/KPBU/PES/donor), risiko utama, dan indikator KHD (keluaran–hasil–dampak) dengan baseline & ambang sinyal.", tag: "Program" },
+  { t: "Risiko implementasi & mitigasi: identifikasi 3 risiko (pilih kategori politik-kelembagaan, ekologis/hidrologis, sosial-keadilan, fiskal, teknis) dengan bukti/preseden; rancang mitigasi pada Tabel 9.4 versi Anda — wajib menyertakan leading indicator terukur dan meja sinyal-trigger; untuk satu risiko sosial-keadilan, gambarkan stakeholder mapping dan usulkan mekanisme PADIATAPA.", tag: "Risiko" }
 ];
 
 /* Pustaka */
 APP_DATA.PUSTAKA = [
   { group: "Jurnal & literatur ilmiah", items: [
-    "Corgo, J., et al. (2024). Nature-based solutions in spatial planning for climate adaptation. Ambio. DOI: 10.1007/s13280-024-02052-1.",
-    "Paletto, A., et al. (2015). Participatory Scenario Development for land-use change. Mountain Research and Development, 35(2). DOI: 10.1659/MRD-JOURNAL-D-14-00082.1.",
-    "Samy, M. (2022). An Overview of Scenario Approaches for Urban Planning. Journal of Planning Literature, 37. DOI: 10.1177/08854122221083546.",
-    "Adams, C., et al. (2023). Mainstreaming NbS in cities — systematic review (dikutip dalam Landscape and Urban Planning 256, 2025).",
-    "Holling, C.S. (Ed.). (1978). Adaptive Environmental Assessment and Management. Wiley. — karya seminal.",
-    "Walters, C.J. (1986). Adaptive Management of Renewable Resources. Macmillan. — karya seminal.",
+    "Adams, C., Frantzeskaki, N., & Moglia, M. (2023). Mainstreaming nature-based solutions in cities: A systematic literature review and a proposal for facilitating urban transitions. Landscape and Urban Planning.",
+    "Corgo, J., Cruz, S. S., & Conceição, P. (2024). Nature-based solutions in spatial planning and policies for climate change adaptation: A literature review. Ambio. DOI: 10.1007/s13280-024-02052-1.",
+    "Flyvbjerg, B., Bruzelius, N., & Rothengatter, W. (2003). Megaprojects and Risk: An Anatomy of Ambition. Cambridge University Press.",
+    "Holling, C. S. (Ed.). (1978). Adaptive Environmental Assessment and Management. Wiley. — karya seminal.",
+    "JPPIPA Unram (2022). Effects of land cover change and deforestation on rainfall and surface temperature in New Capital City of Indonesia (IKN) (Samboja–Sepaku). Jurnal Penelitian Pendidikan IPA.",
+    "Paletto, A., et al. (2015). Participatory scenario development to address potential impacts of land use change: An example from the Italian Alps. Mountain Research and Development, 35(2). DOI: 10.1659/MRD-JOURNAL-D-14-00082.1.",
     "Pracetak PlanetScope IKN 2021–2026 (arXiv:2608.01230) — lahan terbangun +670%, vegetasi −18,1%, NDVI −17,2%, karbon −0,28% (ilustrasi tren, belum peer-review).",
-    "JPPIPA Unram (2022). Effects of Land Cover Change on Rainfall and Surface Temperature in IKN (Samboja–Sepaku).",
-    "Water Alternatives, 19(1), 2026 — From Forest Extraction to New Capital City Development in Sepaku."
+    "Samy, M. (2022). An overview of scenario approaches: A guide for urban design and planning. Journal of Planning Literature, 37. DOI: 10.1177/08854122221083546.",
+    "Walters, C. J. (1986). Adaptive Management of Renewable Resources. Macmillan. — karya seminal.",
+    "Water Alternatives, 19(1), 2026 — From Forest Extraction to New Capital City Development in East Kalimantan (Sepaku).",
+    "Zuhdi, dkk. (2024). Kota Hutan Ibu Kota Nusantara dalam model desain ramah lingkungan. Jurnal Ekonomi dan Kebijakan Pembangunan (IPB)."
   ] },
   { group: "Kerangka internasional & NbS", items: [
     "Cohen-Shacham, E., et al. (Eds.). (2016). Nature-based Solutions to address global societal challenges. IUCN.",
@@ -250,10 +252,11 @@ APP_DATA.PUSTAKA = [
     "UNDRR/UNISDR. (2015). Sendai Framework for Disaster Risk Reduction 2015–2030."
   ] },
   { group: "Regulasi & dokumen resmi Indonesia", items: [
-    "UU No. 32/2009 PPLH (Pasal 15 KLHS) jo. UU No. 6/2023.",
-    "PP No. 22/2021 (KLHS, daya dukung–daya tampung, AMDAL).",
-    "UU No. 3/2022 jo. UU No. 21/2023 tentang Ibu Kota Negara; Perpres No. 63/2022 (Rencana Induk 5 tahap 2022–2045, 6 aspek implementasi).",
-    "UU No. 16/2016 (Paris Agreement); Perpres No. 87/2020 (RPB Nasional).",
+    "UU No. 32/2009 tentang PPLH (Pasal 15 KLHS) jo. UU No. 6/2023.",
+    "PP No. 22/2021 tentang Penyelenggaraan PPLH (KLHS, daya dukung–daya tampung, AMDAL).",
+    "UU No. 3/2022 jo. UU No. 21/2023 tentang Ibu Kota Negara; Perpres No. 63/2022 tentang Perincian Rencana Induk IKN (5 tahap 2022–2045, 6 aspek implementasi).",
+    "PP No. 17/2022 tentang Pendanaan dan Pengelolaan Anggaran IKN; Permen PPN/Bappenas No. 6/2022 tentang Tata Cara KPBU di IKN.",
+    "UU No. 16/2016 tentang Pengesahan Paris Agreement; Perpres No. 87/2020 tentang Rencana Induk Penanggulangan Bencana (RIPB) Tahun 2020–2044.",
     "Kementerian PPN/Bappenas. (2020). KLHS Masterplan IKN (diakses via lcdi-indonesia.id).",
     "Data pembiayaan indikatif IKN Rp466 T (KPBU Rp252,5 T, swasta/BUMN Rp123,2 T, APBN Rp89,4–90,4 T) — indikasi rencana, perlu verifikasi RPJMN/Otorita IKN."
   ] }

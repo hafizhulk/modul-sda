@@ -226,7 +226,7 @@ APP_DATA.QUIZ = [
       "Karena KLHK mencakup rotasi tanaman yang akan ditanam kembali, sedangkan GFW tidak."
     ],
     answer: 1,
-    pembahasan: "Empat pemicu selisih: definisi/konstruk, resolusi-M-MU, periode, dan akuntansi bruto vs netto. Tree cover loss mencakup panen rotasi yang akan tumbuh kembali — deforestasi permanen tidak."
+    pembahasan: "Empat pemicu selisih: definisi/konstruk, resolusi & MMU, periode, dan akuntansi bruto vs netto. Tree cover loss mencakup panen rotasi yang akan tumbuh kembali — deforestasi permanen tidak."
   },
   {
     q: "Ketika dua sumber kredibel memberikan angka divergen, praktik yang dianjurkan adalah…",
@@ -243,7 +243,7 @@ APP_DATA.QUIZ = [
 
 /* Diskusi */
 APP_DATA.DISKUSI = [
-  { q: "Selisih mana dalam kasus deforestasi yang dapat dijelaskan murni oleh perbedaan metadata (definisi, MMU, periode, akuntansi), dan selisih mana yang menyiratkan perbedaan substantif di lapangan?", h: "Gunakan Tabel C studi kasus: pisahkan efek definisi (GFW tree cover vs 7 kelas hutan), efek resolusi (6,25 ha vs 0,09 ha), dan efek periode (Juli–Juni vs kalender). Selisih yang tersisa setelah koreksi metadata adalah sinyal tata kelola." },
+  { q: "Selisih mana dalam kasus deforestasi yang dapat dijelaskan murni oleh perbedaan metadata (definisi, MMU, periode, akuntansi), dan selisih mana yang menyiratkan perbedaan substantif di lapangan?", h: "Gunakan Tabel 3.6 pada studi kasus: pisahkan efek definisi (GFW tree cover vs 7 kelas hutan), efek resolusi (6,25 ha vs 0,09 ha), dan efek periode (Juli–Juni vs kalender). Selisih yang tersisa setelah koreksi metadata adalah sinyal tata kelola." },
   { q: "Angka mana yang akan Anda pakai untuk (a) KLHS RTRW, (b) komunikasi publik, dan (c) target kinerja kementerian — dan mengapa?", h: "(a) KLHS: angka resmi (sesuai mandat regulasi, memisahkan permanen vs temporer). (b) Publik: rentang kedua angka dengan narasi. (c) Kinerja: resmi sebagai akuntabilitas, GFW sebagai kontrol independen. Justifikasi: kesepadanan konstruk dengan tujuan pakai." },
   { q: "Apa konsekuensi keadilan lingkungan bila definisi resmi mengecualikan kehilangan tutupan pohon di luar kawasan hutan dari hitungan 'deforestasi'?", h: "Di luar kawasan hutan banyak tutupan pohon rakyat, kebun campur, dan hutan adat. Pengecualian membuat deforestasi tampak lebih kecil — bias terhadap kawasan yang justru paling dekat dengan mata pencaharian lokal." }
 ];
@@ -260,6 +260,7 @@ APP_DATA.PUSTAKA = [
   { group: "Jurnal peer-reviewed", items: [
     "Denzin, N.K. (1978). The Research Act: A Theoretical Introduction to Sociological Methods (2nd ed.). McGraw-Hill.",
     "Hansen, M.C., et al. (2013). High-resolution global maps of 21st-century forest cover change. Science, 342(6160), 850–853.",
+    "Lempert, R.J., Popper, S.W., & Bankes, S.C. (2003). Shaping the Next One Hundred Years: New Methods for Quantitative, Long-Term Policy Analysis. RAND.",
     "Margono, B.A., et al. (2014). Primary forest cover loss in Indonesia over 2000–2012. Nature Climate Change, 4(8), 730–735.",
     "Olofsson, P., et al. (2014). Good practices for estimating area and assessing accuracy of land change. Remote Sensing of Environment, 148, 42–57.",
     "Openshaw, S. (1984). The Modifiable Areal Unit Problem (CATMOG 38). Geo Books.",

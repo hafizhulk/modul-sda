@@ -120,10 +120,10 @@
           <table class="tbl" aria-label="Jenis data spasial dan nonspasial">
             <thead><tr><th scope="col">Jenis</th><th scope="col">Contoh</th><th scope="col">Kekuatan</th><th scope="col">Keterbatasan tipikal</th></tr></thead>
             <tbody>
-              <tr><td>Vektor — titik</td><td>Sumur pantau, stasiun kualitas air</td><td>Presisi lokasi; siap diuji lapangan</td><td>Representativitas spasial terbatas</td></tr>
+              <tr><td><span class="term" data-gloss="vektor">Vektor</span> — titik</td><td>Sumur pantau, stasiun kualitas air</td><td>Presisi lokasi; siap diuji lapangan</td><td>Representativitas spasial terbatas</td></tr>
               <tr><td>Vektor — garis</td><td>Jalan, sungai, pipa</td><td>Analisis jaringan &amp; keterjangkauan</td><td>Kelengkapan atribut tidak merata</td></tr>
               <tr><td>Vektor — poligon</td><td>Batas administrasi, pola ruang RTRW</td><td>Kompatibel dengan kebijakan</td><td>Batas admin ≠ batas proses ekologis</td></tr>
-              <tr><td>Raster — citra</td><td>Landsat, Sentinel</td><td>Cakupan luas, seri waktu panjang</td><td>Awan, resolusi, bias klasifikasi</td></tr>
+              <tr><td><span class="term" data-gloss="raster">Raster</span> — citra</td><td>Landsat, Sentinel</td><td>Cakupan luas, seri waktu panjang</td><td>Awan, resolusi, bias klasifikasi</td></tr>
               <tr><td>Raster — grid model</td><td>DEM, grid iklim BMKG</td><td>Kontinu secara spasial</td><td>Ketidakpastian model menempel pada piksel</td></tr>
               <tr><td>Tabular/statistik</td><td>BPS SLHI, neraca air</td><td>Baku, berkala, dapat diaudit</td><td>Agregasi sembunyikan variasi lokal</td></tr>
               <tr><td>Dokumen &amp; naratif</td><td>RTRW, KLHS, FGD</td><td>Konteks &amp; pengetahuan lokal</td><td>Tidak terstandar; perlu pengkodean</td></tr>
@@ -162,7 +162,7 @@
           </div>
 
           <h3>3.1.4 · Land cover vs land use &amp; sumber internasional</h3>
-          <p><span class="term" data-gloss="land-cover">SEEA Central Framework</span> membedakan <em>land cover</em>, yaitu tutupan fisik dan biologis yang teramati, dari <em>land use</em>, yaitu tujuan penggunaan lahan. Pembedaan ini mengacu pada FAO LCCS dan penting saat membaca angka deforestasi. Data internasional, seperti FAOSTAT dan Global Forest Watch, dapat dipakai untuk membandingkan tren. Namun, definisi dan resolusinya perlu diperiksa sebelum dibandingkan dengan angka resmi Indonesia. Studi kasus pada akhir bab memperlihatkan akibat jika perbedaan itu diabaikan.</p>
+          <p><span class="term" data-gloss="seea">SEEA Central Framework</span> membedakan <span class="term" data-gloss="land-cover"><em>land cover</em> dan <em>land use</em></span>: tutupan fisik dan biologis yang teramati versus tujuan penggunaan lahan oleh manusia. Pembedaan ini mengacu pada FAO LCCS dan penting saat membaca angka deforestasi. Data internasional, seperti FAOSTAT dan Global Forest Watch, dapat dipakai untuk membandingkan tren. Namun, definisi dan resolusinya perlu diperiksa sebelum dibandingkan dengan angka resmi Indonesia. Studi kasus pada akhir bab memperlihatkan akibat jika perbedaan itu diabaikan.</p>
           <p class="note"><strong>Implikasi:</strong> KLHS RTRW/RDTR memerlukan penggabungan IGT (tutupan lahan, DAS, dan risiko) dengan data nonspasial (emisi dan kualitas air) dalam satu matriks diagnosis. Jika asal-usul data tidak didokumentasikan, rekomendasi tidak dapat ditelusuri kembali ke bukti yang mendasarinya (Bab 10).</p>
         </div>
       </div>
@@ -297,6 +297,7 @@
           <p><span class="term" data-gloss="olofsson">Praktik baik Olofsson et al. (2014)</span> — kini rujukan standar: (i) desain sampling probabilistik; (ii) data referensi lebih akurat dari peta yang dinilai; (iii) matriks galat dalam proporsi luas; (iv) luas kelas perubahan diestimasi dari sampel referensi — bukan dihitung dari piksel; (v) ketidakpastian sebagai interval kepercayaan; dan (vi) galat referensi dievaluasi. Konsekuensinya: <strong>angka luas dari peta adalah estimasi dengan selang ketidakpastian, bukan sensus kebenaran</strong>.</p>
 
           <h3>3.4.3 · Anatomi ketidakpastian</h3>
+          <p>Secara konseptual, bedakan <span class="term" data-gloss="ketidakpastian-epistemik">ketidakpastian epistemik</span> (kurangnya pengetahuan atau data yang dapat dikurangi dengan pengukuran lebih lanjut), <strong>ketidakpastian ontik</strong> (variabilitas inheren sistem alam), dan <strong>ambiguitas</strong> (perbedaan definisi atau bingkai antaraktor). Dalam rantai data spasial-nonspasial, ketidakpastian muncul pada enam titik:</p>
           <ul>
             <li><strong>Definisi</strong> — konstruk berbeda (tutupan pohon vs hutan permanen).</li>
             <li><strong>Pengukuran</strong> — instrumen &amp; kalibrasi.</li>
@@ -382,7 +383,7 @@
             </tbody>
           </table>
           </div>
-          <p><strong>Ilustrasi risiko salah baca:</strong> sejumlah pemberitaan media pernah mengutip "kehilangan hutan 1,4 juta ha pada 2023" — hampir pasti merujuk total <em>tree cover loss</em> GFW (yang mencakup rotasi tanam pada perkebunan), bukan deforestasi; tanpa membaca metadata, angka semacam ini mudah dikutip sebagai "deforestasi" dan menggelembungkan persepsi.</p>
+          <p><strong>Ilustrasi risiko salah baca:</strong> sejumlah pemberitaan media pernah mengutip "kehilangan hutan 1,4 juta ha pada 2023" — hampir pasti merujuk total <span class="term" data-gloss="tree-cover-loss"><em>tree cover loss</em></span> GFW (yang mencakup rotasi tanam pada perkebunan), bukan deforestasi; tanpa membaca metadata, angka semacam ini mudah dikutip sebagai "deforestasi" dan menggelembungkan persepsi.</p>
 
           <h3>B. Mengapa angkanya berbeda: bedah metadata</h3>
           <p class="tbl-title">Tabel 3.6 — Bedah metadata KLHK vs GFW/Hansen–UMD</p>

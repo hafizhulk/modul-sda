@@ -35,7 +35,7 @@ APP_DATA.GLOSSARY = {
   "rebuttal": {
     term: "Rebuttal",
     en: "rebuttal",
-    def: "Pengecualian atau bantahan terhadap klaim ('kecuali bila disertai infrastruktur hijau-biru pengganti') — penulis kuat dalam rebuttal menurut temuan lintas studi."
+    def: "Pengecualian atau bantahan terhadap klaim ('kecuali bila disertai infrastruktur hijau-biru pengganti') — penulis umumnya lemah dalam menyertakan rebuttal menurut temuan lintas studi, padahal rebuttal yang jujur justru meningkatkan kredibilitas argumen."
   },
   "data-ink-ratio": {
     term: "Data-ink ratio",
@@ -121,7 +121,7 @@ APP_DATA.STEPS = [
     icon: "database",
     title: "2 · Data/bukti (grounds)",
     body: "Bukti apa yang mendukung? Peta tutupan lahan dua seri waktu, statistik BPS, penelitian jasa ekosistem. Tiap angka wajib tahun, cakupan, satuan, metode, dan sumber primer.",
-    note: "Klemahan umum: data ada, tetapi warrant tidak dinyatakan."
+    note: "Kelemahan umum: data ada, tetapi warrant tidak dinyatakan."
   },
   {
     icon: "link-2",
@@ -214,13 +214,13 @@ APP_DATA.QUIZ = [
 APP_DATA.DISKUSI = [
   { q: "Ambil satu paragraf analisis dari draf Tugas 2 Anda dan bedah dengan model Toulmin: identifikasi klaim, data, warrant, backing, qualifier, dan rebuttal. Warrant mana yang tidak dinyatakan dan bagaimana Anda memperbaikinya?", h: "Fokus pada warrant — prinsip penghubung. Jika warrant adalah 'konversi sawah → hilangnya fungsi hidrologis', nyatakan backing (jurnal peri-urbanisasi) dan qualifier ('umumnya', 'pada DAS terfragmentasi')." },
   { q: "Bandingkan satu peta di dokumen KLHS RTRW daerah dengan kaidah Bertin dan Tufte: apakah hue/value dipakai dengan benar, apakah ketidakpastian dikomunikasikan (fuzziness/peta reliabilitas), dan apakah elemen wajib (judul informatif, legenda, skala, sumber, tahun) lengkap?", h: "Gunakan variabel visual Bertin: value untuk kuantitatif bertingkat, hue untuk kualitatif. Periksa palet buta warna (ColorBrewer) dan sumber/tahun di legenda." },
-  { q: "Susun draf policy brief 2–4 halaman dari Tugas 2 Anda: apakah 5 checklist Subbab 10.3 terpenuhi (angka & pihak terdampak di 300 kata pertama, perbandingan opsi, keterlacakan, keterbatasan, halaman pertama cukup untuk keputusan)?", h: "Struktur: judul pesan → ringkasan eksekutif ≤150 kata → konteks ≤300 kata → kritik opsi 0,5–1 hal → rekomendasi ≤500 kata + rujukan ringkas. Total 2–4 halaman." },
-  { q: "Pilih 5 rekomendasi utama Tugas 2 Anda dan buat matriks keterlacakan mini. Rekomendasi mana yang 'yatim' (temuan tanpa rekomendasi) atau 'panti kosong' (rekomendasi tanpa temuan), dan lompatan logika apa yang Anda temukan?", h: "Periksa dua arah: maju (temuan → rekomendasi) dan mundur (rekomendasi → temuan). Temukan warrant tidak dinyatakan, ekstrapolasi diam-diam, atau normatif menjadi empiris." }
+  { q: "Susun draf policy brief 2–4 halaman dari Tugas 2 Anda: apakah 5 checklist Subbab 10.3 terpenuhi (angka & pihak terdampak di 300 kata pertama, perbandingan opsi, keterlacakan, keterbatasan, halaman pertama cukup untuk keputusan)?", h: "Struktur: judul pesan → ringkasan eksekutif ≤150–200 kata → konteks ≤300 kata → kritik opsi 0,5–1 hal → rekomendasi ≤500 kata + rujukan ringkas. Total 2–4 halaman." },
+  { q: "Pilih 5 rekomendasi utama Tugas 2 Anda dan buat matriks keterlacakan mini. Adakah temuan yang 'yatim' (temuan utama tanpa rekomendasi) atau rekomendasi tanpa pijakan bukti (rekomendasi tanpa temuan pendukung), dan lompatan logika apa yang Anda temukan?", h: "Periksa dua arah: maju (temuan → rekomendasi) dan mundur (rekomendasi → temuan). Temukan warrant tidak dinyatakan, ekstrapolasi diam-diam, atau normatif menjadi empiris." }
 ];
 
 /* Latihan */
 APP_DATA.LATIHAN = [
-  { t: "Policy brief dari Tugas 2: ubah dokumen strategi terintegrasi menjadi policy brief 2 halaman untuk pengambil keputusan daerah — judul berbentuk pesan, ringkasan ≤200 kata, konteks berangka, perbandingan ≥2 opsi dengan trade-off distributif, 2–4 rekomendasi operasional, dan satu larik keterbatasan bukti.", tag: "Policy brief" },
+  { t: "Policy brief dari Tugas 2: ubah dokumen strategi terintegrasi menjadi policy brief 2 halaman untuk pengambil keputusan daerah — judul berbentuk pesan, ringkasan ≤150–200 kata, konteks berangka, perbandingan ≥2 opsi dengan trade-off distributif, 2–4 rekomendasi operasional, dan satu larik keterbatasan bukti.", tag: "Policy brief" },
   { t: "Satu visual penentu: buat satu peta atau grafik yang merangkum argumen utama strategi Anda. Terapkan kaidah Subbab 10.2 (elemen peta wajib: judul informatif, legenda, skala, arah utara, sumber, tahun, sistem koordinat; palet aksesibel; penanda ketidakpastian bila relevan) dan tulis 3 kalimat: keputusan apa yang seharusnya diambil pembaca setelah melihat visual ini.", tag: "Visual" },
   { t: "Peer review silang: bertukar naskah Tugas 2 dengan rekan; gunakan protokol 6 butir Subbab 10.5 (masalah/metode/batasan, visual, keterlacakan, lompatan logika, trade-off/keadilan, ketidakpastian). Tulis minimal 3 komentar substansial (bukan redaksional) dan tanggapi dalam log revisi (diterima/ditolak + alasan).", tag: "Peer review" },
   { t: "Tugas 2 — pengumpulan: kumpulkan paket final — dokumen strategi terintegrasi yang telah direvisi (maks. 25 halaman di luar lampiran), policy brief, visual kunci, dan lampiran mutu (matriks keterlacakan untuk ≥5 rekomendasi + log revisi + metadata). Pastikan setiap angka di ringkasan eksekutif tertelusur ke sumbernya.", tag: "Tugas 2" }

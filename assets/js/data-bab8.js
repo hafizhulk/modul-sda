@@ -78,9 +78,9 @@ APP_DATA.GLOSSARY = {
     def: "Menguji kestabilan peringkat ketika bobot/skor bergeser dalam rentang yang masuk akal; tanpa ini peringkat tidak dapat dianggap robust (Malczewski 2006)."
   },
   "oat": {
-    term: "OAT",
-    en: "one-at-a-time sensitivity",
-    def: "Uji sensitivitas satu-bobot-pada-satu-waktu: mengubah satu bobot, menahan total =1, mere-distribusi proporsional bobot lain, dan mengamati perubahan peringkat."
+    term: "OAT & sensitivitas skenario",
+    en: "one-at-a-time & scenario sensitivity",
+    def: "Uji sensitivitas satu-bobot-pada-satu-waktu (OAT: mengubah satu bobot dan meredistribusi proporsional bobot lain agar total = 1) atau uji skenario pertukaran bobot (weight trade-off, mis. pro-ekonomi vs pro-lingkungan) untuk mengamati perubahan peringkat."
   },
   "klhs": {
     term: "KLHS",
@@ -160,7 +160,7 @@ APP_DATA.MCE = {
   ],
   alternatives: [
     { key: "A", label: "A · Bisnis-seperti-biasa", desc: "Reklamasi sesuai izin tanpa perubahan batas lindung", scores: { ekologis: 1, efisiensi: 4, sosial: 5, kelembagaan: 2, regulasi: 2, keadilan: 1, ketahanan: 2 } },
-    { key: "B", label: "B · Zonasi terbatas + mitigasi", desc: "Hanya di sub-zona luar penyangga + rehabilitasi & pemantauan", scores: { ekologis: 3, efisiensi: 3, sosial: 4, kelembagaan: 3, regulasi: 3, keadilan: 3, ketahanan: 3 } },
+    { key: "B", label: "B · Zonasi terbatas + mitigasi bersyarat", desc: "Diizinkan terbatas di luar zona penyangga setelah kajian daya dukung, kesepakatan kolaboratif, & rehabilitasi", scores: { ekologis: 3, efisiensi: 3, sosial: 4, kelembagaan: 3, regulasi: 3, keadilan: 3, ketahanan: 3 } },
     { key: "C", label: "C · Larangan / redesain ketat", desc: "Hentikan/relokasi keluar kawasan lindung; kompensasi & alih ke ekowisata", scores: { ekologis: 5, efisiensi: 2, sosial: 2, kelembagaan: 3, regulasi: 3, keadilan: 4, ketahanan: 5 } }
   ]
 };
@@ -231,30 +231,30 @@ APP_DATA.DISKUSI = [
   { q: "Rumuskan satu masalah inti (core problem) untuk wilayah studi Anda sebagai kesenjangan terbatas ruang-waktu. Siapa aktor yang dirugikan/diuntungkan, dan mengapa definisi tersebut siap dijawab alternatif kebijakan?", h: "Gunakan 4 tahap penstrukturan (8.1.2): dari problem sensing → kategorisasi → dekomposisi → pilihan definisi. Batasi ruang (DAS/pesisir) dan otoritas (kabupaten/KLHK) serta sikap terhadap ketidakpastian." },
   { q: "Susun matriks pengaruh × kepentingan untuk kasus reklamasi/pertambangan vs kawasan lindung di wilayah studi Anda. Kelompok mana yang berpengaruh rendah tetapi kepentingannya tinggi, dan bagaimana memastikan suaranya masuk ke pohon masalah?", h: "Rujuk Reed et al. (2009): kualitas input partisipasi menentukan legitimasi. Tambahkan kolom perspektif aktor terhadap definisi masalah dan sumber hak/klaim." },
   { q: "Bandingkan pohon masalah dan pohon tujuan untuk isu yang sama: tujuan mana yang saling bertentangan dan mengapa retorika 'win–win' berbahaya pada tahap ini?", h: "Pohon tujuan mengekspos konflik distributif (investasi pelabuhan vs mangrove). Alternatif kebijakan harus meladeni konflik tersebut secara eksplisit, bukan menghapusnya." },
-  { q: "Ambil satu dokumen RTRW/RDTR/KLHS daerah: apakah evaluasi alternatif di dalamnya benar-benar multikriteria dan membuka asumsi, atau sudah menutup pilihan sejak awal? Kutip bagian dokumen dan beri label [F/R/A/I].", h: "Periksa apakah alternatif benar-benar berbeda desain, kriteria mencakup 7 keluarga, bobot didokumentasikan, dan sensitivitas diuji — atau hanya justifikasi pasca-keputusan (Bab 7)." }
+  { q: "Ambil satu dokumen RTRW/RDTR/KLHS daerah: apakah evaluasi alternatif di dalamnya benar-benar multikriteria dan membuka asumsi, atau sudah menutup pilihan sejak awal? Kutip bagian dokumen dan beri label [F/R/A/I].", h: "Periksa apakah alternatif benar-benar berbeda desain, kriteria mencakup 7 keluarga, bobot didokumentasikan, dan sensitivitas diuji — atau hanya justifikasi pasca-keputusan (Bab 7). Gunakan label [F] fakta empiris, [R] regulasi, [A] asumsi, dan [I] interpretasi." }
 ];
 
 /* Latihan */
 APP_DATA.LATIHAN = [
-  { t: "Pohon masalah & pohon tujuan: untuk isu utama wilayah studi Anda, rumuskan satu masalah inti sebagai kesenjangan ruang-waktu, bangun pohon masalah (≥3 akar mekanistik, ≥4 dampak) dan beri kode tiap link [F/R/A/I]; lalu konversi menjadi pohon tujuan dan ekspos tujuan yang saling bertentangan.", tag: "Penstrukturan" },
-  { t: "Evaluasi multikriteria: untuk 3 alternatif yang berbeda desain (bukan intensitas), susun tabel kriteria–bobot–skor (dokumentasikan panil penilai, metode bobot, dan fungsi nilai); uji sensitivitas OAT pada 3 skenario (pro-sosial-ekonomi, pro-lingkungan, bobot rata) dan catat ambang perubahan peringkat; tulis justifikasi distributif.", tag: "MCE" },
-  { t: "Refleksi kritis: ambil satu dokumen kebijakan konkret (RTRW/RDTR/KLHS/izin) dan periksa apakah evaluasinya benar-benar multikriteria dan membuka asumsi — atau sudah menutup pilihan sejak awal. Kutip bagian dokumen, beri label [F/R/A/I], dan tatariskan implikasi kesalahan Tipe III.", tag: "Refleksi" }
+  { t: "Pohon masalah & pohon tujuan: untuk isu utama wilayah studi Anda, rumuskan satu masalah inti sebagai kesenjangan ruang-waktu, bangun pohon masalah (≥3 akar mekanistik, ≥4 dampak) dan beri kode tiap tautan ([F] fakta empiris, [R] regulasi, [A] asumsi, [I] interpretasi); lalu konversi menjadi pohon tujuan dan ekspos tujuan yang saling bertentangan.", tag: "Penstrukturan" },
+  { t: "Evaluasi multikriteria: untuk 3 alternatif yang berbeda desain (bukan intensitas), susun tabel kriteria–bobot–skor (dokumentasikan panel penilai, metode bobot, dan fungsi nilai); lakukan uji sensitivitas pada 3 skenario bobot (pro-sosial-ekonomi, pro-lingkungan, bobot rata) serta uji OAT, catat ambang perubahan peringkat, dan tulis justifikasi distributif.", tag: "MCE" },
+  { t: "Refleksi kritis: ambil satu dokumen kebijakan konkret (RTRW/RDTR/KLHS/izin) dan periksa apakah evaluasinya benar-benar multikriteria dan membuka asumsi — atau sudah menutup pilihan sejak awal. Kutip bagian dokumen, beri label [F/R/A/I], dan jelaskan implikasi kesalahan Tipe III.", tag: "Refleksi" }
 ];
 
 /* Pustaka */
 APP_DATA.PUSTAKA = [
   { group: "Jurnal & panduan metode", items: [
-    "Dunn, W.N. (2017). Public Policy Analysis (6th ed.). Routledge.",
+    "Adem Esmail, B., & Geneletti, D. (2018). Multi-criteria decision analysis for nature conservation: A review of 20 years of applications. Methods in Ecology and Evolution, 9(1), 42–53. DOI: 10.1111/2041-210X.12899.",
+    "Dodgson, J. S., Spackman, M., Pearman, A., & Phillips, L. D. (2009). Multi-criteria analysis: A manual. Department for Communities and Local Government, London.",
     "Dorst, K. (2006). Design problems and design paradoxes. Design Issues, 22(3), 4–17.",
-    "Hisschemöller, M., & Hoppe, R. (1996). Coping with intractable controversies: The case for problem structuring in policy design and analysis. Knowledge and Technology Policy, 8(4), 40–60.",
-    "Malczewski, J. (2006). GIS-based multicriteria decision analysis. Int. J. Geographical Information Science, 20(7), 703–726.",
-    "Reed, M.S., et al. (2009). Who's in and why? A typology of stakeholder analysis methods. J. Environmental Management, 90(5), 1933–1949.",
-    "Saaty, T.L. (1990). How to make a decision: The analytic hierarchy process. European J. Operational Research, 48(1), 9–26.",
-    "Ray, S. (2025). Integrating GIS, AI/ML, and MCDA for urban settlement planning. Applied Spatial Analysis, 18, 155.",
-    "Holbrook, et al. (2018). Rules-of-thumb for problem-structuring policy design. Policy Design and Practice, 1(1).",
-    "Yasmi, Y. (2003). Understanding conflict in the co-management of forests: Bulungan Research Forest. Int. Forestry Review, 5(1).",
-    "Multi-criteria analysis: a manual. LSE Research Online (2009).",
-    "Application of MCDA - systematic review 20 years (BES Journal, 2041-210X.12899)."
+    "Dunn, W. N. (2017). Public Policy Analysis (6th ed.). Routledge.",
+    "Hisschemöller, M., & Hoppe, R. (1996). Coping with intractable controversies: The case for problem structuring in policy design and analysis. Knowledge and Policy, 8(4), 40–60.",
+    "Hoornbeek, J., & Peters, B. G. (2017). Understanding policy problems: A refinement of past work. Policy Design and Practice, 1(1), 56–72. DOI: 10.1080/25741292.2018.1427419.",
+    "Malczewski, J. (2006). GIS-based multicriteria decision analysis: A survey of the literature. Int. J. Geographical Information Science, 20(7), 703–726. DOI: 10.1080/13658810600661508.",
+    "Ray, S. (2025). Integrating GIS, AI/ML, and MCDA for sustainable urban settlement planning. Applied Spatial Analysis and Policy, 18, 155. DOI: 10.1007/s12061-025-09762-3.",
+    "Reed, M. S., et al. (2009). Who's in and why? A typology of stakeholder analysis methods for natural resource management. J. Environmental Management, 90(5), 1933–1949. DOI: 10.1016/j.jenvman.2009.01.001.",
+    "Saaty, T. L. (1990). How to make a decision: The analytic hierarchy process. European J. Operational Research, 48(1), 9–26.",
+    "Yasmi, Y. (2003). Understanding conflict in the co-management of forests: The case of Bulungan Research Forest. International Forestry Review, 5(1), 38–44."
   ] },
   { group: "Regulasi & dokumen perencanaan", items: [
     "UU No. 32/2009 jo. UU No. 6/2023 (PPLH) — KLHS sebagai prasyarat KRP.",

@@ -95,13 +95,20 @@
     if (window.lucide && lucide.createIcons) { try { lucide.createIcons(); } catch (e) {} }
   }
 
-  /* ---------- Latihan (checklist + localStorage) ---------- */
-  var LAT_KEY = "sdl-latihan";
+  /* ---------- Latihan (checklist + localStorage per bab) ---------- */
+  function getLatKey() {
+    var cur = ((window.APP_DATA && APP_DATA.CHAPTERS) || []).filter(function (c) { return c.current; })[0];
+    return cur && cur.n ? "sdl-latihan-bab" + cur.n : "sdl-latihan";
+  }
   function loadDone() {
-    try { return JSON.parse(localStorage.getItem(LAT_KEY)) || []; } catch (e) { return []; }
+    var n = ((window.APP_DATA && APP_DATA.LATIHAN) || []).length;
+    try {
+      var raw = JSON.parse(localStorage.getItem(getLatKey())) || [];
+      return Array.isArray(raw) ? raw.filter(function (i) { return typeof i === "number" && i >= 0 && i < n; }) : [];
+    } catch (e) { return []; }
   }
   function saveDone(arr) {
-    try { localStorage.setItem(LAT_KEY, JSON.stringify(arr)); } catch (e) {}
+    try { localStorage.setItem(getLatKey(), JSON.stringify(arr)); } catch (e) {}
   }
   function initLatihan() {
     var list = $("#latihan-list");
@@ -236,16 +243,17 @@
       ].join("\n"),
       "mm-cld": [
         "flowchart TD",
-        'A["Permintaan perumahan & komersial"] -->|＋| B["Harga lahan peri-urban"]',
-        'B -->|＋| C["Konversi sawah → terbangun"]',
-        'C -->|＋| D["Pasokan lahan terbangun"]',
-        'D -->|−| A',
-        'C -->|＋| E["Kehilangan fungsi tata air sawah"]',
+        'A["Permintaan lahan peri-urban"] -->|＋| B["Harga lahan peri-urban"]',
+        'B -->|＋| C["Konversi sawah → terbangun"]:::leak',
+        'C -->|＋| D["Kawasan terbangun & aksesibilitas"]',
+        'D -->|＋ R1 ekspansi| A',
+        'C -->|＋| E["Kehilangan fungsi tata air sawah"]:::leak',
         'E -->|＋| F["Risiko & kerugian banjir"]',
+        'F -->|＋| H["Tanggul/drainase → rasa aman semu"]',
+        'H -->|＋ R2 maladaptasi| A',
         'F -->|＋| G["Biaya proteksi & tekanan regulasi"]',
-        'G -->|−| A',
-        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
-        'class C,E leak'
+        'G -->|− B1 peredam| A',
+        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;"
       ].join("\n"),
       "mm-dpsir": [
         "flowchart LR",
@@ -300,33 +308,32 @@
       ].join("\n"),
       "mm-hierarki": [
         "flowchart TD",
-        'A["RPJPN SDGs"] --> B["RPJMN dan RPPLH"]',
-        'B --> C["RTRWN"]',
-        'C --> D["RTRW Prov"]',
-        'D --> E["RDTR"]',
-        'E --> F["KKPR AMDAL UKL UPL"]',
-        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
-        'class E leak'
+        'P1["Rel Pembangunan<br/>RPJPN/D 20 th → RPJMN/D 5 th → RKP/D 1 th"] --> K["KLHS<br/>Rel Penghubung (PP 22/2021)"]',
+        'L1["Rel Lingkungan Hidup<br/>RPPLH 30 th & D3TLH"] --> K',
+        'K --> R1["Rel Penataan Ruang<br/>RTRWN → RTRW Prov → RTRW Kab/Kota"]',
+        'R1 --> E["RDTR Operasional<br/>(titik rawan: cakupan belum lengkap)"]:::leak',
+        'E --> F["Gerbang Izin & Pengendalian<br/>KKPR (OSS-RBA) · AMDAL / UKL-UPL"]',
+        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;"
       ].join("\n"),
       "mm-gap": [
         "flowchart LR",
-        'A["Koherensi"] --> B["Kepatuhan"]',
-        'B --> C["Kapasitas"]',
-        'C --> G["Gap"]',
-        'G -.-> A',
-        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
-        'class G leak'
+        'A["Koherensi<br/>konflik mandat sektoral"] --> G["Implementation Gap<br/>Adoption & Outcome Gap"]:::leak',
+        'B["Kepatuhan<br/>deteksi & insentif lemah"] --> G',
+        'C["Kapasitas<br/>SDM, anggaran, data RDTR"] --> G',
+        'A -.-> R1["Resep: harmonisasi norma & KRP"]',
+        'B -.-> R2["Resep: penegakan & sinyal insentif"]',
+        'C -.-> R3["Resep: penguatan anggaran & data"]',
+        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;"
       ].join("\n"),
       "mm-pohon": [
         "flowchart TD",
-        'R1["Akar: investasi pelabuhan"] --> C["Masalah inti<br/>tekanan pesisir thd mangrove"]',
-        'R2["Akar: fragmentasi jasa"] --> C',
-        'R3["Akar: kelembagaan lemah"] --> C',
-        'C --> D1["Dampak: hilangnya tangkapan"]',
-        'C --> D2["Dampak: banjir rob"]',
-        'C --> D3["Dampak: konflik tenurial"]',
-        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
-        'class C leak'
+        'R1["Akar: ekspansi reklamasi & investasi"] --> C["Masalah inti<br/>tekanan pesisir thd kawasan lindung mangrove"]:::leak',
+        'R2["Akar: kebutuhan lahan pelabuhan/industri"] --> C',
+        'R3["Akar: perizinan & tata ruang tak inklusif"] --> C',
+        'C --> D1["Dampak: tangkapan nelayan turun"]',
+        'C --> D2["Dampak: redaman banjir rob hilang"]',
+        'C --> D3["Dampak: konflik sosial-adat"] --> T["Pohon Tujuan: ekspos trade-off<br/>pertumbuhan ekonomi vs integritas mangrove"]',
+        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;"
       ].join("\n"),
       "mm-mce": [
         "flowchart LR",
@@ -354,7 +361,7 @@
         'A --> C["Adaptasi: mundur, standar infra"]',
         'A --> D["PRB: peringatan dini, evakuasi"]',
         'A --> E["Potensi lokal: ekowisata, PES"]',
-        'A --> F["Inovasi: IoT, PLE"]',
+        'A --> F["Inovasi: IoT, InSAR/GNSS"]',
         "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
         'class A leak'
       ].join("\n"),
@@ -378,6 +385,17 @@
         'R --> K["Indikator KHD<br/>keluaran–hasil–dampak"]',
         "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
         'class R leak'
+      ].join("\n"),
+      "mm-cascade": [
+        "flowchart LR",
+        'M1["1 · Preconditioned<br/>tanah jenuh / subsiden"] --> CR["Risiko Majemuk<br/>(Compound Risk)"]:::leak',
+        'M2["2 · Multivariat<br/>pasang + gelombang + hujan"] --> CR',
+        'M3["3 · Temporal<br/>kejadian ekstrem beruntun"] --> CR',
+        'M4["4 · Spasial<br/>serempak di wilayah terhubung"] --> CR',
+        'CR --> S1["Kegagalan infrastruktur fisik"]',
+        'S1 --> S2["Gangguan layanan dasar & logistik"]',
+        'S2 --> S3["Kerugian sosial-ekonomi berantai"]',
+        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;"
       ].join("\n"),
       "mm-cascade-bab6": [
         "flowchart TD",

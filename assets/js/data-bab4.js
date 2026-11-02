@@ -246,7 +246,8 @@ APP_DATA.DISKUSI = [
 APP_DATA.LATIHAN = [
   { t: "Hitung neraca sederhana kebutuhan versus ketersediaan satu sumber daya (lahan atau air) di wilayah studi Anda. Ikuti logika Permen LH 17/2009: proyeksikan kebutuhan (penduduk × standar per kapita per fungsi) vs ketersediaan efektif (luas sesuai fisik di luar kawasan lindung, rujuk RTRW + BPS/BIG). Sajikan tabel neraca + status surplus/defisit + catatan asumsi.", tag: "Neraca" },
   { t: "Petakan tiga jasa ekosistem utama di wilayah studi beserta penyedia dan penerima manfaatnya. Gunakan tipologi CICES; bangun matriks tutupan lahan × kapasitas jasa (Burkhard et al. 2014); identifikasi unit penyedia, wilayah penerima, dan arah aliran (Serna-Chavez et al. 2014). Nyatakan apakah penyedia dan penerima dalam satu yurisdiksi.", tag: "Pemetaan" },
-  { t: "Analisis satu trade-off pembangunan di wilayah studi: susun matriks skenario/kebijakan × (jasa meningkat / jasa menurun / penerima manfaat / penanggung beban / waktu-ruang). Gunakan tipologi TEEB dan nilai keadilan distributif–prosedural–pengakuan (Turkelboom et al. 2018).", tag: "Trade-off" }
+  { t: "Analisis satu trade-off pembangunan di wilayah studi: susun matriks skenario/kebijakan × (jasa meningkat / jasa menurun / penerima manfaat / penanggung beban / waktu-ruang). Gunakan tipologi TEEB dan nilai keadilan distributif–prosedural–pengakuan (Turkelboom et al. 2018).", tag: "Trade-off" },
+  { t: "Bacaan pembanding Singapura (Empat Keran Nasional & ABC Waters): bandingkan pengelolaan kelangkaan air di wilayah studi Anda dengan Singapura dari sisi diversifikasi pasokan, penutupan daur air, penataan harga, dan integrasi kelembagaan (PUB). Identifikasi satu instrumen yang layak dipinjam dan satu hambatan transferabilitasnya.", tag: "Pembanding" }
 ];
 
 /* Pustaka */

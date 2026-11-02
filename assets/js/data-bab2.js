@@ -255,9 +255,12 @@ APP_DATA.PUSTAKA = [
   { group: "Jurnal peer-reviewed (rujukan utama)", items: [
     "Firman, T. (1997). Land conversion and urban development in the northern region of West Java, Indonesia. Urban Studies, 34(7), 1027–1046.",
     "Firman, T. (2000). Rural to urban land conversion in Indonesia during boom and bust periods. Land Use Policy, 17(1), 13–20.",
+    "Folke, C., Carpenter, S., Walker, B., Scheffer, M., Elmqvist, T., Gunderson, L., & Holling, C.S. (2004). Regime shifts, resilience, and biodiversity in ecosystem management. Annual Review of Ecology, Evolution, and Systematics, 35, 557–581.",
     "Geist, H.J., & Lambin, E.F. (2002). Proximate causes and underlying driving forces of tropical deforestation. BioScience, 52(2), 143–150.",
     "Holling, C.S. (1973). Resilience and stability of ecological systems. Annual Review of Ecology and Systematics, 4, 1–23.",
     "Hudalah, D., Winarso, H., & Woltjer, J. (2016). Gentrifying the peri-urban. Urban Studies, 53(3), 593–608.",
+    "Kennedy, C., Cuddihy, J., & Engel-Yan, J. (2007). The changing metabolism of cities. Journal of Industrial Ecology, 11(2), 43–59.",
+    "Liu, J., Dietz, T., Carpenter, S.R., Alberti, M., Folke, C., Moran, E., ... & Taylor, W.W. (2007). Complexity of coupled human and natural systems. Science, 317(5844), 1513–1516.",
     "Mulya, S.P., dkk. (2024). Spatio-temporal changes in agricultural land in Greater Jakarta. Regional Environmental Change, 24, 195.",
     "Mulya, S.P., dkk. (2026). Rural–urban transition and control of agricultural land change in Greater Bandung. Sustainability, 18(10), 5016.",
     "Ostrom, E. (2009). A general framework for analyzing sustainability of social-ecological systems. Science, 325(5939), 419–422.",
@@ -275,25 +278,26 @@ APP_DATA.PUSTAKA = [
   { group: "Buku dan karya seminal", items: [
     "Alonso, W. (1964). Location and Land Use. Harvard University Press.",
     "Berkes, F., & Folke, C. (Eds.). (1998). Linking Social and Ecological Systems. Cambridge University Press.",
+    "McGee, T.G. (1991). The emergence of desakota regions in Asia. Dalam The Extended Metropolis. University of Hawaii Press.",
     "Meadows, D.H. (2008). Thinking in Systems: A Primer. Chelsea Green.",
     "Myrdal, G. (1957). Economic Theory and Under-Developed Regions. Duckworth.",
-    "Sterman, J.D. (2000). Business Dynamics. McGraw-Hill.",
-    "Walker, B., & Salt, D. (2006). Resilience Thinking. Island Press.",
-    "McGee, T.G. (1991). The emergence of desakota regions in Asia. Dalam The Extended Metropolis. Hawaii."
+    "North, D.C. (1955). Location theory and regional economic growth. Journal of Political Economy, 63(3), 243–258.",
+    "Perroux, F. (1950). Economic space: Theory and applications. Quarterly Journal of Economics, 64(1), 89–104.",
+    "Sterman, J.D. (2000). Business Dynamics: Systems Thinking and Modeling for a Complex World. McGraw-Hill.",
+    "Walker, B., & Salt, D. (2006). Resilience Thinking. Island Press."
   ] },
   { group: "Regulasi dan data resmi Indonesia", items: [
-    "UU No. 26/2007 tentang Penataan Ruang.",
-    "UU No. 32/2009 tentang Perlindungan dan Pengelolaan Lingkungan Hidup.",
+    "UU No. 26/2007 tentang Penataan Ruang (jo. UU No. 6/2023).",
+    "UU No. 32/2009 tentang Perlindungan dan Pengelolaan Lingkungan Hidup (jo. UU No. 6/2023).",
     "UU No. 41/2009 tentang Perlindungan Lahan Pertanian Pangan Berkelanjutan (LP2B).",
     "PP No. 21/2021 tentang Penyelenggaraan Penataan Ruang.",
     "PP No. 22/2021 tentang Penyelenggaraan PPLH (KLHS dan D3TLH).",
-    "Perpres No. 60/2020 tentang RTR Kawasan Jabodetabekpunjur.",
-    "BPS. Hasil Sensus Penduduk 2020 (persentase urban 56,7%; proyeksi 66,6% pada 2035).",
-    "Kementerian ATR/BPN. Estimasi konversi lahan sawah (Kompas, 2024)."
+    "Perpres No. 60/2020 tentang RTR Kawasan Perkotaan Jabodetabekpunjur.",
+    "BPS (2021). Hasil Sensus Penduduk 2020 (persentase urban 56,7%; proyeksi 66,6% pada 2035).",
+    "Kementerian ATR/BPN. Estimasi konversi lahan sawah nasional."
   ] },
   { group: "Data dan organisasi internasional", items: [
-    "European Environment Agency. (1999). Environmental Indicators. Technical Report No. 25.",
-    "Seto, K.C., dkk. (2011). A meta-analysis of global urban land expansion. PLoS ONE, 6(8), e23777.",
-    "Chaussard, E., dkk. (2013). Sinking cities in Indonesia. Remote Sensing of Environment, 128, 150–161."
+    "European Environment Agency. (1999). Environmental Indicators: Typology and Overview. Technical Report No. 25.",
+    "Seto, K.C., Fragkias, M., Güneralp, B., & Reilly, M.K. (2011). A meta-analysis of global urban land expansion. PLoS ONE, 6(8), e23777."
   ] }
 ];

@@ -65,7 +65,7 @@ APP_DATA.GLOSSARY = {
   "d3tlh": {
     term: "D3TLH",
     en: "environmental carrying capacity (Indonesia)",
-    def: "Daya Dukung dan Daya Tampung Lingkungan Hidup — tiga tingkat (tidak terlampaui / sedang / sangat tinggi) yang menentukan kelanjutan rencana usaha/kegiatan di AMDAL/UKL-UPL (PP 22/2021)."
+    def: "Daya Dukung dan Daya Tampung Lingkungan Hidup — tiga status (belum terlampaui / telah terlampaui / sangat terlampaui) yang menentukan kelanjutan rencana usaha/kegiatan di KLHS dan AMDAL/UKL-UPL (PP 22/2021)."
   },
   "ketimpangan-paparan": {
     term: "Ketimpangan paparan",
@@ -217,12 +217,12 @@ APP_DATA.DISKUSI = [
   { q: "Dengan data BIG/KLHK untuk dua tahun berbeda, susun matriks transisi perubahan tutupan lahan wilayah studi Anda dan identifikasi hot spot alih fungsi. Driver proksimat dan pendorong mendasar apa yang menjelaskan hotspot tersebut?", h: "Gunakan analisis tetangga terdekat untuk pola, bandingkan dengan Austin et al. (2019) (sawit 23% nasional) dan studi peri-urban Yogyakarta/Makassar. Nyatakan metadata: resolusi, klasifikasi, periode — jangan dipaksakan menjadi satu angka." },
   { q: "Untuk satu isu pencemaran di wilayah studi Anda, susun diagram SPR dengan minimal dua jalur paparan berbeda dan bedakan kerentanan kelompok penerima. Pada sisi rantai mana intervensi RTRW paling efektif?", h: "Contoh: sumber industri tekstil → jalur (i) air permukaan dan (ii) sedimen–ikan–konsumsi; reseptor dengan kerentanan berbeda. Tempatkan instrumen: zona/izin pada sumber, sempadan/buffer pada jalur, relokasi/standar pada reseptor." },
   { q: "Ketimpangan paparan pencemaran di wilayah studi Anda: petakan tumpang-tindih sebaran sumber pencemar (industri, TPA, lalu lintas padat) dengan permukiman berpendapatan rendah. Bagaimana muatan keadilan lingkungan (distributif, prosedural, rekognisi) diintegrasikan ke KLHS RTRW?", h: "Rujuk Schlosberg (2007) & Walker (2012); gunakan peta zonasi sumber vs permukiman. Diskusikan data gap BPS SLHI sosioekonomi sebagai keterbatasan." },
-  { q: "Evaluasi status mutu sungai di wilayah studi Anda dengan Indeks Pencemar (Kepmen LH 115/2003) versus IKA/IKLH (Permen LHK 27/2021): kapan suatu segmen 'cemar ringan' menurut satu indeks tetapi memiliki implikasi perencanaan yang berbeda menurut indeks lain?", h: "Bandingkan skor IP 0–1/1–5/5–10/>10 dengan komponen IKA; diskusikan mengapa D3TLH tiga tingkat PP 22/2021 (tidak/sedang/sangat tinggi) menjadi jembatan ke AMDAL/UKL-UPL." }
+  { q: "Evaluasi status mutu sungai di wilayah studi Anda dengan Indeks Pencemar (Kepmen LH 115/2003) versus IKA/IKLH (Permen LHK 27/2021): kapan suatu segmen 'cemar ringan' menurut satu indeks tetapi memiliki implikasi perencanaan yang berbeda menurut indeks lain?", h: "Bandingkan skor IP 0–1/1–5/5–10/>10 dengan komponen IKA; diskusikan mengapa tiga status D3TLH pada PP 22/2021 (belum / telah / sangat terlampaui) menjadi jembatan ke AMDAL/UKL-UPL." }
 ];
 
 /* Latihan — sesuai bab: 3 latihan + catatan */
 APP_DATA.LATIHAN = [
-  { t: "Analisis perubahan tutupan lahan wilayah studi Anda (BIG atau KLHK, dua tahun berbeda). Hitung matriks transisi dan laju tahunan r = (A1−A2)/(t2−t1) serta v = r/A1×100%. Identifikasi penyebab langsung dan tiga pendorong tak langsung, bandingkan dengan temuan Austin et al. (2019). Sajikan peta + tabel + narasi trade-off PDRB jangka pendek vs beban banjir/jasa ekosistem.", tag: "Analisis" },
+  { t: "Analisis perubahan tutupan lahan wilayah studi Anda (BIG atau KLHK, dua tahun berbeda). Hitung matriks transisi dan laju perubahan tahunan ΔA/Δt = (A2−A1)/(t2−t1) (atau laju penyusutan r = (A1−A2)/(t2−t1)) serta persentasenya terhadap luas awal A1. Identifikasi penyebab langsung dan tiga pendorong tak langsung, bandingkan dengan temuan Austin et al. (2019). Sajikan peta + tabel + narasi trade-off PDRB jangka pendek vs beban banjir/jasa ekosistem.", tag: "Analisis" },
   { t: "Susun diagram sumber–jalur–reseptor untuk satu isu pencemaran wilayah studi (minimal dua jalur berbeda) serta perbedaan kerentanan penerima. Tambahkan satu masukan kebijakan pada tiap sisi rantai (kendalikan sumber, putus jalur, lindungi reseptor) dan kaitkan dengan AMDAL/UKL-UPL.", tag: "Diagnosis" },
   { t: "Bandingkan tata kelola DAS Citarum (Perpres 15/2018: Tim/Satgas/Komando Sektor) dengan Murray–Darling (Water Act 2007–Basin Plan 2012–SDL 10.873 GL/tahun–MDBA). Buat tabel isu→pendekatan Citarum→pendekatan Murray–Darling→catatan transferibilitas dalam konteks otonomi daerah Indonesia.", tag: "Pembanding" }
 ];
@@ -251,7 +251,7 @@ APP_DATA.PUSTAKA = [
   ] },
   { group: "Regulasi", items: [
     "Perpres No. 15/2018 tentang Percepatan Pengendalian Pencemaran dan Kerusakan DAS Citarum (14 Mar 2018; tim di bawah Menko Kemaritiman, Satgas di bawah Gubernur Jabar).",
-    "PP No. 22/2021 tentang Penyelenggaraan Perlindungan dan Pengelolaan Lingkungan Hidup (Klas I–IV Lampiran VI; baku mutu air limbah/udara ambien; D3TLH tiga tingkat).",
+    "PP No. 22/2021 tentang Penyelenggaraan Perlindungan dan Pengelolaan Lingkungan Hidup (Kelas I–IV Lampiran VI; baku mutu air limbah/udara ambien; status D3TLH tiga tingkat).",
     "Kepmen LH No. 115/2003 tentang Pedoman Penentuan Status Mutu Air (Indeks Pencemar); Permen LHK No. 27/2021 tentang IKLH.",
     "UU No. 41/2009 tentang LP2B/KP2B; UU No. 17/2019 tentang Sumber Daya Air (TKPSDA)."
   ] }
