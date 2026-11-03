@@ -15,77 +15,127 @@ APP_DATA.GLOSSARY = {
   "wicked-problem": {
     term: "Wicked problem",
     en: "wicked problem",
-    def: "Masalah kebijakan yang berciri banyak aktor, banyak definisi, tujuan yang tidak dapat dimaksimalkan sekaligus, dan tidak ada solusi yang benar secara teknis — memerlukan penstrukturan masalah sebelum evaluasi (Dorst 2006; Hisschemöller & Hoppe 1996)."
+    def: "Masalah kebijakan yang berciri banyak aktor, banyak definisi, tujuan yang tidak dapat dimaksimalkan sekaligus, dan tidak ada solusi yang benar secara teknis — memerlukan penstrukturan masalah sebelum evaluasi (Rittel & Webber 1973; Dorst 2006; Hisschemöller & Hoppe 1996)."
+  },
+  "fenomena-vs-masalah": {
+    term: "Fenomena vs masalah kebijakan",
+    en: "problem situation vs policy problem",
+    def: "Fenomena (gejala/situasi bermasalah) adalah kondisi objektif di lapangan yang dirasakan tidak nyaman, sedangkan masalah kebijakan adalah rumusan analitis berupa kesenjangan antara kondisi saat ini dan kondisi normatif yang diinginkan yang dapat diintervensi melalui instrumen publik pada batas ruang-waktu dan kewenangan tertentu (Dunn 2017)."
+  },
+  "konstruksi-analitis": {
+    term: "Konstruksi analitis",
+    en: "analytical construct",
+    def: "Pandangan bahwa masalah kebijakan tidak hadir begitu saja di alam (bukan fakta mentah yang tinggal dipungut), melainkan hasil abstraksi, pemilihan batas, dan pembingkaian (framing) atas suatu situasi kacau (mess) oleh analis dan pemangku kepentingan (Dunn 2017; Ackoff 1974)."
   },
   "kesalahan-tipe-iii": {
     term: "Kesalahan Tipe III",
     en: "Type III error",
-    def: "Kesalahan berupa upaya menyelesaikan masalah yang salah. Dalam analisis kebijakan, kesalahan ini dapat lebih merugikan daripada salah hitung (Dunn 2017)."
+    def: "Kesalahan berupa upaya menyelesaikan masalah yang salah akibat perumusan masalah yang keliru atau terlalu sempit (berbeda dari Kesalahan Tipe I: menolak hipotesis benar, dan Tipe II: menerima hipotesis salah). Dalam kebijakan publik, kesalahan ini paling merugikan karena menghabiskan sumber daya secara presisi untuk solusi yang tidak menyentuh akar persoalan (Raiffa 1968; Mitroff & Featheringham 1974; Dunn 2017)."
   },
   "penstrukturan-masalah": {
     term: "Penstrukturan masalah",
     en: "problem structuring",
-    def: "Proses iteratif puzzling (berpikir) dan powering (berpolitik) untuk mengubah mess menjadi definisi masalah yang spesifik ruang-waktu dan siap dijawab alternatif kebijakan."
+    def: "Proses iteratif antara penyelidikan analitis (puzzling) dan negosiasi politik-kelembagaan (powering) melalui empat tahap (problem sensing, kategorisasi, dekomposisi, dan pilihan definisi) untuk mengubah situasi kacau (mess) menjadi rumusan masalah spesifik ruang-waktu yang siap dijawab alternatif kebijakan (Dunn 2017; Hisschemöller & Hoppe 1996)."
+  },
+  "puzzling-powering": {
+    term: "Puzzling & powering",
+    en: "intellectual puzzling & political powering",
+    def: "Konsep Hugh Heclo (1974) bahwa pembuatan kebijakan publik selalu merupakan gabungan antara proses belajar kolektif mengatasi ketidakpastian (puzzling) dan kontestasi kekuasaan antaraktor yang berbeda kepentingan (powering)."
+  },
+  "joint-knowledge": {
+    term: "Produksi pengetahuan bersama",
+    en: "joint knowledge production",
+    def: "Pendekatan kolaboratif yang memadukan bukti ilmiah kuantitatif (data penginderaan jauh, pemodelan hidrologis) dengan pengetahuan lokal dan pengalaman langsung warga terdampak sejak tahap perumusan masalah agar analisis memiliki keabsahan ilmiah sekaligus legitimasi sosial."
+  },
+  "dpsir-bab8": {
+    term: "Kerangka DPSIR",
+    en: "Driving forces–Pressures–State–Impact–Response",
+    def: "Kerangka diagnostik kausal yang menghubungkan pendorong sosial-ekonomi makro (Driving forces), tekanan langsung pada lingkungan (Pressures), perubahan kondisi biofisik (State), dampak pada ekosistem/manusia (Impact), dan titik intervensi kebijakan (Response)."
+  },
+  "social-license": {
+    term: "Keabsahan sosial",
+    en: "social legitimacy / social license to operate",
+    def: "Tingkat penerimaan dan persetujuan berkelanjutan dari komunitas lokal dan pemangku kepentingan atas suatu proyek atau kebijakan. Izin formal dari pemerintah (legalitas administratif) tidak otomatis menjamin keabsahan sosial bila prosesnya mengabaikan keadilan prosedural dan distributif."
   },
   "pohon-masalah": {
     term: "Pohon masalah",
     en: "problem tree",
-    def: "Diagram batang masalah inti dengan akar penyebab langsung/tidak langsung dan tajuk dampak langsung/tidak langsung; tiap panah mewakili mekanisme yang dapat dipertahankan secara ilmiah, bukan korelasi semata."
+    def: "Diagram hierarki sebab-akibat yang menempatkan masalah inti (core problem) sebagai batang, penyebab langsung dan struktural sebagai akar, serta dampak langsung dan ikutan sebagai tajuk; setiap panah wajib mewakili mekanisme ilmiah yang teruji."
   },
   "pohon-tujuan": {
     term: "Pohon tujuan",
     en: "objective tree",
-    def: "Pemetaan ulang pohon masalah menjadi pernyataan positif; mengekspos tujuan yang saling bertentangan (mis. pertumbuhan pelabuhan vs perlindungan mangrove) yang harus dijawab oleh alternatif kebijakan, bukan dihapus dengan retorika win–win."
+    def: "Transformasi pohon masalah menjadi kondisi positif di masa depan (hubungan cara–hasil / means–ends); berfungsi mengekspos tujuan yang saling bertentangan (mis. ekspansi pelabuhan vs integritas mangrove) untuk dijawab secara jujur oleh alternatif kebijakan."
   },
   "theory-of-change": {
     term: "Theory of change (ToC)",
     en: "theory of change",
-    def: "Urutan hipotesis sebab-akibat dari intervensi ke keluaran, hasil, dan dampak jangka panjang, disertai asumsi yang dapat diuji dan indikator tiap tautan — membedakan fakta empiris, asumsi risiko, dan pemisalan."
+    def: "Rantai hipotesis kausal dari intervensi, keluaran (outputs), hasil antara/perubahan perilaku (outcomes), hingga dampak jangka panjang (impacts), yang dilengkapi asumsi prasyarat kelembagaan-ekologis dan indikator terukur pada setiap tautannya (Weiss 1995; Sayer et al. 2018)."
   },
   "stakeholder-grid": {
     term: "Matriks pengaruh × kepentingan",
     en: "power–interest grid",
-    def: "Pemetaan aktor menurut pengaruh dan kepentingan, ditambah kolom perspektif aktor terhadap definisi masalah dan sumber hak/klaim (hukum, adat, kontrak, moral) — (Reed et al. 2009)."
+    def: "Alat pemetaan aktor ke dalam empat kuadran (Key Players, Context Setters, Subjects, Crowd) menurut kapasitas kekuasaan dan besarnya kepentingan/dampak, ditambah analisis pembingkaian masalah dan sumber hak/klaim tiap aktor (Ackermann & Eden 2011; Reed et al. 2009)."
   },
   "alternatif-kosmetik": {
     term: "Alternatif kosmetik",
-    en: "cosmetic alternatives",
-    def: "Alternatif yang hanya berbeda intensitas (mis. reklamasi 838 ha vs 600 ha dengan desain sama) — gagal karena membaca konflik dengan cara yang sama; alternatif bermutu berbeda pada kerangka masalah, sasaran, dan instrumen utama."
+    en: "cosmetic / pseudo-alternatives",
+    def: "Opsi-opsi kebijakan yang hanya memvariasikan besaran kuantitatif dari satu desain yang sama (mis. reklamasi 838 ha vs 600 ha vs 400 ha) tanpa mengubah kerangka masalah, instrumen utama, dan distribusi manfaat-beban."
   },
   "mcda": {
     term: "MCDA / MCDM",
     en: "multi-criteria decision analysis",
-    def: "Evaluasi alternatif terhadap kriteria yang saling independen, transparan terhadap bobot dan skor, dengan agregasi (WLC) dan analisis sensitivitas — mengungkap trade-off, bukan menyembunyikannya."
+    def: "Keluarga metode evaluasi sistematis untuk membandingkan alternatif kebijakan di hadapan berbagai kriteria yang saling berbenturan (ekologis, ekonomi, sosial, kelembagaan, regulasi, keadilan, ketahanan) secara transparan guna mengungkap trade-off (Dodgson et al. 2009; Malczewski 2006)."
+  },
+  "double-counting": {
+    term: "Bebas hitung-ganda",
+    en: "non-redundancy / mutual independence",
+    def: "Syarat metodologis dalam penyusunan kriteria MCDA bahwa satu proses atau manfaat yang sama tidak boleh diukur dan diberi bobot lebih dari sekali di bawah nama kriteria yang berbeda, karena akan mendistorsi skor akhir secara tersembunyi (Keeney & Raiffa 1976)."
   },
   "kriteria-mcda": {
     term: "Keluarga kriteria MCDA",
     en: "MCDA criteria family",
-    def: "Ekologis, efisiensi sumber daya, sosial-ekonomi, kelembagaan, kesesuaian regulasi (RTRW/RDTR, WP3K), keadilan (distributif & prosedural), ketahanan/resiliensi — tiap kriteria relevan, dapat diukur, tidak redundan."
+    def: "Tujuh dimensi evaluasi kebijakan sumber daya dan tata ruang: ekologis, efisiensi sumber daya, sosial-ekonomi, kelembagaan, kesesuaian regulasi (RTRW/RDTR, KLHS, RZWP3K), keadilan (distributif & prosedural), serta ketahanan/resiliensi."
+  },
+  "fungsi-nilai": {
+    term: "Fungsi nilai & normalisasi",
+    en: "value function & standardization",
+    def: "Aturan matematis atau rubrik kualitatif yang mentransformasikan indikator mentah dengan satuan berbeda (ha, rupiah, persen) ke dalam skala nilai tak-berdimensi yang seragam (mis. 1–5 atau 0–1) sebelum dikalikan bobot (Malczewski 2006)."
   },
   "ahp": {
     term: "AHP",
     en: "Analytic Hierarchy Process",
-    def: "Metode pembobotan pairwise comparison dengan uji rasio konsistensi (Saaty 1990); alternatif: pembobotan sama, deliberatif, berbasis dokumen kebijakan, atau hybrid — bobot bersifat normatif, bukan fakta objektif."
+    def: "Metode elisitasi bobot melalui perbandingan berpasangan (pairwise comparison) berskala 1–9 yang dikembangkan Thomas L. Saaty (1990), dilengkapi uji Rasio Konsistensi (CR ≤ 0,10) untuk memverifikasi kelogisan penilaian."
   },
   "wlc": {
     term: "WLC",
     en: "Weighted Linear Combination",
-    def: "Agregasi skor ternormalisasi × bobot menjadi peringkat; berasumsi kompensatoris/non-kompensatoris — pilihan normatif yang harus dinyatakan."
+    def: "Aturan agregasi skor paling umum dalam MCDA (Si = Σ wj · xij) yang mengalikan skor terstandardisasi tiap kriteria dengan bobotnya lalu menjumlahkannya; secara bawaan bersifat kompensatoris penuh."
+  },
+  "kompensatoris": {
+    term: "Kompensatoris vs non-kompensatoris",
+    en: "compensatory vs non-compensatory aggregation",
+    def: "Dalam aturan kompensatoris (seperti WLC murni), skor buruk pada kriteria lingkungan dapat ditutupi oleh skor tinggi pada kriteria ekonomi. Dalam aturan non-kompensatoris (keberlanjutan kuat), dipasang ambang batas minimum (veto) yang tidak boleh dilanggar."
   },
   "analisis-sensitivitas": {
     term: "Analisis sensitivitas",
     en: "sensitivity analysis",
-    def: "Menguji kestabilan peringkat ketika bobot/skor bergeser dalam rentang yang masuk akal; tanpa ini peringkat tidak dapat dianggap robust (Malczewski 2006)."
+    def: "Prosedur menguji seberapa kokoh (robust) peringkat alternatif ketika bobot kriteria atau skor digeser dalam rentang ketidakpastian yang wajar, serta mengidentifikasi titik balik (crossover threshold) perubahan pemenang (Malczewski 2006)."
   },
   "oat": {
     term: "OAT & sensitivitas skenario",
     en: "one-at-a-time & scenario sensitivity",
-    def: "Uji sensitivitas satu-bobot-pada-satu-waktu (OAT: mengubah satu bobot dan meredistribusi proporsional bobot lain agar total = 1) atau uji skenario pertukaran bobot (weight trade-off, mis. pro-ekonomi vs pro-lingkungan) untuk mengamati perubahan peringkat."
+    def: "Dua teknik uji sensitivitas: (1) OAT mengubah satu bobot kriteria secara bertahap sambil meredistribusi proporsional bobot lainnya; (2) Skenario bobot menguji paket profil preferensi aktor yang kontras (mis. Pro-Ekonomi vs Pro-Lingkungan vs Bobot Setara)."
+  },
+  "mds-rapfish": {
+    term: "Multi-Dimensional Scaling (MDS)",
+    en: "MDS sustainability index (Rapfish)",
+    def: "Metode ordinasi statistik multidimensi (sering diterapkan melalui perangkat Rapfish) untuk memetakan indeks keberlanjutan sistem sumber daya pada skala 0–100% (<50% dikategorikan tidak/kurang berkelanjutan)."
   },
   "klhs": {
     term: "KLHS",
     en: "Strategic Environmental Assessment",
-    def: "Kajian Lingkungan Hidup Strategis — prasyarat KRP menurut PP 22/2021; sering dikerjakan di akhir sehingga berubah dari penyaring alternatif menjadi justifikasi pasca-keputusan."
+    def: "Kajian Lingkungan Hidup Strategis (UU 32/2009 jo. PP 22/2021) — instrumen wajib untuk mengintegrasikan daya dukung, daya tampung, dan prinsip pembangunan berkelanjutan ke dalam KRP (RTRW/RDTR/RPJMD) sejak tahap perumusan alternatif di hulu."
   }
 };
 
@@ -123,27 +173,27 @@ APP_DATA.KEYWORDS = [
 APP_DATA.STEPS = [
   {
     icon: "search",
-    title: "1 · Merasakan masalah",
-    body: "Mulailah dengan bertanya: gejala apa yang terlihat, siapa yang terdampak, dan di mana batas wilayah masalah? Gabungkan angka resmi dengan pengalaman para pihak agar rumusan awal tidak hanya mencerminkan satu sudut pandang.",
-    note: "Keluaran: inventaris gejala, peta aktor awal, batas ruang-waktu masalah."
+    title: "1 · Merasakan masalah (Problem sensing)",
+    body: "Kenali situasi kacau (mess) di lapangan: gejala fisik dan keluhan sosial apa yang terlihat, siapa kelompok yang paling terdampak, dan di mana batas awal wilayah persoalannya? Padukan data pengamatan resmi dengan pengalaman hidup warga (joint knowledge) agar pengenalan awal tidak bias pada satu kepentingan.",
+    note: "Keluaran: inventaris gejala fisik-sosial, daftar aktor awal, dan deliniasi kasar ruang-waktu."
   },
   {
     icon: "scale",
-    title: "2 · Kategorisasi masalah",
-    body: "Kesenjangan apa yang memisahkan keadaan sekarang dan yang diinginkan? Daftar kesenjangan bernilai bagi aktor — bukan kesenjangan teknis semata, melainkan kesenjangan yang dirasakan pihak terdampak.",
-    note: "Keluaran: daftar gap bernilai (valued gaps) per aktor."
+    title: "2 · Kategorisasi masalah (Valued gaps)",
+    body: "Rumuskan kesenjangan bernilai yang memisahkan kondisi saat ini (what is) dari kondisi normatif atau harapan aktor (what ought to be). Catat bagaimana setiap pemangku kepentingan membingkai kesenjangan tersebut menurut mandat hukum, standar baku mutu, atau hak ruang hidupnya.",
+    note: "Keluaran: matriks kesenjangan bernilai (valued gaps) per kelompok pemangku kepentingan."
   },
   {
     icon: "git-branch",
-    title: "3 · Dekomposisi",
-    body: "Kesenjangan mana yang berpotensi dijembatani? Oleh instrumen apa? Rantai penyebab–dampak dirinci dengan mekanisme yang dapat dipertahankan, jangkauan ruang-waktu, dan kerangka DPSIR yang teruji.",
-    note: "Keluaran: rantai penyebab–dampak; isu yang tatakelolanya teridentifikasi."
+    title: "3 · Dekomposisi (Rantai kausal & DPSIR)",
+    body: "Urai arsitektur penyebab langsung dan pendorong struktural di balik kesenjangan tersebut. Gunakan mekanisme ilmiah yang teruji (bukan sekadar korelasi), perhatikan skala hulu–hilir DAS/pesisir, dan padankan dengan kerangka DPSIR untuk mengidentifikasi titik tatakelola yang dapat diintervensi.",
+    note: "Keluaran: pohon masalah mekanistik dan pemetaan instrumen/kewenangan kelembagaan."
   },
   {
     icon: "target",
-    title: "4 · Pilihan definisi masalah",
-    body: "Di mana peluang nyata untuk perbaikan? Definisi masalah yang siap dijawab alternatif kebijakan — spesifik ruang-waktu, dalam otoritas perencana, dan jujur terhadap ketidakpastian (mana faktual, mana perkiraan model).",
-    note: "Keluaran: definisi masalah inti yang siap diuji dengan alternatif kebijakan."
+    title: "4 · Pilihan definisi masalah (Core problem)",
+    body: "Tetapkan satu rumusan masalah inti pada titik ungkit (leverage point) yang tepat sasaran — terikat batas ruang-waktu ekologis, berada dalam kewenangan otoritas perencana, jujur terhadap ketidakpastian data vs model, serta tidak menyamarkan solusi tunggal sebagai definisi masalah (bebas Kesalahan Tipe III).",
+    note: "Keluaran: pernyataan masalah kebijakan inti yang siap diladeni alternatif struktural (Subbab 8.3)."
   }
 ];
 
@@ -244,16 +294,26 @@ APP_DATA.LATIHAN = [
 /* Pustaka */
 APP_DATA.PUSTAKA = [
   { group: "Jurnal & panduan metode", items: [
+    "Ackermann, F., & Eden, C. (2011). Making Strategy: Mapping Out Strategic Success (2nd ed.). SAGE Publications.",
+    "Ackoff, R. L. (1974). Redesigning the Future: A Systems Approach to Societal Problems. John Wiley & Sons.",
     "Adem Esmail, B., & Geneletti, D. (2018). Multi-criteria decision analysis for nature conservation: A review of 20 years of applications. Methods in Ecology and Evolution, 9(1), 42–53. DOI: 10.1111/2041-210X.12899.",
     "Dodgson, J. S., Spackman, M., Pearman, A., & Phillips, L. D. (2009). Multi-criteria analysis: A manual. Department for Communities and Local Government, London.",
     "Dorst, K. (2006). Design problems and design paradoxes. Design Issues, 22(3), 4–17.",
-    "Dunn, W. N. (2017). Public Policy Analysis (6th ed.). Routledge.",
+    "Dunn, W. N. (2017). Public Policy Analysis: An Integrated Approach (6th ed.). Routledge.",
+    "Gregory, R., Failing, L., Harstone, M., Long, G., McDaniels, T., & Ohlson, D. (2012). Structured Decision Making: A Practical Guide to Environmental Management Choices. Wiley-Blackwell.",
+    "Heclo, H. (1974). Modern Social Politics in Britain and Sweden: From Relief to Income Maintenance. Yale University Press.",
     "Hisschemöller, M., & Hoppe, R. (1996). Coping with intractable controversies: The case for problem structuring in policy design and analysis. Knowledge and Policy, 8(4), 40–60.",
     "Hoornbeek, J., & Peters, B. G. (2017). Understanding policy problems: A refinement of past work. Policy Design and Practice, 1(1), 56–72. DOI: 10.1080/25741292.2018.1427419.",
+    "Keeney, R. L., & Raiffa, H. (1976). Decisions with Multiple Objectives: Preferences and Value Tradeoffs. John Wiley & Sons.",
     "Malczewski, J. (2006). GIS-based multicriteria decision analysis: A survey of the literature. Int. J. Geographical Information Science, 20(7), 703–726. DOI: 10.1080/13658810600661508.",
+    "Mitroff, I. I., & Featheringham, T. R. (1974). On systemic problem solving and the error of the third kind. Behavioral Science, 19(6), 383–393.",
+    "Raiffa, H. (1968). Decision Analysis: Introductory Lectures on Choices under Uncertainty. Addison-Wesley.",
     "Ray, S. (2025). Integrating GIS, AI/ML, and MCDA for sustainable urban settlement planning. Applied Spatial Analysis and Policy, 18, 155. DOI: 10.1007/s12061-025-09762-3.",
     "Reed, M. S., et al. (2009). Who's in and why? A typology of stakeholder analysis methods for natural resource management. J. Environmental Management, 90(5), 1933–1949. DOI: 10.1016/j.jenvman.2009.01.001.",
+    "Rittel, H. W. J., & Webber, M. M. (1973). Dilemmas in a general theory of planning. Policy Sciences, 4(2), 155–169.",
     "Saaty, T. L. (1990). How to make a decision: The analytic hierarchy process. European J. Operational Research, 48(1), 9–26.",
+    "Sayer, J., et al. (2013). Ten principles for a landscape approach to reconciling agriculture, conservation, and other competing land uses. PNAS, 110(21), 8349–8356.",
+    "Weiss, C. H. (1995). Nothing as practical as good theory: Exploring theory-based evaluation for comprehensive community initiatives. In New Approaches to Evaluating Community Initiatives (pp. 65–92). Aspen Institute.",
     "Yasmi, Y. (2003). Understanding conflict in the co-management of forests: The case of Bulungan Research Forest. International Forestry Review, 5(1), 38–44."
   ] },
   { group: "Regulasi & dokumen perencanaan", items: [

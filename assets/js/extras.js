@@ -325,6 +325,16 @@
         'C -.-> R3["Resep: penguatan anggaran & data"]',
         "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;"
       ].join("\n"),
+      "mm-fenomena": [
+        "flowchart TD",
+        'F["Fenomena / Gejala Lapangan<br/>(Genangan rob pesisir utara makin tinggi & sering)"] --> K1["Pembingkaian Sempit (Gejala = Masalah)<br/>Masalah: Kurangnya tanggul penahan air laut"]:::leak',
+        'F --> K2["Penstrukturan Masalah Kebijakan (Dunn, 2017)<br/>Masalah: Laju penurunan muka tanah & konversi ruang pesisir<br/>melampaui daya dukung hidrologis dalam kewenangan pemda/pusat"]',
+        'K1 --> S1["Intervensi: Peninggian tanggul terus-menerus<br/>(mengabaikan ekstraksi air tanah & beban bangunan)"]:::leak',
+        'S1 --> E3["Kesalahan Tipe III: Masalah salah dirumuskan<br/>(tanggul tenggelam lagi, risiko jebol & maladaptasi naik)"]:::leak',
+        'K2 --> S2["Intervensi Struktural & Non-struktural:<br/>Pengendalian air tanah + suplai air perpipaan +<br/>zonasi pesisir + sabuk mangrove + proteksi selektif"]',
+        'S2 --> O2["Akar penyebab tertangani & risiko jangka panjang turun"]',
+        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;"
+      ].join("\n"),
       "mm-pohon": [
         "flowchart TD",
         'R1["Akar: ekspansi reklamasi & investasi"] --> C["Masalah inti<br/>tekanan pesisir thd kawasan lindung mangrove"]:::leak',
@@ -333,6 +343,15 @@
         'C --> D1["Dampak: tangkapan nelayan turun"]',
         'C --> D2["Dampak: redaman banjir rob hilang"]',
         'C --> D3["Dampak: konflik sosial-adat"] --> T["Pohon Tujuan: ekspos trade-off<br/>pertumbuhan ekonomi vs integritas mangrove"]',
+        "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;"
+      ].join("\n"),
+      "mm-toc": [
+        "flowchart LR",
+        'I["Intervensi Kebijakan<br/>(Zonasi pesisir + skema PES/ko-manajemen)"] --> O["Keluaran (Outputs)<br/>(Batas zona penyangga & kontrak insentif kelompok)"]',
+        'O --> H["Hasil Antara (Outcomes)<br/>(Manfaat ekonomi lokal terikat & konversi berhenti)"]:::leak',
+        'H --> M["Dampak Jangka Panjang (Impacts)<br/>(Integritas mangrove & ketahanan rob pulih)"]',
+        'A1["Asumsi 1: Hak kelola lokal diakui & dana tepat sasaran"] -.-> O',
+        'A2["Asumsi 2: Penegakan KKPR konsisten & beban tak bocor"] -.-> H',
         "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;"
       ].join("\n"),
       "mm-mce": [
