@@ -137,7 +137,7 @@ APP_DATA.STEPS = [
   {
     icon: "map-pinned",
     title: "4 · Translasi ke spasial",
-    body: "Petakan implikasi tutupan/penggunaan lahan tiap skenario — lazim dengan cellular automata atau CLUE-family; pendekatan partisipatif (interview–cognitive mapping–GIS–pemodelan) untuk skenario spatio-temporal (Paletto et al., Alpen Italia, 2015).",
+    body: "Petakan implikasi tutupan/penggunaan lahan tiap skenario ke dalam peta: di mana permukiman, kawasan lindung, sawah, dan mangrove bergeser pada tiap skenario.",
     note: "Keluaran: peta skenario yang dapat dibandingkan dengan indikator yang sama."
   },
   {

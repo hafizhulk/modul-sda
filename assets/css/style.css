@@ -457,6 +457,9 @@ code { font-family: "Space Mono", monospace; font-size: .85em; background: var(-
 .mermaid-box { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 1rem 1.2rem; overflow-x: auto; }
 .mermaid-box svg { max-width: 100%; height: auto; }
+#mm-nbs svg { min-width: 0; width: 100%; }
+#mm-nbs text { font-size: 16px !important; font-weight: 400; }
+#mm-mel text { font-size: 16px !important; font-weight: 400; }
 .viz figcaption, .chart-card figcaption { font-size: .82rem; color: var(--muted); line-height: 1.5; margin-top: .6rem; }
 .chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 1.4rem 0; }
 .chart-card { margin: 0; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.1rem 1.2rem; }
