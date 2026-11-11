@@ -394,11 +394,12 @@
       ].join("\n"),
       "mm-toulmin": [
         "flowchart LR",
-        'G["Data/bukti<br/>peta, BPS, jurnal"] --> W["Warrant<br/>prinsip ekologi"]',
-        'W --> C["Klaim"]',
-        'B["Backing<br/>literatur"] --> W',
-        'C --> Q["Qualifier"]',
-        'R["Rebuttal"] -.-> C',
+        'D["Data / Bukti<br/>peta, BPS, jurnal"] --> J(( ))',
+        'J --> C["Klaim"]',
+        'B["Backing"] -- memperkuat --> W["Warrant"]',
+        'W -- membenarkan hubungan --> J',
+        'Q["Qualifier"] -- membatasi kepastian --> C',
+        'R["Rebuttal"] -. pengecualian terhadap .-> J',
         "classDef leak fill:" + c.accentFill + ",stroke:" + c.accentStroke + ",color:" + c.accentText + ",font-weight:600;",
         'class C leak'
       ].join("\n"),

@@ -460,6 +460,8 @@ code { font-family: "Space Mono", monospace; font-size: .85em; background: var(-
 #mm-nbs svg { min-width: 0; width: 100%; }
 #mm-nbs text { font-size: 16px !important; font-weight: 400; }
 #mm-mel text { font-size: 16px !important; font-weight: 400; }
+#mm-trace svg { min-width: 760px; width: 100%; }
+#mm-trace text { font-size: 18px !important; font-weight: 500; }
 .viz figcaption, .chart-card figcaption { font-size: .82rem; color: var(--muted); line-height: 1.5; margin-top: .6rem; }
 .chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 1.4rem 0; }
 .chart-card { margin: 0; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.1rem 1.2rem; }
